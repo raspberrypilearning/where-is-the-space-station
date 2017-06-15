@@ -60,9 +60,9 @@ You’re going to use a web service that provides live information about space. 
 
     You should see something like this:
 
-      ```
-      {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
-      ```
+    ```
+    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    ```
 
     This is a Python dictionary with 3 keys: message, number and people. 
 
