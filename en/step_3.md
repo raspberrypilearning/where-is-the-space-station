@@ -1,6 +1,13 @@
+
+
 ## Who is in Space?
 
+
+
+
 You’re going to use a web service that provides live information about space. First let’s find out who is currently in space. 
+
+
 
 + A web service has an address (url) just like a web page does. Instead of returning HTML for a web page it returns data. 
 
@@ -9,43 +16,24 @@ You’re going to use a web service that provides live information about space. 
     You should see something like this:
 
     ```
-
     {
-
       "message": "success", 
-
       "number": 3, 
-
       "people": [
-
         {
-
           "craft": "ISS", 
-
           "name": "Yuri Malenchenko"
-
         }, 
-
         {
-
           "craft": "ISS", 
-
           "name": "Timothy Kopra"
-
         }, 
-
         {
-
           "craft": "ISS", 
-
           "name": "Timothy Peake"
-
         }
-
       ]
-
     }
-
     ```
 
     The data is live so you will see a different result. The format is called JSON (say Jason). 
@@ -59,21 +47,21 @@ You’re going to use a web service that provides live information about space. 
     Add the following code to `main.py` to put the web address you just used into a variable:
 
     ![screenshot](images/iss-url.png)
-
+   
 + Now let's call the web service:
 
     ![screenshot](images/iss-request.png)
+
 
 + Next you need to load the JSON reponse into a Python data structure:
 
     ![screenshot](images/iss-result.png)
 
+
     You should see something like this:
 
       ```
-
       {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
-
       ```
 
     This is a Python dictionary with 3 keys: message, number and people. 
@@ -85,7 +73,7 @@ You’re going to use a web service that provides live information about space. 
 + Now let's print the information in a more readable way. 
 
     First, let's look up the number of people in space and print it:
-
+  
     ![screenshot](images/iss-number.png)
 
     `result['number']` will print the value associated with the key ‘number’ in the result dictionary. In the example this is `3`. 
@@ -94,12 +82,11 @@ You’re going to use a web service that provides live information about space. 
 
     ![screenshot](images/iss-people.png)
 
+
     You should see something like: 
-
+    
     ```
-
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-
     ```
 
 + Now you need to print out a line for each astronaut.
@@ -111,20 +98,18 @@ You’re going to use a web service that provides live information about space. 
 + You can then look up the values for ‘name’ and ‘craft’
 
     ![screenshot](images/iss-people-2.png)
-
+  
     You should see something like:
 
     ```
-
     People in Space:  3
-
     Yuri Malenchenko
-
     Timothy Kopra
-
     Timothy Peake
-
     ```
 
     You are using live data so your results will depend on the number of people currently in space. 
+
+
+
 
