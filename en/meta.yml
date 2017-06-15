@@ -1,12 +1,12 @@
 title: Where is the Space Station?
 hero_image: images/banner.png
 description: Plot the exact location of the ISS.
-original_url:
+original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 listed: false
 ingredient: false
 duration: 1
-interests:
+interests: ""
 technology: "python"
 steps:
   - title: "Introduction"
