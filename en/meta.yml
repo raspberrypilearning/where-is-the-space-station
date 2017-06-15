@@ -1,12 +1,28 @@
-title: where-is-the-space-station
+title: Where is the Space Station?
 hero_image: images/banner.png
-description: where-is-the-space-station description
-original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
-theme: cc-prototype
-duration: 1 # 1, 2 or 3
-ingredient: false
-interests: "jokes/pranks, sports, art/design, photography, games, outside/weather/nature, space, animals, music/sound"
-technologies: "scratch, python, html/css, micro:bit"
+description: Plot the exact location of the ISS.
 listed: false
+ingredient: false
+duration: 1
+interests:
+technology: python
+curriculum:
+  design: 0
+  programming: 1
+  phys-comp: 0
+  manufacture: 0
+  community: 0
+theme: green
 steps:
-  - title: Step one
+  - title: Introduction
+    duration: 1
+  - title: What you will need
+    duration: 1
+  - title: Who is in Space?
+    duration: 1
+  - title: Challenge: Show the Craft
+    duration: 1
+  - title: Where is the ISS?
+    duration: 1
+  - title: Challenge: Find more passover times
+    duration: 1
