@@ -1,8 +1,8 @@
 title: Where is the Space Station?
 hero_image: images/banner.png
-subtitle: Where is the Space Station?
-description: Use Scratch to make a boat race game
-original_url: https://www.codeclubprojects.org/en-GB/scratch/boat-race?redirect=false
+description: Plot the exact location of the ISS.
+subtitle: 
+original_url:
 theme: cc-prototype
 published: false
 steps:
