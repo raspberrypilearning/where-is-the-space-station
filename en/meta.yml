@@ -6,15 +6,6 @@ original_url:
 listed: false
 ingredient: false
 duration: 1
-interests:
-technology: python
-curriculum:
-  design: 0
-  programming: 1
-  phys-comp: 0
-  manufacture: 0
-  community: 0
-theme: green
 theme: cc-prototype
 steps:
   - title: "Introduction"
