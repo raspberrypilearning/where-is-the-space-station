@@ -82,7 +82,7 @@ Let’s use another web service to find out where the International Space Statio
 
 + Test your program by running it. The ISS should move to its current location above Earth. 
 
-Wait a few seconds and run your program again to see where the ISS has moved to. 
+    Wait a few seconds and run your program again to see where the ISS has moved to. 
 
     ![screenshot](images/iss-plotted.png)
 
