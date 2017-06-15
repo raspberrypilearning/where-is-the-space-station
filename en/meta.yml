@@ -1,22 +1,18 @@
 title: Where is the Space Station?
 hero_image: images/banner.png
 description: Plot the exact location of the ISS.
-subtitle: 
 original_url:
+theme: cc-prototype
 listed: false
 ingredient: false
 duration: 1
-theme: cc-prototype
+interests:
+technology: "python"
 steps:
   - title: "Introduction"
-    duration: 1
   - title: "What you will need"
-    duration: 1
   - title: "Who is in Space?"
-    duration: 1
   - title: "Challenge: Show the Craft"
-    duration: 1
   - title: "Where is the ISS?"
-    duration: 1
+  - title: "When will the ISS be overhead?"
   - title: "Challenge: Find more passover times"
-    duration: 1
