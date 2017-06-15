@@ -3,8 +3,8 @@ hero_image: images/banner.png
 description: Plot the exact location of the ISS.
 subtitle: 
 original_url:
+listed: false
 theme: cc-prototype
-published: false
 steps:
   - title: "Introduction"
     duration: 1
