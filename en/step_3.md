@@ -40,7 +40,7 @@ You’re going to use a web service that provides live information about space. 
 
 + Let’s call the web service from Python so we can use the results.
 
-      Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>. 
+    Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>. 
 
 + The `urllib.request` and `json` modules have already been imported for you. 
 
