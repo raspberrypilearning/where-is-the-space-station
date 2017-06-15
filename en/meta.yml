@@ -1,18 +1,10 @@
 title: Where is the Space Station?
 hero_image: images/banner.png
-description: Plot the exact location of the ISS.
-listed: false
-ingredient: false
-duration: 1
-interests:
-technology: python
-curriculum:
-  design: 0
-  programming: 1
-  phys-comp: 0
-  manufacture: 0
-  community: 0
-theme: green
+subtitle: Where is the Space Station?
+description: Use Scratch to make a boat race game
+original_url: https://www.codeclubprojects.org/en-GB/scratch/boat-race?redirect=false
+theme: cc-prototype
+published: false
 steps:
   - title: "Introduction"
     duration: 1
