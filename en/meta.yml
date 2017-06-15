@@ -1,0 +1,12 @@
+title: where-is-the-space-station
+hero_image: images/banner.png
+description: where-is-the-space-station description
+original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
+theme: cc-prototype
+duration: 1 # 1, 2 or 3
+ingredient: false
+interests: "jokes/pranks, sports, art/design, photography, games, outside/weather/nature, space, animals, music/sound"
+technologies: "scratch, python, html/css, micro:bit"
+listed: false
+steps:
+  - title: Step one
