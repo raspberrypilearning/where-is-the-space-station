@@ -91,7 +91,11 @@ You’re going to use a web service that provides live information about space. 
 
 + Now you need to print out a line for each astronaut.
 
-    You can use a for loop to do this in Python. Each time through the loop `p` will be set to a dictionary for a different astronaut.
+    You can use a `for` loop to do this in Python. 
+    
+    [[[generic-python-for-loop]]]
+    
+    Each time through the loop `p` will be set to a dictionary for a different astronaut.
 
     ![screenshot](images/iss-people-1a.png)
 
