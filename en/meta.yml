@@ -14,15 +14,15 @@ curriculum:
   community: 0
 theme: green
 steps:
-  - title: Introduction
+  - title: "Introduction"
     duration: 1
-  - title: What you will need
+  - title: "What you will need"
     duration: 1
-  - title: Who is in Space?
+  - title: "Who is in Space?"
     duration: 1
-  - title: Challenge: Show the Craft
+  - title: "Challenge: Show the Craft"
     duration: 1
-  - title: Where is the ISS?
+  - title: "Where is the ISS?"
     duration: 1
-  - title: Challenge: Find more passover times
+  - title: "Challenge: Find more passover times"
     duration: 1
