@@ -28,9 +28,7 @@ Let’s use another web service to find out where the International Space Statio
   
     The result contains the coordinates of the spot on Earth that the ISS is currently over. 
 
-    Longitude is the East-West position and runs from -180 to 180. 0 is the Prime Meridian which runs through Greenwich in London, UK. 
-
-    Latitude is the North-South position and runs from 90 to -90. 0 is the Equator. 
+    [[[generic-theory-lat-long]]]
 
 + Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
