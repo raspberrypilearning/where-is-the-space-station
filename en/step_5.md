@@ -2,14 +2,11 @@
 
 ## Where is the ISS?
 
-
-
-
 The International Space Station is in orbit around Earth. It orbits the earth roughly every hour and a half. The ISS travels at an average speed of 7.66 km per second. It’s fast! 
 
 Let’s use another web service to find out where the International Space Station is. 
 
-
+[[[generic-theory-lat-long]]]
 
 + First open the url for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
   
