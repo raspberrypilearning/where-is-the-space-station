@@ -6,8 +6,6 @@ The International Space Station is in orbit around Earth. It orbits the earth ro
 
 Let’s use another web service to find out where the International Space Station is. 
 
-[[[generic-theory-lat-long]]]
-
 + First open the url for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
   
     You should see something like this:
@@ -25,7 +23,8 @@ Let’s use another web service to find out where the International Space Statio
   
     The result contains the coordinates of the spot on Earth that the ISS is currently over. 
 
-    [[[generic-theory-lat-long]]]
+[[[generic-theory-lat-long]]]
+
 
 + Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
