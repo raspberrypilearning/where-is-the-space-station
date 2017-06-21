@@ -2,12 +2,7 @@
 
 ## Who is in Space?
 
-
-
-
 You’re going to use a web service that provides live information about space. First let’s find out who is currently in space. 
-
-
 
 + A web service has an address (url) just like a web page does. Instead of returning HTML for a web page it returns data. 
 
@@ -65,6 +60,8 @@ You’re going to use a web service that provides live information about space. 
     ```
 
     This is a Python dictionary with 3 keys: message, number and people. 
+    
+    [[[generic-python-key-value-pairs]]]
 
     The ‘success’ value of message tells you that the request was successful. Good. 
 
