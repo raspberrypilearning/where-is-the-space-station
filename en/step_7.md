@@ -9,9 +9,6 @@ You can use a website such as <a href="http://www.latlong.net/" target="_blank">
 
 Can you look up and plot the passover times for more locations? 
 
-+ You’ll need to change the latitude and longitude inputs to the web service. 
-+ You'll need to plot the location and result on the map. 
-
 ![screenshot](images/iss-final.png)
 
 --- hints ---
@@ -33,7 +30,7 @@ lon = ??.??
 ``` 
 --- /hint ---
 --- hint ---
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. 
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass over time. 
 
 ```python
 # Baikonur Cosmodrome
