@@ -2,15 +2,13 @@
 
 ## What you will need
 
-### Hardware
-
-    + [add hardware here, or delete section]
-
 ### Software
 
-    + [add software here, or delete section]
+    + Trinket online editor
 
 ### Additional Resources
 
-    + [add resources here, or delete section]
+    + Starter project: <a href="jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>
+    
+    +  Open Notify web services: <a href="http://api.open-notify.org/" target="_blank">http://api.open-notify.org/</a>
 
