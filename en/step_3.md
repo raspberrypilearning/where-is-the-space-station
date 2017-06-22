@@ -42,6 +42,8 @@ You’re going to use a web service that provides live information about space. 
     Add the following code to `main.py` to put the web address you just used into a variable:
 
     ![screenshot](images/iss-url.png)
+    
+    [[[generic-python-creating-a-variable]]]
    
 + Now let's call the web service:
 
