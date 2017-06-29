@@ -7,7 +7,7 @@
 
 As well as the name of the astronaut the web service also provides the craft that they are in (such as the ISS.)
 
-Can you add to your script so that it also prints out the craft that the astronaut is in. 
+Can you add to your script so that it also prints out the craft that the astronaut is in? 
 
 Example:
 

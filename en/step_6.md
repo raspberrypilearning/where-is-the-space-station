@@ -2,14 +2,10 @@
 
 ## When will the ISS be overhead?
 
-
-
-
 There’s also a web service that you can call to find out when the ISS will next be over a particular location. 
 
 Let’s find out when the ISS will next be over the Space Centre in Houston, US which is at latitude 29.5502 and longitude 95.097.
   
- 
 
 + First let’s plot a dot on the map at these coordinates:
 
@@ -31,7 +27,9 @@ Let’s find out when the ISS will next be over the Space Centre in Houston, US 
   
     ![screenshot](images/iss-passtimes.png)
   
-    The response includes several pass over times, we’ll just look at the first one. The time is given in a standard time format, you'll be able to convert it to a readable time in Python.
+    The response includes several pass over times, we’ll just look at the first one. The time is given as a Unix timestamp, you'll be able to convert it to a readable time in Python.
+    
+[[[generic-unix-timestamp]]]
 
 +  Now let's call the web service from Python. Add the following code to the end of your script:
 
@@ -50,11 +48,17 @@ Let’s find out when the ISS will next be over the Space Centre in Houston, US 
 
     ![screenshot](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle: 
++ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle:
 
     ![screenshot](images/iss-pass-write.png)
  
     (You can remove or comment out the `print` line.)
+    
++ You can change the colour and format of the text if you like. 
+
+[[[generic-python-turtle-write]]] 
+    
+
 
 
 
