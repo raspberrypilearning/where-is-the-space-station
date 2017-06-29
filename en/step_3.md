@@ -32,8 +32,10 @@ You’re going to use a web service that provides live information about space. 
     ```
 
     The data is live so you will see a different result. The format is called JSON (say Jason). 
+    
+    [[[generic-json]]]
 
-+ Let’s call the web service from Python so we can use the results.
++ You need to call the web service from Python so you can use the results.
 
     Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>. 
 
@@ -45,7 +47,7 @@ You’re going to use a web service that provides live information about space. 
     
     [[[generic-python-creating-a-variable]]]
    
-+ Now let's call the web service:
++ Now call the web service:
 
     ![screenshot](images/iss-request.png)
 
@@ -98,7 +100,7 @@ You’re going to use a web service that provides live information about space. 
 
     ![screenshot](images/iss-people-1a.png)
 
-+ You can then look up the values for ‘name’ and ‘craft’
++ You can then look up the values for ‘name’ and ‘craft’. Let's show the names of the people in space:
 
     ![screenshot](images/iss-people-2.png)
   
@@ -111,7 +113,7 @@ You’re going to use a web service that provides live information about space. 
     Timothy Peake
     ```
 
-    You are using live data so your results will depend on the number of people currently in space. 
+    __You are using live data so your results will depend on the number of people currently in space.__ 
 
 
 

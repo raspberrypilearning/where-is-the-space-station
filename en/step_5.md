@@ -60,13 +60,22 @@ Let’s use another web service to find out where the International Space Statio
     ![screenshot](images/iss-world.png) 
   
     Now the coordinates will match the latitude and longitude coordinates that we get back from the web service. 
+    
+    [[[generic-python-turtle-world-coordinates]]]
 
 + Let’s create a turtle for the ISS. 
 
-    ![screenshot](images/iss-image.png)
-
     Your project includes 'iss.png' and 'iss2.png', try them both and see which one you prefer. 
+    
+[[[generic-python-turtle-image]]]
 
+--- hints ---
+--- hint ---
+Your code should look like this:
+![screenshot](images/iss-image.png)
+--- /hint ---
+--- /hints ---
+    
 + The ISS starts off in the centre of the map, now let's move it to the correct location on the map:
 
     ![screenshot](images/iss-plot.png)

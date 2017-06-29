@@ -16,5 +16,8 @@ The space station image shows the current location of the International Space St
 
 ### What you will learn
 
-[should the curriculum graphic be added or generated automatically?]
+This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+
++ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
+
 
