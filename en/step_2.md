@@ -1,5 +1,3 @@
-
-
 ## What you will need
 
 ### Software

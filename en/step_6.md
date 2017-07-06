@@ -1,64 +1,57 @@
+# Plotting the ISS on a map
 
+It would be more useful to show the position on a map. You can do this using Python turtle graphics. 
 
-## When will the ISS be overhead?
-
-There’s also a web service that you can call to find out when the ISS will next be over a particular location. 
-
-Let’s find out when the ISS will next be over the Space Centre in Houston, US which is at latitude 29.5502 and longitude 95.097.
++ First we'll need to import the turtle graphics library. 
   
-
-+ First let’s plot a dot on the map at these coordinates:
-
-    ![screenshot](images/iss-houston.png)
-
-+ Now let’s get the date and time that the ISS is next overhead. 
-
-    As before we can call the web service by entering the url into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-  
-    You should see an error:
-
-    ![screenshot](images/iss-pass-error.png)
-
-+ This web service takes latitude and longitude as inputs so we have to include them in the url we use.
-
-    Inputs are added after a `?` and separated with `&`. 
-
-    Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-  
-    ![screenshot](images/iss-passtimes.png)
-  
-    The response includes several pass over times, we’ll just look at the first one. The time is given as a Unix timestamp, you'll be able to convert it to a readable time in Python.
+    ![screenshot](images/iss-turtle.png)
     
-[[[generic-unix-timestamp]]]
++ You'll need to use a background image for the screen. Your project contains an image called 'map.jpg'. The size of the image is 720 by 360 pixels. 
+  
++ Let’s load a world map as the background image, there’s one already included in your trinket.
 
-+  Now let's call the web service from Python. Add the following code to the end of your script:
+    ![screenshot](images/iss-map.png)
+  
+    NASA have provided this gorgeous map and given permission for reuse. 
+  
+    The map is centered at 0, 0 which is just what you need. 
 
-    ![screenshot](images/iss-passover.png)
++ You need to set the screen size to match the size of the image which is 720 by 360. 
 
-+ Now let's get the first pass over time from the result.
+    Add `screen.setup(720, 360)`:
 
-    Add the following code:
+    ![screenshot](images/iss-setup.png)
+  
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy we can set the screen to match the coordinates we are using:
 
-    ![screenshot](images/iss-print-pass.png)
+    ![screenshot](images/iss-world.png) 
+  
+    Now the coordinates will match the latitude and longitude coordinates that we get back from the web service. 
 
++ Let’s create a turtle for the ISS. 
 
-+ The time is given as a timestamp so we’ll need the Python time module so we can print it in a readable form and convert it to local time. Let’s get the turtle to write the passover time by the dot. 
-
-+ Add an `import time` line at the top of your script:
-
-    ![screenshot](images/iss-time.png)
-
-+ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle:
-
-    ![screenshot](images/iss-pass-write.png)
- 
-    (You can remove or comment out the `print` line.)
+    Your project includes 'iss.png' and 'iss2.png', try them both and see which one you prefer. 
     
-+ You can change the colour and format of the text if you like. 
+[[[generic-python-turtle-image]]]
 
-[[[generic-python-turtle-write]]] 
+--- hints ---
+--- hint ---
+Your code should look like this:
+![screenshot](images/iss-image.png)
+--- /hint ---
+--- /hints ---
     
++ The ISS starts off in the centre of the map, now let's move it to the correct location on the map:
 
+    ![screenshot](images/iss-plot.png)
+  
+    Note that latitude is normally given first, but we need to give longitude first when plotting (x,y) coordinates. 
+
++ Test your program by running it. The ISS should move to its current location above Earth. 
+
+    Wait a few seconds and run your program again to see where the ISS has moved to. 
+
+    ![screenshot](images/iss-plotted.png)
 
 
 

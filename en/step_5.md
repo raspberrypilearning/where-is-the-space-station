@@ -40,10 +40,6 @@ Let’s use another web service to find out where the International Space Statio
     First we'll need to import the turtle graphics library. 
   
     ![screenshot](images/iss-turtle.png)
-    
-+ You'll need to use a background image for the screen. 
-
-[[[generic-python-turtle-background-image]]]
   
 + Let’s load a world map as the background image, there’s one already included in your trinket.
 

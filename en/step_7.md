@@ -1,59 +1,65 @@
 
 
-## Find more passover times
+## When will the ISS be overhead?
 
---- challenge ---
+There’s also a web service that you can call to find out when the ISS will next be over a particular location. 
+
+Let’s find out when the ISS will next be over the Space Centre in Houston, US which is at latitude 29.5502 and longitude 95.097.
+  
+
++ First let’s plot a dot on the map at these coordinates:
+
+    ![screenshot](images/iss-houston.png)
+
++ Now let’s get the date and time that the ISS is next overhead. 
+
+    As before we can call the web service by entering the url into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
+  
+    You should see an error:
+
+    ![screenshot](images/iss-pass-error.png)
+
++ This web service takes latitude and longitude as inputs so we have to include them in the url we use.
+
+    Inputs are added after a `?` and separated with `&`. 
+
+    Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+  
+    ![screenshot](images/iss-passtimes.png)
+  
+    The response includes several pass over times, we’ll just look at the first one. The time is given as a Unix timestamp, you'll be able to convert it to a readable time in Python.
+    
+[[[generic-unix-timestamp]]]
+
++  Now let's call the web service from Python. Add the following code to the end of your script:
+
+    ![screenshot](images/iss-passover.png)
+
++ Now let's get the first pass over time from the result.
+
+    Add the following code:
+
+    ![screenshot](images/iss-print-pass.png)
 
 
-You can use a website such as <a href="http://www.latlong.net/" target="_blank">http://www.latlong.net/</a> to look up the latitude and longitude of locations you are interested in. 
++ The time is given as a timestamp so we’ll need the Python time module so we can print it in a readable form and convert it to local time. Let’s get the turtle to write the passover time by the dot. 
 
-Can you look up and plot the passover times for more locations? 
++ Add an `import time` line at the top of your script:
 
-![screenshot](images/iss-final.png)
+    ![screenshot](images/iss-time.png)
 
---- hints ---
---- hint ---
-At the end of your program, set the __lat__ and __long__ variables to new values and then use the __location__ turtle variable to draw a dot at the new location (you can choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this.) Finally, get the `risetime` from the response and write it with the __location__ turtle. 
---- /hint ---
---- hint ---
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code that gives the pass over time for the Space Center in Houston and then make the changes you need. 
-```python
-# Your chosen location
-lat = ??.??
-lon = ??.??
++ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle:
 
-# Draw a dot with the location turtle (no need to create a new turtle). Choose a different colour.
+    ![screenshot](images/iss-pass-write.png)
+ 
+    (You can remove or comment out the `print` line.)
+    
++ You can change the colour and format of the text if you like. 
 
-# Get the result from `iss-pass.json` for your new latitude and longitude 
+[[[generic-python-turtle-write]]] 
+    
 
-# Get the risetime from the result and use the location turtle to write it on the map
-``` 
---- /hint ---
---- hint ---
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass over time. 
 
-```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
-
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
-```
-
-Try adding more locations. 
---- /hint ---
---- /hints ---
---- /challenge ---
 
