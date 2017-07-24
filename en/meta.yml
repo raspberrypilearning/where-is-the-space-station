@@ -1,3 +1,4 @@
+---
 title: Where is the Space Station?
 hero_image: images/banner.png
 description: Plot the exact location of the ISS.
@@ -5,15 +6,16 @@ original_url: https://codeclubprojects.org/en-GB/scratch/rock-band
 theme: cc-prototype
 listed: false
 ingredient: false
-duration: 1
-interests: "space, graphics"
-technology: "python"
+duration: 2
+interests: space, graphics
+technology: python
 steps:
-  - title: "Introduction"
-  - title: "What you will need"
-  - title: "Who is in space?"
-  - title: "Challenge: Show the craft"
-  - title: "Where is the ISS?"
-  - title: "Plotting the ISS on a map"
-  - title: "When will the ISS be overhead?"
-  - title: "Challenge: Find more passover times"
+- title: Introduction
+- title: What you will need
+- title: Who is in space?
+- title: 'Challenge: Show the craft'
+- title: Where is the ISS?
+- title: Plotting the ISS on a map
+- title: When will the ISS be overhead?
+- title: 'Challenge: Find more passover times'
+
