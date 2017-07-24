@@ -10,7 +10,7 @@ In this project you will use a web service to find out the current location of t
 
 ### Additional information for club leaders
 
-If you need to print this project, please use the [Printer friendly version](https://projects.raspberry-pi.org/en/projects/where-is-the-space-station/print).
+If you need to print this project, please use the [Printer friendly version](https://projects.raspberrypi.org/en/projects/where-is-the-space-station/print).
 
 
 --- collapse ---
