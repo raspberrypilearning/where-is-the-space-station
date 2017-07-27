@@ -64,40 +64,40 @@ You’re going to use a web service that provides live information about space. 
     This is a Python dictionary with 3 keys: message, number and people. 
     
     --- collapse ---
-    ---
-    title: Using key:value pairs in Python
-    ---
-    <p>You can add and remove items from a dictionary quite easily. For instance, here is a simple dictionary.</p>
+  ---
+  title: Using key:value pairs in Python
+  ---
+<p>You can add and remove items from a dictionary quite easily. For instance, here is a simple dictionary.</p>
 
-    <div class="language-python highlighter-coderay"><div class="CodeRay">
-      <div class="code"><pre>band = {
-        <span class="string"><span class="delimiter">'</span><span class="content">john</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">rhythm guitar</span><span class="delimiter">'</span></span>,
-        <span class="string"><span class="delimiter">'</span><span class="content">paul</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">base guitar</span><span class="delimiter">'</span></span>,
-            <span class="string"><span class="delimiter">'</span><span class="content">george</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">lead guitar</span><span class="delimiter">'</span></span>,
-        <span class="string"><span class="delimiter">'</span><span class="content">ringo</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">base guitar</span><span class="delimiter">'</span></span>
-            }
-    </pre></div>
-    </div>
-    </div>
+<div class="language-python highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>band = {
+    <span class="string"><span class="delimiter">'</span><span class="content">john</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">rhythm guitar</span><span class="delimiter">'</span></span>,
+    <span class="string"><span class="delimiter">'</span><span class="content">paul</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">base guitar</span><span class="delimiter">'</span></span>,
+        <span class="string"><span class="delimiter">'</span><span class="content">george</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">lead guitar</span><span class="delimiter">'</span></span>,
+    <span class="string"><span class="delimiter">'</span><span class="content">ringo</span><span class="delimiter">'</span></span> : <span class="string"><span class="delimiter">'</span><span class="content">base guitar</span><span class="delimiter">'</span></span>
+        }
+</pre></div>
+</div>
+</div>
 
-    <p>You can do the following to add a key:value pairs to the dictionary.</p>
+<p>You can do the following to add a key:value pairs to the dictionary.</p>
 
-    <div class="language-python highlighter-coderay"><div class="CodeRay">
-      <div class="code"><pre><span class="comment">## adding key:value pairs</span>
-    band[<span class="string"><span class="delimiter">'</span><span class="content">yoko</span><span class="delimiter">'</span></span>] = <span class="string"><span class="delimiter">'</span><span class="content">vocals</span><span class="delimiter">'</span></span>
-    </pre></div>
-    </div>
-    </div>
+<div class="language-python highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="comment">## adding key:value pairs</span>
+band[<span class="string"><span class="delimiter">'</span><span class="content">yoko</span><span class="delimiter">'</span></span>] = <span class="string"><span class="delimiter">'</span><span class="content">vocals</span><span class="delimiter">'</span></span>
+</pre></div>
+</div>
+</div>
 
-    <p>If you want to remove a key:value pair you can do the following.</p>
-    <div class="language-python highlighter-coderay"><div class="CodeRay">
-      <div class="code"><pre><span class="comment">## removing key:value pairs</span>
-    <span class="keyword">del</span> band[<span class="string"><span class="delimiter">'</span><span class="content">paul</span><span class="delimiter">'</span></span>]
-    </pre></div>
-    </div>
-    </div>
+<p>If you want to remove a key:value pair you can do the following.</p>
+<div class="language-python highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="comment">## removing key:value pairs</span>
+<span class="keyword">del</span> band[<span class="string"><span class="delimiter">'</span><span class="content">paul</span><span class="delimiter">'</span></span>]
+</pre></div>
+</div>
+</div>
 
-    --- /collapse ---
+--- /collapse ---
     
     The `success` value of message tells you that the request was successful. Good. 
 
