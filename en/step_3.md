@@ -62,8 +62,6 @@ You’re going to use a web service that provides live information about space. 
     ```
 
     This is a Python dictionary with 3 keys: message, number and people. 
-    
-    [[[generic-python-key-value-pairs]]]
 
     The 'success' value of message tells you that the request was successful. Good. 
 
@@ -112,7 +110,3 @@ You’re going to use a web service that provides live information about space. 
     ```
 
     __You are using live data so your results will depend on the number of people currently in space.__ 
-
-
-
-
