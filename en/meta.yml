@@ -8,7 +8,7 @@ curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, commun
 title: Where is the Space Station?
 description: Plot the exact location of the ISS.
 original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: ''
+interests: space
 technologies: python
 site_areas: codeclub, python
 steps:
