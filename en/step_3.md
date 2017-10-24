@@ -4,7 +4,7 @@
 
 You’re going to use a web service that provides live information about space. First let’s find out who is currently in space.
 
-* A web service has an address (url) just like a web page does. Instead of returning HTML for a web page it returns data.
++ A web service has an address (url) just like a web page does. Instead of returning HTML for a web page it returns data.
 
     Open <a href="http://api.open-notify.org/astros.json" target="_blank">http://api.open-notify.org/astros.json</a> in a web browser.
 
@@ -35,22 +35,22 @@ You’re going to use a web service that provides live information about space. 
 
     [[[generic-json]]]
 
-* You need to call the web service from Python so you can use the results.
++ You need to call the web service from Python so you can use the results.
 
     Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
 
-* The `urllib.request` and `json` modules have already been imported for you.
++ The `urllib.request` and `json` modules have already been imported for you.
 
     Add the following code to `main.py` to put the web address you just used into a variable:
 
     ![screenshot](images/iss-url.png)
 
-* Now call the web service:
++ Now call the web service:
 
     ![screenshot](images/iss-request.png)
 
 
-* Next you need to load the JSON reponse into a Python data structure:
++ Next you need to load the JSON reponse into a Python data structure:
 
     ![screenshot](images/iss-result.png)
 
@@ -62,13 +62,13 @@ You’re going to use a web service that provides live information about space. 
 
     This is a Python dictionary with 3 keys: message, number and people.
 
-     [[[generic-python-key-value-pairs]]]
+    [[[generic-python-key-value-pairs]]]
 
     The `success` value of message tells you that the request was successful. Good.
 
     Note that you will see different results depending on who is currently in space!
 
-* Now let's print the information in a more readable way.
++ Now let's print the information in a more readable way.
 
     First, let's look up the number of people in space and print it:
 
@@ -76,7 +76,7 @@ You’re going to use a web service that provides live information about space. 
 
     `result['number']` will print the value associated with the key ‘number’ in the result dictionary. In the example this is `3`.
 
-* The value associated with the ‘people’ key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ The value associated with the ‘people’ key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
     ![screenshot](images/iss-people.png)
 
@@ -86,17 +86,17 @@ You’re going to use a web service that provides live information about space. 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     ```
 
-* Now you need to print out a line for each astronaut.
++ Now you need to print out a line for each astronaut.
 
     You can use a `for` loop to do this in Python.
 
     [[[generic-python-for-loop-list]]]
 
-* Each time through the loop `p` will be set to a dictionary for a different astronaut.
++ Each time through the loop `p` will be set to a dictionary for a different astronaut.
 
     ![screenshot](images/iss-people-1a.png)
 
-* You can then look up the values for ‘name’ and ‘craft’. Let's show the names of the people in space:
++ You can then look up the values for ‘name’ and ‘craft’. Let's show the names of the people in space:
 
     ![screenshot](images/iss-people-2.png)
 
