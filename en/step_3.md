@@ -54,7 +54,6 @@ You’re going to use a web service that provides live information about space. 
 
     ![screenshot](images/iss-result.png)
 
-
     You should see something like this:
 
     ```
