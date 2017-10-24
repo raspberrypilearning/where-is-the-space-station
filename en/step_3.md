@@ -80,7 +80,6 @@ You’re going to use a web service that provides live information about space. 
 
     ![screenshot](images/iss-people.png)
 
-
     You should see something like:
 
     ```
@@ -91,7 +90,7 @@ You’re going to use a web service that provides live information about space. 
 
     You can use a `for` loop to do this in Python.
 
-[[[generic-python-for-loop-list]]]
+    [[[generic-python-for-loop-list]]]
 
 + Each time through the loop `p` will be set to a dictionary for a different astronaut.
 
