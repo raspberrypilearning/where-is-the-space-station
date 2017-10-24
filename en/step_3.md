@@ -33,7 +33,7 @@ You’re going to use a web service that provides live information about space. 
 
     The data is live so you will see a different result. The format is called JSON (say Jason).
 
-    [[[generic-json]]]
+     [[[generic-json]]]
 
 + You need to call the web service from Python so you can use the results.
 
@@ -62,7 +62,7 @@ You’re going to use a web service that provides live information about space. 
 
     This is a Python dictionary with 3 keys: message, number and people.
 
-    [[[generic-python-key-value-pairs]]]
+     [[[generic-python-key-value-pairs]]]
 
     The `success` value of message tells you that the request was successful. Good.
 
