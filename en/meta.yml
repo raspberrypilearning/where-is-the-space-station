@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-hero_image: images/where-is-the-space-station.png
-=======
 title: Where is the Space Station?
 hero_image: images/banner.png
 description: Plot the exact location of the ISS.
->>>>>>> draft
 theme: blue
 duration: 2
 listed: true
@@ -19,17 +15,11 @@ technologies: python
 site_areas: codeclub, python
 steps:
 - title: Introduction
-<<<<<<< HEAD
-- title: Who is in Space?
-- title: 'Challenge: Show the Craft'
-- title: Where is the ISS?
-=======
 - title: What you will need
 - title: Who is in space?
 - title: 'Challenge: Show the craft'
 - title: Where is the ISS?
 - title: Plotting the ISS on a map
->>>>>>> draft
 - title: When will the ISS be overhead?
 - title: 'Challenge: Find more passover times'
 
