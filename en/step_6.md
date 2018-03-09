@@ -1,16 +1,3 @@
-<<<<<<< HEAD
---- challenge ---
-## Challenge: Find more passover times
-
-You can use a website such as <a href="http://www.latlong.net/" target="_blank">http://www.latlong.net/</a> to look up the latitude and longitude of locations you are interested in. 
-
-Can you look up and plot the passover times for more locations? 
-
-+ You’ll need to change the latitude and longitude inputs to the web service. 
-+ You'll need to plot the location and result on the map. 
-
-![screenshot](images/iss-final.png)
-=======
 ## Plotting the ISS on a map
 
 It would be more useful to show the position on a map. You can do this using Python turtle graphics. 
@@ -65,12 +52,4 @@ Your code should look like this:
     Wait a few seconds and run your program again to see where the ISS has moved to. 
 
     ![screenshot](images/iss-plotted.png)
->>>>>>> draft
 
-
-
-
-<<<<<<< HEAD
---- /challenge ---
-=======
->>>>>>> draft
