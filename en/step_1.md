@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 ## Introduction
 
 In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map. 
+=======
+
+
+## Introduction
+
+In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+
+### Instructions
+
+The space station image shows the current location of the International Space Station. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+>>>>>>> draft
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -8,6 +20,7 @@ In this project you will use a web service to find out the current location of t
   <img src="images/iss-final.png">
 </div>
 
+<<<<<<< HEAD
 ### Additional information for club leaders
 
 If you need to print this project, please use the [Printer friendly version](https://projects.raspberrypi.org/en/projects/where-is-the-space-station/print).
@@ -56,11 +69,15 @@ You can also find a completed version of this project's challenges in the 'Volun
 ## Learning Objectives
 + Using web services to get live data;
 + Consolidation: using Python data structures and turtle graphics. 
+=======
+### What you will learn
+>>>>>>> draft
 
 This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
 + [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
 
+<<<<<<< HEAD
 ## Challenges
 + Show the Craft - Reading data from a returned data structure;
 + Find more passover times - Passing inputs to a web service;
@@ -96,3 +113,6 @@ title: Project materials
 * [iss-finished/iss2.gif](resources/iss-finished-iss2.gif)
 
 --- /collapse ---
+=======
+
+>>>>>>> draft

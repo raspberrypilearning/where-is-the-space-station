@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
+
 ## When will the ISS be overhead?
 
 There’s also a web service that you can call to find out when the ISS will next be over a particular location. 
 
 Let’s find out when the ISS will next be over the Space Centre in Houston, US which is at latitude 29.5502 and longitude 95.097.
   
- 
 
 + First let’s plot a dot on the map at these coordinates:
 
@@ -27,7 +27,9 @@ Let’s find out when the ISS will next be over the Space Centre in Houston, US 
   
     ![screenshot](images/iss-passtimes.png)
   
-    The response includes several pass over times, we’ll just look at the first one. The time is given in a standard time format, you'll be able to convert it to a readable time in Python.
+    The response includes several pass over times, we’ll just look at the first one. The time is given as a Unix timestamp, you'll be able to convert it to a readable time in Python.
+    
+[[[generic-unix-timestamp]]]
 
 +  Now let's call the web service from Python. Add the following code to the end of your script:
 
@@ -46,49 +48,18 @@ Let’s find out when the ISS will next be over the Space Centre in Houston, US 
 
     ![screenshot](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle: 
++ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle:
 
     ![screenshot](images/iss-pass-write.png)
  
     (You can remove or comment out the `print` line.)
+    
++ You can change the colour and format of the text if you like. 
+
+[[[generic-python-turtle-write]]] 
+    
 
 
-=======
 
 
-## Where is the ISS?
-
-The International Space Station is in orbit around Earth. It orbits the earth roughly every hour and a half. The ISS travels at an average speed of 7.66 km per second. It’s fast! 
-
-Let’s use another web service to find out where the International Space Station is. 
-
-+ First open the url for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
-  
-    You should see something like this:
-  
-    ```
-    {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
-    }
-    ```
-  
-    The result contains the coordinates of the spot on Earth that the ISS is currently over. 
-
-[[[generic-theory-lat-long]]]
-
-
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
-
-    ![screenshot](images/iss-location.png)
-
-
-+ Let’s create variables to store the latitude and longitude, and then print them:
-
-    ![screenshot](images/iss-coordinates.png)
->>>>>>> draft
 
