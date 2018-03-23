@@ -1,10 +1,10 @@
-## Introduction
+## Invoering
 
-In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+In dit project maakt u gebruik van een webservice om de huidige locatie van het International Space Station (ISS) te achterhalen en de locatie ervan op een kaart uit te zetten.
 
 ### Instructions
 
-The space station image shows the current location of the International Space Station. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+De afbeelding van het ruimtestation toont de huidige locatie van het internationale ruimtestation. De gele tekst geeft aan wanneer het ISS vervolgens het Space Center in Houston, VS zal passeren.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@ The space station image shows the current location of the International Space St
   <img src="images/iss-final.png">
 </div>
 
-### What you will learn
+### Wat je zult leren
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+Dit project behandelt elementen uit de volgende onderdelen van het [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Combineer programmeerconstructies om een ​​probleem op te lossen.](https://www.raspberrypi.org/curriculum/programming/builder)
