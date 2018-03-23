@@ -1,26 +1,22 @@
-## Show the Craft
+## Pokaż Craft
 
-\--- challenge \---
+\--- wyzwanie \---
 
-As well as the name of the astronaut the web service also provides the craft that they are in (such as the ISS.)
+Oprócz nazwy astronautki serwis internetowy zapewnia również rzemiosło, w którym się znajduje (np. ISS).
 
-Can you add to your script so that it also prints out the craft that the astronaut is in?
+Czy możesz dodać do swojego skryptu, aby wydrukował również statek, w którym znajduje się astronauta?
 
-Example:
+Przykład:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Ludzie w kosmosie: 3 Yuri Malenchenko w ISS Timothy Kopra w ISS Timothy Peake w ISS
     
 
-\--- hints \--- \--- hint \--- You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas. \--- /hint \--- \--- hint \--- You get the value for the name using `p[name]`, how can you get the value for the `craft`? \--- /hint \--- \--- hint \--- Change your `for` loop so it looks like this:
+\--- wskazówki \--- \--- podpowiedź \--- Musisz dodać kod do polecenia print w `dla p w ludziach:`. Pamiętaj, że możesz drukować wiele przedmiotów, oddzielając je przecinkami. \--- / wskazówka \--- \--- podpowiedź \--- Otrzymujesz wartość nazwy używając `p[name]`, w jaki sposób możesz uzyskać wartość dla `jednostki`? \--- / wskazówka \--- \--- podpowiedź \--- Zmień swoją `dla pętli` , więc wygląda to tak:
 
 ```python
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+dla p w ludziach: print (p ['name'], 'in', p ['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- / wskazówka \--- \--- / wskazówki \---
 
-\--- /challenge \---
+\--- / wyzwanie \---
