@@ -1,32 +1,32 @@
 ---
-title: Where is the Space Station?
-hero_image: images/banner.png
-description: Plot the exact location of the ISS.
-theme: blue
+title: Waar is het ruimtestation?
+hero_image: images / banner.png
+description: Zet de exacte locatie van het ISS uit.
+theme: blauw
 duration: 2
 listed: true
 ingredient: false
 copyedit: false
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+curriculum: maker, ontwerp-0, programmeren-0, phys-comp-0, productie-0, community-0
 original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
+interests: ruimte
+technologies: Python
 site_areas: codeclub, python
 steps:
   - 
-    title: Introduction
+    title: Invoering
   - 
-    title: What you will need
+    title: Wat je nodig zult hebben
   - 
-    title: Who is in space?
+    title: Wie zit er in de ruimte?
   - 
-    title: 'Challenge: Show the craft'
+    title: 'Uitdaging: Laat het ambacht zien'
   - 
-    title: Where is the ISS?
+    title: Waar is het ISS?
   - 
-    title: Plotting the ISS on a map
+    title: Het ISS op een kaart uitzetten
   - 
-    title: When will the ISS be overhead?
+    title: Wanneer zal het ISS overhead zijn?
   - 
-    title: 'Challenge: Find more passover times'
+    title: 'Uitdaging: vind meer paasuurtjes'
 
