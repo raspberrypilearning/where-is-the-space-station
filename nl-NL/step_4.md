@@ -1,26 +1,22 @@
-## Show the Craft
+## Laat de Craft zien
 
-\--- challenge \---
+\--- uitdaging \---
 
-As well as the name of the astronaut the web service also provides the craft that they are in (such as the ISS.)
+Naast de naam van de astronaut biedt de webservice ook het vaartuig waarin ze zich bevinden (zoals het ISS.)
 
-Can you add to your script so that it also prints out the craft that the astronaut is in?
+Kun je aan je script toevoegen zodat het ook het vak afdrukt waarin de astronaut zich bevindt?
 
-Example:
+Voorbeeld:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Mensen in de ruimte: 3 Yuri Malenchenko in ISS Timothy Kopra in ISS Timothy Peake in ISS
     
 
-\--- hints \--- \--- hint \--- You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas. \--- /hint \--- \--- hint \--- You get the value for the name using `p[name]`, how can you get the value for the `craft`? \--- /hint \--- \--- hint \--- Change your `for` loop so it looks like this:
+\--- hints \--- \--- hint \--- Je moet code toevoegen aan de printinstructie in `voor p bij mensen:`. Vergeet niet dat je meerdere items kunt afdrukken door ze te scheiden met komma's. \--- / hint \--- \--- hint \--- Je krijgt de waarde voor de naam met `p[name]`, hoe kun je de waarde voor `ambacht` krijgen? \--- / hint \--- \--- hint \--- Wijzig je `voor` lus zodat het er zo uitziet:
 
 ```python
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+voor p in people: print (p ['naam'], 'in', p ['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- / hint \--- \--- / hints \---
 
-\--- /challenge \---
+\--- / uitdaging \---
