@@ -1,55 +1,55 @@
-## When will the ISS be overhead?
+## Kiedy ISS będzie nad głową?
 
-There’s also a web service that you can call to find out when the ISS will next be over a particular location.
+Istnieje również usługa sieciowa, z której możesz zadzwonić, aby dowiedzieć się, kiedy usługa ISS będzie nad danym miejscem.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, US which is at latitude 29.5502 and longitude 95.097.
+Przekonajmy się, kiedy ISS będzie następny nad Space Center w Houston, USA, który jest na szerokości 29.5502 i długości 95.097.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Najpierw narysuj kropkę na mapie o tych współrzędnych:
     
-    ![screenshot](images/iss-houston.png)
+    ![zrzut ekranu](images/iss-houston.png)
 
-+ Now let’s get the date and time that the ISS is next overhead.
++ Teraz pobierzmy datę i godzinę, kiedy ISS będzie następnym razem.
     
-    As before we can call the web service by entering the url into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
+    Tak jak poprzednio możemy zadzwonić do usługi internetowej, wpisując adres URL w pasku adresu przeglądarki internetowej: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
     
-    You should see an error:
+    Powinien pojawić się błąd:
     
-    ![screenshot](images/iss-pass-error.png)
+    ![zrzut ekranu](images/iss-pass-error.png)
 
-+ This web service takes latitude and longitude as inputs so we have to include them in the url we use.
++ Ta usługa internetowa przyjmuje szerokość i długość geograficzną jako dane wejściowe, więc musimy uwzględnić je w adresie URL, którego używamy.
     
-    Inputs are added after a `?` and separated with `&`.
+    Dane wejściowe są dodawane po `?` i oddzielone `&`.
     
     Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
     
-    ![screenshot](images/iss-passtimes.png)
+    ![zrzut ekranu](images/iss-passtimes.png)
     
-    The response includes several pass over times, we’ll just look at the first one. The time is given as a Unix timestamp, you'll be able to convert it to a readable time in Python.
+    Odpowiedź zawiera kilka czasów przejściowych, po prostu przyjrzymy się pierwszemu. Czas jest podany jako uniksowy znacznik czasu, możesz go przekonwertować na czas czytelny w Pythonie.
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Teraz zadzwońmy do usługi internetowej z Pythona. Dodaj następujący kod na końcu skryptu:
     
-    ![screenshot](images/iss-passover.png)
+    ![zrzut ekranu](images/iss-passover.png)
 
-+ Now let's get the first pass over time from the result.
++ Teraz otrzymamy pierwsze przejście w czasie z wyniku.
     
-    Add the following code:
+    Dodaj następujący kod:
     
-    ![screenshot](images/iss-print-pass.png)
+    ![zrzut ekranu](images/iss-print-pass.png)
 
-+ The time is given as a timestamp so we’ll need the Python time module so we can print it in a readable form and convert it to local time. Let’s get the turtle to write the passover time by the dot.
++ Czas jest podany jako znacznik czasu, więc potrzebujemy modułu czasu Pythona, abyśmy mogli wydrukować go w czytelnej formie i przekonwertować go na czas lokalny. Poprowadźmy żółwia, by zapisał czas paschy za pomocą kropki.
 
 + Add an `import time` line at the top of your script:
     
-    ![screenshot](images/iss-time.png)
+    ![zrzut ekranu](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time to a readable form that you can write with the turtle:
++ Funkcja `time.ctime ()` zamieni ten czas na czytelny formularz, który można zapisać za pomocą żółwia:
     
-    ![screenshot](images/iss-pass-write.png)
+    ![zrzut ekranu](images/iss-pass-write.png)
     
-    (You can remove or comment out the `print` line.)
+    (Możesz usunąć lub zakomunikować linię `druk`).
 
-+ You can change the colour and format of the text if you like.
++ Możesz zmienić kolor i format tekstu, jeśli chcesz.
 
 [[[generic-python-turtle-write]]]
