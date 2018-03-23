@@ -1,105 +1,85 @@
-## Who is in Space?
+## Wie zit er in de ruimte?
 
-You’re going to use a web service that provides live information about space. First let’s find out who is currently in space.
+U gaat een webservice gebruiken die live informatie biedt over de ruimte. Laten we eerst eens kijken wie er momenteel in de ruimte is.
 
-+ A web service has an address (url) just like a web page does. Instead of returning HTML for a web page it returns data.
++ Een webservice heeft een adres (url), net zoals een webpagina dat doet. In plaats van HTML voor een webpagina te retourneren, retourneert het gegevens.
     
-    Open <a href="http://api.open-notify.org/astros.json" target="_blank">http://api.open-notify.org/astros.json</a> in a web browser.
+    Open <a href="http://api.open-notify.org/astros.json" target="_blank">http://api.open-notify.org/astros.json</a> in een webbrowser.
     
-    You should see something like this:
+    Je zou zoiets als dit moeten zien:
     
-        {
-          "message": "success",
-          "number": 3,
-          "people": [
-            {
-              "craft": "ISS",
-              "name": "Yuri Malenchenko"
-            },
-            {
-              "craft": "ISS",
-              "name": "Timothy Kopra"
-            },
-            {
-              "craft": "ISS",
-              "name": "Timothy Peake"
-            }
-          ]
-        }
+        {"message": "success", "number": 3, "people": [{"craft": "ISS", "name": "Yuri Malenchenko"}, {"craft": "ISS", "name ":" Timothy Kopra "}, {" craft ":" ISS "," name ":" Timothy Peake "}]}
         
     
-    The data is live so you will see a different result. The format is called JSON (say Jason).
+    De gegevens zijn live, dus u ziet een ander resultaat. Het formaat wordt JSON genoemd (zeg Jason).
     
     [[[generic-json]]]
 
-+ You need to call the web service from Python so you can use the results.
++ U moet de webservice van Python bellen zodat u de resultaten kunt gebruiken.
     
-    Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
+    Open deze trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
 
-+ The `urllib.request` and `json` modules have already been imported for you.
++ De `urllib.request` en `json` modules zijn al voor u geïmporteerd.
     
-    Add the following code to `main.py` to put the web address you just used into a variable:
+    Voeg de volgende code toe aan `main.py` om het webadres dat u zojuist hebt gebruikt in een variabele te plaatsen:
     
     ![screenshot](images/iss-url.png)
 
-+ Now call the web service:
++ Bel nu de webservice:
     
     ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON reponse into a Python data structure:
++ Vervolgens moet u de JSON-respons in een Python-gegevensstructuur laden:
     
     ![screenshot](images/iss-result.png)
     
-    You should see something like this:
+    Je zou zoiets als dit moeten zien:
     
         {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
         
     
-    This is a Python dictionary with 3 keys: message, number and people.
+    Dit is een Python-woordenboek met 3 sleutels: bericht, nummer en mensen.
     
     [[[generic-python-key-value-pairs]]]
     
-    The `success` value of message tells you that the request was successful. Good.
+    De `succes` waarde van bericht vertelt u dat het verzoek succesvol was. Goed.
     
-    Note that you will see different results depending on who is currently in space!
+    Merk op dat u verschillende resultaten zult zien, afhankelijk van wie er momenteel in de ruimte is!
 
-+ Now let's print the information in a more readable way.
++ Laten we de informatie nu op een meer leesbare manier afdrukken.
     
-    First, let's look up the number of people in space and print it:
+    Laten we eerst het aantal mensen in de ruimte opzoeken en het afdrukken:
     
     ![screenshot](images/iss-number.png)
     
-    `result['number']` will print the value associated with the key ‘number’ in the result dictionary. In the example this is `3`.
+    `resultaat ['nummer']` drukt de waarde af die is gekoppeld aan de sleutel 'nummer' in het resultaatwoordenboek. In het voorbeeld is dit `3`.
 
-+ The value associated with the ‘people’ key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ De waarde die is gekoppeld aan de sleutel 'people' is een lijst met woordenboeken! Laten we die waarde in een variabele plaatsen, zodat je hem kunt gebruiken:
     
     ![screenshot](images/iss-people.png)
     
-    You should see something like:
+    Je zou zoiets als moeten zien:
     
         [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
         
 
-+ Now you need to print out a line for each astronaut.
++ Nu moet u voor elke astronaut een lijn afdrukken.
     
-    You can use a `for` loop to do this in Python.
+    Je kunt een `voor` -lus gebruiken om dit in Python te doen.
     
     [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop `p` will be set to a dictionary for a different astronaut.
++ Elke keer dat door de lus `p` wordt ingesteld op een woordenboek voor een andere astronaut.
     
     ![screenshot](images/iss-people-1a.png)
 
-+ You can then look up the values for ‘name’ and ‘craft’. Let's show the names of the people in space:
++ U kunt dan de waarden opzoeken voor 'naam' en 'ambacht'. Laten we de namen van de mensen in de ruimte tonen:
     
     ![screenshot](images/iss-people-2.png)
     
-    You should see something like:
+    Je zou zoiets als moeten zien:
     
-        People in Space:  3
-        Yuri Malenchenko
-        Timothy Kopra
-        Timothy Peake
+        Mensen in de ruimte: 3 Yuri Malenchenko Timothy Kopra Timothy Peake
         
     
-    **You are using live data so your results will depend on the number of people currently in space.**
+    **U gebruikt live gegevens, zodat uw resultaten afhankelijk zijn van het aantal mensen dat zich momenteel in de ruimte bevindt.**
