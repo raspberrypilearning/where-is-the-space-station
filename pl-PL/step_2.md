@@ -1,11 +1,11 @@
-## What you will need
+## Co będzie potrzebne
 
-### Software
+### Oprogramowanie
 
-+ Trinket online editor
++ Edytor internetowy Trinket
 
-### Additional Resources
+### Dodatkowe zasoby
 
-+ Starter project: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>
++ Projekt początkowy: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>
 
-+ Open Notify web services: <a href="http://api.open-notify.org/" target="_blank">http://api.open-notify.org/</a>
++ Otwórz usługi internetowe powiadomień: <a href="http://api.open-notify.org/" target="_blank">http://api.open-notify.org/</a>
