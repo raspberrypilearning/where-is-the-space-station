@@ -1,32 +1,32 @@
 ---
-title: Where is the Space Station?
-hero_image: images/banner.png
-description: Plot the exact location of the ISS.
-theme: blue
+title: Gdzie jest Stacja Kosmiczna?
+hero_image: images / banner.png
+description: Narysuj dokładną lokalizację ISS.
+theme: niebieski
 duration: 2
 listed: true
 ingredient: false
 copyedit: false
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+curriculum: twórca, design-0, programowanie-0, phys-comp-0, production-0, community-0
 original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
+interests: przestrzeń
+technologies: pyton
 site_areas: codeclub, python
 steps:
   - 
-    title: Introduction
+    title: Wprowadzenie
   - 
-    title: What you will need
+    title: Co będzie potrzebne
   - 
-    title: Who is in space?
+    title: Kto jest w kosmosie?
   - 
-    title: 'Challenge: Show the craft'
+    title: 'Wyzwanie: Pokaż statek'
   - 
-    title: Where is the ISS?
+    title: Gdzie jest ISS?
   - 
-    title: Plotting the ISS on a map
+    title: Drukowanie ISS na mapie
   - 
-    title: When will the ISS be overhead?
+    title: Kiedy ISS będzie nad głową?
   - 
-    title: 'Challenge: Find more passover times'
+    title: 'Wyzwanie: Znajdź więcej czasu paschalnego'
 
