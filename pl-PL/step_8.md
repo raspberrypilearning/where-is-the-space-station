@@ -1,47 +1,28 @@
-## Find more passover times
+## Znajdź więcej czasu paschalnego
 
-\--- challenge \---
+\--- wyzwanie \---
 
-You can use a website such as <a href="http://www.latlong.net/" target="_blank">http://www.latlong.net/</a> to look up the latitude and longitude of locations you are interested in.
+Możesz skorzystać z witryny internetowej, takiej jak <a href="http://www.latlong.net/" target="_blank">http://www.latlong.net/</a> , aby sprawdzić szerokość i długość geograficzną lokalizacji, które Cię interesują.
 
-Can you look up and plot the passover times for more locations?
+Czy możesz wyszukać i zaplanować czas paschy dla większej liczby lokalizacji?
 
-![screenshot](images/iss-final.png)
+![zrzut ekranu](images/iss-final.png)
 
-\--- hints \--- \--- hint \--- At the end of your program, set the **lat** and **long** variables to new values and then use the **location** turtle variable to draw a dot at the new location (you can choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this.) Finally, get the `risetime` from the response and write it with the **location** turtle. \--- /hint \--- \--- hint \--- Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code that gives the pass over time for the Space Center in Houston and then make the changes you need.
-
-```python
-# Your chosen location
-lat = ??.??
-lon = ??.??
-
-# Draw a dot with the location turtle (no need to create a new turtle). Choose a different colour.
-
-# Get the result from `iss-pass.json` for your new latitude and longitude 
-
-# Get the risetime from the result and use the location turtle to write it on the map
-```
-
-\--- /hint \--- \--- hint \--- Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass over time.
+\--- wskazówki \--- \--- podpowiedź \--- Na końcu programu ustaw zmienne **lat** i **długie** na nowe wartości, a następnie użyj zmiennej żółwia **lokalizacja** , aby narysować kropkę w nowym lokalizacja (możesz wybrać inny kolor, jeśli chcesz.) Następnie wywołaj usługę WWW `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Wreszcie, otrzymaj `wzrost czasu` z odpowiedzi i napisz to z żółwiem **lokalizacja**. \--- / wskazówka \--- \--- podpowiedź \--- Dodaj ten kod do końca programu i uzupełnij brakujące części. Zauważ, że możesz skopiować i wkleić kod, który daje przepustkę w czasie w Space Center w Houston, a następnie wprowadzić potrzebne zmiany.
 
 ```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
+# Twoja wybrana lokalizacja lat = ??. ??
+lon = ??. ??
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+# Narysuj kropkę z żółwiem lokalizacji (nie ma potrzeby tworzenia nowego żółwia). Wybierz inny kolor.
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
-
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+# Uzyskaj wynik z `iss-pass.json` dla swojej nowej szerokości i długości geograficznej # Uzyskaj wzrost z wyniku i użyj żółwia lokalizacji, aby zapisać go na mapie
 ```
 
-Try adding more locations. \--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- / wskazówka \--- \--- podpowiedź \--- Oto przykład wykorzystujący lokalizację kosmodromu Bajkonur, portu kosmicznego w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po wykreśleniu przejazdu z Houston Space Center w czasie.
+
+```python
+# Bajkonur Kosmodrom lat = 45,86 lon = 63.31 lokalizacji.penup () location.color ('pomarańczowa') location.goto (lon, lat) location.dot (5) location.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) response = urllib.request.urlopen (url) result = json.loads (response.read ()) #print (result) over = result ['response'][1]['risetime'] location.write (time.ctime (over))
+```
+
+Spróbuj dodać więcej lokalizacji. \--- / wskazówka \--- \--- / wskazówki \--- \--- / wyzwanie \---
