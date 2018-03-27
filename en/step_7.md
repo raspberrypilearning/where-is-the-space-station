@@ -32,7 +32,7 @@ The response includes several pass-over times, and we’ll just look at the firs
 
 ![screenshot](images/iss-passover.png)
 
-+ Now let's get the first pass over time from the result. Add the following code:
++ Now let's get the first pass-over time from the result. Add the following code:
 
 ![screenshot](images/iss-print-pass.png)
 
