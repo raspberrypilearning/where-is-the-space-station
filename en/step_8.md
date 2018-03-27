@@ -1,6 +1,4 @@
-
-
-## Find more passover times
+## Find more pass-over times
 
 --- challenge ---
 
