@@ -59,11 +59,9 @@ The `urllib.request` and `json` modules have already been imported for you at th
 
     This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
-    [[[generic-python-key-value-pairs]]]
+[[[generic-python-key-value-pairs]]]
 
-    The `success` value of `message` tells you that the request was successful. Good!
-
-    Note that you will see different results depending on who is currently in space.
+The `success` value of `message` tells you that the request was successful. Good! Note that you will see different results depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
@@ -85,7 +83,7 @@ Now let's print the information in a more readable way.
 
 + Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
-    [[[generic-python-for-loop-list]]]
+[[[generic-python-for-loop-list]]]
 
 + Each time through the loop `p` will be set to a dictionary for a different astronaut.
 
