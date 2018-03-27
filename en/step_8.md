@@ -20,8 +20,8 @@ Add this code to the end of your program and fill in the missing parts. Note tha
 
 ```python
 # Your chosen location
-lat = ??.??
-lon = ??.??
+lat = XX.XX
+lon = XX.XX
 
 # Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
 
