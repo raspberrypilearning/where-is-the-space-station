@@ -61,7 +61,7 @@ This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-The `success` value of `message` tells you that the request was successful. Good! Note that you will see different results depending on who is currently in space.
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
