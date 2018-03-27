@@ -46,14 +46,8 @@ We’ll need the Python `time` module so we can print it in a readable form and 
 
 ![screenshot](images/iss-pass-write.png)
  
-(You can remove or comment out (using `#`) the `print` line.)
+(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
     
-+ You can change the colour and format of the text if you like. 
++ If you like, you can change the colour and format of the text. 
 
 [[[generic-python-turtle-write]]] 
-    
-
-
-
-
-
