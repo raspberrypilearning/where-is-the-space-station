@@ -31,7 +31,7 @@ A web service has an address (URL) just like a website does. Instead of returnin
 
     The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
-    [[[generic-json]]]
+[[[generic-json]]]
 
 You need to call the web service from a Python script, so you can use the results.
 
