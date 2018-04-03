@@ -1,28 +1,41 @@
-## Znajdź więcej czasu paschalnego
+## Challenge: find more pass-over times
 
 \--- wyzwanie \---
 
-Możesz skorzystać z witryny internetowej, takiej jak <a href="http://www.latlong.net/" target="_blank">http://www.latlong.net/</a> , aby sprawdzić szerokość i długość geograficzną lokalizacji, które Cię interesują.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
 
-Czy możesz wyszukać i zaplanować czas paschy dla większej liczby lokalizacji?
++ Can you look up and plot the pass-over times for more locations? 
 
-![zrzut ekranu](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
-\--- wskazówki \--- \--- podpowiedź \--- Na końcu programu ustaw zmienne **lat** i **długie** na nowe wartości, a następnie użyj zmiennej żółwia **lokalizacja** , aby narysować kropkę w nowym lokalizacja (możesz wybrać inny kolor, jeśli chcesz.) Następnie wywołaj usługę WWW `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Wreszcie, otrzymaj `wzrost czasu` z odpowiedzi i napisz to z żółwiem **lokalizacja**. \--- / wskazówka \--- \--- podpowiedź \--- Dodaj ten kod do końca programu i uzupełnij brakujące części. Zauważ, że możesz skopiować i wkleić kod, który daje przepustkę w czasie w Space Center w Houston, a następnie wprowadzić potrzebne zmiany.
+\--- hints \--- \--- hint \---
+
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+
+\--- /hint \--- \--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
-# Twoja wybrana lokalizacja lat = ??. ??
-lon = ??. ??
+# Your chosen location
+lat = XX.XX
+lon = XX.XX
 
-# Narysuj kropkę z żółwiem lokalizacji (nie ma potrzeby tworzenia nowego żółwia). Wybierz inny kolor.
+# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
 
-# Uzyskaj wynik z `iss-pass.json` dla swojej nowej szerokości i długości geograficznej # Uzyskaj wzrost z wyniku i użyj żółwia lokalizacji, aby zapisać go na mapie
+# Get the result from `iss-pass.json` for your new latitude and longitude
+
+# Get the `risetime` from the result and use the `location` turtle to write it on the map
 ```
 
-\--- / wskazówka \--- \--- podpowiedź \--- Oto przykład wykorzystujący lokalizację kosmodromu Bajkonur, portu kosmicznego w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po wykreśleniu przejazdu z Houston Space Center w czasie.
+\--- /hint \--- \--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Bajkonur Kosmodrom lat = 45,86 lon = 63.31 lokalizacji.penup () location.color ('pomarańczowa') location.goto (lon, lat) location.dot (5) location.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) response = urllib.request.urlopen (url) result = json.loads (response.read ()) #print (result) over = result ['response'][1]['risetime'] location.write (time.ctime (over))
 ```
 
-Spróbuj dodać więcej lokalizacji. \--- / wskazówka \--- \--- / wskazówki \--- \--- / wyzwanie \---
+Try adding more locations!
+
+\--- /hint \--- \--- /hints \--- \--- /challenge \---
