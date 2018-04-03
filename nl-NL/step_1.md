@@ -4,7 +4,7 @@ In dit project maakt u gebruik van een webservice om de huidige locatie van het 
 
 ### Instructions
 
-De afbeelding van het ruimtestation toont de huidige locatie van het internationale ruimtestation. De gele tekst geeft aan wanneer het ISS vervolgens het Space Center in Houston, VS zal passeren.
+The space station icon shows the current location of the ISS. De gele tekst geeft aan wanneer het ISS vervolgens het Space Center in Houston, VS zal passeren.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
