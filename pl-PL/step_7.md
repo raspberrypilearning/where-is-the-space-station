@@ -1,55 +1,51 @@
 ## Kiedy ISS będzie nad głową?
 
-Istnieje również usługa sieciowa, z której możesz zadzwonić, aby dowiedzieć się, kiedy usługa ISS będzie nad danym miejscem.
+There’s also a web service that you can use to find out when the ISS will next be over a particular location.
 
-Przekonajmy się, kiedy ISS będzie następny nad Space Center w Houston, USA, który jest na szerokości 29.5502 i długości 95.097.
+Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
 
-+ Najpierw narysuj kropkę na mapie o tych współrzędnych:
-    
-    ![zrzut ekranu](images/iss-houston.png)
++ First let’s plot a dot on the map at these coordinates:
 
-+ Teraz pobierzmy datę i godzinę, kiedy ISS będzie następnym razem.
-    
-    Tak jak poprzednio możemy zadzwonić do usługi internetowej, wpisując adres URL w pasku adresu przeglądarki internetowej: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-    
-    Powinien pojawić się błąd:
-    
-    ![zrzut ekranu](images/iss-pass-error.png)
+![screenshot](images/iss-houston.png)
 
-+ Ta usługa internetowa przyjmuje szerokość i długość geograficzną jako dane wejściowe, więc musimy uwzględnić je w adresie URL, którego używamy.
-    
-    Dane wejściowe są dodawane po `?` i oddzielone `&`.
-    
-    Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-    
-    ![zrzut ekranu](images/iss-passtimes.png)
-    
-    Odpowiedź zawiera kilka czasów przejściowych, po prostu przyjrzymy się pierwszemu. Czas jest podany jako uniksowy znacznik czasu, możesz go przekonwertować na czas czytelny w Pythonie.
+Now let’s get the date and time that the ISS is next overhead.
+
++ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+
+You should see an error:
+
+![screenshot](images/iss-pass-error.png)
+
+This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+
++ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+
+![screenshot](images/iss-passtimes.png)
+
+The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
 
 [[[generic-unix-timestamp]]]
 
-+ Teraz zadzwońmy do usługi internetowej z Pythona. Dodaj następujący kod na końcu skryptu:
-    
-    ![zrzut ekranu](images/iss-passover.png)
++ Now let's call the web service from Python. Add the following code to the end of your script:
 
-+ Teraz otrzymamy pierwsze przejście w czasie z wyniku.
-    
-    Dodaj następujący kod:
-    
-    ![zrzut ekranu](images/iss-print-pass.png)
+![screenshot](images/iss-passover.png)
 
-+ Czas jest podany jako znacznik czasu, więc potrzebujemy modułu czasu Pythona, abyśmy mogli wydrukować go w czytelnej formie i przekonwertować go na czas lokalny. Poprowadźmy żółwia, by zapisał czas paschy za pomocą kropki.
++ Now let's get the first pass-over time from the result. Add the following code:
+
+![screenshot](images/iss-print-pass.png)
+
+We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
 
 + Add an `import time` line at the top of your script:
-    
-    ![zrzut ekranu](images/iss-time.png)
 
-+ Funkcja `time.ctime ()` zamieni ten czas na czytelny formularz, który można zapisać za pomocą żółwia:
-    
-    ![zrzut ekranu](images/iss-pass-write.png)
-    
-    (Możesz usunąć lub zakomunikować linię `druk`).
+![screenshot](images/iss-time.png)
 
-+ Możesz zmienić kolor i format tekstu, jeśli chcesz.
++ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
+
+![screenshot](images/iss-pass-write.png)
+
+(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+
++ If you like, you can change the colour and format of the text. 
 
 [[[generic-python-turtle-write]]]
