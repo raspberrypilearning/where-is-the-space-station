@@ -4,7 +4,7 @@ W tym projekcie użyjesz usługi internetowej, aby znaleźć aktualną lokalizac
 
 ### Instrukcje
 
-Obraz stacji kosmicznej pokazuje aktualną lokalizację Międzynarodowej Stacji Kosmicznej. Żółty tekst pokazuje, kiedy ISS przejdzie następnie przez Space Center w Houston w USA.
+The space station icon shows the current location of the ISS. Żółty tekst pokazuje, kiedy ISS przejdzie następnie przez Space Center w Houston w USA.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
