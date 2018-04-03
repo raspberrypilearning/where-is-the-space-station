@@ -1,49 +1,47 @@
 ## Het ISS op een kaart uitzetten
 
-Het zou handiger zijn om de positie op een kaart te tonen. U kunt dit doen met afbeeldingen van Python-schildpadden.
+It would be useful to show the position on a map. You can do this using Python Turtle graphics!
 
-+ Eerst moeten we de schildpadgrafiekbibliotheek importeren.
-    
-    ![screenshot](images/iss-turtle.png)
++ First we'll need to import the `turtle` Python library:
 
-+ U moet een achtergrondafbeelding voor het scherm gebruiken. Uw project bevat een afbeelding genaamd 'map.jpg'. De afmeting van de afbeelding is 720 bij 360 pixels.
+![screenshot](images/iss-turtle.png)
 
-+ Laten we een wereldkaart laden als achtergrondafbeelding, er is er al één in je trinket.
-    
-    ![screenshot](images/iss-map.png)
-    
-    NASA heeft deze prachtige kaart geleverd en toestemming gegeven voor hergebruik.
-    
-    De kaart is gecentreerd op 0, 0 wat precies is wat je nodig hebt.
++ Next, load a world map as the background image. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
 
-+ U moet de schermgrootte instellen op de grootte van de afbeelding die 720 bij 360 is.
-    
-    Voeg `screen.setup (720, 360)` toe:
-    
-    ![screenshot](images/iss-setup.png)
+![screenshot](images/iss-map.png)
 
-+ Je wilt de schildpad naar een bepaalde lengte- en breedtegraad kunnen sturen. Om dit gemakkelijk te maken, kunnen we het scherm instellen op basis van de coördinaten die we gebruiken:
-    
-    ![screenshot](images/iss-world.png)
-    
-    Nu komen de coördinaten overeen met de breedte- en lengtegraadcoördinaten die we terug krijgen van de webservice.
+The map is centered at `(0,0)` latitude and longitude, which is just what you need.
 
-+ Laten we een schildpad maken voor het ISS.
-    
-    Je project bevat 'iss.png' en 'iss2.png', probeer ze allebei en kijk welke je het beste verkiest.
++ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
+
+![screenshot](images/iss-setup.png)
+
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
+
+![screenshot](images/iss-world.png)
+
+Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+
++ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
-\--- hints \--- \--- hint \--- Uw code zou er als volgt uit moeten zien: ![screenshot](images/iss-image.png) \--- / hint \--- \--- / hints \---
+\--- hints \--- \--- hint \---
 
-+ Het ISS begint in het midden van de kaart, laten we het nu naar de juiste locatie op de kaart verplaatsen:
-    
-    ![screenshot](images/iss-plot.png)
-    
-    Merk op dat breedtegraad normaal eerst wordt vermeld, maar we moeten eerst de lengtegraad aangeven bij het plotten van (x, y) coördinaten.
+Your code should look like this:
 
-+ Test je programma door het uit te voeren. Het ISS moet naar de huidige locatie boven de aarde gaan.
-    
-    Wacht een paar seconden en voer je programma opnieuw uit om te zien waar het ISS naartoe is verhuisd.
-    
-    ![screenshot](images/iss-plotted.png)
+![screenshot](images/iss-image.png)
+
+\--- /hint \--- \--- /hints \---
+
++ The ISS starts off in the centre of the map, now let's move it to the correct location:
+
+![screenshot](images/iss-plot.png)
+
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+
++ Test your program by running it. The ISS should move to its current location above Earth. 
+
+![screenshot](images/iss-plotted.png)
+
++ Wait a few seconds and run your program again to see where the ISS has moved to.
