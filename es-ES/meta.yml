@@ -1,17 +1,21 @@
 ---
 title: Where is the Space Station?
 hero_image: images/banner.png
-description: Plot the exact location of the ISS.
+description: Find the exact location of the ISS
 theme: blue
 duration: 2
 listed: true
 ingredient: false
 copyedit: false
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 original_url: https://codeclubprojects.org/en-GB/python/iss
 interests: space
 technologies: python
-site_areas: codeclub, python
+site_areas: projects
+hardware: ''
+software: python
+version: 3
+last_tested: 2017-01-01
 steps:
   - 
     title: Introduction
@@ -20,7 +24,7 @@ steps:
   - 
     title: Who is in space?
   - 
-    title: 'Challenge: Show the craft'
+    title: 'Challenge: show the craft'
   - 
     title: Where is the ISS?
   - 
@@ -28,5 +32,4 @@ steps:
   - 
     title: When will the ISS be overhead?
   - 
-    title: 'Challenge: Find more passover times'
-
+    title: 'Challenge: find more pass-over times'
