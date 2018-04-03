@@ -1,11 +1,15 @@
 ## Wat je nodig zult hebben
 
+### Hardware
+
++ A computer with internet connection
+
 ### Software
 
-+ Trinket online editor
++ [Trinket](https://trinket.io/) online editor
 
-### Aanvullende bronnen
+### Additional resources
 
-+ Startproject: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>
++ <a href="http://jumpto.cc/iss-go" target="_blank">Starter project</a>
 
-+ Open Notify web services: <a href="http://api.open-notify.org/" target="_blank">http://api.open-notify.org/</a>
++ Open Notify webservices: <a href="http://api.open-notify.org/" target="_blank">api.open-notify.org</a>
