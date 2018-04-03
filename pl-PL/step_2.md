@@ -1,11 +1,15 @@
 ## Co będzie potrzebne
 
-### Oprogramowanie
+### Hardware
 
-+ Edytor internetowy Trinket
++ A computer with internet connection
 
-### Dodatkowe zasoby
+### Software
 
-+ Projekt początkowy: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>
++ [Trinket](https://trinket.io/) online editor
 
-+ Otwórz usługi internetowe powiadomień: <a href="http://api.open-notify.org/" target="_blank">http://api.open-notify.org/</a>
+### Additional resources
+
++ <a href="http://jumpto.cc/iss-go" target="_blank">Starter project</a>
+
++ Open Notify webservices: <a href="http://api.open-notify.org/" target="_blank">api.open-notify.org</a>
