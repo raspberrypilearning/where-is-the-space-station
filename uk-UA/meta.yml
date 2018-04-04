@@ -1,0 +1,35 @@
+---
+title: Де знаходиться космічна станція?
+hero_image: images / banner.png
+description: Знайдіть точне місцезнаходження МКС
+theme: синій
+duration: 2
+listed: true
+ingredient: false
+copyedit: false
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+original_url: https://codeclubprojects.org/en-GB/python/iss
+interests: простір
+technologies: python
+site_areas: проекти
+hardware: ''
+software: python
+version: 3
+last_tested: 2017-01-01
+steps:
+  - 
+    title: Вступ
+  - 
+    title: Що вам знадобиться
+  - 
+    title: Хто в космосі?
+  - 
+    title: 'Виклик: показати ремесло'
+  - 
+    title: Де знаходиться МКС?
+  - 
+    title: Нанесення МКС на карту
+  - 
+    title: Коли буде МКС бути накладними?
+  - 
+    title: 'Виклик: знайдіть більше часу перетину'
