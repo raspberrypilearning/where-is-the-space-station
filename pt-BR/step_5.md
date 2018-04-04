@@ -1,31 +1,24 @@
-## Where is the ISS?
+## Onde fica a ISS?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+A Estação Espacial Internacional está em órbita ao redor da Terra. Ele completa uma órbita da Terra aproximadamente a cada hora e meia, e viaja a uma velocidade média de 7,66 km por segundo. É rápido!
 
-Let’s use another web service to find out where the International Space Station is.
+Vamos usar outro serviço da web para descobrir onde fica a Estação Espacial Internacional.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Primeiro, abra o URL do serviço da Web em uma nova guia no navegador da Web: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-You should see something like this:
+Você deveria ver algo assim:
 
-    {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
-    }
+    {"iss_position": {"latitude": 8.54938193505081, "longitude": 73.16560793639105}, "message": "success", "timestamp": 1461931913}
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+O resultado contém as coordenadas do ponto na Terra em que o ISS está no momento.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Agora você precisa chamar o mesmo serviço da Web do Python. Adicione o seguinte código ao final do seu script para obter a localização atual do ISS:
 
-![screenshot](images/iss-location.png)
+![captura de tela](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Vamos criar variáveis ​​para armazenar a latitude e a longitude e depois imprimi-las:
 
-![screenshot](images/iss-coordinates.png)
+![captura de tela](images/iss-coordinates.png)
