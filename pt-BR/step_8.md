@@ -1,57 +1,33 @@
-## Challenge: find more pass-over times
+## Desafio: encontre mais tempos de repercussão
 
-\--- challenge \---
+\--- desafio \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+Para pesquisar a latitude e a longitude de um local de seu interesse, você pode usar um site como <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Você pode procurar e plotar os tempos de passagem para mais locais? 
 
-![screenshot](images/iss-final.png)
+![captura de tela](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- dicas \--- \--- dica \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+No final do programa, defina as variáveis ​​ `lat` e `long` para novos valores e, em seguida, use a variável `location` turtle para desenhar um ponto no novo local. (Escolha uma cor diferente, se quiser.) Em seguida, chame `iss-pass` serviço da web com as coordenadas (é possível copiar e colar o código para fazer isso). Finalmente, obtenha o tempo de subida `` da resposta e escreva-o com a localização `` tartaruga.
 
-\--- /hint \--- \--- hint \---
+\--- / sugestão \--- \--- sugestão \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
-
-```python
-# Your chosen location
-lat = XX.XX
-lon = XX.XX
-
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
-
-# Get the result from `iss-pass.json` for your new latitude and longitude
-
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
-```
-
-\--- /hint \--- \--- hint \---
-
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Adicione este código ao final do seu programa e preencha as partes que faltam. Observe que você pode copiar e colar o código que você escreveu para obter o tempo de passagem para o Centro Espacial em Houston e, em seguida, fazer as alterações necessárias.
 
 ```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
-
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
-
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
-
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+# Sua localização escolhida lat = XX.XX lon = XX.XX # Desenhe um ponto com a tartaruga `location` (não é necessário criar uma nova tartaruga), escolha uma cor diferente # Obtenha o resultado de` iss-pass.json` para sua nova latitude e longitude # Pegue o `risetime` do resultado e use a tartaruga` location` para escrevê-lo no mapa
 ```
 
-Try adding more locations!
+\--- / sugestão \--- \--- sugestão \---
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, um espaçoporto no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
+
+```python
+# Baikonur Cosmodrome lat = 45.86 lon = 63.31 location.penup () localização.color ('laranja') location.goto (lon, lat) location.dot (5) localização.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) resposta = urllib.request.urlopen (url) resultado = json.loads (response.read) ()) #print (resultado) over = resultado ['resposta'][1]['tempo de subida'] location.write (time.ctime (over))
+```
+
+Tente adicionar mais locais!
+
+\--- / dica \--- \--- / dicas \--- \--- / desafio \---
