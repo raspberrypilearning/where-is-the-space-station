@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## Quando a ISS será sobrecarga?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+Há também um serviço da Web que você pode usar para descobrir quando a ISS será em um determinado local.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Vamos descobrir quando a ISS estará próxima do Centro Espacial em Houston, EUA, que está na latitude `29.5502` e longitude `95.097`.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Primeiro, vamos traçar um ponto no mapa nessas coordenadas:
 
-![screenshot](images/iss-houston.png)
+![captura de tela](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Agora vamos pegar a data e a hora em que a ISS é a próxima sobrecarga.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Como antes, você pode chamar o serviço da Web digitando seu URL na barra de endereços de um navegador da Web: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-You should see an error:
+Você deve ver um erro:
 
-![screenshot](images/iss-pass-error.png)
+![captura de tela](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Esse serviço da web usa latitude e longitude como entradas, portanto, você deve incluí-los na URL. Entradas são adicionadas após um `?` e separados por `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Adicione as entradas `lat` e `lon` ao URL como mostrado: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1</a>
 
-![screenshot](images/iss-passtimes.png)
+![captura de tela](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+A resposta inclui várias vezes, e vamos ver o primeiro. A hora é dada como um carimbo de data / hora do Unix (você poderá convertê-la em um tempo legível em seu script Python).
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Agora vamos chamar o serviço da web do Python. Adicione o seguinte código ao final do seu script:
 
-![screenshot](images/iss-passover.png)
+![captura de tela](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Agora vamos obter o primeiro tempo de passagem do resultado. Adicione o seguinte código:
 
-![screenshot](images/iss-print-pass.png)
+![captura de tela](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+Vamos precisar do módulo Python `time` para que possamos imprimi-lo de forma legível e convertê-lo para a hora local. Então nós vamos pegar o script para escrever o tempo de passagem pelo ponto para Houston.
 
-+ Add an `import time` line at the top of your script:
++ Adicione uma linha de `hora de importação` na parte superior do seu script:
 
-![screenshot](images/iss-time.png)
+![captura de tela](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ A função `time.ctime ()` converterá o registro de data e hora em um formato legível que você pode gravar em seu mapa:
 
-![screenshot](images/iss-pass-write.png)
+![captura de tela](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(Você pode remover a `print` linha, ou transformá-lo em um comentário, adicionando `#` no início, assim o seu script irá ignorá-lo.)
 
-+ If you like, you can change the colour and format of the text. 
++ Se preferir, você pode alterar a cor e o formato do texto. 
 
 [[[generic-python-turtle-write]]]
