@@ -1,103 +1,81 @@
-## Who is in space?
+## Quem está no espaço?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Você vai usar um serviço da web que fornece informações ao vivo sobre o espaço. Primeiro, vamos descobrir quem está no espaço atualmente.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Um serviço da web tem um endereço (URL) exatamente como um site faz. Em vez de retornar HTML para uma página da Web, ele retorna dados.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Abra <a href="http://api.open-notify.org/astros.json" target="_blank">o serviço da web</a> em um navegador da web.
 
-You should see something like this:
+Você deveria ver algo assim:
 
-    ```
-    {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
-    }
-    ```
+    `` `{" mensagem ":" sucesso "," número ": 3," pessoas ": [{" craft ":" ISS "," nome ":" Yuri Malenchenko "}, {" craft ":" ISS " , "nome": "Timothy Kopra"}, {"ofício": "ISS", "nome": "Timothy Peake"}]} `` `
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Os dados são ao vivo, então você provavelmente verá um resultado ligeiramente diferente. O formato de dados é chamado de `JSON` (pronunciado como "Jason").
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Você precisa chamar o serviço da web a partir de um script Python, para poder usar os resultados.
 
-+ Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Abra este trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+Os módulos `urllib.request` e `json` já foram importados para você na parte superior do script `main.py`.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Adicione o seguinte código a `main.py` para armazenar o URL do serviço web que você acabou de acessar como uma variável:
 
-![screenshot](images/iss-url.png)
+![captura de tela](images/iss-url.png)
 
-+ Now call the web service:
++ Agora ligue para o serviço da web:
 
-![screenshot](images/iss-request.png)
+![captura de tela](images/iss-request.png)
 
-+ Next you need to load the JSON reponse into a Python data structure:
++ Em seguida, você precisa carregar a resposta JSON em uma estrutura de dados Python:
 
-![screenshot](images/iss-result.png)
+![captura de tela](images/iss-result.png)
 
-You should see something like this:
+Você deveria ver algo assim:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Este é um dicionário Python com três chaves: `, mensagem`, `número`e `pessoas`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Que `mensagem` tem o valor `sucesso` diz que você acessou com sucesso o serviço web. Observe que você verá resultados diferentes para `número` e `pessoas` dependendo de quem está no espaço.
 
-Now let's print the information in a more readable way.
+Agora vamos imprimir as informações de uma maneira mais legível.
 
-+ First, let's look up the number of people in space and print it:
++ Primeiro, vamos procurar o número de pessoas no espaço e imprimi-lo:
 
-![screenshot](images/iss-number.png)
+![captura de tela](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`resultado ['número']` imprimirá o valor associado à chave `número` no `resultado` dicionário. No exemplo, isso é `3`.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ O valor associado à chave `pessoas` é uma lista de dicionários! Vamos colocar esse valor em uma variável para que você possa usá-lo:
 
-![screenshot](images/iss-people.png)
+![captura de tela](images/iss-people.png)
 
-You should see something like:
+Você deveria ver algo como:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Agora você precisa imprimir uma linha para cada astronauta. Você pode usar um loop `do Python para` para fazer isso.
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ Cada vez através do loop, `p` será definido como um dicionário para um astronauta diferente.
 
-![screenshot](images/iss-people-1a.png)
+![captura de tela](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ Você pode então procurar os valores para o `nome` e `ofício`. Vamos mostrar os nomes das pessoas no espaço:
 
-![screenshot](images/iss-people-2.png)
+![captura de tela](images/iss-people-2.png)
 
-You should see something like this:
+Você deveria ver algo assim:
 
-    People in Space:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    Pessoas no Espaço: 3 Yuri Malenchenko Timothy Kopra Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+**Nota:** Você está usando dados ao vivo, então seus resultados dependerão do número de pessoas atualmente no espaço.
