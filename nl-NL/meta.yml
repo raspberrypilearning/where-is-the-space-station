@@ -1,7 +1,7 @@
 ---
 title: Waar is het ruimtestation?
 hero_image: images / banner.png
-description: Find the exact location of the ISS
+description: Zoek de exacte locatie van het ISS
 theme: blauw
 duration: 2
 listed: true
@@ -24,7 +24,7 @@ steps:
   - 
     title: Wie zit er in de ruimte?
   - 
-    title: 'Challenge: show the craft'
+    title: 'Uitdaging: laat het voertuig zien'
   - 
     title: Waar is het ISS?
   - 
@@ -32,4 +32,4 @@ steps:
   - 
     title: Wanneer zal het ISS overhead zijn?
   - 
-    title: 'Challenge: find more pass-over times'
+    title: 'Uitdaging: vind meer overvliegtijden'
