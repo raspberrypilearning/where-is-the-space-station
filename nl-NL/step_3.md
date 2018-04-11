@@ -69,18 +69,18 @@ Laten we de informatie beter leesbaar maken.
 
 ![screenshot](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`result['number']` zal de waarde laten zien van de sleutel `number` in het `resultaat` woordenboek. In het voorbeeld is dit ` 3 `.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ De waarde die is gekoppeld aan de ` people ` sleutel is een lijst met woordenboeken! We plaatsen die waarde in een variabele, zodat je hem kunt gebruiken:
 
 ![screenshot](images/iss-people.png)
 
-You should see something like:
+Je zou zoiets moeten zien:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Nu moet er voor elke astronaut een regel worden geprint. Je kunt daar een Python `for` lus voor gebruiken.
 
 [[[generic-python-for-loop-list]]]
 
