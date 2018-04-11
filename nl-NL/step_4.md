@@ -24,10 +24,11 @@ Je krijgt de waarde van `name` door `p[name]` te gebruiken — hoe krijg je de w
 
 \--- /hint \--- \--- hint \---
 
-Verander de `for` lus zo dat het hier op lijkt:
+Verander de `for` lus zodanig dat het hier op lijkt:
 
 ```python
-voor p in people: print (p ['naam'], 'in', p ['craft'])
+for p in mensen:
+  print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \--- \--- /hints \---
