@@ -4,24 +4,27 @@
 
 Naast de namen van de astronauten geeft de webservice ook het voertuig waarop ze zich bevinden, zoals het ISS.
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ Kun je het script zo aanpassen dat het voor elke astronaut ook het voertuig weergeeft? 
 
-Example:
+Voorbeeld:
 
-    Mensen in de ruimte: 3 Yuri Malenchenko in ISS Timothy Kopra in ISS Timothy Peake in ISS
+    Mensen in de ruimte:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \--- \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Vergeet niet dat je meerdere items kunt afdrukken door ze te scheiden met komma's.
+Je moet code toevoegen aan de print-regel in `for p in mensen:`. Bedenk dat je meerdere items kunt weergeven door ze te scheiden met komma's.
 
 \--- /hint \--- \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+Je krijgt de waarde van `name` door `p[name]` te gebruiken — hoe krijg je de waarde van `craft`?
 
 \--- /hint \--- \--- hint \---
 
-Change your `for` loop so it looks like this:
+Verander de `for` lus zo dat het hier op lijkt:
 
 ```python
 voor p in people: print (p ['naam'], 'in', p ['craft'])
