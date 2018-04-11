@@ -1,8 +1,8 @@
-## Invoering
+## Inleiding
 
-In dit project maakt u gebruik van een webservice om de huidige locatie van het International Space Station (ISS) te achterhalen en de locatie ervan op een kaart uit te zetten.
+In dit project maak je gebruik van een webservice om de huidige locatie van het International Space Station (ISS) te achterhalen en de locatie ervan op een kaart te zetten.
 
-### Instructions
+### Instructies
 
 The space station icon shows the current location of the ISS. De gele tekst geeft aan wanneer het ISS vervolgens het Space Center in Houston, VS zal passeren.
 
