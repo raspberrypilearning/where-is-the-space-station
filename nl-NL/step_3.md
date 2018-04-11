@@ -57,15 +57,15 @@ Het zou er zo moeten uitzien:
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Dit is een Python woordenboek (Engels: dictionary) met drie sleutels: `bericht`, ` aantal ` en ` mensen `.
+Dit is een Python woordenboek (Engels: dictionary) met drie sleutels: `message`, `number` en `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Het woord` message` met de waarde ` success ` geeft aan dat je met succes toegang had tot de webservice. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Het woord` message` met de waarde ` success ` geeft aan dat je met succes toegang had tot de webservice. Je zult wellicht andere waarden voor ` number ` en ` people `zien en dat hangt af wie er nu in de ruimte is.
 
-Now let's print the information in a more readable way.
+Laten we de informatie beter leesbaar maken.
 
-+ First, let's look up the number of people in space and print it:
++ Bekijk het aantal mensen dat in de ruimte is en print dat:
 
 ![screenshot](images/iss-number.png)
 
