@@ -1,0 +1,24 @@
+title: Dov'è la Stazione Spaziale?
+hero_image: images/banner.png
+description: Traccia la posizione esatta della ISS
+theme: blue
+duration: 2
+listed: true
+ingredient: false
+copyedit: false
+curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
+original_url: https://codeclubprojects.org/en-GB/python/iss
+interests: space
+technologies: python
+site_areas: projects
+hardware: ''
+software: python
+version: 3
+last_tested: 2017-01-01
+steps: 
+- title: Introduzione
+- title: Chi è nello Spazio?
+- title: 'Sfida: Mostra il Veicolo'
+- title: Dov'è la ISS?
+- title: Quando sarà la ISS in alto?
+- title: 'Sfida: Trova altri orari di passaggio'
