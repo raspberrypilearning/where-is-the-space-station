@@ -32,13 +32,13 @@ Usiamo ora un latro servizio web per scoprire dove si trova la Stazione Spaziale
 
 Creiamo delle variabili per salvare la latitudine e la longitdine, e poi stampiamole:
 
-    ![screenshot](images/iss-coordinates.png)
+   ![screenshot](images/iss-coordinates.png)
 
 + Sarebbe pià utile mostrare la posizione su una mappa.
 
     Innanzitutto, dobbiamo importare i cursori tartaruga dalla libreria.
 
-    ![screenshot](images/iss-turtle.png)
+   ![screenshot](images/iss-turtle.png)
 
 Carichiamo una mappa del mondo come immagine di sfondo, ce n'è già una inclusa nel tuo trinket.
 
