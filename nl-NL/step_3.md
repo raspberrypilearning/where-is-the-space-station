@@ -84,11 +84,11 @@ Je zou zoiets moeten zien:
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ Bij elke doorloop van de lus wordt `p` het woordenboek van steeds een andere astronaut.
 
 ![screenshot](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ Je kunt dan de waarden voor `name` en ` craft` bekijken. Laten we de namen van de mensen in de ruimte weergeven:
 
 ![screenshot](images/iss-people-2.png)
 
