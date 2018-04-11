@@ -4,7 +4,7 @@ In dit project maak je gebruik van een webservice om de huidige locatie van het 
 
 ### Instructies
 
-The space station icon shows the current location of the ISS. De gele tekst geeft aan wanneer het ISS vervolgens het Space Center in Houston, VS zal passeren.
+Het pictogram van het ruimtestation geeft de huidige locatie van het ISS weer. De gele tekst geeft aan wanneer het ISS weer over het Space Center in Houston, VS, zal vliegen.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,7 +12,7 @@ The space station icon shows the current location of the ISS. De gele tekst geef
   <img src="images/iss-final.png">
 </div>
 
-### Wat je zult leren
+### Wat je gaat leren
 
 Dit project behandelt elementen uit de volgende onderdelen van het [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
