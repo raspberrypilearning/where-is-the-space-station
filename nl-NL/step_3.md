@@ -1,12 +1,12 @@
-## Who is in space?
+## Wie is er in de ruimte?
 
-U gaat een webservice gebruiken die live informatie biedt over de ruimte. First, let’s find out who is currently in space.
+Je gaat een webservice gebruiken die live informatie biedt over de ruimte. Laten we eerst eens kijken wie er momenteel in de ruimte is.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Een webservice heeft een adres (URL), net als een website. In plaats van HTML voor een webpagina, stuurt het data terug.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Open <a href="http://api.open-notify.org/astros.json" target="_blank">de webservice</a> in een webbrowser.
 
-You should see something like this:
+Het zou er zo kunnen uitzien:
 
     ```
     {
@@ -30,17 +30,17 @@ You should see something like this:
     ```
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dataformaat heet ` JSON ` (uitgesproken als 'djeesun').
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Je moet de webservice met een Pythonscript oproepen om de resultaten te kunnen gebruiken.
 
-+ Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open deze trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `main.py` script.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Voeg de volgende code toe aan ` main.py ` om de URL van de webservice die je eerder hebt bezocht als een variabele op te slaan:
 
 ![screenshot](images/iss-url.png)
 
