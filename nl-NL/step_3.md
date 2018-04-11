@@ -57,11 +57,11 @@ Het zou er zo moeten uitzien:
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Dit is een Python woordenboek (Engels: dictionary) met drie sleutels: `bericht`, ` aantal ` en ` mensen `.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Het woord` message` met de waarde ` success ` geeft aan dat je met succes toegang had tot de webservice. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
