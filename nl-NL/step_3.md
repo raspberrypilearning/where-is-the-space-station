@@ -92,12 +92,12 @@ Je zou zoiets moeten zien:
 
 ![screenshot](images/iss-people-2.png)
 
-You should see something like this:
+Je zou zoiets moeten zien:
 
-    People in Space:  3
+    Mensen in de ruimte:  3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+** Opmerking: ** je gebruikt live gegevens, dus de resultaten zullen afhangen van het aantal mensen dat op dit moment in de ruimte is.
