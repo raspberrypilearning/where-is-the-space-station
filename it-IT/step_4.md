@@ -42,11 +42,11 @@ Creiamo delle variabili per salvare la latitudine e la longitdine, e poi stampia
 
 Carichiamo una mappa del mondo come immagine di sfondo, ce n'è già una inclusa nel tuo trinket.
 
-    ![screenshot](images/iss-map.png)
+   ![screenshot](images/iss-map.png)
 
-    La NASA ha fornito questa bellissima mappa e ci ha dato il permesso di riutilizzarla.
+   La NASA ha fornito questa bellissima mappa e ci ha dato il permesso di riutilizzarla.
 
-    La mappa è centrata a 0, 0 che è proprio quello di cui abbiamo bisogno.
+   La mappa è centrata a 0, 0 che è proprio quello di cui abbiamo bisogno.
 
 + Dovrai impostare la misura dello schermo per combaciare la misura dell'immagine che è 720 per 360.
 
@@ -62,9 +62,9 @@ Carichiamo una mappa del mondo come immagine di sfondo, ce n'è già una inclusa
 
 Creiamo una tartaruga per la ISS.
 
-    ![screenshot](images/iss-image.png)
+   ![screenshot](images/iss-image.png)
 
-    Il tuo progetto include 'iss.png' e 'iss2.png', provali entrambi e vedi quale preferisci.  
+   Il tuo progetto include 'iss.png' e 'iss2.png', provali entrambi e vedi quale preferisci.  
 
 + La ISS inizia nel centro della mappa, ora muoviamola verso la corretta posizione sulla mappa:
 
