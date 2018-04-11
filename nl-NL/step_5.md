@@ -1,6 +1,6 @@
 ## Waar is het ISS?
 
-Het internationale ruimtestation bevindt zich in een baan rond de aarde. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+Het internationale ruimtestation draait om de aarde. Het voltooit ongeveer elk anderhalf uur een baan om de aarde en reist met een gemiddelde snelheid van 7,66 km per seconde. Het gaat snel!
 
 Laten we een andere webservice gebruiken om uit te zoeken waar het internationale ruimtestation ISS is.
 
