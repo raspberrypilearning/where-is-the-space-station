@@ -44,15 +44,15 @@ De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `m
 
 ![screenshot](images/iss-url.png)
 
-+ Now call the web service:
++ Roep nu de webservice op:
 
 ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON reponse into a Python data structure:
++ Nu moet je het JSON-antwoord in een Python datastructuur laden:
 
 ![screenshot](images/iss-result.png)
 
-You should see something like this:
+Het zou er zo moeten uitzien:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
