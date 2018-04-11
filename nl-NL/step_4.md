@@ -1,8 +1,8 @@
-## Challenge: show the craft
+## Uitdaging: laat het voertuig zien
 
-\--- uitdaging \---
+\--- challenge \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+Naast de namen van de astronauten geeft de webservice ook het voertuig waarop ze zich bevinden, zoals het ISS.
 
 + Can you add to your script so that it also prints out the craft for each astronaut? 
 
