@@ -1,28 +1,28 @@
-## Het ISS op een kaart uitzetten
+## Het ISS op een kaart tekenen
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+Het zou handig zijn om de positie op een kaart te tonen. Je kunt dit doen met de grafische mogelijkheden van Python Turtle.
 
-+ First we'll need to import the `turtle` Python library:
++ Ten eerste moeten we de ` Turtle ` Python-bibliotheek importeren:
 
 ![screenshot](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
++ Laad vervolgens een wereldkaart als achtergrondafbeelding. Er is er al één in je trinket genaamd 'map.jpg'. NASA heeft deze prachtige kaart verstrekt en toestemming gegeven voor hergebruik. 
 
 ![screenshot](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+De kaart is gecentreerd op ` (0,0) ` lengte- en breedtegraad, precies wat je nodig hebt.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ De schermgrootte moet worden ingesteld op de grootte van de afbeelding, die 720 bij 360 pixels is. Voeg ` screen.setup(720, 360) ` toe:
 
 ![screenshot](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Je wilt de schildpad (Engels: turtle) naar een bepaalde lengte- en breedtegraad kunnen sturen. Om het makkelijk te maken, kunt je het scherm instellen op basis van de coördinaten die je gebruikt:
 
 ![screenshot](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Nu komen de coördinaten overeen met de breedte- en lengtegraadcoördinaten die je terugkrijgt van de webservice.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
++ Laten we een turtle-pictogram maken voor het ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
