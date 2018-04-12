@@ -22,7 +22,7 @@ De kaart is gecentreerd op ` (0,0) ` lengte- en breedtegraad, precies wat je nod
 
 Nu komen de coördinaten overeen met de breedte- en lengtegraadcoördinaten die je terugkrijgt van de webservice.
 
-+ Laten we een turtle-pictogram maken voor het ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
++ Laten we een turtle-pictogram maken voor het ISS. Je trinket heeft al 'iss.png' en 'iss2.png' - probeer ze allebei en kies er een. 
 
 [[[generic-python-turtle-image]]]
 
