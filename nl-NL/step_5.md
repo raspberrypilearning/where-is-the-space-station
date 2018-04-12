@@ -18,14 +18,14 @@ Je zou zoiets moeten zien:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+Het levert de coördinaten op van de plek op aarde waarboven het ISS momenteel vliegt.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Nu kun je dezelfde webservice met Python benaderen. Voeg de volgende code toe aan het einde van het script om de huidige locatie van het ISS te krijgen:
 
 ![screenshot](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ We maken variabelen om de breedte- en lengtegraad op te slaan en ze vervolgens weer te geven:
 
 ![screenshot](images/iss-coordinates.png)
