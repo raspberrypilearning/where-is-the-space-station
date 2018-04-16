@@ -55,9 +55,7 @@
 
     你会看到类似于下文的内容：
 
-    ```
-   
-    ```
+    ```{'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]} ```
 
     这是一个有 3 个键的 Python 字典：message（信息）、number（数量）和 people（人物）。 
 
@@ -80,9 +78,7 @@
 
     你会看到类似于下文的内容： 
     
-    ```
-    []
-    ```
+    ```[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}] ```
 
 + 现在你需要针对每个宇航员打印出一行。
 
