@@ -8,10 +8,10 @@
 उदाहरण:
 
 ```
-अंतरिक्ष में लोग:  3
-ISS में यूरी मैलेनचेंको
-ISS में टिमोथी कोपरा
-ISS में टिमोथी पेक
+People in Space:  3
+Yuri Malenchenko in ISS
+Timothy Kopra in ISS
+Timothy Peake in ISS
 ```
 
 
