@@ -1,0 +1,21 @@
+hero_image: images/where-is-the-space-station.png
+theme: blue
+duration: 2
+listed: true
+ingredient: false
+copyedit: false
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+title: 国际空间站在哪里？
+description: 绘制 ISS 的准确位置。
+original_url: https://codeclubprojects.org/en-GB/python/iss
+interests: space
+technologies: python
+site_areas: codeclub, python
+steps:
+- title: 介绍
+- title: 谁在太空里？
+- title: '挑战：显示飞行器'
+- title: ​ISS 在哪里？
+- title: ISS 何时会到达上空？
+- title: '挑战：寻找更多经过时间'
+
