@@ -43,7 +43,7 @@
 
 أضف سطر `import time` أعلى المقطع البرمجي:
 
-    ![screenshot](images/iss-time.png)
+   ![screenshot](images/iss-time.png)
 
 + ستحوِّل الدالة `()time.ctime`الوقتَ إلى صيغة يمكن قراءتها ويمكنك كتابتها باستخدام السلحفاة: 
 
