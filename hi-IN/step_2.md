@@ -55,7 +55,9 @@
 
     आपको कुछ ऐसा दिखाई देना चाहिए:
 
-    ```{'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}```
+    ```
+    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    ```
 
     यह 3 कुंजियों से युक्त Python डिक्शनरी है: सन्देश, संख्या और लोग 
 
@@ -78,7 +80,9 @@
 
     आपको कुछ ऐसा दिखाई देना चाहिए: 
     
-    ```[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]```
+    ```
+    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
+    ```
 
 + अब आपको प्रत्येक अन्तरिक्ष यात्री के लिए एक पंक्ति प्रिंट करनी है।
 
