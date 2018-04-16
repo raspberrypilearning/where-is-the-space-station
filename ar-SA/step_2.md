@@ -55,7 +55,9 @@
 
     سترى شيئًا كهذا:
 
-    ```{'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}```
+    ```
+    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy  Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    ```
 
     هذا قاموس Python يحتوي على 3 مفاتيح: `message` و`number` و`people`. 
 
@@ -78,7 +80,9 @@
 
     سترى شيئًا كهذا: 
     
-    ```[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]```
+    ```
+    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
+    ```
 
 + تحتاج الآن إلى طباعة سطر لكل رائد فضاء.
 
