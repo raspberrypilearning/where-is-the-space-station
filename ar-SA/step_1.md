@@ -10,7 +10,7 @@
 
 ### معلومات إضافية لقادة النادي
 
-إذا كنت بحاجة إلى طباعة هذا المشروع، فيُرجى استخدام [نسخة سهلة الطباعة](https://projects.raspberrypi.org/en/projects/where-is-the-space-station/print).
+إذا كنت بحاجة إلى طباعة هذا المشروع، فيُرجى استخدام [نسخة سهلة الطباعة](https://projects.raspberrypi.org/ar-SA/projects/where-is-the-space-station/print).
 
 
 --- collapse ---
@@ -59,7 +59,7 @@ __يستخدم هذا المشروع Python 3.__ نوصي باستخدام [trin
 
 يتناول هذا المشروع عناصر من الصفوف التالية من [المناهج الرقمية الخاصة بـ Raspberry Pi](http://rpf.io/curriculum):
 
-+ [دمج الإنشاءات البرمجية لحل مشكلة].(https://www.raspberrypi.org/curriculum/programming/builder)
++ [دمج الإنشاءات البرمجية لحل مشكلة](https://www.raspberrypi.org/curriculum/programming/builder)
 
 ## التحديات:
 + اعرض المركبة الفضائية - قراءة البيانات من بنية بيانات مُرجعة؛
