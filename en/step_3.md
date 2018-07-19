@@ -47,7 +47,7 @@ The `urllib.request` and `json` modules have already been imported for you at th
 
 ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON reponse into a Python data structure:
++ Next you need to load the JSON response into a Python data structure:
 
 ![screenshot](images/iss-result.png)
 
