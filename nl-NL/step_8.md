@@ -1,41 +1,57 @@
-## Challenge: find more pass-over times
+## Uitdaging: vind meer overvliegtijden
 
-\--- uitdaging \---
+\--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+Om interessante lengte- en breedtegraden te vinden kun je gebruik maken van een website zoals <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Kun je overvliegtijden voor meer locaties opzoeken en tekenen? 
 
 ![screenshot](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Zet aan het einde van het programma de ` lat ` en ` long ` variabelen op nieuwe waarden en gebruik dan de `location` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wilt). Roep dan de ` iss-pass ` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `location` turtle.
 
 \--- /hint \--- \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Voeg deze code toe aan het einde van je programma en vul de ontbrekende delen in. Merk op dat je de code die je hebt geschreven om de overvliegtijd voor het Space Center in Houston te krijgen kunt kopiëren en plakken om er daarna wijzigingen in aan te kunnen brengen.
 
 ```python
-# Your chosen location
+# Jouw gekozen locatie
 lat = XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# Teken een punt met de 'location' turtle (je hoeft geen nieuwe te maken), kies een andere kleur
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+# Haal het resultaat op van`iss-pass.json` voor de nieuwe lengte- en breedtegraad
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# Haal de 'risetime' op uit het resultaat en gebruik de `location` turtle om het op de kaart te zetten
 ```
 
 \--- /hint \--- \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Hier is een voorbeeld van de locatie van het Kosmodroom Bajkonoer, een raketlanceerplaats in Zuid-Kazachstan. De code kan aan het einde van je programma staan, na het tekenen van de overvliegtijd in het Houston Space Center.
 
 ```python
-# Baikonur Cosmodrome lat = 45.86 lon = 63.31 location.penup () location.color ('orange') location.goto (lon, lat) location.dot (5) location.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) response = urllib.request.urlopen (url) result = json.loads (response.read ()) #print (resultaat) over = resultaat ['antwoord'][1]['risetime'] location.write (time.ctime (over))
+# Kosmodroom Bajkonoer
+lat = 45.86
+lon = 63.31
+
+locatie.penup()
+locatie.color('orange')
+locatie.goto(lon,lat)
+locatie.dot(5)
+locatie.hideturtle()
+
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+antwoord = urllib.request.urlopen(url)
+resultaat = json.loads(antwoord.read())
+
+#print(resultaat)
+over = resultaat['response'][1]['risetime']
+location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+Probeer meer locaties toe te voegen
 
 \--- /hint \--- \--- /hints \--- \--- /challenge \---
