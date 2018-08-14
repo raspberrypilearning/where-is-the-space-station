@@ -1,10 +1,10 @@
-## Uitdaging: laat het voertuig zien
+## Uitdaging: laat het ruimtestation zien
 
 \--- challenge \---
 
-Naast de namen van de astronauten geeft de webservice ook het voertuig waarop ze zich bevinden, zoals het ISS.
+Naast de namen van de astronauten geeft de webservice ook het vaartuig aann waarop ze zich bevinden, zoals het ISS.
 
-+ Kun je het script zo aanpassen dat het voor elke astronaut ook het voertuig weergeeft? 
++ Kun je het script zo aanpassen dat het voor elke astronaut ook het vaartuig weergeeft? 
 
 Voorbeeld:
 
