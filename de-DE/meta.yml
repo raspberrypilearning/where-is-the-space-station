@@ -1,7 +1,7 @@
 ---
-title: Where is the Space Station?
+title: Wo ist die Weltraumstation?
 hero_image: images/banner.png
-description: Find the exact location of the ISS
+description: Zeichne die genaue Position der Internationalen Weltraumstation ISS auf
 theme: blue
 duration: 2
 listed: true
@@ -18,17 +18,17 @@ version: 3
 last_tested: 2017-01-01
 steps:
   - 
-    title: Introduction
+    title: Einführung
   - 
-    title: What you will need
+    title: Wer ist im Weltall?
   - 
-    title: Who is in space?
+    title: 'Aufgabe: Die Weltraumstation anzeigen'
   - 
-    title: 'Challenge: show the craft'
+    title: 'Wo ist die ISS?'
   - 
-    title: Where is the ISS?
+    title: Wann wird die ISS über uns sein?
   - 
-    title: Plotting the ISS on a map
+    title: 'Aufgabe: Finde noch mehr Überflugszeiten'
   - 
     title: When will the ISS be overhead?
   - 
