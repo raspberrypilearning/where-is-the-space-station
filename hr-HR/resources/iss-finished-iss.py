@@ -23,8 +23,8 @@ response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
 location = result['iss_position']
-lat = location['latitude']
-lon = location['longitude']
+lat = float(location['latitude'])
+lon = float(location['longitude'])
 print('Latitude: ', lat)
 print('Longitude: ', lon)
 
@@ -33,7 +33,7 @@ screen.setup(720, 360)
 screen.setworldcoordinates(-180, -90, 180, 90)
 screen.register_shape('iss.gif')
 
-# image source: 
+# image source:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
 screen.bgpic('map.gif')
 
