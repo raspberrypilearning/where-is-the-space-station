@@ -48,7 +48,7 @@ De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `m
 
 ![screenshot](images/iss-request.png)
 
-+ Nu moet je het JSON-antwoord in een Python datastructuur laden:
++ Next you need to load the JSON response into a Python data structure:
 
 ![screenshot](images/iss-result.png)
 
@@ -69,7 +69,7 @@ Laten we de informatie beter leesbaar maken.
 
 ![screenshot](images/iss-number.png)
 
-`result['number']` zal de waarde laten zien van de sleutel `number` in het `resultaat` woordenboek. In het voorbeeld is dit ` 3 `.
+`resultaat['number']` zal de waarde laten zien van de sleutel `number` in het `resultaat` woordenboek. In het voorbeeld is dit ` 3 `.
 
 + De waarde die is gekoppeld aan de ` people ` sleutel is een lijst met woordenboeken! We plaatsen die waarde in een variabele, zodat je hem kunt gebruiken:
 
