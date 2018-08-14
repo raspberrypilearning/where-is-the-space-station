@@ -29,7 +29,7 @@
 
 ![скріншот](images/iss-request.png)
 
-+ Далі вам потрібно завантажити відповідь JSON у структуру даних Python:
++ Next you need to load the JSON response into a Python data structure:
 
 ![скріншот](images/iss-result.png)
 
