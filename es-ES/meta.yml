@@ -1,7 +1,7 @@
 ---
-title: Where is the Space Station?
+title: '¿Dónde está la Estación Espacial?'
 hero_image: images/banner.png
-description: Find the exact location of the ISS
+description: Traza la ubicación exacta de la ISS
 theme: blue
 duration: 2
 listed: true
@@ -18,17 +18,17 @@ version: 3
 last_tested: 2017-01-01
 steps:
   - 
-    title: Introduction
+    title: Introducción
   - 
-    title: What you will need
+    title: '¿Quién está en el espacio?'
   - 
-    title: Who is in space?
+    title: 'Reto: Mostrar la nave'
   - 
-    title: 'Challenge: show the craft'
+    title: '¿Dónde está la ISS?'
   - 
-    title: Where is the ISS?
+    title: '¿Cuándo pasará por encima la ISS?'
   - 
-    title: Plotting the ISS on a map
+    title: 'Reto: Averigua otras fechas y horas de sobrevuelo'
   - 
     title: When will the ISS be overhead?
   - 
