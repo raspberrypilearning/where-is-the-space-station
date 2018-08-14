@@ -1,51 +1,51 @@
-## Wanneer zal het ISS overhead zijn?
+## Wanneer zal het ISS boven je hoofd zijn?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+Er is ook een webservice die je kunt gebruiken om uit te zoeken wanneer het ISS boven een bepaalde locatie is.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Laten we eens uitzoeken wanneer het ISS de volgende keer boven het Space Center in Houston, VS, vliegt, op breedtegraad ` 29.5502 ` en lengtegraad ` 95.097 `.
 
-+ First let’s plot a dot on the map at these coordinates:
++ We gaan eerst een punt op de kaart zetten op deze coördinaten:
 
 ![screenshot](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Dan nemen we de datum en het tijdstip waarop het ISS er boven zal zijn.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Zoals eerder kunt je de webservice oproepen door de URL in te voeren in de adresbalk van een webbrowser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
 
-You should see an error:
+Je zou een foutmelding moeten zien:
 
 ![screenshot](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Deze webservice neemt breedtegraad en lengtegraad als invoer, die moet dus worden opgenomen in de URL. De invoer wordt na een `? ` toegevoegd en gescheiden met `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Voeg de ` lat ` en ` lon ` invoer toe aan de url zoals getoond: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
 
 ![screenshot](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+Het antwoord geeft meerdere overvliegtijden en we kijken nu alleen naar de eerste. De tijd wordt gegeven als een Unix-tijdstempel (die je kunt omzetten naar een leesbare tijd in je Python-script).
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Roep de webservice nu vanuit Python op. Voeg de volgende code toe aan het einde van het script:
 
 ![screenshot](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Haal nu de eerste overvliegtijd uit het resultaat. Voer de volgende code in:
 
 ![screenshot](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+We hebben de Python ` tijd ` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
 
-+ Add an `import time` line at the top of your script:
++ Voeg bovenaan je script de regel ` import time ` toe:
 
 ![screenshot](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ De `time.ctime()` functie zet de tijdstempel om naar een leesbaar formaat die je kunt weergeven op de kaart:
 
 ![screenshot](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(Je kunt de `print` regel verwijderen of er een `#` voor zetten om de regel te negeren)
 
-+ If you like, you can change the colour and format of the text. 
++ Als je wilt kun je de kleur en de grootte van de tekst wijzigen. 
 
 [[[generic-python-turtle-write]]]
