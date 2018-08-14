@@ -28,20 +28,20 @@ Nu komen de coördinaten overeen met de breedte- en lengtegraadcoördinaten die 
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+Je code zou er als volgt uit moeten zien:
 
 ![screenshot](images/iss-image.png)
 
 \--- /hint \--- \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ Het ISS start in het midden van de kaart, we gaan het nu naar de juiste locatie verplaatsen:
 
 ![screenshot](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+** Opmerking**: normaal wordt eerst de breedtegraad (Engels: latitude) als eerste gegeven, maar om de ` (x, y) ` coördinaten te tekenen moet eerst de lengtegraad (Engels: longitude) worden opgegeven.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Test je programma door het uit te voeren. Het ISS zou naar de huidige locatie boven de aarde moeten gaan. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Wacht een paar seconden en voer je programma opnieuw uit om te zien waar het ISS naartoe is gegaan.
