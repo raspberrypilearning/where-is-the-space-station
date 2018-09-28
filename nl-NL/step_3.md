@@ -48,7 +48,7 @@ De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `m
 
 ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ Nu moet je het JSON-antwoord in een Python datastructuur laden:
 
 ![screenshot](images/iss-result.png)
 
