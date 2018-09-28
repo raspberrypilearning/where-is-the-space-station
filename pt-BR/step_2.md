@@ -4,9 +4,9 @@
 
 + Um computador com conexão à internet
 
-### Programas
+### Software
 
-+ [Editor on-line do trinket](https://trinket.io/)
++ Editor online [Trinket](https://trinket.io/)
 
 ### Recursos adicionais
 
