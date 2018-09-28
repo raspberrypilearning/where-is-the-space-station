@@ -1,17 +1,36 @@
 ## Quem está no espaço?
 
-Você vai usar um serviço da web que fornece informações ao vivo sobre o espaço. Primeiro, vamos descobrir quem está no espaço atualmente.
+Você vai usar um serviço da web que fornece informações em tempo real sobre o espaço. Primeiro, vamos descobrir quem está no espaço atualmente.
 
-Um serviço da web tem um endereço (URL) exatamente como um site faz. Em vez de retornar HTML para uma página da Web, ele retorna dados.
+Um serviço da web tem um endereço (URL) exatamente como um site tem. Em vez de retornar HTML para uma página da Web, ele retorna dados.
 
 + Abra <a href="http://api.open-notify.org/astros.json" target="_blank">o serviço da web</a> em um navegador da web.
 
-Você deveria ver algo assim:
+Você deverá ver algo assim:
 
-    `` `{" mensagem ":" sucesso "," número ": 3," pessoas ": [{" craft ":" ISS "," nome ":" Yuri Malenchenko "}, {" craft ":" ISS " , "nome": "Timothy Kopra"}, {"ofício": "ISS", "nome": "Timothy Peake"}]} `` `
+    ```
+    {
+      "message": "success",
+      "number": 3,
+      "people": [
+        {
+          "craft": "ISS",
+          "name": "Yuri Malenchenko"
+        },
+        {
+          "craft": "ISS",
+          "name": "Timothy Kopra"
+        },
+        {
+          "craft": "ISS",
+          "name": "Timothy Peake"
+        }
+      ]
+    }
+    ```
     
 
-Os dados são ao vivo, então você provavelmente verá um resultado ligeiramente diferente. O formato de dados é chamado de `JSON` (pronunciado como "Jason").
+Os dados são atualizados em tempo real, então você provavelmente verá um resultado ligeiramente diferente. O formato dos dados é chamado de `JSON` (pronunciado como "Jason").
 
 [[[generic-json]]]
 
@@ -21,61 +40,64 @@ Você precisa chamar o serviço da web a partir de um script Python, para poder 
 
 Os módulos `urllib.request` e `json` já foram importados para você na parte superior do script `main.py`.
 
-+ Adicione o seguinte código a `main.py` para armazenar o URL do serviço web que você acabou de acessar como uma variável:
++ Adicione o seguinte código a `main.py` para armazenar a URL do serviço web que você acabou de acessar como uma variável:
 
-![captura de tela](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
-+ Agora ligue para o serviço da web:
++ Agora chame o serviço da web:
 
-![captura de tela](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ Em seguida, você precisará carregar a resposta JSON em uma estrutura de dados em Python:
 
-![captura de tela](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
-Você deveria ver algo assim:
+Você deverá ver algo assim:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Este é um dicionário Python com três chaves: `, mensagem`, `número`e `pessoas`.
+Este é um dicionário Python com três chaves: `message`, `number` e `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Que `mensagem` tem o valor `sucesso` diz que você acessou com sucesso o serviço web. Observe que você verá resultados diferentes para `número` e `pessoas` dependendo de quem está no espaço.
+A `message` que tem o valor `success` mostra que você acessou com sucesso o serviço da web. Observe que você verá resultados diferentes para `number` e `people` dependendo de quem está no espaço.
 
 Agora vamos imprimir as informações de uma maneira mais legível.
 
 + Primeiro, vamos procurar o número de pessoas no espaço e imprimi-lo:
 
-![captura de tela](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
-`resultado ['número']` imprimirá o valor associado à chave `número` no `resultado` dicionário. No exemplo, isso é `3`.
+`resultado ['number']` imprimirá o valor associado à chave `number` no dicionário `resultado`. No exemplo, isso é `3`.
 
-+ O valor associado à chave `pessoas` é uma lista de dicionários! Vamos colocar esse valor em uma variável para que você possa usá-lo:
++ O valor associado à chave `people` é uma lista de dicionários! Vamos colocar esse valor em uma variável para que você possa usá-lo:
 
-![captura de tela](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
-Você deveria ver algo como:
+Você deverá ver algo assim:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Agora você precisa imprimir uma linha para cada astronauta. Você pode usar um loop `do Python para` para fazer isso.
++ Agora você precisa imprimir uma linha para cada astronauta. Você pode usar um laço de repetição `for` do Python para fazer isso.
 
 [[[generic-python-for-loop-list]]]
 
 + Cada vez através do loop, `p` será definido como um dicionário para um astronauta diferente.
 
-![captura de tela](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
-+ Você pode então procurar os valores para o `nome` e `ofício`. Vamos mostrar os nomes das pessoas no espaço:
++ Você pode então procurar os valores para o `name` e `craft`. Vamos mostrar os nomes das pessoas no espaço:
 
-![captura de tela](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
-Você deveria ver algo assim:
+Você deverá ver algo assim:
 
-    Pessoas no Espaço: 3 Yuri Malenchenko Timothy Kopra Timothy Peake
+    Pessoas no Espaço: 3
+    Yuri Malenchenko
+    Timothy Kopra
+    Timothy Peake
     
 
-**Nota:** Você está usando dados ao vivo, então seus resultados dependerão do número de pessoas atualmente no espaço.
+**Nota:** Você está usando dados atualizados, então os seus resultados dependerão do número de pessoas atualmente no espaço.
