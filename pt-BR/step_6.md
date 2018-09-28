@@ -1,4 +1,4 @@
-## Plotando o ISS em um mapa
+## Plotando a ISS em um mapa
 
 Seria útil mostrar a posição em um mapa. Você pode fazer isso usando gráficos Python Turtle!
 
@@ -10,9 +10,9 @@ Seria útil mostrar a posição em um mapa. Você pode fazer isso usando gráfic
 
 ![captura de tela](images/iss-map.png)
 
-O mapa é centrado em `(0,0)` latitude e longitude, exatamente o que você precisa.
+O mapa é centrado em latitude e longitude `(0,0)`, exatamente o que você precisa.
 
-+ Você precisa definir o tamanho da tela para corresponder ao tamanho da imagem, que é de 720 por 360 pixels. Adicione `screen.setup (720, 360)`:
++ Você precisa definir o tamanho da tela para corresponder ao tamanho da imagem, que é de 720 por 360 pixels. Adicione `tela.setup (720, 360)`:
 
 ![captura de tela](images/iss-setup.png)
 
@@ -20,28 +20,28 @@ O mapa é centrado em `(0,0)` latitude e longitude, exatamente o que você preci
 
 ![captura de tela](images/iss-world.png)
 
-Agora as coordenadas corresponderão às coordenadas de latitude e longitude que você recebe do serviço da web.
+Agora as coordenadas corresponderão às coordenadas de latitude e longitude que você recebe de volta do serviço da web.
 
-+ Vamos criar um ícone de tartaruga para a ISS. Seu trinket inclui 'iss.png' e 'iss2.png' - experimente os dois e veja qual você prefere. 
++ Vamos criar um ícone turtle para a ISS. Seu trinket inclui 'iss.png' e 'iss2.png' - experimente os dois e veja qual você prefere. 
 
 [[[generic-python-turtle-image]]]
 
-\--- dicas \--- \--- dica \---
+\--- hints \--- \--- hint \---
 
 Seu código deve ficar assim:
 
 ![captura de tela](images/iss-image.png)
 
-\--- / sugestão \--- \--- / sugestões \---
+\--- /hint \--- \--- /hints \---
 
-+ A ISS começa no centro do mapa, agora vamos movê-lo para o local correto:
++ A ISS começa no centro do mapa, agora vamos movê-la para o local correto:
 
 ![captura de tela](images/iss-plot.png)
 
-**Nota**: latitude normalmente é dada primeiro, mas precisamos dar longitude primeiro ao plotar as coordenadas `(x, y)`.
+**Nota**: a latitude normalmente é dada primeiro, mas precisamos dar a longitude primeiro ao plotar as coordenadas `(x, y)`.
 
 + Teste seu programa executando-o. A ISS deve se mover para sua localização atual acima da Terra. 
 
 ![captura de tela](images/iss-plotted.png)
 
-+ Aguarde alguns segundos e execute seu programa novamente para ver para onde o ISS foi movido.
++ Aguarde alguns segundos e execute seu programa novamente para ver para onde a ISS se moveu.
