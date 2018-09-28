@@ -1,32 +1,36 @@
-## Desafio: mostre o ofício
+## Desafio: Mostre a nave
 
-\--- desafio \---
+\--- challenge \---
 
-Além do nome dos astronautas, o serviço da Web também fornece o veículo em que eles estão, como o ISS.
+Além do nome dos astronautas, o serviço da Web também fornece a nave em que eles estão, como a ISS.
 
-+ Você pode adicionar ao seu roteiro para que ele também imprima a embarcação para cada astronauta? 
++ Você pode adicionar ao seu código para que ele também imprima a nave para cada astronauta? 
 
 Exemplo:
 
-    Pessoas no Espaço: 3 Yuri Malenchenko na ISS Timothy Kopra na ISS Timothy Peake na ISS
+    Pessoas no Espaço: 3
+    Yuri Malenchenko na ISS
+    Timothy Kopra na ISS
+    Timothy Peake na ISS
     
 
-\--- dicas \--- \--- dica \---
+\--- hints \--- \--- hint \---
 
-Você precisa adicionar código à declaração de impressão em `para p em pessoas:`. Lembre-se de que você pode imprimir vários itens separando-os com vírgulas.
+Você precisa adicionar código à instrução print em ` for p in pessoas: `. Lembre-se de que você pode imprimir vários itens separando-os com vírgulas.
 
-\--- / sugestão \--- \--- sugestão \---
+\--- /hint \--- \--- hint \---
 
-Você obtém o valor para o `nome` usando `p[name]` - como você pode obter o valor `para a embarcação`?
+Você obtém o valor para o `name` usando `p[name]` - como você pode obter o valor para `craft`?
 
-\--- / sugestão \--- \--- sugestão \---
+\--- /hint \--- \--- hint \---
 
-Altere seu `para o loop` para que fique assim:
+Altere o laço `for` para que fique assim:
 
 ```python
-para p em pessoas: print (p ['name'], 'in', p ['craft'])
+for p in people:
+  print(p['name'], ' in ', p['craft'])
 ```
 
-\--- / sugestão \--- \--- / dicas \---
+\--- /hint \--- \--- /hints \---
 
-\--- / desafio \---
+\--- /challenge \---
