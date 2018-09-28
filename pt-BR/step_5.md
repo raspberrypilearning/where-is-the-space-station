@@ -15,10 +15,10 @@ O resultado contém as coordenadas do ponto na Terra em que a ISS está no momen
 
 [[[generic-theory-lat-long]]]
 
-+ Agora você precisa chamar o mesmo serviço da Web do Python. Adicione o seguinte código ao final do seu script para obter a localização atual da ISS:
++ Agora você precisa chamar o mesmo serviço da Web no Python. Adicione o seguinte código ao final do seu script para obter a localização atual da ISS:
 
-![captura de tela](images/iss-location.png)
+![screenshot](images/iss-location.png)
 
 + Vamos criar variáveis ​​para armazenar a latitude e a longitude e depois imprimi-las:
 
-![captura de tela](images/iss-coordinates.png)
+![screenshot](images/iss-coordinates.png)
