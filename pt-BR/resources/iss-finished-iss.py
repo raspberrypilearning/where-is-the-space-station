@@ -7,35 +7,35 @@ import time
 
 # http://open-notify.org/Open-Notify-API/
 url = 'http://api.open-notify.org/astros.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+resposta = urllib.request.urlopen(url)
+resultado = json.loads(resposta.read())
 
-print('People in Space: ', result['number'])
+print('Pessoas no espaço: ', resultado['number'])
 
-people = result['people']
+pessoas = resultado['people']
 
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+for p in pessoas:
+  print(p['name'], ' na ', p['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+resposta = urllib.request.urlopen(url)
+resultado = json.loads(resposta.read())
 
-location = result['iss_position']
-lat = float(location['latitude'])
-lon = float(location['longitude'])
+local = resultado['iss_position']
+lat = float(local['latitude'])
+lon = float(local['longitude'])
 print('Latitude: ', lat)
 print('Longitude: ', lon)
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-screen.register_shape('iss.gif')
+tela = turtle.Screen()
+tela.setup(720, 360)
+tela.setworldcoordinates(-180, -90, 180, 90)
+tela.register_shape('iss.gif')
 
-# image source:
+# origem da imagem:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
-screen.bgpic('map.gif')
+tela.bgpic('map.gif')
 
 iss = turtle.Turtle()
 iss.shape('iss.gif')
@@ -44,8 +44,8 @@ iss.penup()
 
 iss.goto(lon, lat)
 
-# When Does ISS next pass over me?
-#london
+# Quando a ISS passa logo acima de mim?
+# Londres
 #lat = 51.5072
 #lon = 0.1275
 
@@ -53,21 +53,21 @@ iss.goto(lon, lat)
 #lat = 35.689487
 #lon = 139.691706
 
-# Space Center, Houston
+# Centro Espacial, Houston
 lat = 29.5502
 lon = -95.097
 
-location = turtle.Turtle()
-location.penup()
-location.color('yellow')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+local = turtle.Turtle()
+local.penup()
+local.color('yellow')
+local.goto(lon,lat)
+local.dot(5)
+local.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+resposta = urllib.request.urlopen(url)
+resultado = json.loads(resposta.read())
 
-#print result
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+# mostrar resultado
+acima = resultado['response'][1]['risetime']
+local.write(time.ctime(acima))
