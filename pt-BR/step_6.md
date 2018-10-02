@@ -1,12 +1,12 @@
-## Plotando a ISS em um mapa
+## Localizando a ISS em um mapa
 
-Seria útil mostrar a posição em um mapa. Você pode fazer isso usando gráficos Python Turtle!
+Seria útil mostrar a posição em um mapa. Você pode fazer isso usando a Python Turtle!
 
-+ Primeiro, precisaremos importar a biblioteca `turtle` Python:
++ Primeiro, precisaremos importar a biblioteca `turtle` no Python:
 
 ![captura de tela](images/iss-turtle.png)
 
-+ Em seguida, carregue um mapa do mundo como imagem de fundo. Há um já incluído no seu trinket chamado 'map.jpg'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
++ Em seguida, carregue um mapa mundi como imagem de fundo. Há um mapa mundi incluído no seu trinket chamado 'map.jpg'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
 
 ![captura de tela](images/iss-map.png)
 
@@ -16,7 +16,7 @@ O mapa é centrado em latitude e longitude `(0,0)`, exatamente o que você preci
 
 ![captura de tela](images/iss-setup.png)
 
-+ Você quer poder enviar a tartaruga para uma latitude e longitude específicas. Para facilitar, você pode definir a tela para corresponder às coordenadas que você está usando:
++ Você precisa enviar a turtle para coordenadas(latitude e longitude) específicas. Para facilitar, você pode definir a tela para corresponder às coordenadas que você está usando:
 
 ![captura de tela](images/iss-world.png)
 
