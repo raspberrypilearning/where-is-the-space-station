@@ -30,10 +30,26 @@ lon = XX.XX
 
 \--- /hint \--- \--- hint \---
 
-Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, um espaçoporto no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
+Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, é a primeira e maior base de lançamentos de foguetes do mundo, localizada no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
 
 ```python
-# Baikonur Cosmodrome lat = 45.86 lon = 63.31 local.penup () local.color ('orange') local.goto (lon, lat) local.dot (5) local.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) resposta = urllib.request.urlopen (url) resultado = json.loads (resposta.read()) #print (resultado) acima = resultado ['response'][1]['risetime'] local.write (time.ctime (acima))
+# Cosmódromo de Baikonur
+lat = 45.86
+lon = 63.31
+
+local.penup()
+local.color('orange')
+local.goto(lon,lat)
+local.dot(5)
+local.hideturtle()
+
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+resposta = urllib.request.urlopen(url)
+resultado = json.loads(response.read())
+
+#print(resultado)
+over = resultado['resposta'][1]['risetime']
+local.write(time.ctime(acima))
 ```
 
 Tente adicionar mais locais!
