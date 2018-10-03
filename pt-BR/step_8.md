@@ -1,10 +1,10 @@
-## Desafio: encontre mais tempos de passagem
+## Desafio: Encontre mais tempos de passagem
 
 \--- challenge \---
 
 Para pesquisar a latitude e a longitude de um local de seu interesse, você pode usar um site como <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
 
-+ Você consegue procurar e plotar os tempos de passagem para mais locais? 
++ Você consegue procurar e definir os tempos de passagem para mais locais? 
 
 ![screenshot](images/iss-final.png)
 
@@ -17,7 +17,15 @@ No final do programa, defina as variáveis ​​ `lat` e `long` para novos valo
 Adicione este código ao final do seu programa e preencha as partes que faltam. Observe que você pode copiar e colar o código que você escreveu para obter o tempo de passagem para o Centro Espacial em Houston e, em seguida, fazer as alterações necessárias.
 
 ```python
-# Sua localização escolhida lat = XX.XX lon = XX.XX # Desenhe um ponto com a turtle `location` (não é necessário criar uma nova turtle), escolha uma cor diferente # Obtenha o resultado de` iss-pass.json` para sua nova latitude e longitude # Pegue o `risetime` do resultado e use a turtle` location` para escrevê-lo no mapa
+# Sua localização escolhida
+lat = XX.XX
+lon = XX.XX
+
+# Desenhe um ponto com a turtle 'location' (não é necessário criar uma nova turtle), escolha uma cor diferente
+
+# Obtenha o resultado de 'iss-pass.json' para as suas novas coordenadas
+
+# Pegue a resposta do 'risetime' e usa a turtle 'location' para escrevê-lo no mapa
 ```
 
 \--- /hint \--- \--- hint \---
