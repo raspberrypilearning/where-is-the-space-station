@@ -38,7 +38,7 @@ Je code zou er als volgt uit moeten zien:
 
 ![screenshot](images/iss-plot.png)
 
-** Opmerking**: normaal wordt eerst de breedtegraad (Engels: latitude) als eerste gegeven, maar om de `(x, y)` coördinaten te tekenen moet eerst de lengtegraad (Engels: longitude) worden opgegeven.
+**Opmerking**: normaal wordt eerst de breedtegraad (Engels: latitude) als eerste gegeven, maar om de `(x, y)` coördinaten te tekenen moet eerst de lengtegraad (Engels: longitude) worden opgegeven.
 
 + Test je programma door het uit te voeren. Het ISS zou naar de huidige locatie boven de aarde moeten gaan. 
 
