@@ -1,32 +1,36 @@
-## Challenge: show the craft
+## Wyzwanie: pokaż pojazd
 
-\--- wyzwanie \---
+\--- challenge \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+Oprócz nazwy astronautów, serwis internetowy zapewnia również pojazd, na którym się znajdują, takie jak ISS.
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ Czy możesz dodać do swojego skryptu, aby wydrukował także pojazd dla każdego astronauty? 
 
-Example:
+Przykład:
 
-    Ludzie w kosmosie: 3 Yuri Malenchenko w ISS Timothy Kopra w ISS Timothy Peake w ISS
+    People in Space:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \--- \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Pamiętaj, że możesz drukować wiele przedmiotów, oddzielając je przecinkami.
+Musisz dodać kod do instrukcji print w `for p in people:`. Pamiętaj, że możesz drukować wiele obiektów, oddzielając je przecinkami.
 
-\--- /hint \--- \--- hint \---
+-- /hint \--- \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+Otrzymujesz wartość dla `name` używając `p[name]` - jak uzyskać wartość dla `craft`?
 
-\--- /hint \--- \--- hint \---
+-- /hint \--- \--- hint \---
 
-Change your `for` loop so it looks like this:
+Zmień swoją pętlę `for`, aby wyglądała tak:
 
 ```python
-dla p w ludziach: print (p ['name'], 'in', p ['craft'])
+for p in people:
+  print(p['name'], ' in ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+-- /hint \--- \--- hints \---
 
 \--- /challenge \---
