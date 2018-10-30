@@ -1,12 +1,12 @@
 ## Gdzie jest ISS?
 
-Międzynarodowa Stacja Kosmiczna znajduje się na orbicie wokół Ziemi. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+Międzynarodowa Stacja Kosmiczna(ISS) znajduje się na orbicie wokół Ziemi. Zatacza pełną orbitę Ziemi mniej więcej co półtorej godziny i podróżuje ze średnią prędkością 7,66 km na sekundę. To jest szybkie!
 
 Użyjmy innej usługi internetowej, aby dowiedzieć się, gdzie znajduje się Międzynarodowa Stacja Kosmiczna.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Najpierw otwórz adres URL usługi internetowej w nowej karcie w przeglądarce: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-You should see something like this:
+Powinieneś zobaczyć coś takiego:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+Wynik zawiera współrzędne miejsca na Ziemi, nad którym ISS właśnie się znajduje.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Teraz musisz wywołać tę samą usługę internetową z Pythona. Dodaj następujący kod na końcu skryptu, aby uzyskać bieżącą lokalizację ISS:
 
 ![screenshot](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Utwórzmy zmienne do przechowywania szerokości i długości geograficznej, a następnie wyświetlmy je:
 
 ![screenshot](images/iss-coordinates.png)
