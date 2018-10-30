@@ -1,12 +1,12 @@
-## Drukowanie ISS na mapie
+## Nanoszenie ISS na mapę
 
-Przydałoby się pokazać pozycję na mapie. You can do this using Python Turtle graphics!
+Dobrze byłoby wyświetlić pozycję na mapie. Możesz to zrobić za pomocą grafiki Python Turtle!
 
-+ First we'll need to import the `turtle` Python library:
++ Najpierw musimy zaimportować bibliotekę `turtle` Pythona:
 
 ![screenshot](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
++ Następnie załaduj mapę świata jako tło. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
 
 ![screenshot](images/iss-map.png)
 
