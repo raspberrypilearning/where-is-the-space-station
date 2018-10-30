@@ -1,6 +1,6 @@
 ## Drukowanie ISS na mapie
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+Przydałoby się pokazać pozycję na mapie. You can do this using Python Turtle graphics!
 
 + First we'll need to import the `turtle` Python library:
 
