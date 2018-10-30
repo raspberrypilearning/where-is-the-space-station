@@ -1,7 +1,7 @@
 ---
 title: Gdzie jest Stacja Kosmiczna?
 hero_image: images / banner.png
-description: Find the exact location of the ISS
+description: Znajdź dokładną lokalizację Międzynarodowej Stacji Kosmicznej (ISS)
 theme: niebieski
 duration: 2
 listed: true
@@ -9,27 +9,27 @@ ingredient: false
 copyedit: false
 curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
 original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: przestrzeń
-technologies: pyton
-site_areas: projects
+interests: kosmos
+technologies: python
+site_areas: projekty
 hardware: ''
 software: python
 version: 3
 last_tested: 2017-01-01
 steps:
   - 
-    title: Wprowadzenie
+    title: '#wprowadzenie'
   - 
-    title: Co będzie potrzebne
+    title: Co będziesz potrzebować
   - 
     title: Kto jest w kosmosie?
   - 
-    title: 'Challenge: show the craft'
+    title: 'Wyzwanie: pokaż pojazd'
   - 
     title: Gdzie jest ISS?
   - 
-    title: Drukowanie ISS na mapie
+    title: Nanoszenie ISS na mapę
   - 
     title: Kiedy ISS będzie nad głową?
   - 
-    title: 'Challenge: find more pass-over times'
+    title: 'Wyzwanie: znajdź więcej czasów przejścia'
