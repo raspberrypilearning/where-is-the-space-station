@@ -6,42 +6,42 @@ Dobrze byłoby wyświetlić pozycję na mapie. Możesz to zrobić za pomocą gra
 
 ![screenshot](images/iss-turtle.png)
 
-+ Następnie załaduj mapę świata jako tło. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
++ Następnie załaduj mapę świata jako tło. Jedna już jest zawarta w twoim trinkecie "map.jpg"! NASA dostarczyła tę piękną mapę i udzieliła pozwolenia na jej ponowne wykorzystanie. 
 
 ![screenshot](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+Mapa jest wyśrodkowana na `(0,0)` szerokość i długość geograficzna, która jest właśnie tym, czego potrzebujesz.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ Musisz ustawić rozmiar ekranu, aby dopasować go do rozmiaru obrazu, który wynosi 720 na 360 pikseli. Dodaj `screen.setup(720, 360)`:
 
 ![screenshot](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Chcesz móc wysłać żółwia na określoną szerokość i długość geograficzną. Aby to ułatwić, możesz ustawić ekran tak, aby pasował do współrzędnych, z których korzystasz:
 
 ![screenshot](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Teraz współrzędne będą pasować do długości i szerokości geograficznej, które otrzymujesz z powrotem od usługi internetowej.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
++ Stwórzmy ikonę żółwia dla ISS. Twój trinket zawiera "iss.png" i "iss2.png" - wypróbuj je i sprawdź, który z nich wolisz. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+Twój plik powinien teraz wyglądać tak:
 
 ![screenshot](images/iss-image.png)
 
 \--- /hint \--- \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ ISS zaczyna się w środku mapy, a teraz przenieśmy ją do właściwej lokalizacji:
 
 ![screenshot](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Uwaga**: szerokość geograficzna jest zwykle podawana jako pierwsza, ale musimy najpierw podać długość geograficzną podczas wyświetlania współrzędnych `(x, y)`.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Sprawdź swój program, uruchamiając go. ISS powinna przejść do swojej obecnej lokalizacji nad Ziemią. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Poczekaj kilka sekund i uruchom ponownie program, aby sprawdzić, do którego miejsca trafiła usługa ISS.
