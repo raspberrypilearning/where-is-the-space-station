@@ -1,24 +1,24 @@
 ## Kiedy ISS będzie nad głową?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+Istnieje również usługa internetowa, za pomocą której można dowiedzieć się, kiedy usługa ISS będzie nad danym miejscem.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Zobaczmy, kiedy ISS będzie następny nad Centrum Kosmicznym w Houston, USA, na szerokości geograficznej `29.5502` i długość geograficzna `95,097`.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Najpierw narysuj kropkę na mapie o tych współrzędnych:
 
 ![screenshot](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Teraz pobierzmy datę i godzinę, kiedy ISS będzie następnym razem powyżej.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Tak jak poprzednio, możesz wywołać usługę internetową, wpisując jej adres URL w pasku adresu przeglądarki internetowej: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-You should see an error:
+Powinien pojawić się błąd:
 
 ![screenshot](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Ta usługa internetowa ma długość i szerokość geograficzną jako dane wejściowe, więc musisz uwzględnić je w adresie URL. Wejścia są dodawane po `?` i oddzielone przez `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Dodaj dane wejściowe ` lat ` i ` lon ` do adresu url, jak pokazano: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1</a>
 
 ![screenshot](images/iss-passtimes.png)
 
