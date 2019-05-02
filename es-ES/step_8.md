@@ -52,6 +52,6 @@ over = resultado['respuesta'][1]['risetime']
 location.write (time.ctime (over))
 ```
 
-Try adding more locations!
+¡Intente añadir más ubicaciones!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- / hint \--- \--- / hints \--- \--- / challenge \---
