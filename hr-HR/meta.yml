@@ -2,25 +2,15 @@
 title: Gdje je svemirska postaja?
 hero_image: images/banner.png
 description: U ovom projektu koristit ćeš web uslugu kako bi saznao gdje se trenutno nalazi Međunarodna svemirska postaja (ISS) i ucrtao njenu lokaciju na kartu.
-theme: blue
-duration: 2
 listed: true
-ingredient: false
 copyedit: false
-curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: projects
-hardware: ''
-software: python
 version: 3
 last_tested: 2017-01-01
 steps:
   - 
-    title: Gdje je svemirska postaja?
+    title: Sretan rođendan
   - 
-    title: What you will need
+    title: Ono što će vam trebati
   - 
     title: Who is in space?
   - 
