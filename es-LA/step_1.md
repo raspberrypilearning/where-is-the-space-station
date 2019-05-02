@@ -1,4 +1,4 @@
-## Introduction
+## Introducción
 
 In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
 
@@ -12,8 +12,8 @@ The space station icon shows the current location of the ISS. The yellow text sh
   <img src="images/iss-final.png">
 </div>
 
-### What you will learn
+### Lo que aprenderás
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+Este proyecto incluye elementos de los siguientes aspectos del [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
 + [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
