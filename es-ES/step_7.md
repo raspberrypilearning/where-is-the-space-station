@@ -26,21 +26,21 @@ La respuesta incluye varios tiempos de paso, y nosotros solo vamos a ocuparnos d
 
 [[[generic-unix-timestamp]]]
 
-+ Ahora llamemos al servicio web de Python. Add the following code to the end of your script:
++ Ahora llamemos al servicio web de Python. Agregue el siguiente código al final de su script:
 
 ![captura de pantalla](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Ahora obtendremos el primer paso de tiempo del resultado. Agregue el siguiente código:
 
 ![screenshot](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+Necesitamos el módulo Python `time` para que podamos imprimirlo en un formato legible y convertirlo a tiempo local. Luego obtendremos el script para escribir el tiempo de paso por el punto para Houston.
 
-+ Add an `import time` line at the top of your script:
++ Añada una línea `import time` en la parte superior de su script:
 
 ![captura de pantalla](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ La función `time.ctime()` convertirá la marca de tiempo en un formato legible que puede escribir en su mapa:
 
 ![captura de pantalla](images/iss-pass-write.png)
 
