@@ -6,7 +6,7 @@
 
 ![スクリーンショット](images/iss-turtle.png)
 
-+ 次に、世界地図を背景画像として読み込みます。 あなたのtrinketにはすでに 'map.jpg'というものがあります。 NASAが提供してる地図で、再利用の許可をだしています。 
++ 次に、世界地図を背景画像として読み込みます。 There’s one already included in your trinket called 'map.gif'! NASAが提供してる地図で、再利用の許可をだしています。 
 
 ![スクリーンショット](images/iss-map.png)
 
@@ -14,7 +14,7 @@
 
 + 画像のサイズ（720 x 360ピクセル）と一致するように画面サイズを設定する必要があります。 `screen.setup(720, 360)`を追加しましょう:
 
-![スクリーンショット](images/iss-setup.png)
+![screenshot](images/iss-setup.png)
 
 + 特定の緯度と経度にカメを置きましょう。 これを簡単にするには、使用している座標に合わせて画面を設定します：
 
@@ -22,7 +22,7 @@
 
 これで座標は、Webサービスから返された緯度と経度の座標と一致します。
 
-+ ISSをあらわすカメアイコンを作成しましょう。 あなたのtrinketには「iss.png」と「iss2.png」があります—好きな画像を使ってください。 
++ ISSをあらわすカメアイコンを作成しましょう。 Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
