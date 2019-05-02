@@ -6,7 +6,7 @@ It would be useful to show the position on a map. You can do this using Python T
 
 ![screenshot](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
++ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
 ![screenshot](images/iss-map.png)
 
@@ -22,7 +22,7 @@ The map is centered at `(0,0)` latitude and longitude, which is just what you ne
 
 Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
++ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
