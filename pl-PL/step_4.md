@@ -2,13 +2,13 @@
 
 \--- challenge \---
 
-Oprócz nazwy astronautów, serwis internetowy zapewnia również pojazd, na którym się znajdują, takie jak ISS.
+Oprócz nazwy astronautów, usługa sieciowa zapewnia również pojazd, na którym się znajdują, takie jak ISS.
 
 + Czy możesz dodać do swojego skryptu, aby wydrukował także pojazd dla każdego astronauty? 
 
 Przykład:
 
-    People in Space:  3
+    Liczba osób w Kosmosie:  3
     Yuri Malenchenko in ISS
     Timothy Kopra in ISS
     Timothy Peake in ISS
@@ -28,7 +28,7 @@ Zmień swoją pętlę `for`, aby wyglądała tak:
 
 ```python
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+  print(p['name'], ' w ', p['craft'])
 ```
 
 -- /hint \--- \--- hints \---
