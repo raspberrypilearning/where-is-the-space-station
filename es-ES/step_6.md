@@ -6,7 +6,7 @@ Sería útil mostrar la posición en un mapa. ¡Usted puede hacer esto utilizand
 
 ![captura de pantalla](images/iss-turtle.png)
 
-+ A continuación, cargue un mapa del mundo como imagen de fondo. There’s one already included in your trinket called 'map.gif'! La NASA ha proporcionado este hermoso mapa y ha dado permiso para su reutilización. 
++ A continuación, cargue un mapa del mundo como imagen de fondo. ¡Ya hay uno incluido en su baratija llamado 'map.gif'! La NASA ha proporcionado este hermoso mapa y ha dado permiso para su reutilización. 
 
 ![captura de pantalla](images/iss-map.png)
 
@@ -22,7 +22,7 @@ El mapa está centrado en `(0,0)` latitud y longitud, que es justo lo que necesi
 
 Ahora las coordenadas coincidirán con las coordenadas de latitud y longitud que obtiene del servicio web.
 
-+ Vamos a crear un icono de tortuga para la ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Vamos a crear un icono de tortuga para la ISS. Su baratija incluye 'iss.gif' y 'iss2.gif' - pruébelos y vea cuál prefiere. 
 
 [[[generic-python-turtle-image]]]
 
