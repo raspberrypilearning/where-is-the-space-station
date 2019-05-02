@@ -8,7 +8,6 @@ Webサービスには、Webサイトと同じようにアドレス（URL）が�
 
 以下のようなものが表示されます：
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,7 +26,6 @@ Webサービスには、Webサイトと同じようにアドレス（URL）が�
         }
       ]
     }
-    ```
     
 
 ライブデータであるため、毎回Webサービスから返ってくるデータが同じものとは限りません。 データ形式は `JSON` （ 'ジェイソン'のように発音）と呼ばれます。
@@ -36,7 +34,7 @@ Webサービスには、Webサイトと同じようにアドレス（URL）が�
 
 データを使うためには、PythonスクリプトからWebサービスを呼び出す必要があります。
 
-+ 次のトリンケットを開いてください: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>。
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 `urllib.request` と `json` モジュールは、 `main.py` スクリプトの先頭にすでにインポートされています。
 
@@ -52,7 +50,7 @@ Webサービスには、Webサイトと同じようにアドレス（URL）が�
 
 ![スクリーンショット](images/iss-result.png)
 
-次のようなものが表示されます。
+以下のようなものが表示されます：
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
@@ -92,7 +90,7 @@ Webサービスにアクセス成功した場合、指定したキー、`message
 
 ![スクリーンショット](images/iss-people-2.png)
 
-次のようなものが表示されます。
+以下のようなものが表示されます：
 
     People in Space:  3
     Yuri Malenchenko
