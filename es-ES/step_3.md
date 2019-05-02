@@ -1,4 +1,4 @@
-## Who is in space?
+## Reto: Mostrar la nave
 
 You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
 
@@ -8,7 +8,6 @@ A web service has an address (URL) just like a website does. Instead of returnin
 
 You should see something like this:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,7 +26,6 @@ You should see something like this:
         }
       ]
     }
-    ```
     
 
 The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
@@ -36,17 +34,17 @@ The data is live, so you will probably see a slightly different result. The data
 
 You need to call the web service from a Python script, so you can use the results.
 
-+ Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
 + Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![screenshot](images/iss-url.png)
+![captura de pantalla](images/iss-url.png)
 
 + Now call the web service:
 
-![screenshot](images/iss-request.png)
+![captura de pantalla](images/iss-request.png)
 
 + Next you need to load the JSON response into a Python data structure:
 
@@ -67,13 +65,13 @@ Now let's print the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
-![screenshot](images/iss-number.png)
+![captura de pantalla](images/iss-number.png)
 
 `result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![screenshot](images/iss-people.png)
+![captura de pantalla](images/iss-people.png)
 
 You should see something like:
 
@@ -86,18 +84,18 @@ You should see something like:
 
 + Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![screenshot](images/iss-people-1a.png)
+![captura de pantalla](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ You can then look up the values for `name` and `craft`. Mostremos los nombres de las personas en el espacio:
 
-![screenshot](images/iss-people-2.png)
+![captura de pantalla](images/iss-people-2.png)
 
-You should see something like this:
+Deberá ver algo como esto:
 
-    People in Space:  3
+    Personas en el espacio: 3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+** Nota: ** Está utilizando datos en vivo, por lo que sus resultados dependerán de la cantidad de personas que actualmente estén en el espacio.
