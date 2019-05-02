@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-Om interessante lengte- en breedtegraden te vinden kun je gebruik maken van een website zoals <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Kun je overvliegtijden voor meer locaties opzoeken en tekenen? 
 
