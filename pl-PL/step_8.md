@@ -1,41 +1,57 @@
-## Challenge: find more pass-over times
+## Wyzwanie: znajdź więcej czasów przejścia
 
-\--- wyzwanie \---
+\--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Czy możesz sprawdzić i wyznaczyć czas przejścia dla większej liczby lokalizacji? 
 
-![screenshot](images/iss-final.png)
+![zrzut ekranu](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Na końcu twojego programu ustaw `lat` i `long` zmienne do nowych wartości, a następnie użyj `location` zmiennej żółwia, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj`iss-pass` usługi sieciowej ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Wreszcie weź `risetime` z odpowiedzi i zapisz z zmienną `location` żółwia.
 
-\--- /hint \--- \--- hint \---
+-- /hint \--- \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Dodaj ten kod na końcu programu i uzupełnij brakujące fragmenty. Pamiętaj, że możesz skopiować i wkleić napisany kod, aby uzyskać czas przejścia nad Centrum Kosmicznym w Houston, a następnie wprowadzić potrzebne zmiany.
 
 ```python
-# Your chosen location
+#Twoja wybrana lokalizacja
 lat = XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+#Narysuj kropkę używając 'location' żółwia ( nie ma potrzeby tworzenia nowego żółwia), wybierz inny kolor
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+#Pobierz wyniki z 'iss-pass.json' dla twojej nowej długości i szerokości geograficznej
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+#Pobierz 'risetime' z wyników i użyj 'location' żółwia aby nanieść je na mapie
 ```
 
-\--- /hint \--- \--- hint \---
+-- /hint \--- \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Oto przykład wykorzystania lokalizacji Kosmodromu z Bajkonuru, kosmoport w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po naniesieniu czasu przejścia dla Centrum Lotów Kosmicznego w Houston.
 
 ```python
-# Bajkonur Kosmodrom lat = 45,86 lon = 63.31 lokalizacji.penup () location.color ('pomarańczowa') location.goto (lon, lat) location.dot (5) location.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) response = urllib.request.urlopen (url) result = json.loads (response.read ()) #print (result) over = result ['response'][1]['risetime'] location.write (time.ctime (over))
+# Baikonur Cosmodrome
+lat = 45.86
+lon = 63.31
+
+location.penup()
+location.color('orange')
+location.goto(lon,lat)
+location.dot(5)
+location.hideturtle()
+
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
+
+#print(result)
+over = result['response'][1]['risetime']
+location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+Spróbuj dodać więcej lokalizacji!
 
 \--- /hint \--- \--- /hints \--- \--- /challenge \---
