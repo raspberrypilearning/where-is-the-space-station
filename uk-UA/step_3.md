@@ -8,22 +8,39 @@
 
 Ви повинні побачити щось на зразок цього:
 
-    "{{" ремесло ":" МКС "," назва ":" Юрій Маленченко "}, {" ремесло ":" МКС " , "ім'я": "Тимофій Копра"}, {"ремесло": "МКС", "назва": "Тимофій Пік"}]} `` `
+    {
+      "message": "success",
+      "number": 3,
+      "people": [
+        {
+          "craft": "ISS",
+          "name": "Yuri Malenchenko"
+        },
+        {
+          "craft": "ISS",
+          "name": "Timothy Kopra"
+        },
+        {
+          "craft": "ISS",
+          "name": "Timothy Peake"
+        }
+      ]
+    }
     
 
 Дані є живими, тому ви, мабуть, побачите трохи інший результат. Формат даних називається `JSON` (вимовляється як "Джейсон").
 
-[[[generic-json]]]
+[generic-json]
 
 Вам потрібно зателефонувати до веб-сервера за допомогою сценарію Python, щоб ви могли використовувати результати.
 
-+ Відкрийте цю дрібницю: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 Модулі `urllib.request` та `json` вже імпортовані для вас у верхній частині сценарію `main.py`.
 
 + Додайте наступний код до `main.py` , щоб зберегти URL-адресу веб-сервісу, який ви лише переглянули як змінну:
 
-![скріншот](images/iss-url.png)
+![Знімок екрану](images/iss-url.png)
 
 + Зателефонуйте на веб-службу:
 
@@ -31,7 +48,7 @@
 
 + Next you need to load the JSON response into a Python data structure:
 
-![скріншот](images/iss-result.png)
+![знімок екрану](images/iss-result.png)
 
 Ви повинні побачити щось на зразок цього:
 
