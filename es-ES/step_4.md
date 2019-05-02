@@ -1,34 +1,34 @@
-## Challenge: show the craft
+## ¿Dónde está la ISS?
 
-\--- challenge \---
+\--- desafío \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+Además del nombre de los astronautas, el servicio web también proporciona la nave en la que se encuentran, como la ISS.
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ ¿Puede agregar al script para que imprime también la nave para cada astronauta? 
 
-Example:
+Ejemplo:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Personas en el espacio: 3
+    Yuri Malenchenko en ISS
+    Timothy Kopra en ISS
+    Timothy Peake en ISS
     
 
 \--- hints \--- \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+Debe agregar código al comando print en ` for p in personas: `. Recuerde que puede imprimir varios elementos separándolos con comas.
 
 \--- /hint \--- \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+Puede obtener el valor de ` nombre ` utilizando ` p[nombre]` - ¿Cómo puede obtener el valor para ` craft `?
 
 \--- /hint \--- \--- hint \---
 
-Change your `for` loop so it looks like this:
+Cambie el bucle ` for` para que se vea así:
 
 ```python
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+for p in personas:
+  print(p['nombre'], ' en ', p['nave'])
 ```
 
 \--- /hint \--- \--- /hints \---
