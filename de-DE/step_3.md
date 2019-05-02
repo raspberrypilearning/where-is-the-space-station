@@ -1,14 +1,13 @@
-## Who is in space?
+## Wer ist im Weltraum?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Du wirst einen Web Service verwenden der live Informationen über den Weltraum anbietet. Als erstes werden wir herausfinden wer im Weltraum ist.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Ein Webdienst hat eine Adresse (URL) wie eine Website. Anstatt HTML für eine Webseite zurückzugeben, werden Daten zurückgegeben.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Öffne <a href="http://api.open-notify.org/astros.json" target="_blank"> den Webservice </a> in einem Webbrowser.
 
-You should see something like this:
+Dein Code sollte ungefähr so aussehen:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,30 +26,29 @@ You should see something like this:
         }
       ]
     }
-    ```
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Die Daten sind live, daher wirst du wahrscheinlich ein etwas anderes Ergebnis sehen. Das Datenformat heißt ` JSON ` (ausgesprochen wie "Jason").
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Du musst den Webdienst über ein Python-Skript aufrufen, damit du die Ergebnisse verwenden kannst.
 
-+ Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+Die ` urllib.request ` und `json` Module wurden bereits oben in der ` main.py ` Datei für dich importiert.
 
 + Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![screenshot](images/iss-url.png)
+![Screenshot](images/iss-url.png)
 
 + Now call the web service:
 
-![screenshot](images/iss-request.png)
+![Screenshot](images/iss-request.png)
 
 + Next you need to load the JSON response into a Python data structure:
 
-![screenshot](images/iss-result.png)
+![Screenshot](images/iss-result.png)
 
 You should see something like this:
 
@@ -67,13 +65,13 @@ Now let's print the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
-![screenshot](images/iss-number.png)
+![Screenshot](images/iss-number.png)
 
 `result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![screenshot](images/iss-people.png)
+![Screenshot](images/iss-people.png)
 
 You should see something like:
 
@@ -86,11 +84,11 @@ You should see something like:
 
 + Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![screenshot](images/iss-people-1a.png)
+![Screenshot](images/iss-people-1a.png)
 
 + You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![screenshot](images/iss-people-2.png)
+![Screenshot](images/iss-people-2.png)
 
 You should see something like this:
 
