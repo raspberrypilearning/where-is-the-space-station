@@ -6,7 +6,7 @@
 
 + まず、Webブラウザの新しいタブでWebサービスのURLを開きます <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-次のようなものが表示されます。
+以下のようなものが表示されます：
 
     {
     "iss_position": {
