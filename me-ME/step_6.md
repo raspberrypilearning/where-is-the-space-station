@@ -1,47 +1,47 @@
-## Plotting the ISS on a map
+## Ucrtavanje ISS na kartu
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+Bilo bi korisno da prikažemo poziciju na karti. To možeš da uradiš koristeći kornjačinu grafiku u Pythonu!
 
-+ First we'll need to import the `turtle` Python library:
++ Prvo treba da uvezemo `turtle` biblioteku u Pythonu:
 
 ![screenshot](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.jpg'! NASA has provided this beautiful map and given permission for reuse. 
++ Zatim učitaj kartu svijeta kao pozadinsku sliku. There’s one already included in your trinket called 'map.gif'! NASA je obezbijedila ovu divnu kartu i dala dozvolu za njeno korišćenje. 
 
 ![screenshot](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+Karta je centrirana na geografskoj širini i dužini `(0,0)`, a to je upravo ono što ti je potrebno.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ Treba da podesiš veličinu ekrana na 720 sa 360 piksela tako da odgovara veličini slike. Dodaj `ekran.setup(720, 360)`:
 
 ![screenshot](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Potrebno je da kornjaču šalješ na određenu geografsku širinu i dužinu. Da bi to bilo lakše, možeš da podesiš ekran tako da odgovara koordinatama koje koristiš:
 
 ![screenshot](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Sada će koordinate odgovarati geografskoj širini i dužini koje dobiješ sa veb usluge.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.png' and 'iss2.png' — try them both and see which one you prefer. 
++ Kreirajmo ikonu kornjače za ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+Tvoj kôd treba da izgleda ovako:
 
 ![screenshot](images/iss-image.png)
 
 \--- /hint \--- \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ ISS se nalazi na sredini karte. Pomjerimo je sada na ispravnu lokaciju:
 
 ![screenshot](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Napomena**: geografska širina se obično daje prva, ali mi treba prvo da damo geografsku dužinu kada ucrtavamo `(x,y)` koordinate.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Pokreni i isprobaj svoj program. ISS bi trebalo da se pomjeri na svoju trenutnu lokaciju iznad Zemlje. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Sačekaj nekoliko sekundi, a zatim ponovo pokreni svoj program da provjeriš gdje se pomjerila ISS.
