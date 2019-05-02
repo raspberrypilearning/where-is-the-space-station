@@ -6,7 +6,7 @@ In addition to the name of the astronauts, the web service also provides the cra
 
 + Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Example:
+Primjer:
 
     People in Space:  3
     Yuri Malenchenko in ISS
