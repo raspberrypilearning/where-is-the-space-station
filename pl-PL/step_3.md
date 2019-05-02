@@ -1,14 +1,13 @@
 ## Kto jest w kosmosie?
 
-Użyjesz usługi internetowej, która dostarcza na bieżąco informacje o kosmosie. Najpierw dowiedzmy się, kto jest obecnie w kosmosie.
+Użyjesz usługi sieciowej, która dostarcza na bieżąco informacje o kosmosie. Najpierw dowiedzmy się, kto jest obecnie w kosmosie.
 
 Usługa internetowa ma adres (URL), tak jak robi to strona internetowa. Zamiast zwracać kod HTML dla strony internetowej, zwraca dane.
 
-+ Otwórz <a href="http://api.open-notify.org/astros.json" target="_blank">usługę internetową</a> w przeglądarce sieci web.
++ Otwórz <a href="http://api.open-notify.org/astros.json" target="_blank">usługę sieciową</a> w przeglądarce sieci web.
 
 Powinieneś zobaczyć coś takiego:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,30 +26,29 @@ Powinieneś zobaczyć coś takiego:
         }
       ]
     }
-    ```
     
 
 Dane są aktualizowane na żywo, więc prawdopodobnie zobaczysz nieco inny wynik. Format danych jest nazywany `JSON` (wymawiane jak "Dżejson").
 
 [[[generic-json]]]
 
-Musisz wywołać usługę internetową ze skryptu w języku Python, aby móc korzystać z wyników.
+Musisz wywołać usługę sieciową ze skryptu w języku Python, aby móc korzystać z wyników.
 
-+ Otwórz ten szablon: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 Moduły `urllib.request` i `json` zostały już zaimportowane u góry głównego pliku skryptu`main.py`.
 
-+ Dodaj następujący kod do ` main.py ` aby przechowywać adres URL usługi internetowej, do której właśnie dostęp miałeś jako zmiennej:
++ Dodaj następujący kod do ` main.py ` aby przechowywać adres URL usługi sieciowej, do której właśnie dostęp miałeś jako zmiennej:
 
-![screenshot](images/iss-url.png)
+![zrzut ekranu](images/iss-url.png)
 
-+ Teraz wywołaj usługę internetową:
++ Teraz wywołaj usługę sieciową:
 
-![screenshot](images/iss-request.png)
+![zrzut ekranu](images/iss-request.png)
 
 + Następnie musisz załadować odpowiedź JSON do struktury danych Pythona:
 
-![screenshot](images/iss-result.png)
+![zrzut ekranu](images/iss-result.png)
 
 Powinieneś zobaczyć coś takiego:
 
@@ -67,13 +65,13 @@ Teraz wyświetlmy te informacje w bardziej czytelny sposób.
 
 + Najpierw sprawdźmy liczbę osób w przestrzeni i wyświetlmy ją:
 
-![screenshot](images/iss-number.png)
+![zrzut ekranu](images/iss-number.png)
 
 `result['number']` wyświetli wartość skojarzoną z kluczem`number` w słowniku `result`. W tym przypadku jest to `3`.
 
 + Wartość powiązana z kluczem `people` to lista słowników! Przypiszmy tę wartość do zmiennej, abyś mógł z niej korzystać:
 
-![screenshot](images/iss-people.png)
+![zrzut ekranu](images/iss-people.png)
 
 Powinieneś zobaczyć coś takiego:
 
@@ -86,15 +84,15 @@ Powinieneś zobaczyć coś takiego:
 
 + Za każdym przejściem przez pętlę, `p` będzie ustawione na słownik dla innego astronauty.
 
-![screenshot](images/iss-people-1a.png)
+![zrzut ekranu](images/iss-people-1a.png)
 
-+ Następnie możesz wyszukać wartości dla `name` i `pojazd`. Pokażmy imiona osób w kosmosie:
++ Następnie możesz wyszukać wartości dla `name` i `craft`. Pokażmy imiona osób w kosmosie:
 
-![screenshot](images/iss-people-2.png)
+![zrzut ekranu](images/iss-people-2.png)
 
 Powinieneś zobaczyć coś takiego:
 
-    People in Space:  3
+    Liczba osób w Kosmosie:  3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
