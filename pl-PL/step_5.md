@@ -2,9 +2,9 @@
 
 Międzynarodowa Stacja Kosmiczna(ISS) znajduje się na orbicie wokół Ziemi. Zatacza pełną orbitę Ziemi mniej więcej co półtorej godziny i podróżuje ze średnią prędkością 7,66 km na sekundę. To jest szybkie!
 
-Użyjmy innej usługi internetowej, aby dowiedzieć się, gdzie znajduje się Międzynarodowa Stacja Kosmiczna.
+Użyjmy innej usługi sieciowej, aby dowiedzieć się, gdzie znajduje się Międzynarodowa Stacja Kosmiczna.
 
-+ Najpierw otwórz adres URL usługi internetowej w nowej karcie w przeglądarce: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Najpierw otwórz adres URL usługi sieciowej w nowej karcie w przeglądarce: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
 Powinieneś zobaczyć coś takiego:
 
@@ -22,10 +22,10 @@ Wynik zawiera współrzędne miejsca na Ziemi, nad którym ISS właśnie się zn
 
 [[[generic-theory-lat-long]]]
 
-+ Teraz musisz wywołać tę samą usługę internetową z Pythona. Dodaj następujący kod na końcu skryptu, aby uzyskać bieżącą lokalizację ISS:
++ Teraz musisz wywołać tę samą usługę sieciową z Pythona. Dodaj następujący kod na końcu skryptu, aby uzyskać bieżącą lokalizację ISS:
 
-![screenshot](images/iss-location.png)
+![zrzut ekranu](images/iss-location.png)
 
 + Utwórzmy zmienne do przechowywania szerokości i długości geograficznej, a następnie wyświetlmy je:
 
-![screenshot](images/iss-coordinates.png)
+![zrzut ekranu](images/iss-coordinates.png)
