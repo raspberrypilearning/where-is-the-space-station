@@ -12,7 +12,7 @@ El icono de la estación espacial muestra la ubicación actual de la ISS. El tex
   <img src="images/iss-final.png">
 </div>
 
-### Lo que aprenderás
+### Lo que aprenderá
 
 Este proyecto incluye elementos de los siguientes aspectos del [currículo de creación digital de Raspberry Pi](http://rpf.io/curriculum):
 
