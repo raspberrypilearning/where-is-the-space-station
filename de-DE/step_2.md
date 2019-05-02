@@ -1,15 +1,17 @@
-## What you will need
+## Was du brauchen wirst
 
 ### Hardware
 
-+ A computer with internet connection
++ Einen Computer mit Internetverbindung
 
 ### Software
 
-+ [Trinket](https://trinket.io/) online editor
++ [Trinket](https://trinket.io/) Online-Editor
 
-### Additional resources
+### Weitere Quellen
 
-+ <a href="http://jumpto.cc/iss-go" target="_blank">Starter project</a>
++ Starter projekt - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ Open Notify webservices: <a href="http://api.open-notify.org/" target="_blank">api.open-notify.org</a>
++ Eine abgeschlossene Version dieses Projekts - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) {: target = "_ blank"}
+
++ Öffne Notify Webservices - [ api.open-notify.org ](http://api.open-notify.org/) {: target = "_ blank"}
