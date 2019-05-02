@@ -10,13 +10,13 @@ steps:
   - 
     title: Introducción
   - 
-    title: Lo que necesitarás
+    title: Lo que necesitará
   - 
-    title: 'Reto: Mostrar la nave'
+    title: '¿Quién está en el espacio?'
+  - 
+    title: 'Desafío: mostrar la nave'
   - 
     title: '¿Dónde está la ISS?'
-  - 
-    title: '¿Cuándo pasará por encima la ISS?'
   - 
     title: Trazando la ISS en un mapa
   - 
