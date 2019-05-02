@@ -8,7 +8,6 @@ Een webservice heeft een adres (URL), net als een website. In plaats van HTML vo
 
 Het zou er zo kunnen uitzien:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,7 +26,6 @@ Het zou er zo kunnen uitzien:
         }
       ]
     }
-    ```
     
 
 De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dataformaat heet ` JSON ` (uitgesproken als 'djeesun').
@@ -36,7 +34,7 @@ De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dat
 
 Je moet de webservice met een Pythonscript oproepen om de resultaten te kunnen gebruiken.
 
-+ Open deze trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `main.py` script.
 
