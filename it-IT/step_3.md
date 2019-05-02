@@ -8,7 +8,6 @@ A web service has an address (URL) just like a website does. Instead of returnin
 
 You should see something like this:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,7 +26,6 @@ You should see something like this:
         }
       ]
     }
-    ```
     
 
 The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
@@ -36,7 +34,7 @@ The data is live, so you will probably see a slightly different result. The data
 
 You need to call the web service from a Python script, so you can use the results.
 
-+ Open this trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
