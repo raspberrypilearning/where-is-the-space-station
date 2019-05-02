@@ -86,7 +86,7 @@ Deberá ver algo como esto:
 
 ![captura de pantalla](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Mostremos los nombres de las personas en el espacio:
++ A continuación, puede buscar los valores para ` name` y ` craft`. Mostremos los nombres de las personas en el espacio:
 
 ![captura de pantalla](images/iss-people-2.png)
 
