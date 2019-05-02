@@ -27,8 +27,8 @@ Você obtém o valor para o `name` usando `p[name]` - como você pode obter o va
 Altere o laço `for` para que fique assim:
 
 ```python
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+for p in pessoas:
+  print(p['name'], ' na ', p['craft'])
 ```
 
 \--- /hint \--- \--- /hints \---
