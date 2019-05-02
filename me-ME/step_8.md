@@ -1,57 +1,57 @@
-## Challenge: find more pass-over times
+## Izazov: pronađi još vremena prolaska
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Možeš li da pronađeš i ucrtaš datum i vrijeme prolaska iznad još nekih lokacija? 
 
 ![screenshot](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Na kraju svog programa promjenljivim `sirina` i `duzina` dodijeli nove vrijednosti, a zatim upotrijebi kornjačinu promjenljivu `lokacija` da nacrtaš tačku na novoj lokaciji. (Odaberi neku drugu boju ako želiš). Zatim pozovi veb uslugu `iss-pass` sa unesenim koordinatama (da to uradiš, možeš kopirati i prenijeti kôd). Na kraju, `risetime` koji dobiješ iz odgovora upiši koristeći kornjaču `lokacija`.
 
 \--- /hint \--- \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Dodaj sljedeći kôd na kraju svog programa i popuni dijelove koji nedostaju. Imaj u vidu da možeš da kopiraš i preneseš kôd koji si napisao/napisala za dobijanje vremena prolaska iznad Svemirskog centra u Hjustonu, a zatim da u njega uneseš neophodne izmjene.
 
 ```python
-# Your chosen location
-lat = XX.XX
-lon = XX.XX
+# Tvoja odabrana lokacija
+sirina = XX.XX
+duzina = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# Nacrtaj tačku koristeći kornjaču 'lokacija' (nije potrebno da kreiraš novu kornjaču), odaberi drugu boju 
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+# Dobij rezultat od 'iss-pass.json' za svoju novu geografsku širinu i dužinu 
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# Uzmi 'risetime' iz rezultata i koristi kornjaču 'lokacija' da ga upišeš na kartu
 ```
 
 \--- /hint \--- \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Ovdje je primjer u kojem je korišćena lokacija Kosmodroma Bajkonur, svemirske luke u južnom Kazahstanu. Kôd treba da bude na kraju tvog programa, poslije ucrtavanja vremena prolaska iznad Svemirskog centra u Hjustonu.
 
 ```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
+# Kosmodrom Bajkonur
+sirina = 45.86
+duzina = 63.31
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+lokacija.penup()
+lokacija.color('orange')
+lokacija.goto(duzina,sirina)
+lokacija.dot(5)
+lokacija.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+odgovor = urllib.request.urlopen(url)
+rezultat = json.loads(odgovor.read())
 
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#print(rezultat)
+iznad = rezultat['response'][1]['risetime']
+lokacija.write(time.ctime(iznad))
 ```
 
-Try adding more locations!
+Pokušaj da dodaš još lokacija!
 
 \--- /hint \--- \--- /hints \--- \--- /challenge \---
