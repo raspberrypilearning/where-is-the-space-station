@@ -1,4 +1,4 @@
-## Onde fica a ISS?
+## Onde está a ISS?
 
 A Estação Espacial Internacional está em órbita ao redor da Terra. Ela completa uma órbita da Terra aproximadamente a cada uma hora e meia, e viaja a uma velocidade média de 7,66 km por segundo. É rápida!
 

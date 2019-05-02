@@ -22,6 +22,6 @@ steps:
   - title: Quem está no espaço?
   - title: 'Desafio: Mostre a nave'
   - title: Onde está a ISS?
-  - title: Plotando a ISS em um mapa
+  - title: Localizando a ISS em um mapa
   - title: Quando a ISS estará logo acima?
-  - title: 'Desafio: encontre mais tempos de passagem'
+  - title: 'Desafio: Encontre mais tempos de passagem'
