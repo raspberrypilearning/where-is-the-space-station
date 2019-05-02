@@ -2,25 +2,15 @@
 title: Wo ist die Weltraumstation?
 hero_image: images/banner.png
 description: Zeichne die genaue Position der Internationalen Weltraumstation ISS auf
-theme: blue
-duration: 2
 listed: true
-ingredient: false
 copyedit: false
-curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: projects
-hardware: ''
-software: python
 version: 3
 last_tested: 2017-01-01
 steps:
   - 
-    title: Einführung
+    title: Einleitung
   - 
-    title: Wer ist im Weltall?
+    title: Was du brauchen wirst
   - 
     title: 'Aufgabe: Die Weltraumstation anzeigen'
   - 
@@ -30,6 +20,6 @@ steps:
   - 
     title: 'Aufgabe: Finde noch mehr Überflugszeiten'
   - 
-    title: When will the ISS be overhead?
+    title: Wann wird die ISS über dir sein?
   - 
-    title: 'Challenge: find more pass-over times'
+    title: 'Herausforderung: finde mehr Zeiten wenn sie sich über dir befindet'
