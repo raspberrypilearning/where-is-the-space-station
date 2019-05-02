@@ -1,35 +1,25 @@
 ---
 title: 宇宙ステーションはどこですか？
-hero_image: images / banner.png
+hero_image: images/banner.png
 description: ISSの正確な場所を見つける
-theme: 青
-duration: 2
 listed: true
-ingredient: false
 copyedit: false
-curriculum: 3、design-0、programming-3、phys-comp-0、製造-0、コミュニティ-0
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: スペース
-technologies: パイソン
-site_areas: プロジェクト
-hardware: ''
-software: パイソン
-version: 3
-last_tested: 2017-01-01
+version: 3.1.0
+last_tested: 2018-22-01
 steps:
   - 
     title: 前書き
   - 
     title: あなたが必要とするもの
   - 
-    title: 宇宙にいるのは誰ですか？
+    title: 誰が宇宙にいるのか？
   - 
-    title: '課題：工芸品を表示する'
+    title: 'チャレンジ：宇宙飛行士が乗っている宇宙ステーションの名前を表示しよう'
   - 
     title: ISSはどこですか？
   - 
-    title: マップにISSをプロットする
+    title: マップにISSの位置をプロットする
   - 
-    title: ISSはいつオーバーヘッドになるのですか？
+    title: ISSはいつ特定の場所の位置を通過するか？
   - 
-    title: '課題：より多くの通過時間を見つける'
+    title: 'チャレンジ：より多くの通過日時を見つける'
