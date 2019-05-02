@@ -2,31 +2,31 @@
 
 También hay un servicio web que puede utilizar para saber cuándo la ISS estará en una ubicación particular.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Averigüemos cuándo será la próxima pasada de la ISS sobre el Centro Espacial en Houston, EE. UU., que se encuentra en la latitud ` 29.5502 ` y longitud ` 95.097 `.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Primero trazamos un punto en el mapa en ess coordenadas:
 
 ![captura de pantalla](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Ahora vamos a obtener la fecha y hora en que la ISS es pasará por encima.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Como antes, puede llamar al servicio web ingresando su URL en la barra de direcciones de un navegador web: <a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
 
-You should see an error:
+Debe ver un error:
 
 ![captura de pantalla](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Este servicio web toma latitud y longitud como entradas, por lo que debe incluirlos en la URL. Las entradas se agregan después de un `?` y se separan con `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Añada las entradas `lat` y `lon` a la url como se muestra: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
 ![captura de pantalla](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+La respuesta incluye varios tiempos de paso, y nosotros solo vamos a ocuparnos del primero. El tiempo se da como una marca de tiempo de Unix (podrá convertirlo a un tiempo legible en su script de Python).
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Ahora llamemos al servicio web de Python. Add the following code to the end of your script:
 
 ![captura de pantalla](images/iss-passover.png)
 
