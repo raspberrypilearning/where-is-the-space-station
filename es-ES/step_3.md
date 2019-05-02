@@ -1,12 +1,12 @@
 ## Reto: Mostrar la nave
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Va a utilizar un servicio web que proporciona información en directo sobre el espacio. En primer lugar, veamos quién está actualmente en el espacio.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Un servicio web tiene una dirección (URL) al igual que un sitio web. En lugar de devolver HTML para una página web, devuelve datos.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Abra <a href="http://api.open-notify.org/astros.json" target="_blank"> el servicio web </a> en un navegador web.
 
-You should see something like this:
+Deberá ver algo como esto:
 
     {
       "message": "success",
