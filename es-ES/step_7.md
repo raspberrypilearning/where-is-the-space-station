@@ -44,8 +44,8 @@ Necesitamos el módulo Python `time` para que podamos imprimirlo en un formato l
 
 ![captura de pantalla](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(Puede eliminar la línea `print` o convertirla en un comentario añadiendo `#` al principio para que su script lo ignore.)
 
-+ If you like, you can change the colour and format of the text. 
++ Si lo desea, puede cambiar el color y el formato del texto. 
 
 [[[generic-python-turtle-write]]]
