@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-あなたが興味を持っている場所の緯度と経度を調べるには、 <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>ようなウェブサイトを使うことができます。
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + もっと多くの場所の通過日時を調べてプロットできますか？ 
 
