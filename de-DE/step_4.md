@@ -1,4 +1,4 @@
-## Challenge: show the craft
+## Wo ist die ISS?
 
 \--- challenge \---
 
@@ -6,7 +6,7 @@ In addition to the name of the astronauts, the web service also provides the cra
 
 + Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Example:
+Beispiel:
 
     People in Space:  3
     Yuri Malenchenko in ISS
@@ -33,4 +33,4 @@ for p in people:
 
 \--- /hint \--- \--- /hints \---
 
-\--- /challenge \---
+Und ergänze den CSS-Code in <0>style.css</0>, um das Bild zu positionieren.
