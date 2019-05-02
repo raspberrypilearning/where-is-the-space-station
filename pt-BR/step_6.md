@@ -6,7 +6,7 @@ Seria útil mostrar a posição em um mapa. Você pode fazer isso usando a Pytho
 
 ![screenshot](images/iss-turtle.png)
 
-+ Em seguida, carregue um mapa mundi como imagem de fundo. Há um mapa mundi incluído no seu trinket chamado 'map.jpg'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
++ Em seguida, carregue um mapa mundi como imagem de fundo. There’s one already included in your trinket called 'map.gif'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
 
 ![screenshot](images/iss-map.png)
 
@@ -22,7 +22,7 @@ O mapa é centrado em latitude e longitude `(0,0)`, exatamente o que você preci
 
 Agora as coordenadas corresponderão às coordenadas de latitude e longitude que você recebe de volta do serviço da web.
 
-+ Vamos criar um ícone turtle para a ISS. Seu trinket inclui 'iss.png' e 'iss2.png' - experimente os dois e veja qual você prefere. 
++ Vamos criar um ícone turtle para a ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
