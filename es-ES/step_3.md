@@ -28,61 +28,61 @@ Deberá ver algo como esto:
     }
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Los datos están en vivo, por lo que probablemente verá un resultado ligeramente diferente. El formato de los datos se llama ` JSON. ` (pronunciado como 'Jason').
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Debe llamar al servicio web desde un script de Python, para poder usar los resultados.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Abra esta baratija: [ http://rpf.io/iss-on ](http://rpf.io/iss-on) {: target = "_ blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+Los módulos `urllib.request` y `json` ya han sido importados para usted en la parte superior del script `main.py`.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Agregue el siguiente código a ` main.py ` para almacenar la URL del servicio web al que acaba de acceder como variable:
 
 ![captura de pantalla](images/iss-url.png)
 
-+ Now call the web service:
++ Ahora llame al servicio web:
 
 ![captura de pantalla](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ A continuación, debe cargar la respuesta JSON en una estructura de datos de Python:
 
 ![screenshot](images/iss-result.png)
 
-You should see something like this:
+Deberá ver algo como esto:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Este es un diccionario Python con tres claves: `message`, `number`, y `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Que `message` tiene el valor `success` le dice que accedió correctamente al servicio web. Tenga en cuenta que verá diferentes resultados para `number` y `people` dependiendo de quién esté actualmente en el espacio.
 
-Now let's print the information in a more readable way.
+Ahora imprimiremos la información de una manera más legible.
 
-+ First, let's look up the number of people in space and print it:
++ Primero, busquemos el número de personas en el espacio e imprimámoslo:
 
 ![captura de pantalla](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`resultado['number']` imprimirá el valor asociado con la clave `number` en el diccionario `resultado`. En el ejemplo, esto es `3`.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ El valor asociado con la clave `people` es una lista de diccionarios! Pongamos ese valor en una variable para que pueda usarlo:
 
 ![captura de pantalla](images/iss-people.png)
 
-You should see something like:
+Deberá ver algo como esto:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Ahora necesita imprimir una línea para cada astronauta. En Python puede usar un bucle `for` para hacer esto.
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ Cada vez que se ejecuta el bucle, ` p ` tomará el valor de un diccionario para un astronauta diferente.
 
 ![captura de pantalla](images/iss-people-1a.png)
 
