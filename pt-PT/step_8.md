@@ -2,7 +2,7 @@
 
 \--- desafio \---
 
-Para pesquisar a latitude e a longitude de um local de seu interesse, você pode usar um site como <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Você pode procurar e plotar os tempos de passagem para mais locais? 
 
