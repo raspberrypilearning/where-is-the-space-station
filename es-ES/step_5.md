@@ -1,12 +1,12 @@
-## Where is the ISS?
+## ¿Cuándo pasará por encima la ISS?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+La Estación Espacial Internacional está en órbita alrededor de la Tierra. Completa una órbita de la Tierra aproximadamente cada hora y media, y viaja a una velocidad promedio de 7.66 km por segundo. ¡Es rápida!
 
-Let’s use another web service to find out where the International Space Station is.
+Usemos otro servicio web para averiguar dónde está la Estación Espacial Internacional.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Primero abra la URL del servicio web en una nueva pestaña en su navegador web: <a href="http://api.open-notify.org/iss-now.json" target="_blank"> http://api.open-notify.org/iss-now.json </a>
 
-You should see something like this:
+Deberá ver algo como esto:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+El resultado contiene las coordenadas del lugar en la Tierra en el que se encuentra actualmente la ISS.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Ahora necesita llamar al mismo servicio web desde Python. Agregue el siguiente código al final de su script para obtener la ubicación actual de la ISS:
 
-![screenshot](images/iss-location.png)
+![captura de pantalla](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Vamos a crear variables para almacenar la latitud y la longitud, y luego vamos a imprimirlas:
 
-![screenshot](images/iss-coordinates.png)
+![captura de pantalla](images/iss-coordinates.png)
