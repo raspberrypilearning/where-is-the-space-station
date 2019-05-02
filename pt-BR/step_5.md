@@ -8,7 +8,14 @@ Vamos usar outro serviço da web para descobrir onde está a Estação Espacial 
 
 Você deveria ver algo assim:
 
-    {"iss_position": {"latitude": 8.54938193505081, "longitude": 73.16560793639105}, "message": "success", "timestamp": 1461931913}
+    {
+    "iss_position": {
+      "latitude": 8.54938193505081, 
+      "longitude": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
     
 
 O resultado contém as coordenadas do ponto na Terra em que a ISS está no momento.
