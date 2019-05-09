@@ -1,10 +1,10 @@
 ## 들어가며
 
-In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+이 프로젝트에서 여러분은 국제우주정거장(ISS)의 현재 위치를 알아내고 해당 위치에 ISS를 표시하기 위해 웹 서비스를 사용할 것입니다.
 
 ### 설명
 
-The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+우주 정거장 아이콘은 ISS의 현재 위치를 보여줍니다. 노란색 텍스트는 ISS가 다음 휴스턴에 있는 우주 센터를 통과할 때를 알려줍니다.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
