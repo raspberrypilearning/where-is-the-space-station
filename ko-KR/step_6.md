@@ -1,47 +1,47 @@
-## Plotting the ISS on a map
+## 지도에 ISS 플롯팅하기
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+ISS의 위치를 지도에 표시해 준다면 더 알아보기 쉽겠죠. Python의 Turtle graphics를 이용해서 작업을 수행할 수 있습니다.
 
-+ First we'll need to import the `turtle` Python library:
++ 먼저, `turtle` 라이브러리를 불러와야 합니다.
 
-![screenshot](images/iss-turtle.png)
+![스크린샷](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
++ 다음으로, 세계지도를 배경 이미지로 불러오세요. 이미 trinket에 'map.gif'라는 파일이 있습니다! NASA는 이 아름다운 지도를 누구나 사용, 배포할 수 있도록 허가하였습니다. 
 
 ![스크린샷](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+이 지도의 중심은 `(0,0)`으로 각각 위도와 경도를 뜻합니다.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ 이제 720 x 360픽셀의 이미지 크기와 일치하도록 화면 크기를 설정해야 합니다. `screen.setup(720,360)`을 추가합니다:
 
-![screenshot](images/iss-setup.png)
+![스크린샷](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ 거북이를 특정 위도와 경도로 보낼 수 있도록 합니다. 이 작업을 쉽게 하려면, 사용 중인 좌표와 일치하도록 화면을 설정할 수 있습니다:
 
 ![스크린샷](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+이제 좌표는 웹 서비스에서 가져온 위도와 경도 좌표와 일치하게 됩니다.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ ISS에 대한 turtle 아이콘을 만들어 봅시다. trinket에는 이미 'iss.gif', 'iss2.gif'가 포함되어 있습니다. - 둘 다 시도해 보고 어떤 것이 마음에 드는지 확인하고, 골라 보세요. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+다음과 같은 코드가 될 것입니다.:
 
 ![스크린샷](images/iss-image.png)
 
 \--- /hint \--- \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ ISS는 지도의 중심에서 시작하고, 이제 올바른 위치로 옮겨 봅시다:
 
 ![스크린샷](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**참고:** 보통 위도가 먼저 주어지지만, `(x,y)`를 그릴 때에는 경도를 먼저 지정해 주어야 합니다.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ 프로그램을 테스트해 보세요. ISS는 현재 지구의 위도, 경도로 이동해야 합니다. 
 
 ![스크린샷](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ 조금 기다렸다가 프로그램을 다시 실행해서 ISS가 어디로 이동했는지 확인해 보세요.
