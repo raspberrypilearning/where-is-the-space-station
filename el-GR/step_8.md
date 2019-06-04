@@ -6,7 +6,7 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 + Μπορείς να βρεις και να αποτυπώσεις στο χάρτη την ώρα περάσματος του ISS πάνω από άλλες τοποθεσίες; 
 
-![screenshot](images/iss-final.png)
+![screenshot (στιγμιότυπο οθόνης)](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
