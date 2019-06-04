@@ -34,7 +34,7 @@
 
 Πρέπει να καλέσεις την υπηρεσία web από ένα μικρό πρόγραμμα (script) Python, ώστε να μπορείς να χρησιμοποιήσεις τα αποτελέσματα.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Άνοιξε αυτό το πρότυπο trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 Οι βιβλιοθήκες `urllib.request` και `json` έχουν ήδη εισαχθεί στην αρχή του προγράμματος `main.py`.
 
