@@ -6,7 +6,7 @@ Seria útil mostrar a posição em um mapa. Você pode fazer isso usando gráfic
 
 ![captura de tela](images/iss-turtle.png)
 
-+ Em seguida, carregue um mapa do mundo como imagem de fundo. There’s one already included in your trinket called 'map.gif'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
++ Em seguida, carregue um mapa do mundo como imagem de fundo. Já existe um incluído no teu trinket chamado 'map.gif'! A NASA forneceu este belo mapa e deu permissão para reutilização. 
 
 ![captura de tela](images/iss-map.png)
 
@@ -22,7 +22,7 @@ O mapa é centrado em `(0,0)` latitude e longitude, exatamente o que você preci
 
 Agora as coordenadas corresponderão às coordenadas de latitude e longitude que você recebe do serviço da web.
 
-+ Vamos criar um ícone de tartaruga para a ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Vamos criar um ícone de tartaruga para a ISS. O teu trinket inclui 'iss.gif' e 'iss2.gif' - experimenta os dois e vê qual deles preferes. 
 
 [[[generic-python-turtle-image]]]
 
