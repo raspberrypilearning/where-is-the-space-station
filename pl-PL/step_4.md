@@ -2,16 +2,16 @@
 
 \--- challenge \---
 
-Oprócz nazwy astronautów, usługa sieciowa zapewnia również pojazd, na którym się znajdują, takie jak ISS.
+Oprócz nazwy astronautów, usługa sieciowa podaje również pojazd, na którym się znajdują, taki jak ISS.
 
-+ Czy możesz dodać do swojego skryptu, aby wydrukował także pojazd dla każdego astronauty? 
++ Czy możesz rozbudować swój skrypt tak, aby wydrukował także pojazd dla każdego astronauty? 
 
 Przykład:
 
     Liczba osób w Kosmosie:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Yuri Malenchenko w ISS
+    Timothy Kopra w ISS
+    Timothy Peake w ISS
     
 
 \--- hints \--- \--- hint \---
@@ -27,8 +27,8 @@ Otrzymujesz wartość dla `name` używając `p[name]` - jak uzyskać wartość d
 Zmień swoją pętlę `for`, aby wyglądała tak:
 
 ```python
-for p in people:
-  print(p['name'], ' w ', p['craft'])
+for o in osoby:
+  print(o['name'], ' w ', o['craft'])
 ```
 
 -- /hint \--- \--- hints \---
