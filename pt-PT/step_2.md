@@ -1,4 +1,4 @@
-## O que você precisará
+## Do que vais precisar
 
 ### Hardware
 
@@ -10,8 +10,8 @@
 
 ### Recursos adicionais
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ Projeto inicial - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_ blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ Uma versão completada deste projeto - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) {: target = "_ blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ Abrir os serviços web Notify - [ api.open-notify.org ](http://api.open-notify.org/) {: target = "_ blank"}
