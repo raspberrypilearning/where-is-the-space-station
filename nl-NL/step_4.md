@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-Naast de namen van de astronauten geeft de webservice ook het vaartuig aann waarop ze zich bevinden, zoals het ISS.
+Naast de namen van de astronauten geeft de webservice ook het vaartuig aan waarop ze zich bevinden, zoals het ISS.
 
 + Kun je het script zo aanpassen dat het voor elke astronaut ook het vaartuig weergeeft? 
 
