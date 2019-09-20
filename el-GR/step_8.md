@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Για να βρεις το γεωγραφικό πλάτος και μήκος μιας τοποθεσίας που σε ενδιαφέρει, μπορείς να χρησιμοποιήσεις έναν ιστότοπο όπως ο <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Μπορείς να βρεις και να αποτυπώσεις στο χάρτη την ώρα περάσματος του ISS πάνω από άλλες τοποθεσίες; 
 
