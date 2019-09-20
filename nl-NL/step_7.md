@@ -34,7 +34,7 @@ Het antwoord geeft meerdere overvliegtijden en we kijken nu alleen naar de eerst
 
 ![screenshot](images/iss-print-pass.png)
 
-We hebben de Python ` tijd ` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
+We hebben de Python `time` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
 
 + Voeg bovenaan je script de regel ` import time ` toe:
 
