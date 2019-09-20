@@ -34,7 +34,7 @@ Os dados são ao vivo, então você provavelmente verá um resultado ligeirament
 
 Você precisa chamar o serviço da web a partir de um script Python, para poder usar os resultados.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Abrir este trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 Os módulos `urllib.request` e `json` já foram importados para você na parte superior do script `main.py`.
 
@@ -46,7 +46,7 @@ Os módulos `urllib.request` e `json` já foram importados para você na parte s
 
 ![captura de tela](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ De seguida, vais necessitar carregar a resposta JSON em uma estrutura de dados Python:
 
 ![captura de tela](images/iss-result.png)
 
