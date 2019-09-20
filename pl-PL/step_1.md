@@ -4,7 +4,7 @@ W tym projekcie użyjesz usługi sieciowej, aby znaleźć aktualną lokalizację
 
 ### Instrukcje
 
-Ikona stacji kosmicznej pokazuje bieżącą lokalizację ISS. Żółty tekst pokazuje, kiedy ISS przejdzie następnym razem nad Centrum Lotów Kosmicznych w Houston, USA.
+Ikona stacji kosmicznej pokazuje bieżącą lokalizację ISS. Żółty tekst pokazuje, kiedy ISS przejdzie następnym razem nad Centrum Lotów Kosmicznych w Houston, w Stanach Zjednoczonych.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -16,4 +16,4 @@ Ikona stacji kosmicznej pokazuje bieżącą lokalizację ISS. Żółty tekst pok
 
 Projekt ten obejmuje następujące elementy [Cyfrowego programu nauczania Raspberry Pi](http://rpf.io/curriculum):
 
-+ [Połącz konstrukcje programistyczne, aby rozwiązać problem.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Łączenie konstrukcji programistycznych w celu rozwiązania problemu.](https://www.raspberrypi.org/curriculum/programming/builder)
