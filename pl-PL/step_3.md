@@ -2,7 +2,7 @@
 
 Użyjesz usługi sieciowej, która dostarcza na bieżąco informacje o kosmosie. Najpierw dowiedzmy się, kto jest obecnie w kosmosie.
 
-Usługa internetowa ma adres (URL), tak jak robi to strona internetowa. Zamiast zwracać kod HTML dla strony internetowej, zwraca dane.
+Usługa internetowa ma adres (URL), tak jak strona internetowa. Zamiast zwracać kod HTML dla strony internetowej, zwraca dane.
 
 + Otwórz <a href="http://api.open-notify.org/astros.json" target="_blank">usługę sieciową</a> w przeglądarce sieci web.
 
@@ -34,11 +34,11 @@ Dane są aktualizowane na żywo, więc prawdopodobnie zobaczysz nieco inny wynik
 
 Musisz wywołać usługę sieciową ze skryptu w języku Python, aby móc korzystać z wyników.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Otwórz Trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-Moduły `urllib.request` i `json` zostały już zaimportowane u góry głównego pliku skryptu`main.py`.
+Moduły `urllib.request` i `json` zostały już zaimportowane u góry głównego pliku skryptu `main.py`.
 
-+ Dodaj następujący kod do ` main.py ` aby przechowywać adres URL usługi sieciowej, do której właśnie dostęp miałeś jako zmiennej:
++ Dodaj następujący kod do ` main.py ` aby przechować w zmiennej adres URL usługi sieciowej, do której właśnie miałeś dostęp:
 
 ![zrzut ekranu](images/iss-url.png)
 
@@ -67,7 +67,7 @@ Teraz wyświetlmy te informacje w bardziej czytelny sposób.
 
 ![zrzut ekranu](images/iss-number.png)
 
-`result['number']` wyświetli wartość skojarzoną z kluczem`number` w słowniku `result`. W tym przypadku jest to `3`.
+`wynik['number']` wyświetli wartość skojarzoną z kluczem `number` w słowniku `result`. W tym przypadku jest to `3`.
 
 + Wartość powiązana z kluczem `people` to lista słowników! Przypiszmy tę wartość do zmiennej, abyś mógł z niej korzystać:
 
