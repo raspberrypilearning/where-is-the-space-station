@@ -1,6 +1,6 @@
 ## Gdzie jest ISS?
 
-Międzynarodowa Stacja Kosmiczna(ISS) znajduje się na orbicie wokół Ziemi. Zatacza pełną orbitę Ziemi mniej więcej co półtorej godziny i podróżuje ze średnią prędkością 7,66 km na sekundę. To jest szybkie!
+Międzynarodowa Stacja Kosmiczna (ISS) znajduje się na orbicie okołoziemskiej. Zatacza pełną orbitę Ziemi mniej więcej co półtorej godziny i podróżuje ze średnią prędkością 7,66 km na sekundę. To szybko!
 
 Użyjmy innej usługi sieciowej, aby dowiedzieć się, gdzie znajduje się Międzynarodowa Stacja Kosmiczna.
 
@@ -18,7 +18,7 @@ Powinieneś zobaczyć coś takiego:
     }
     
 
-Wynik zawiera współrzędne miejsca na Ziemi, nad którym ISS właśnie się znajduje.
+Wynik zawiera współrzędne miejsca na Ziemi, nad którym właśnie znajduje się ISS.
 
 [[[generic-theory-lat-long]]]
 
