@@ -32,9 +32,9 @@ De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dat
 
 [[[generic-json]]]
 
-Je moet de webservice met een Pythonscript oproepen om de resultaten te kunnen gebruiken.
+Je moet de webservice met een Python-script oproepen om de resultaten te kunnen gebruiken.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Open deze trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `main.py` script.
 
