@@ -1,16 +1,16 @@
 ---
 title: Gdzie jest Stacja Kosmiczna?
-hero_image: images / banner.png
+hero_image: images/banner.png
 description: Znajdź dokładną lokalizację Międzynarodowej Stacji Kosmicznej (ISS)
 listed: true
 copyedit: false
 version: 3.1.0
-last_tested: 22 listopada 2018
+last_tested: 2018-11-22
 steps:
   - 
-    title: '#wprowadzenie'
+    title: Wprowadzenie
   - 
-    title: Co będziesz potrzebować
+    title: Co będzie potrzebne
   - 
     title: Kto jest w kosmosie?
   - 
