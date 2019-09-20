@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Aby sprawdzić szerokość i długość geograficzną lokalizacji, którą jesteś zainteresowany, możesz skorzystać z witryny internetowej, takiej jak <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Czy możesz sprawdzić i wyznaczyć czas przejścia dla większej liczby lokalizacji? 
 
@@ -10,7 +10,7 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 \--- hints \--- \--- hint \---
 
-Na końcu twojego programu ustaw `lat` i `long` zmienne do nowych wartości, a następnie użyj `location` zmiennej żółwia, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj`iss-pass` usługi sieciowej ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Wreszcie weź `risetime` z odpowiedzi i zapisz z zmienną `location` żółwia.
+Na końcu twojego programu ustaw nową wartość zmiennych `lat` i `long`, a następnie użyj zmiennej żółwia `location`, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj usługę sieciową `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Na koniec odczytaj `risetime` z odpowiedzi i zapisz go za pomocą zmiennej `location` żółwia.
 
 -- /hint \--- \--- hint \---
 
@@ -18,38 +18,38 @@ Dodaj ten kod na końcu programu i uzupełnij brakujące fragmenty. Pamiętaj, �
 
 ```python
 #Twoja wybrana lokalizacja
-lat = XX.XX
-lon = XX.XX
+szerokosc = XX.XX
+dlugosc = XX.XX
 
-#Narysuj kropkę używając 'location' żółwia ( nie ma potrzeby tworzenia nowego żółwia), wybierz inny kolor
+#Narysuj kropkę używając żółwia 'lokalizacja' (nie ma potrzeby tworzenia nowego żółwia), wybierz inny kolor
 
 #Pobierz wyniki z 'iss-pass.json' dla twojej nowej długości i szerokości geograficznej
 
-#Pobierz 'risetime' z wyników i użyj 'location' żółwia aby nanieść je na mapie
+#Pobierz 'risetime' z wyników i użyj żółwia 'lokalizacja' aby nanieść je na mapie
 ```
 
 -- /hint \--- \--- hint \---
 
-Oto przykład wykorzystania lokalizacji Kosmodromu z Bajkonuru, kosmoport w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po naniesieniu czasu przejścia dla Centrum Lotów Kosmicznego w Houston.
+Oto przykład wykorzystania lokalizacji Kosmodromu z Bajkonuru, kosmoportu w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po narysowaniu czasu przejścia dla Centrum Lotów Kosmicznego w Houston.
 
 ```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
+# Kosmodrom Bajkonur
+szerokosc = 45.86
+dlugosc = 63.31
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+lokalizacja.penup()
+lokalizacja.color('orange')
+lokalizacja.goto(lon,lat)
+lokalizacja.dot(5)
+lokalizacja.hideturtle()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(szerokosc) + '&lon=' + str(dlugosc)
+odpowiedz = urllib.request.urlopen(url)
+wynik = json.loads(odpowiedz.read())
 
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#print(wynik)
+czas_przejscia = result['response'][1]['risetime']
+lokalizacja.write(time.ctime(czas_przejscia))
 ```
 
 Spróbuj dodać więcej lokalizacji!
