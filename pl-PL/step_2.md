@@ -1,10 +1,10 @@
-## Co będzie potrzebne
+## Czego będziesz potrzebować
 
 ### Sprzęt
 
 + Komputer z dostępem do Internetu
 
-### Oprogamowanie
+### Oprogramowanie
 
 + [Trinket](https://trinket.io/) edytor online
 
@@ -12,6 +12,6 @@
 
 + Projekt początkowy - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_ blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ Ukończona wersja tego projektu - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ Usługi sieciowe Open Notify - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
