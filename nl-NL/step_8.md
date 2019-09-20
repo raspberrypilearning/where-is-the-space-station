@@ -2,7 +2,7 @@
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Om de breedte- en lengtegraad van een locatie waar je in geïnteresseerd bent te bekijken, kun je een website gebruiken zoals <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Kun je overvliegtijden voor meer locaties opzoeken en tekenen? 
 
@@ -10,7 +10,7 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 \--- hints \--- \--- hint \---
 
-Zet aan het einde van het programma de ` lat ` en ` long ` variabelen op nieuwe waarden en gebruik dan de `location` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wilt). Roep dan de ` iss-pass ` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `location` turtle.
+Zet aan het einde van het programma de ` lat ` en ` long ` variabelen op nieuwe waarden en gebruik dan de `locatie` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wil). Roep dan de ` iss-pass ` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `locatie` turtle.
 
 \--- /hint \--- \--- hint \---
 
@@ -21,11 +21,11 @@ Voeg deze code toe aan het einde van je programma en vul de ontbrekende delen in
 lat = XX.XX
 lon = XX.XX
 
-# Teken een punt met de 'location' turtle (je hoeft geen nieuwe te maken), kies een andere kleur
+# Teken een punt met de 'locatie' turtle (je hoeft geen nieuwe te maken), kies een andere kleur
 
 # Haal het resultaat op van`iss-pass.json` voor de nieuwe lengte- en breedtegraad
 
-# Haal de 'risetime' op uit het resultaat en gebruik de `location` turtle om het op de kaart te zetten
+# Haal de 'risetime' op uit het resultaat en gebruik de `locatie` turtle om het op de kaart te zetten
 ```
 
 \--- /hint \--- \--- hint \---
