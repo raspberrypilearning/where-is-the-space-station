@@ -1,5 +1,0 @@
-files:
-  - source: /en/**/*.*
-    ignore:
-      - /**/*.zip
-    translation: /%locale%/**/%original_file_name%
