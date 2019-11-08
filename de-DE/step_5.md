@@ -1,51 +1,31 @@
+## Wo ist die ISS?
 
+Die Internationale Raumstation befindet sich im Orbit um die Erde. Sie umrundet die Erde ungefähr alle anderthalb Stunden und erreicht eine Durchschnittsgeschwindigkeit von 7,66 km/s. Das ist schnell!
 
-## Wann wird die ISS über uns sein?
+Verwenden wir einen anderen Web Service, um herauszufinden, wo sich die Internationale Raumstation befindet.
 
-Es gibt auch einen Web-Service, den du aufrufen kannst, um herauszufinden, wann sich die ISS das nächste Mal über einem bestimmten Standort befindet. 
-Lass uns herausfinden, wann die ISS das nächste Mal über dem Space Centre in Houston, USA schweben wird, es hat einen Längengrad von 29,5502 und einen Breitengrad von 95,097.
-  
-+ Lass uns als erstes einen „dot“ auf die Karte mit diesen Koordinaten zeichnen:
++ Öffne zunächst die URL für den Web Service in einem neuen Tab in deinem Webbrowser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-  ![screenshot](images/iss-houston.png)
+Du solltest so etwas sehen:
 
-+ Lass uns jetzt das Datum und die Uhrzeit herausfinden, wann die ISS das nächste Mal hierüber schwebt. 
+    {
+    "iss_position": {
+      "Breitengrad": 8.54938193505081, 
+      "Laengengrad": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
+    
 
-  Wie zuvor auch, können wir den Web-Service aufrufen, indem wir  das URL in die Adressleiste des Browsers eingeben: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-  
-  Du solltest jetzt eine Fehlermeldung sehen:
+Das Ergebnis enthält die Koordinaten des Ortes auf der Erde, über dem die ISS sich derzeit befindet.
 
-  ![screenshot](images/iss-pass-error.png)
+[[[generic-theory-lat-long]]]
 
-+ Dieser Web-Service benutzt die Breiten- und Längengrade als Eingabe, wir müssen sie daher mit in das URL setzen, das wir benutzen.
++ Jetzt musst du denselben Web Service von Python aus aufrufen. Fügen den folgenden Code am Ende deines Skripts hinzu, um den aktuellen Standort der ISS zu ermitteln:
 
-  Die Eingabe wird nach einem `?` hinzugefügt und durch ein `&` getrennt. 
+![Bildschirmfoto](images/iss-location.png)
 
-  Füge die `lat` (Breite) und `lon` (Länge) Eingaben wie folgt in das URL: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1"target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-  
-  ![screenshot](images/iss-passtimes.png)
-  
-  Die Antwort enthält mehrere Überflugszeiten, wir betrachten hier die erste Zeitangabe. Die Zeit wird im Standard Zeitformat genannt. Du wirst in der Lage sein, dies in eine lesbare Zeit in Python zu konvertieren.
++ Erstellen wir Variablen, um Breitengrad und Längengrad zu speichern und dann auszugeben:
 
-+  Lass uns jetzt den Web-Service von Python aus aufrufen. Füge den folgenden Code zum Ende deines Scripts hinzu:
-
-  ![screenshot](images/iss-passover.png)
-
-+ Lass uns jetzt die erste Überflugszeit aus dem Ergebnis herausfinden.
-
-Füge den folgenden Code hinzu:
-
-  ![screenshot](images/iss-print-pass.png)
-
-
-+ Die Zeit wird als Zeitstempel genannt. Wir benötigen daher das Python Zeitmodul, damit wir die Zeit in lesbarer Form drucken können und sie zur Lokalzeit umwandeln können. Lass uns die Schildkröte nehmen, um die Überflugszeit beim „dot“ zu schreiben. 
-
-+ Füge eine `import time` (Zeit importieren) Zeile oberhalb deines Scripts hinzu:
-
-  ![screenshot](images/iss-time.png)
-
-+ Die Funktion `time.cime()` wird die Zeit in eine lesbare Form umwandeln, die du mit der Schildkröte schreiben kannst: 
-
-  ![screenshot](images/iss-pass-write.png)
- 
-  (Du kannst die `print` (drucken) Zeile entfernen oder wegkommentieren.)
+![Bildschirmfoto](images/iss-coordinates.png)
