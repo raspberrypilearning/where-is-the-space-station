@@ -34,11 +34,11 @@ Los datos están en vivo, por lo que probablemente verá un resultado ligerament
 
 Debe llamar al servicio web desde un script de Python para poder usar los resultados.
 
-+ Abra esta baratija: [ http://rpf.io/iss-on ](http://rpf.io/iss-on) {: target = "_ blank"}.
++ Abra este trinket: <http://rpf.io/iss-on> {:target = "_ blank"}.
 
 Los módulos `urllib.request` y `json` ya han sido importados para usted en la parte superior del script `main.py`.
 
-+ Agregue el siguiente código a ` main.py ` para almacenar la URL del servicio web al que acaba de acceder como variable:
++ Agregue el siguiente código a `main.py` para almacenar la URL del servicio web al que acaba de acceder como variable:
 
 ![captura de pantalla](images/iss-url.png)
 
@@ -48,26 +48,26 @@ Los módulos `urllib.request` y `json` ya han sido importados para usted en la p
 
 + A continuación, debe cargar la respuesta JSON en una estructura de datos de Python:
 
-![screenshot](images/iss-result.png)
+![captura de pantalla](images/iss-result.png)
 
 Deberá ver algo como esto:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Este es un diccionario Python con tres claves: `message`, `number`, y `people`.
+Este es un diccionario Python con tres claves: `message`, `number` y `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Que `message` tiene el valor `success` le dice que accedió correctamente al servicio web. Tenga en cuenta que verá diferentes resultados para `number` y `people` dependiendo de quién esté actualmente en el espacio.
+Que `message` tenga como valor `success` le dice que accedió correctamente al servicio web. Tenga en cuenta que verá diferentes resultados para `number` y `people` dependiendo de quién esté actualmente en el espacio.
 
 Ahora imprimiremos la información de una manera más legible.
 
-+ Primero, busquemos el número de personas en el espacio e imprimámoslo:
++ Primero busquemos el número de personas en el espacio e imprimámoslo:
 
 ![captura de pantalla](images/iss-number.png)
 
-`resultado['number']` imprimirá el valor asociado con la clave `number` en el diccionario `resultado`. En el ejemplo, esto es `3`.
+`result['number']` imprimirá el valor asociado con la clave `number` en el diccionario `result`. En el ejemplo esto es `3`.
 
 + El valor asociado con la clave `people` es una lista de diccionarios! Pongamos ese valor en una variable para que pueda usarlo:
 
@@ -78,7 +78,7 @@ Deberá ver algo como esto:
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Ahora necesita imprimir una línea para cada astronauta. En Python puede usar un bucle `for` para hacer esto.
++ Ahora necesita imprimir una línea por cada astronauta. En Python puede usar un bucle `for` para hacer esto.
 
 [[[generic-python-for-loop-list]]]
 
