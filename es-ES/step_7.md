@@ -32,7 +32,7 @@ La respuesta incluye varios tiempos de paso, y nosotros solo vamos a ocuparnos d
 
 + Ahora obtendremos el primer paso de tiempo del resultado. Agregue el siguiente código:
 
-![screenshot](images/iss-print-pass.png)
+![captura de pantalla](images/iss-print-pass.png)
 
 Necesitamos el módulo Python `time` para que podamos imprimirlo en un formato legible y convertirlo a tiempo local. Luego obtendremos el script para escribir el tiempo de paso por el punto para Houston.
 
