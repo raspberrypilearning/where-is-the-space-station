@@ -1,16 +1,16 @@
 ## Trazando la ISS en un mapa
 
-Sería útil mostrar la posición en un mapa. ¡Usted puede hacer esto utilizando el module Turtle para gráficos de Python!
+Sería útil mostrar la posición en un mapa. ¡Usted puede hacer esto utilizando el módulo Turtle para gráficos de Python!
 
-+ En primer lugar tendremos que importar la biblioteca de Python `turtle`:
++ En primer lugar tendremos que importar el módulo `turtle` de Python:
 
 ![captura de pantalla](images/iss-turtle.png)
 
-+ A continuación, cargue un mapa del mundo como imagen de fondo. ¡Ya hay uno incluido en su baratija llamado 'map.gif'! La NASA ha proporcionado este hermoso mapa y ha dado permiso para su reutilización. 
++ A continuación, cargue un mapa del mundo como imagen de fondo. ¡Ya hay uno incluido en su trinket llamado 'map.gif'! La NASA ha proporcionado este hermoso mapa y ha dado permiso para su reutilización. 
 
 ![captura de pantalla](images/iss-map.png)
 
-El mapa está centrado en `(0,0)` latitud y longitud, que es justo lo que necesitamos.
+El mapa está centrado en latitud y longitud `(0,0)`, que es justo lo que necesitamos.
 
 + Debe configurar el tamaño de la pantalla para que coincida con el tamaño de la imagen, que es de 720 por 360 píxeles. Añada `screen.setup(720, 360)`:
 
@@ -22,7 +22,7 @@ El mapa está centrado en `(0,0)` latitud y longitud, que es justo lo que necesi
 
 Ahora las coordenadas coincidirán con las coordenadas de latitud y longitud que obtiene del servicio web.
 
-+ Vamos a crear un icono de tortuga para la ISS. Su baratija incluye 'iss.gif' y 'iss2.gif' - pruébelos y vea cuál prefiere. 
++ Vamos a crear un icono de tortuga para la ISS. Su trinket incluye 'iss.gif' y 'iss2.gif' - pruébelos y vea cuál prefiere. 
 
 [[[generic-python-turtle-image]]]
 
