@@ -1,55 +1,31 @@
-## ISS किस समय सिर के ऊपर से गुजरेगा?
+## Where is the ISS?
 
-ऐसी भी वेब सेवा है, जिसे आप यह पता लगाने के लिए उपयोग कर सकते हैं कि ISS स्थान के ऊपर से किस समय गुजरेगा। 
+The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
 
-चलिए पता लगाते हैं कि ISS ह्युस्टन, अमेरिका के स्पेस केंद्र के ऊपर से किस समय गुजरेगा, जिसका अक्षांश 29.5502 और देशांतर 95.097 है।
-  
- 
+Let’s use another web service to find out where the International Space Station is.
 
-+ चलिए सबसे पहले इन अक्षों पर मानचित्र पर डॉट बनाएँ:
++ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-    ![screenshot](images/iss-houston.png)
+You should see something like this:
 
-+ चलिए अब ISS के सिर के ऊपर से गुजरने की तिथि और समय पता लगाएँ। 
+    {
+    "iss_position": {
+      "latitude": 8.54938193505081, 
+      "longitude": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
+    
 
-    पहले की तरह हम वेब ब्राउज़र के पता बार में url दर्ज करके, वेब सेवा का उपयोग कर सकते हैं: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-  
-    आपको त्रुटि दिखाई देनी चाहिए:
+The result contains the coordinates of the spot on Earth that the ISS is currently over.
 
-    ![screenshot](images/iss-pass-error.png)
+[[[generic-theory-lat-long]]]
 
-+ यह वेब सेवा अक्षांश और देशांतर इनपुट के तौर पर लेता है, इसलिए हमें अपने द्वारा उपयोग किए जाने वाले url में उन्हें जोड़ना होगा।
++ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
-    इनपुट को `?` के बाद शामिल किया जाता है और `&` द्वारा अलग किया जाता है। 
+![स्क्रीनशॉट](images/iss-location.png)
 
-    नीचे दिखाए अनुसार url में `lat` और `lon` इनपुट जोड़ें: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-  
-    ![screenshot](images/iss-passtimes.png)
-  
-    प्रतिक्रिया में कई पासओवर समय शामिल होंगे, हम केवल प्रथम देखेंगे। समय मानक समय फॉरमेट में दिया जाता है, आप इसे Python में पढ़ने योग्य समय में बदलने में योग्य होंगे।
++ Let’s create variables to store the latitude and longitude, and then print them:
 
-+ चलिए अब Python से वेब सेवा का उपयोग करें। अपनी स्क्रिप्ट के अंत में निम्नलिखित कोड जोड़ें:
-
-    ![screenshot](images/iss-passover.png)
-
-+ चलिए अब परिणाम से प्रथम पासओवर समय प्राप्त करें।
-
-    निम्नलिखित कोड जोड़ें:
-
-    ![screenshot](images/iss-print-pass.png)
-
-
-+ समय टाइमस्टैंप के रूप में दिया जाता है, इसलिए हमें Python समय मॉड्यूल की आवश्यकता होगी ताकि हम इसे पढ़ने योग्य रूप में प्रिंट कर सकें और इसे स्थानीय समय में परिवर्तित कर सकें। डॉट द्वारा पासओवर समय लिखने के लिए चलिए टर्टल का उपयोग करें। 
-
-+ अपनी स्क्रिप्ट के शीर्ष पर `import time` पंक्ति लिखें:
-
-    ![screenshot](images/iss-time.png)
-
-+ `time.ctime()` फंक्शन समय को पढ़ने योग्य रूप में परिवर्तित करेगा, जिसे आप टर्टल द्वारा लिख सकते हैं: 
-
-    ![screenshot](images/iss-pass-write.png)
- 
-    (आप `print` पंक्ति को हटा सकते हैं या उस पर टिप्पणी दे सकते हैं।)
-
-
-
+![स्क्रीनशॉट](images/iss-coordinates.png)
