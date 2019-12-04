@@ -1,19 +1,18 @@
 ## Desafio: Encontre mais tempos de passagem
 
---- challenge ---
+\--- challenge \---
 
-Para pesquisar a latitude e a longitude de um local de seu interesse, você pode usar um site como <a href="http://www.latlong.net/" target="_blank">hwww.latlong.net/</a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Você consegue procurar e definir os tempos de passagem para mais locais? 
 
 ![screenshot](images/iss-final.png)
 
---- hints ---
- --- hint ---
+\--- hints \--- \--- hint \---
 
-No final do programa, defina as variáveis ​​ `lat` e `long` para novos valores e, em seguida, use a variável `location` turtle para desenhar um ponto no novo local. (Escolha uma cor diferente, se quiser.) Em seguida, chame o serviço da web `iss-pass` com as coordenadas (você pode copiar e colar o código para fazer isso). Finalmente, obtenha o `risetime` da resposta e escreva-o com a `locations` turtle.
+No final do programa, defina as variáveis ​​ `lat` e `long` para novos valores e, em seguida, use a variável `location` turtle para desenhar um ponto no novo local. (Escolha uma cor diferente, se quiser.) Em seguida, chame o serviço da web `iss-pass` com as coordenadas (você pode copiar e colar o código para fazer isso). Finalmente, obtenha o `risetime` da resposta e escreva-o com a `local` turtle.
 
---- /hint --- --- hint ---
+\--- /hint \--- \--- hint \---
 
 Adicione este código ao final do seu programa e preencha as partes que faltam. Observe que você pode copiar e colar o código que você escreveu para obter o tempo de passagem para o Centro Espacial em Houston e, em seguida, fazer as alterações necessárias.
 
@@ -22,14 +21,14 @@ Adicione este código ao final do seu programa e preencha as partes que faltam. 
 lat = XX.XX
 lon = XX.XX
 
-# Desenhe um ponto com a turtle 'location' (não é necessário criar uma nova turtle), escolha uma cor diferente
+# Desenhe um ponto com a turtle 'local' (não é necessário criar uma nova turtle), escolha uma cor diferente
 
 # Obtenha o resultado de 'iss-pass.json' para as suas novas coordenadas
 
 # Pegue a resposta do 'risetime' e usa a turtle 'location' para escrevê-lo no mapa
 ```
 
---- /hint --- --- hint ---
+\--- /hint \--- \--- hint \---
 
 Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, é a primeira e maior base de lançamentos de foguetes do mundo, localizada no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
 
@@ -49,16 +48,10 @@ resposta = urllib.request.urlopen(url)
 resultado = json.loads(response.read())
 
 #print(resultado)
-over = resultado['resposta'][1]['risetime']
+acima = resultado['resposta'][1]['risetime']
 local.write(time.ctime(acima))
 ```
 
-Tente adicionar mais locais!
+Tente adicionar mais locais! (São Paulo, lat = -23.5505, lon = -46.6333)
 
---- /hint ------ /hints --- --- /challenge ---
-
-Tradução Contribuída pela Comunidade
-
-Este projeto foi traduzido por Isabela Blucher e revisado por Elton Marques.
-
-Nossos incríveis voluntários de tradução nos ajudam a dar as crianças em todo o mundo a oportunidade de aprender a programar. Você pode nos ajudar a alcançar mais crianças traduzindo nossos projetos - leia mais em [rpf.io/translators](https://rpf.io/translators).
+\--- /hint \--- \--- /hints \--- \--- /challenge \---
