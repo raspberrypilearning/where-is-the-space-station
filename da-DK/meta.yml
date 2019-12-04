@@ -1,0 +1,25 @@
+---
+title: Where is the Space Station?
+hero_image: images/banner.png
+description: Find the exact location of the ISS
+listed: true
+copyedit: false
+version: 3.1.0
+last_tested: 2018-11-22
+steps:
+  - 
+    title: Introduction
+  - 
+    title: What you will need
+  - 
+    title: Who is in space?
+  - 
+    title: 'Challenge: show the craft'
+  - 
+    title: Where is the ISS?
+  - 
+    title: Plotting the ISS on a map
+  - 
+    title: When will the ISS be overhead?
+  - 
+    title: 'Challenge: find more pass-over times'
