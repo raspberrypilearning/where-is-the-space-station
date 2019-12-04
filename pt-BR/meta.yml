@@ -2,26 +2,24 @@
 title: Onde está a estação espacial?
 hero_image: images/banner.png
 description: Encontre a localização exata da ISS
-theme: blue
-duration: 2
 listed: true
-ingredient: false
 copyedit: false
-curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: projects
-hardware: ''
-software: python
 version: 3
 last_tested: 2017-01-01
 steps:
-  - title: Introdução
-  - title: O que você precisará
-  - title: Quem está no espaço?
-  - title: 'Desafio: Mostre a nave'
-  - title: Onde está a ISS?
-  - title: Localizando a ISS em um mapa
-  - title: Quando a ISS estará logo acima?
-  - title: 'Desafio: Encontre mais tempos de passagem'
+  - 
+    title: Introdução
+  - 
+    title: O que você precisará
+  - 
+    title: Quem está no espaço?
+  - 
+    title: 'Desafio: Mostre a nave'
+  - 
+    title: Onde está a ISS?
+  - 
+    title: Plotando a ISS em um mapa
+  - 
+    title: Quando a ISS estará logo acima?
+  - 
+    title: 'Desafio: Encontre mais tempos de passagem'
