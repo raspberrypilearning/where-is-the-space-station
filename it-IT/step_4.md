@@ -1,79 +1,36 @@
-## Dov'è la ISS?
+## Challenge: show the craft
 
-La Stazione Spaziale Internazionale è in orbita attorno alla Terra. Orbita la terra ogni ora e mezza circa. La ISS viaggia a una velocità media di 7,66 km per secondo. È veloce!
+\--- challenge \---
 
-Usiamo ora un latro servizio web per scoprire dove si trova la Stazione Spaziale Internazionale.
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ Apri prima la url per il servizio web in un nuovo tab nel tu browser di internet: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-    Dovresti vedere qualcosa del genere:
+Example:
 
-    ```
-    {
-    "iss_position": {
-      "latitudine". 8,54938193505081,
-      "longitudine". 73,16560793639105
-    },
-    "message": "success",
-    "timestamp": 1461931913
-    }
-    ```
+    People in Space:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
+    
 
-    Il risultato contiene le coordinate del luogo sulla Terra dove si trova attualmente la ISS.
+\--- hints \--- \--- hint \---
 
-    La longitudine è la posizione Est-Ovest e va da -180 a 180. 0 è il Meridiano Zero che attraversa Greenwich, a Londra.
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-    La latitudine è la posizione Nord-Sud e va da 90 a -90. 0 è l'Equatore.
+\--- /hint \--- \--- hint \---
 
-+ Ora devi chiamare lo stesso servzio web da PythoN. Aggiungi il seguente codice alla fine del tuo testo per ottenere l'attuale posizione della ISS:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
 
-    ![screenshot](images/iss-location.png)
+\--- /hint \--- \--- hint \---
 
+Change your `for` loop so it looks like this:
 
-Creiamo delle variabili per salvare la latitudine e la longitdine, e poi stampiamole:
+```python
+for p in people:
+  print(p['name'], ' in ', p['craft'])
+```
 
-   ![screenshot](images/iss-coordinates.png)
+\--- /hint \--- \--- /hints \---
 
-+ Sarebbe pià utile mostrare la posizione su una mappa.
-
-    Innanzitutto, dobbiamo importare i cursori tartaruga dalla libreria.
-
-   ![screenshot](images/iss-turtle.png)
-
-Carichiamo una mappa del mondo come immagine di sfondo, ce n'è già una inclusa nel tuo trinket.
-
-   ![screenshot](images/iss-map.png)
-
-   La NASA ha fornito questa bellissima mappa e ci ha dato il permesso di riutilizzarla.
-
-   La mappa è centrata a 0, 0 che è proprio quello di cui abbiamo bisogno.
-
-+ Dovrai impostare la misura dello schermo per combaciare la misura dell'immagine che è 720 per 360.
-
-    Aggiungi `setup schermo(720, 360)`:
-
-    ![screenshot](images/iss-setup.png)
-
-+ Vui essere in grado di mandare la tartaruga a una specifica latitudine e longitudine. Per renderlo facile, possiamo impostare lo schermo per combaciare le coordinate che stiamo usando:
-
-    ![screenshot](images/iss-world.png)
-
-    Ora le coordinate combaceranno quelle della latitudine e longitudine che otteniamo dal servizio web.
-
-Creiamo una tartaruga per la ISS.
-
-   ![screenshot](images/iss-image.png)
-
-   Il tuo progetto include 'iss.png' e 'iss2.png', provali entrambi e vedi quale preferisci.  
-
-+ La ISS inizia nel centro della mappa, ora muoviamola verso la corretta posizione sulla mappa:
-
-    ![screenshot](images/iss-plot.png)
-
-    Nota che la latitudine all'inizio viene data normalmente, ma dobbiamo prima dare la longitudine quando tracciamo le coordinate (x,y).
-
-+ Prova il tuo programma facendolo partire. La ISS dovrebbe muoversi verso la sua posizione attuale sopra la Terra.
-
-    Aspetta qualche secondo e fai partire il tuo programma di nuovo per vedere dove si è spostata la ISS.
-
-    ![screenshot](images/iss-plotted.png)
+\--- /challenge \---
