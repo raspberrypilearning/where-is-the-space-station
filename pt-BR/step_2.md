@@ -10,6 +10,8 @@
 
 ### Recursos adicionais
 
-+ <a href="http://jumpto.cc/iss-go" target="_blank">Projeto inicial</a>
++ Projeto inicial - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ Abrir Notify webservices: <a href="http://api.open-notify.org/" target="_blank">api.open-notify.org</a>
++ Uma versão completa deste projeto - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
+
++ Serviços da web do Open Notify - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
