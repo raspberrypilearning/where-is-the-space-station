@@ -15,15 +15,17 @@ Przykład:
 ```    
 
 --- hints ---
- --- hint ---
+--- hint ---
 
 Musisz dodać kod do instrukcji print w `for p in people:`. Pamiętaj, że możesz drukować wiele obiektów, oddzielając je przecinkami.
 
---- /hint --- --- hint ---
+--- /hint --- 
+--- hint ---
 
 Otrzymujesz wartość dla `name` używając `p[name]` - jak uzyskać wartość dla `craft`?
 
---- /hint --- --- hint ---
+--- /hint --- 
+--- hint ---
 
 Zmień swoją pętlę `for`, aby wyglądała tak:
 
@@ -32,7 +34,8 @@ for o in osoby:
   print(o['name'], ' w ', o['craft'])
 ```
 
---- /hint --- --- hints ---
+--- /hint --- 
+--- hints ---
 
 
 --- /challenge ---
