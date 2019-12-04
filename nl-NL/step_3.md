@@ -8,7 +8,6 @@ Een webservice heeft een adres (URL), net als een website. In plaats van HTML vo
 
 Het zou er zo kunnen uitzien:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,20 +26,19 @@ Het zou er zo kunnen uitzien:
         }
       ]
     }
-    ```
     
 
-De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dataformaat heet `JSON` (uitgesproken als 'djeesun').
+De gegevens zijn live, dus je krijgt waarschijnlijk een ander resultaat. Het dataformaat heet ` JSON ` (uitgesproken als 'djeesun').
 
 [[[generic-json]]]
 
-Je moet de webservice met een Pythonscript oproepen om de resultaten te kunnen gebruiken.
+Je moet de webservice met een Python-script oproepen om de resultaten te kunnen gebruiken.
 
-+ Open deze trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open deze trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `main.py` script.
 
-+ Voeg de volgende code toe aan `main.py` om de URL van de webservice die je eerder hebt bezocht als een variabele op te slaan:
++ Voeg de volgende code toe aan ` main.py ` om de URL van de webservice die je eerder hebt bezocht als een variabele op te slaan:
 
 ![screenshot](images/iss-url.png)
 
@@ -48,7 +46,7 @@ De modules `urllib.request` en `json` zijn al geplaatst aan het begin van het `m
 
 ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ Nu moet je het JSON-antwoord in een Python datastructuur laden:
 
 ![screenshot](images/iss-result.png)
 
@@ -61,7 +59,7 @@ Dit is een Python woordenboek (Engels: dictionary) met drie sleutels: `message`,
 
 [[[generic-python-key-value-pairs]]]
 
-Het woord `message` met de waarde `success` geeft aan dat je met succes toegang had tot de webservice. Je zult wellicht andere waarden voor `number` en `people` zien en dat hangt af wie er nu in de ruimte is.
+Het woord` message` met de waarde ` success ` geeft aan dat je met succes toegang had tot de webservice. Je zult wellicht andere waarden voor ` number ` en ` people `zien en dat hangt af wie er nu in de ruimte is.
 
 Laten we de informatie beter leesbaar maken.
 
@@ -69,9 +67,9 @@ Laten we de informatie beter leesbaar maken.
 
 ![screenshot](images/iss-number.png)
 
-`resultaat['number']` zal de waarde laten zien van de sleutel `number` in het `resultaat` woordenboek. In het voorbeeld is dit `3`.
+`resultaat['number']` zal de waarde laten zien van de sleutel `number` in het `resultaat` woordenboek. In het voorbeeld is dit ` 3 `.
 
-+ De waarde die is gekoppeld aan de `people` sleutel is een lijst met woordenboeken! We plaatsen die waarde in een variabele, zodat je hem kunt gebruiken:
++ De waarde die is gekoppeld aan de ` people ` sleutel is een lijst met woordenboeken! We plaatsen die waarde in een variabele, zodat je hem kunt gebruiken:
 
 ![screenshot](images/iss-people.png)
 
@@ -100,4 +98,4 @@ Je zou zoiets moeten zien:
     Timothy Peake
     
 
-**Opmerking:** je gebruikt live gegevens, dus de resultaten zullen afhangen van het aantal mensen dat op dit moment in de ruimte is.
+** Opmerking: ** je gebruikt live gegevens, dus de resultaten zullen afhangen van het aantal mensen dat op dit moment in de ruimte is.
