@@ -2,7 +2,7 @@
 
 Er is ook een webservice die je kunt gebruiken om uit te zoeken wanneer het ISS boven een bepaalde locatie is.
 
-Laten we eens uitzoeken wanneer het ISS de volgende keer boven het Space Center in Houston, VS, vliegt, op breedtegraad `29.5502` en lengtegraad `95.097`.
+Laten we eens uitzoeken wanneer het ISS de volgende keer boven het Space Center in Houston, VS, vliegt, op breedtegraad ` 29.5502 ` en lengtegraad ` 95.097 `.
 
 + We gaan eerst een punt op de kaart zetten op deze coördinaten:
 
@@ -16,9 +16,9 @@ Je zou een foutmelding moeten zien:
 
 ![screenshot](images/iss-pass-error.png)
 
-Deze webservice neemt breedtegraad en lengtegraad als invoer, die moet dus worden opgenomen in de URL. De invoer wordt na een `?` toegevoegd en gescheiden met `&`.
+Deze webservice neemt breedtegraad en lengtegraad als invoer, die moet dus worden opgenomen in de URL. De invoer wordt na een `? ` toegevoegd en gescheiden met `&`.
 
-+ Voeg de `lat` en `lon` invoer toe aan de url zoals getoond: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
++ Voeg de ` lat ` en ` lon ` invoer toe aan de url zoals getoond: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
 
 ![screenshot](images/iss-passtimes.png)
 
@@ -34,9 +34,9 @@ Het antwoord geeft meerdere overvliegtijden en we kijken nu alleen naar de eerst
 
 ![screenshot](images/iss-print-pass.png)
 
-We hebben de Python `tijd` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
+We hebben de Python `time` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
 
-+ Voeg bovenaan je script de regel `import time` toe:
++ Voeg bovenaan je script de regel ` import time ` toe:
 
 ![screenshot](images/iss-time.png)
 
