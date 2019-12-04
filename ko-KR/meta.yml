@@ -1,0 +1,25 @@
+---
+title: 우주 정거장은 어디에 있나요?
+hero_image: images/banner.png
+description: 국제우주정거장(ISS)의 정확한 위치를 찾아 봅시다.
+listed: true
+copyedit: false
+version: 3.1.0
+last_tested: 2018-11-22
+steps:
+  - 
+    title: 소개
+  - 
+    title: 준비물
+  - 
+    title: 우주에 누가 있나요?
+  - 
+    title: '과제: 크래프트(우주선) 출력'
+  - 
+    title: ISS는 어디에 있나요?
+  - 
+    title: 지도에 ISS 띄우기
+  - 
+    title: ISS는 언제 특정 위치를 통과하나요?
+  - 
+    title: '과제: 더 많은 통과 시간 찾기'
