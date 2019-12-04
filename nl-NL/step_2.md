@@ -1,4 +1,4 @@
-## Wat je nodig hebt
+## Wat heb je nodig
 
 ### Hardware
 
@@ -10,6 +10,8 @@
 
 ### Extra bronnen
 
-+ <a href="http://jumpto.cc/iss-go" target="_blank">Startproject</a>
++ Start project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank}
 
-+ Open Notify webservices: <a href="http://api.open-notify.org/" target="_blank">api.open-notify.org</a>
++ Een voltooide versie van dit project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
+
++ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
