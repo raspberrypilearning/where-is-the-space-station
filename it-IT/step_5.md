@@ -1,52 +1,31 @@
+## Where is the ISS?
 
+The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
 
-## Quando sarà la ISS in alto?
+Let’s use another web service to find out where the International Space Station is.
 
-Esiste anche un servizio web che puoi chiamare per scoprire quando la ISS raggiungerà un luogo particolare.
++ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-Proviamo a scoprire quando la ISS arriverà al Centro Spaziale Di Houston, USA, che si trova a una latitudine 29.5502 e longitudine 95.097.
+You should see something like this:
 
-+ Innanzitutto, tracciamo un puntino sulla mappa a queste coordinate:
+    {
+    "iss_position": {
+      "latitude": 8.54938193505081, 
+      "longitude": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
+    
 
-    ![screenshot](images/iss-houston.png)
+The result contains the coordinates of the spot on Earth that the ISS is currently over.
 
-+ Ora otteniamo la data e l'ora in cui la ISS sarà in alto.
+[[[generic-theory-lat-long]]]
 
-    Come prima, possiamo chiamare il servizio web inserendo la url nella barra dell'indirizzo di un browser di internet: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
++ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
-    Dovresti vedere un errore:
+![screenshot](images/iss-location.png)
 
-    ![screenshot](images/iss-pass-error.png)
++ Let’s create variables to store the latitude and longitude, and then print them:
 
-+ Questo servizio web prende latitudine e longitudine come input, per cui dobbiamo includerle nella url che stiamo usando.
-
-    Gli input vengono aggiunti dopo un '?' e separati da `&`.
-
-    Aggiungi gli input 'lat e 'lon' alla url come mostrato: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-
-    ![screenshot](images/iss-passtimes.png)
-
-    La risposta include vari passaggi a orari diversi, noi guarderemo solo il primo. L'ora viene data in un formato standard, sarai in grado di trasformarla in una ora più leggibile in Python.
-
-+ Ora chiamiamo il servizio web da Python: Aggiungi il seguente codice alla fine della tua scritta:
-
-    ![screenshot](images/iss-passover.png)
-
-+ Ora otteniamo dal risultato l'ora del primo passaggio.
-
-    Aggiungi il seguente codice:
-
-    ![screenshot](images/iss-print-pass.png)
-
-
-+ L'ora viene data come marcatura oraria, dunque avremo bisogno del modulo orario di Python così che possiamo stamparla in una forma più leggibile e trasformarla in ora locale. Facciamo in modo che la tartaruga scriva l'orario del passaggio sul puntino.
-
-+ Aggiungi una linea 'importa tempo' in cima alla tua scritta:
-
-    ![screenshot](images/iss-time.png)
-
-+ La funzione `time.ctime()` trasformerà l'ora in una forma leggibile che potrai scrivere con la tartaruga:
-
-    ![screenshot](images/iss-pass-write.png)
-
-    (Puoi rimuovere o commentare la linea 'stampa').
+![screenshot](images/iss-coordinates.png)
