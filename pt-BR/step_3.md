@@ -8,7 +8,6 @@ Um serviço da web tem um endereço (URL) exatamente como um site tem. Em vez de
 
 Você deverá ver algo assim:
 
-    ```
     {
       "message": "success",
       "number": 3,
@@ -27,7 +26,6 @@ Você deverá ver algo assim:
         }
       ]
     }
-    ```
     
 
 Os dados são atualizados em tempo real, então você provavelmente verá um resultado ligeiramente diferente. O formato dos dados é chamado de `JSON` (pronunciado como "Jason").
@@ -36,7 +34,7 @@ Os dados são atualizados em tempo real, então você provavelmente verá um res
 
 Você precisa chamar o serviço da web a partir de um script Python, para poder usar os resultados.
 
-+ Abra este trinket: <a href="http://jumpto.cc/iss-go" target="_blank">jumpto.cc/iss-go</a>.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
 Os módulos `urllib.request` e `json` já foram importados para você na parte superior do script `main.py`.
 
