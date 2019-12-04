@@ -2,26 +2,24 @@
 title: Waar is het ruimtestation?
 hero_image: images/banner.png
 description: Zoek de exacte locatie van het ISS
-theme: blue
-duration: 2
 listed: true
-ingredient: false
 copyedit: false
-curriculum: 3, design-0, programming-3, phys-comp-0, manufacture-0, community-0
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: projects
-hardware: ''
-software: python
-version: 3
-last_tested: 2017-01-01
+version: 3.1.0
+last_tested: 2018-11-22
 steps:
-  - title: Inleiding
-  - title: Wat je nodig hebt
-  - title: Wie is er in de ruimte?
-  - title: 'Uitdaging: laat het ruimtestation zien'
-  - title: Waar is het ISS?
-  - title: Het ISS op een kaart tekenen
-  - title: Wanneer zal het ISS boven je hoofd zijn?
-  - title: 'Uitdaging: vind meer overvliegtijden'
+  - 
+    title: Inleiding
+  - 
+    title: Wat heb je nodig
+  - 
+    title: Wie is er in de ruimte?
+  - 
+    title: 'Uitdaging: laat het ruimtestation zien'
+  - 
+    title: Waar is het ISS?
+  - 
+    title: Het ISS op een kaart tekenen
+  - 
+    title: Wanneer zal het ISS recht boven je zijn?
+  - 
+    title: 'Uitdaging: vind meer overvliegtijden'
