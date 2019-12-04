@@ -8,7 +8,7 @@ version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - title: Wprowadzenie
-  - title: Co będzie potrzebne
+  - title: Czego będziesz potrzebować
   - title: Kto jest w kosmosie?
   - title: 'Wyzwanie: pokaż pojazd'
   - title: Gdzie jest ISS?
