@@ -1,18 +1,18 @@
 ## Uitdaging: vind meer overvliegtijden
 
---- challenge ---
+\--- challenge \---
 
-Om interessante lengte- en breedtegraden te vinden kun je gebruik maken van een website zoals <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Om de breedte- en lengtegraad van een locatie waar je in geïnteresseerd bent te bekijken, kun je een website gebruiken zoals <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Kun je overvliegtijden voor meer locaties opzoeken en tekenen? 
 
 ![screenshot](images/iss-final.png)
 
---- hints --- --- hint ---
+\--- hints \--- \--- hint \---
 
-Zet aan het einde van het programma de `lat` en `long` variabelen op nieuwe waarden en gebruik dan de `location` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wilt). Roep dan de `iss-pass` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `location` turtle.
+Zet aan het einde van het programma de ` lat ` en ` long ` variabelen op nieuwe waarden en gebruik dan de `locatie` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wil). Roep dan de ` iss-pass ` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `locatie` turtle.
 
---- /hint --- --- hint ---
+\--- /hint \--- \--- hint \---
 
 Voeg deze code toe aan het einde van je programma en vul de ontbrekende delen in. Merk op dat je de code die je hebt geschreven om de overvliegtijd voor het Space Center in Houston te krijgen kunt kopiëren en plakken om er daarna wijzigingen in aan te kunnen brengen.
 
@@ -21,14 +21,14 @@ Voeg deze code toe aan het einde van je programma en vul de ontbrekende delen in
 lat = XX.XX
 lon = XX.XX
 
-# Teken een punt met de 'location' turtle (je hoeft geen nieuwe te maken), kies een andere kleur
+# Teken een punt met de 'locatie' turtle (je hoeft geen nieuwe te maken), kies een andere kleur
 
 # Haal het resultaat op van`iss-pass.json` voor de nieuwe lengte- en breedtegraad
 
-# Haal de 'risetime' op uit het resultaat en gebruik de `location` turtle om het op de kaart te zetten
+# Haal de 'risetime' op uit het resultaat en gebruik de `locatie` turtle om het op de kaart te zetten
 ```
 
---- /hint --- --- hint ---
+\--- /hint \--- \--- hint \---
 
 Hier is een voorbeeld van de locatie van het Kosmodroom Bajkonoer, een raketlanceerplaats in Zuid-Kazachstan. De code kan aan het einde van je programma staan, na het tekenen van de overvliegtijd in het Houston Space Center.
 
@@ -54,10 +54,4 @@ location.write(time.ctime(over))
 
 Probeer meer locaties toe te voegen
 
---- /hint --- --- /hints --- --- /challenge ---
-***
-### Door de community geleverde vertaling
-
-Dit project werd vertaald door **Henny van Ham** en gecontroleerd door **Cor Groot**. 
-
-Onze geweldige vertalers helpen ons om kinderen over de hele wereld de kans te geven te leren coderen. Jij kunt ons helpen nog meer kinderen te bereiken door onze projecten te vertalen - lees meer op [rpf.io/translators](https://rpf.io/translators).
+\--- /hint \--- \--- /hints \--- \--- /challenge \---
