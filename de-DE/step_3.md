@@ -40,15 +40,15 @@ Die ` urllib.request ` und `json` Module wurden bereits oben in der ` main.py ` 
 
 + Füge den folgenden Code zu `main.py` hinzu, um die URL des Web Services, auf den du gerade zugegriffen hast, als Variable zu speichern:
 
-![Bildschirmfoto](images/iss-url.png)
+![Screenshot](images/iss-url.png)
 
 + Rufe nun den Web Service auf:
 
-![Bildschirmfoto](images/iss-request.png)
+![Screenshot](images/iss-request.png)
 
 + Als nächstes musst du die JSON-Antwort in eine Python-Datenstruktur laden:
 
-![Bildschirmfoto](images/iss-result.png)
+![Screenshot](images/iss-result.png)
 
 Du solltest so etwas sehen:
 
@@ -65,13 +65,13 @@ Jetzt drucken wir die Informationen lesbarer aus.
 
 + Lass uns zunächst die Anzahl der Menschen im Weltraum nachschlagen und sie drucken:
 
-![Bildschirmfoto](images/iss-number.png)
+![Screenshot](images/iss-number.png)
 
 ` ergebnis['number'] ` gibt den Wert aus, der mit dem Schlüssel`number` im `Ergebnis` Dictionary verknüpft ist. Im Beispiel ist dies `3`.
 
 + Der Wert, der mit dem Schlüssel `people` verknüpft ist, ist eine Liste von Dictionaries! Fügen wir diesen Wert in eine Variable ein, damit wir ihn verwenden können:
 
-![Bildschirmfoto](images/iss-people.png)
+![Screenshot](images/iss-people.png)
 
 Du solltest etwas sehen wie:
 
@@ -84,11 +84,11 @@ Du solltest etwas sehen wie:
 
 + `p` wird jedes Mal durch die Schleife auf ein Dictionary für einen anderen Astronauten gesetzt.
 
-![Bildschirmfoto](images/iss-people-1a.png)
+![Screenshot](images/iss-people-1a.png)
 
 + Du kannst dann die Werte für `name` und `craft` nachschlagen. Zeigen wir die Namen der Personen im Weltall an:
 
-![Bildschirmfoto](images/iss-people-2.png)
+![Screenshot](images/iss-people-2.png)
 
 Du solltest so etwas sehen:
 
