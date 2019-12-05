@@ -6,7 +6,7 @@ Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kan
 
 + Kannst du die Überflugzeiten für weitere Standorte suchen und planen? 
 
-![Bildschirmfoto](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
