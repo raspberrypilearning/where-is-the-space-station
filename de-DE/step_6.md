@@ -4,21 +4,21 @@ Es wäre nützlich, die Position auf einer Karte anzuzeigen. Du kannst dies mit 
 
 + Zuerst müssen wir die `turtle` Python-Bibliothek importieren:
 
-![Bildschirmfoto](images/iss-turtle.png)
+![Screenshot](images/iss-turtle.png)
 
 + Als nächstes lädst du eine Weltkarte als Hintergrundbild. Es gibt bereits einen in deinem Trinket namens 'map.gif'! Die NASA hat diese schöne Karte und die Erlaubnis für die Wiederverwendung zur Verfügung gestellt. 
 
-![Bildschirmfoto](images/iss-map.png)
+![screenshot](images/iss-map.png)
 
 Die Karte ist zentriert bei ` (0,0) ` Breite und Länge - genau das, was du brauchst.
 
 + Du musst die Bildschirmgröße so einstellen, dass sie der Bildgröße von 720 x 360 Pixel entspricht. Füge ` screen.setup(720, 360) ` hinzu:
 
-![Bildschirmfoto](images/iss-setup.png)
+![Screenshot](images/iss-setup.png)
 
 + Du möchtest turtle an einen bestimmten Längen- und Breitengrad schicken können. Um dies zu vereinfachen, kannst du den Bildschirm so einstellen, dass er mit den von dir verwendeten Koordinaten übereinstimmt:
 
-![Bildschirmfoto](images/iss-world.png)
+![Screenshot](images/iss-world.png)
 
 Jetzt stimmen die Koordinaten mit den Längen- und Breitengradkoordinaten überein, die du vom Web-Dienst zurückerhältst.
 
@@ -30,18 +30,18 @@ Jetzt stimmen die Koordinaten mit den Längen- und Breitengradkoordinaten übere
 
 Dein Code sollte so aussehen:
 
-![Bildschirmfoto](images/iss-image.png)
+![Screenshot](images/iss-image.png)
 
 \--- /hint \--- \--- /hints \---
 
 + Die ISS startet in der Mitte der Karte, jetzt bewegen wir sie an den richtigen Ort:
 
-![Bildschirmfoto](images/iss-plot.png)
+![Screenshot](images/iss-plot.png)
 
 ** Hinweis **: Breitengrad wird normalerweise zuerst angegeben, aber wir müssen zuerst den Längengrad angeben, wenn wir die ` (x, y)` Koordinaten zeichnen.
 
 + Teste dein Programm, indem du es ausführst. Die ISS sollte sich an ihren aktuellen Standort oberhalb der Erde bewegen. 
 
-![Bildschirmfoto](images/iss-plotted.png)
+![Screenshot](images/iss-plotted.png)
 
 + Warte ein paar Sekunden und starte dein Programm erneut, um zu sehen, wohin die ISS gezogen ist.
