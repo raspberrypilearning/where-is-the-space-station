@@ -24,8 +24,8 @@ Das Ergebnis enthält die Koordinaten des Ortes auf der Erde, über dem die ISS 
 
 + Jetzt musst du denselben Web Service von Python aus aufrufen. Fügen den folgenden Code am Ende deines Skripts hinzu, um den aktuellen Standort der ISS zu ermitteln:
 
-![Bildschirmfoto](images/iss-location.png)
+![Screenshot](images/iss-location.png)
 
 + Erstellen wir Variablen, um Breitengrad und Längengrad zu speichern und dann auszugeben:
 
-![Bildschirmfoto](images/iss-coordinates.png)
+![Screenshot](images/iss-coordinates.png)
