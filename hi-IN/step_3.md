@@ -36,30 +36,30 @@
 
 + इस ट्रिंकेट को खोलें: [ http://rpf.io/iss-on ](http://rpf.io/iss-on) {: लक्ष्य = "_ blank"}।
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+` urllib.request ` और ` json ` मॉड्यूल पहले से ही आपके लिए ` main.py के आयात किए जा चुके हैं ` स्क्रिप्ट।
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ निम्न कोड को ` main.py पर जोड़ें ` वेब सेवा के URL को स्टोर करने के लिए जिसे आपने एक चर के रूप में एक्सेस किया है:
 
 ![स्क्रीनशॉट](images/iss-url.png)
 
-+ Now call the web service:
++ अब वेब सेवा को कॉल करें:
 
 ![स्क्रीनशॉट](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ आगे आपको पायथन डेटा संरचना में JSON प्रतिक्रिया लोड करने की आवश्यकता है:
 
 ![स्क्रीनशॉट](images/iss-result.png)
 
-You should see something like this:
+आपको कुछ इस तरह से देखना चाहिए:
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {'संदेश': 'सफलता', 'संख्या': 3, 'लोग': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+यह तीन कुंजियों वाला पायथन शब्दकोश है: ` संदेश `, ` संख्या `, और ` लोग ` ।
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+वह ` संदेश ` मूल्य है ` सफलता ` आपको बताता है कि आपने वेब सेवा को सफलतापूर्वक एक्सेस किया है। Note that you will see different results for `number` and `people` depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
