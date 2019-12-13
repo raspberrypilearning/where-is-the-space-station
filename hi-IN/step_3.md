@@ -1,40 +1,40 @@
-## Who is in space?
+## अंतरिक्ष में कौन है?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+आप एक वेब सेवा का उपयोग करने जा रहे हैं जो अंतरिक्ष के बारे में लाइव जानकारी प्रदान करती है। सबसे पहले, आइए जानें कि वर्तमान में कौन अंतरिक्ष में है।
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+एक वेब सेवा का एक पता (URL) होता है, जैसे एक वेबसाइट करती है। एक वेब पेज के लिए एचटीएमएल लौटने के बजाय, यह डेटा लौटाता है।
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ वेब सेवा <<> खोलें </a> एक वेब ब्राउज़र में।
 
-You should see something like this:
+आपको कुछ इस तरह से देखना चाहिए:
 
     {
-      "message": "success",
-      "number": 3,
-      "people": [
+      "संदेश": "सफलता",
+      "संख्या": 3,
+      "लोग": [
         {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
+          "शिल्प": "आईएसएस",
+          "नाम": "यूरी मालेनचेंको"
         },
         {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
+          " शिल्प ":" आईएसएस ",
+          " नाम ":" टिमोथी कोपरा "
         },
         {
-          "craft": "ISS",
-          "name": "Timothy Peake"
+          " शिल्प ":" आईएसएस ",
+          " नाम ":" टिमोथी पीक "
         }
       ]
-    }
+    ]
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+डेटा लाइव है, इसलिए आप शायद थोड़ा अलग परिणाम देखेंगे। डेटा प्रारूप को ` JSON कहा जाता है ` ('जेसन' की तरह उच्चारण)।
 
-[[[generic-json]]]
+[[[जेनरीक-जेसन]]]
 
-You need to call the web service from a Python script, so you can use the results.
+आपको पायथन स्क्रिप्ट से वेब सेवा को कॉल करने की आवश्यकता है, ताकि आप परिणामों का उपयोग कर सकें।
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ इस ट्रिंकेट को खोलें: [ http://rpf.io/iss-on ](http://rpf.io/iss-on) {: लक्ष्य = "_ blank"}।
 
 The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
