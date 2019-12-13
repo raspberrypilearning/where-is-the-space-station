@@ -2,13 +2,13 @@
 
 ### हार्डवेयर
 
-+ A computer with internet connection
++ इंटरनेट कनेक्शन वाला कंप्यूटर
 
 ### सॉफ्टवेयर
 
-+ [Trinket](https://trinket.io/) online editor
++ [ त्रिंकेत ](https://trinket.io/) ऑनलाइन संपादक
 
-### Additional resources
+### अतिरिक्त संसाधन
 
 + Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
