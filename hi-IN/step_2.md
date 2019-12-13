@@ -10,8 +10,8 @@
 
 ### अतिरिक्त संसाधन
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ सुरुआत प्रोजेक्ट - [ rpf.io/iss-on ](http://rpf.io/iss-on) {: लक्ष्य = "_ खाली"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ इस परियोजना का एक पूर्ण संस्करण - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) {: लक्ष्य = "_ खाली"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ ओपन नोटिसेस वेबसर्विसेज - [ api.open-notify.org ](http://api.open-notify.org/) {: लक्ष्य = "_ blank"}
