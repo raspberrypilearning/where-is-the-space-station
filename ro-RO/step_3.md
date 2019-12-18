@@ -1,12 +1,12 @@
 ## Cine este în spațiu?
 
-Vei folosi un serviciu web care oferă informații in timp real despre spațiu. First, let’s find out who is currently in space.
+Vei folosi un serviciu web care oferă informații in timp real despre spațiu. Mai întâi, să aflăm cine este în prezent în spațiu.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Un serviciu web are o adresă (URL) la fel cum are un site web. În loc să returneze HTML pentru o pagină web, returnează date.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Deschide <a href="http://api.open-notify.org/astros.json" target="_blank"> serviciul web </a> într-un browser web.
 
-You should see something like this:
+Ar trebui să vezi ceva ca mai jos:
 
     {
       "message": "success",
@@ -28,25 +28,25 @@ You should see something like this:
     }
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Datele sunt în timp real, așa că vei vedea probabil un rezultat ușor diferit. Formatul de date se numește ` JSON ` (pronunțat „Jason”).
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Trebuie să apelezi serviciul web dintr-un script Python pentru a putea utiliza rezultatele.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Deschide acest trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+Modulele ` urllib.request ` și ` json ` au fost deja importate pentru tine la începutul script-ului ` main.py `.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Adaugă următorul cod în ` main.py ` pentru a stoca într-o variabilă adresa URL a serviciului web pe care tocmai l-ai accesat:
 
 ![screenshot](images/iss-url.png)
 
-+ Now call the web service:
++ Acum invocă serviciul web:
 
 ![screenshot](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ În continuare, trebuie să încarci răspunsul JSON într-o structură de date Python:
 
 ![screenshot](images/iss-result.png)
 
