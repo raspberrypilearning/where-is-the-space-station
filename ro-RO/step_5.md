@@ -1,6 +1,6 @@
-## Where is the ISS?
+## Unde este SSI?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+Stația Spațială Internațională este pe orbită în jurul Pământului. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
 
 Let’s use another web service to find out where the International Space Station is.
 
