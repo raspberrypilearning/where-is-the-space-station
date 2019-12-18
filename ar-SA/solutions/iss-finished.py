@@ -2,17 +2,17 @@
 
 import json
 import urllib.request
-استدعاء السلاحف
-وقت الاستيراد
+import turtle
+import time
 
 # http://open-notify.org/Open-Notify-API/
-موقع المعلومات العالمي = 'http://api.open-notify.org/astros.json'
-الاستجابة = urllib.request.urlopen(url)
-النتيجة = json.loads(response.read())
+url = 'http://api.open-notify.org/astros.json'
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
 
 print('الاشخاص في الفضاء: ', result['number'])
 
-الاشخاص = النتيجة['people']
+people = result['people']
 
 for p in people:
   print(p['name'], ' in ', p['craft'])
