@@ -1,11 +1,11 @@
 ---
 title: أين محطة الفضاء الدولية؟
-hero_image: images/where-is-the-space-station.png
+hero_image: images/banner.png
 description: حدِّد الموقع الدقيق لمحطة الفضاء الدولية.
 listed: true
 copyedit: false
 version: 3.1.0
-last_tested: 2018-22-01
+last_tested: 2018-11-22
 steps:
   - 
     title: المقدمة
@@ -18,8 +18,8 @@ steps:
   - 
     title: أين هي محطة الفضاء الدولية؟
   - 
-    title: التخطيط لمحطة الفضاء الدولية على الخريطة
+    title: رسم محطة الفضاء الدولية على الخريطة
   - 
-    title: متى ستكون المحطة الفضائية الدولية ؟
+    title: متى ستكون المحطة الفضائية الدولية فوقنا؟
   - 
     title: 'التحدي: العثور على مزيد من مرات التمرير'
