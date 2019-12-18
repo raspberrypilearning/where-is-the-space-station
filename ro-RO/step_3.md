@@ -1,6 +1,6 @@
-## Who is in space?
+## Cine este în spațiu?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Vei folosi un serviciu web care oferă informații in timp real despre spațiu. First, let’s find out who is currently in space.
 
 A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
 
