@@ -1,12 +1,12 @@
-## Challenge: find more pass-over times
+## Provocare: găseste mai multe perioade de trecere pe deasupra SSI
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Pentru a căuta latitudinea și longitudinea unei locații de interes, poți utiliza un site web cum ar fi <a href="http://www.latlong.net/" target="_blank"> www.latlong.net/ </a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Poți să cauți și să completezi orele de trecere deasupra pentru mai multe locații? 
 
-![screenshot](images/iss-final.png)
+![captură de ecran](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
@@ -52,6 +52,6 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+Încearcă să adaugi mai multe locații!
 
 \--- /hint \--- \--- /hints \--- \--- /challenge \---
