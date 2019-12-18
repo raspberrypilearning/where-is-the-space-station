@@ -15,7 +15,7 @@ print('الاشخاص في الفضاء: ', result['number'])
 people = result['people']
 
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+  print(p['name'], ' في ', p['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
@@ -59,8 +59,8 @@ iss.goto(lon, lat)
 #خط الطول = 139.691706
 
 # مركز الفضاء ، هيوستن
-دائرة العرض = 29.5502
-خط الطول = -95.097
+lat = 29.5502
+lon = -95.097
 
 location = turtle.Turtle()
 location.penup()
