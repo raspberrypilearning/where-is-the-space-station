@@ -1,6 +1,6 @@
 #!/bin/python3
 
 import json
-استدعاء السلاحف
+import turtle
 import urllib.request
 
