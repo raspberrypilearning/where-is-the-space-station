@@ -18,63 +18,63 @@ for p in people:
   print(p['name'], ' in ', p['craft'])
 
 
-موقع المعلومات العالمي = 'http://api.open-notify.org/astros.json'
-الاستجابة = urllib.request.urlopen(url)
-النتيجة = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-now.json'
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
 
-الموقع = النتيجة ['iss_position']
-خط العرض = float(الموقع['latitude'])
-خط الطول = float(الموقع['longitude'])
-print('خط العرض: ', lat)
+location = result['iss_position']
+lat = float(location['latitude'])
+lon = float(location['longitude'])
+print('دائرة العرض: ', lat)
 print('خط الطول: ', lon)
 
-الشاشة = turtle.Screen()
-الشاشة.setup(720, 360)
-الشاشة.setworldcoordinates(-180, -90, 180, 90)
-الشاشة.bgpic('map.gif')
+screen = turtle.Screen()
+screen.setup(720, 360)
+screen.setworldcoordinates(-180, -90, 180, 90)
+screen.bgpic('map.gif')
 
 
-الشاشة = turtle.Screen()
-الشاشة.setup(720, 360)
-الشاشة.setworldcoordinates(-180, -90, 180, 90)
-# image source:
+screen = turtle.Screen()
+screen.setup(720, 360)
+screen.setworldcoordinates(-180, -90, 180, 90)
+# مصدر الصورة:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
-الشاشة.bgpic('map.gif')
+screen.bgpic('map.gif')
 
-الشاشة.register_shape('iss.gif')
-محطة الفضاء العالمية = turtle.Turtle()
-محطة الفضاء العالمية.shape('iss.gif')
-محطة الفضاء العالمية.setheading(90)
+screen.register_shape('iss.gif')
+iss = turtle.Turtle()
+iss.shape('iss.gif')
+iss.setheading(90)
 
-محطة الفضاء العالمية.penup()
+iss.penup()
 iss.goto(lon, lat)
 
-# متى سوف يمر جهاز محطة الفضاء الدولية فوقنا؟
+# متى سوف تمر محطة الفضاء الدولية فوقي؟
 #لندن
-#خط العرض = 51.5072
+#دائرة العرض = 51.5072
 #خط الطول = 0.1275
 
 # طوكيو
-#خط العرض = 35.689487
+#دائرة العرض = 35.689487
 #خط الطول = 139.691706
 
 # مركز الفضاء ، هيوستن
-خط العرض = 29.5502
+دائرة العرض = 29.5502
 خط الطول = -95.097
 
-الموقع = turtle.Turtle()
-الموقع.penup()
-الموقع.color('yellow')
-الموقع.goto(lon,lat)
-الموقع.dot(5)
-الموقع.hideturtle()
+location = turtle.Turtle()
+location.penup()
+location.color('yellow')
+location.goto(lon,lat)
+location.dot(5)
+location.hideturtle()
 
-موقع المعلومات العالمي= 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-استجابة = urllib.request.urlopen (url)
-النتيجة = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
 
-طباعة النتيجة
-خلال = النتيجة['response'][1]['risetime']
+#طباعة النتيجة
+over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 
 
