@@ -33,7 +33,7 @@ lon = XX.XX
 إليك مثال على ذلك باستخدام موقع بايكونور كوزمودروم Baikonur Cosmodrome، وهو ميناء فضائي في جنوب كازاخستان. يقع هذا الكود في نهاية البرنامج، بعد رسم وقت المرور فوق مركز هيوستن للفضاء.
 
 ```python
-# Baikonur Cosmodrome
+#بايكونور كوزمودروم Baikonur Cosmodrome
 lat = 45.86
 lon = 63.31
 
@@ -47,7 +47,7 @@ url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-#print(result)
+#طباعة (result)
 over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
