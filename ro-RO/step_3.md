@@ -40,57 +40,57 @@ Modulele ` urllib.request ` și ` json ` au fost deja importate pentru tine la �
 
 + Adaugă următorul cod în ` main.py ` pentru a stoca într-o variabilă adresa URL a serviciului web pe care tocmai l-ai accesat:
 
-![screenshot](images/iss-url.png)
+![captură de ecran](images/iss-url.png)
 
 + Acum invocă serviciul web:
 
-![screenshot](images/iss-request.png)
+![captură de ecran](images/iss-request.png)
 
 + În continuare, trebuie să încarci răspunsul JSON într-o structură de date Python:
 
-![screenshot](images/iss-result.png)
+![captură de ecran](images/iss-result.png)
 
-You should see something like this:
+Ar trebui să vezi ceva ca mai jos:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Acesta este un dicționar Python cu trei chei: ` message (mesaj)`, ` number(număr)` și ` people(oameni)`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Acel mesaj ` ` cu valoarea ` success(succes) ` îți spune că ai accesat cu succes serviciul web. Reține că vei vedea rezultate diferite pentru ` număr ` și ` oameni ` în funcție de cine se află în prezent în spațiu.
 
-Now let's print the information in a more readable way.
+Acum, să tipărim informațiile într-un mod mai lizibil.
 
-+ First, let's look up the number of people in space and print it:
++ Mai întâi, să căutăm numărul de persoane în spațiu și să îl tipărim:
 
 ![screenshot](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+` rezultat [ 'număr'] ` va tipări valoarea asociată cu cheia`numar ` în dicţionarul `rezultat`. În exemplu, aceasta este ` 3 `.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ Valoarea asociată cu cheia `people` este o listă de dicționare! Să punem această valoare într-o variabilă, astfel încât să o poți folosi:
 
 ![screenshot](images/iss-people.png)
 
-You should see something like:
+Ar trebui să vezi ceva ca mai jos:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Acum trebuie să imprimi o linie pentru fiecare astronaut. Poți folosi o structură repetitivă ` for` din Python pentru a face acest lucru.
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ De fiecare dată cand se executa bucla, ` p ` va primi valoarea unui dicționar pentru un alt astronaut.
 
 ![screenshot](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ Poți căuta apoi valorile pentru ` nume ` și ` meșteșug `. Să arătăm numele persoanelor din spațiu:
 
 ![screenshot](images/iss-people-2.png)
 
-You should see something like this:
+Ar trebui să vezi ceva ca mai jos:
 
     People in Space:  3
     Yuri Malenchenko
@@ -98,4 +98,4 @@ You should see something like this:
     Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+** Notă: ** Utilizați date actualizate în timp real, astfel încât rezultatele dvs. vor depinde de numărul de persoane care se află în prezent în spațiu.
