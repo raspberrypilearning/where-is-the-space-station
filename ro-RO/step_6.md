@@ -16,15 +16,15 @@ Harta este centrată la ` (0,0) ` latitudine și longitudine, care este exact ce
 
 ![captură de ecran](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Vrei să poți trimite testoasa la o anumită latitudine și longitudine. Pentru a face acest lucru ușor, poți seta ecranul să corespundă coordonatelor pe care le utilizezi:
 
 ![captură de ecran](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Acum, coordonatele se vor potrivi cu coordonatele de latitudine și longitudine pe care le returneaza serviciul web.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Hai să creăm o pictogramă cu broască țestoasă pentru SSI. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
 
-[[[generic-python-turtle-image]]]
+[generic-python-turtle-image]
 
 \--- hints \--- \--- hint \---
 
@@ -34,14 +34,14 @@ Codul tău ar trebui să arate astfel:
 
 \--- /hint \--- \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ SSI pornește din centrul hărții, acum să o mutăm în locația corectă:
 
 ![captură de ecran](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+** Notă **: în mod normal, latitudinea este dată mai întâi, dar trebuie să dăm longitudinea mai întâi atunci când se reprezintă coordonatele ` (x, y) `.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Testează-ți programul rulându-l. SSI ar trebui să se mute la poziția sa actuală deasupra Pământului. 
 
 ![captură de ecran](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Așteaptă câteva secunde și execută programul din nou pentru a vedea unde s-a mutat SSI.
