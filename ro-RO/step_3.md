@@ -65,13 +65,13 @@ Acum, să tipărim informațiile într-un mod mai lizibil.
 
 + Mai întâi, să căutăm numărul de persoane în spațiu și să îl tipărim:
 
-![screenshot](images/iss-number.png)
+![captură de ecran](images/iss-number.png)
 
 ` rezultat [ 'număr'] ` va tipări valoarea asociată cu cheia`numar ` în dicţionarul `rezultat`. În exemplu, aceasta este ` 3 `.
 
 + Valoarea asociată cu cheia `people` este o listă de dicționare! Să punem această valoare într-o variabilă, astfel încât să o poți folosi:
 
-![screenshot](images/iss-people.png)
+![captură de ecran](images/iss-people.png)
 
 Ar trebui să vezi ceva ca mai jos:
 
@@ -84,11 +84,11 @@ Ar trebui să vezi ceva ca mai jos:
 
 + De fiecare dată cand se executa bucla, ` p ` va primi valoarea unui dicționar pentru un alt astronaut.
 
-![screenshot](images/iss-people-1a.png)
+![captură de ecran](images/iss-people-1a.png)
 
 + Poți căuta apoi valorile pentru ` nume ` și ` meșteșug `. Să arătăm numele persoanelor din spațiu:
 
-![screenshot](images/iss-people-2.png)
+![captură de ecran](images/iss-people-2.png)
 
 Ar trebui să vezi ceva ca mai jos:
 
