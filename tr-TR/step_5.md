@@ -24,8 +24,8 @@ The result contains the coordinates of the spot on Earth that the ISS is current
 
 + Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
-![screenshot](images/iss-location.png)
+![ekran görüntüsü](images/iss-location.png)
 
 + Let’s create variables to store the latitude and longitude, and then print them:
 
-![screenshot](images/iss-coordinates.png)
+![ekran görüntüsü](images/iss-coordinates.png)
