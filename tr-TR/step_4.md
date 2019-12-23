@@ -1,12 +1,12 @@
 ## Challenge: show the craft
 
-\--- challenge \---
+\--- meydan okuma \---
 
 In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
 + Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Example:
+Örneğin:
 
     People in Space:  3
     Yuri Malenchenko in ISS
