@@ -1,12 +1,12 @@
 ## Challenge: find more pass-over times
 
-\--- challenge \---
+\--- meydan okuma \---
 
 To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
 + Can you look up and plot the pass-over times for more locations? 
 
-![screenshot](images/iss-final.png)
+![ekran görüntüsü](images/iss-final.png)
 
 \--- hints \--- \--- hint \---
 
