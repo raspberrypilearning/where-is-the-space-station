@@ -8,9 +8,9 @@ version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: Introduction
+    title: Giriş
   - 
-    title: What you will need
+    title: Nelere ihtiyacınız olacak
   - 
     title: Who is in space?
   - 
