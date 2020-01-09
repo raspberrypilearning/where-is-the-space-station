@@ -67,7 +67,7 @@ Acum, să tipărim informațiile într-un mod mai lizibil.
 
 ![captură de ecran](images/iss-number.png)
 
-` rezultat [ 'număr'] ` va tipări valoarea asociată cu cheia`numar ` în dicţionarul `rezultat`. În exemplu, aceasta este ` 3 `.
+`rezultat[ 'number']` va tipări valoarea asociată cu cheia `number` în dicţionarul `rezultat`. În exemplu, aceasta este ` 3 `.
 
 + Valoarea asociată cu cheia `people` este o listă de dicționare! Să punem această valoare într-o variabilă, astfel încât să o poți folosi:
 
@@ -86,13 +86,13 @@ Ar trebui să vezi ceva ca mai jos:
 
 ![captură de ecran](images/iss-people-1a.png)
 
-+ Poți căuta apoi valorile pentru ` nume ` și ` meșteșug `. Să arătăm numele persoanelor din spațiu:
++ Poți căuta apoi valorile pentru ` name ` și ` craft`. Să arătăm numele persoanelor din spațiu:
 
 ![captură de ecran](images/iss-people-2.png)
 
 Ar trebui să vezi ceva ca mai jos:
 
-    People in Space:  3
+    Persoane in spatiu:  3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
