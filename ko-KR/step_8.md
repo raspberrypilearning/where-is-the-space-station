@@ -9,11 +9,12 @@
 ![스크린샷](images/iss-final.png)
 
 --- hints ---
- --- hint ---
+--- hint ---
 
 프로그램의 끝에서 `lat`과 `long` 변수를 초기화하고, `location` turtle 변수를 활용하여 새로운 위치를 추가할 수 있도록 하세요. (원하는 경우 다른 색상을 선택하세요.) 그 다음, `iss-pass` 웹 서비스를 좌표 정보를 포함하여 호출하세요. (코드를 복사 붙여넣기 해도 됩니다.) 마지막으로, 응답에서 `risetime`을 받고, `location` turtle 변수에 정보를 입력합니다.
 
---- /hint --- --- hint ---
+--- /hint --- 
+--- hint ---
 
 이 코드를 프로그램 끝에 추가하고 누락 된 부분을 채웁니다. 휴스턴에 있는 우주 센터의 통과 시각을 얻기 위해 작성한 코드를 복사하여 붙여 넣은 다음 필요한 부분을 변경할 수 있습니다.
 
@@ -29,7 +30,8 @@ lon = XX.XX
 # `risetime` 에서 결과를 받고 `location` turtle 에 정보를 입력하여 맵에 쓰기
 ```
 
---- /hints --- --- hint ---
+--- /hint --- 
+--- hint ---
 
 다음은 카자흐스탄 남부의 우주 비행장인 Baikonur Cosmodrome의 좌표를 사용한 예입니다. 코드는 Houston Space Center 통과 시각을 출력한 후, 프로그램이 끝날 때 진행됩니다.
 
@@ -55,4 +57,6 @@ location.write(time.ctime(over))
 
 더 많은 위치를 추가하십시오!
 
---- /hint ------ /hints --- --- /challenge ---
+--- /hint ---
+--- /hints --- 
+--- /challenge ---
