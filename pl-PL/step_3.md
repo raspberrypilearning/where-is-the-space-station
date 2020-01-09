@@ -68,7 +68,7 @@ Teraz wyświetlmy te informacje w bardziej czytelny sposób.
 
 ![zrzut ekranu](images/iss-number.png)
 
-`wynik['number']` wyświetli wartość skojarzoną z kluczem `number` w słowniku `result`. W tym przypadku jest to `3`.
+`wynik['number']` wyświetli wartość skojarzoną z kluczem `number` w słowniku `wynik`. W tym przypadku jest to `3`.
 
 + Wartość powiązana z kluczem `people` to lista słowników! Przypiszmy tę wartość do zmiennej, abyś mógł z niej korzystać:
 
@@ -83,7 +83,7 @@ Powinieneś zobaczyć coś takiego:
 
 [[[generic-python-for-loop-list]]]
 
-+ Za każdym przejściem przez pętlę, `p` będzie ustawione na słownik dla innego astronauty.
++ Za każdym przejściem przez pętlę, `o` będzie ustawione na słownik dla innego astronauty.
 
 ![zrzut ekranu](images/iss-people-1a.png)
 

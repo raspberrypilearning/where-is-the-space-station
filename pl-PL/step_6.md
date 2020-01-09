@@ -12,7 +12,7 @@ Dobrze byłoby wyświetlić pozycję na mapie. Możesz to zrobić za pomocą gra
 
 Mapa jest wyśrodkowana na szerokość i długość geograficzną `(0,0)`, która jest właśnie tym, czego potrzebujesz.
 
-+ Musisz ustawić rozmiar ekranu, aby dopasować go do rozmiaru obrazu, który wynosi 720 na 360 pikseli. Dodaj `screen.setup(720, 360)`:
++ Musisz ustawić rozmiar ekranu, aby dopasować go do rozmiaru obrazu, który wynosi 720 na 360 pikseli. Dodaj `ekran.setup(720, 360)`:
 
 ![zrzut ekranu](images/iss-setup.png)
 

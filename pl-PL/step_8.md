@@ -11,7 +11,7 @@ Aby sprawdzić szerokość i długość geograficzną lokalizacji, którą jeste
 --- hints ---
  --- hint ---
 
-Na końcu twojego programu ustaw nową wartość zmiennych `lat` i `long`, a następnie użyj zmiennej żółwia `location`, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj usługę sieciową `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Na koniec odczytaj `risetime` z odpowiedzi i zapisz go za pomocą zmiennej `location` żółwia.
+Na końcu twojego programu ustaw nową wartość zmiennych `lat` i `long`, a następnie użyj zmiennej żółwia `lokalizacja`, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj usługę sieciową `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Na koniec odczytaj `risetime` z odpowiedzi i zapisz go za pomocą zmiennej `lokalizacja` żółwia.
 
 --- /hint --- --- hint ---
 
