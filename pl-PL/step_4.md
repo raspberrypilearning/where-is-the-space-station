@@ -7,11 +7,12 @@ Oprócz nazwy astronautów, usługa sieciowa podaje również pojazd, na którym
 + Czy możesz rozbudować swój skrypt tak, aby wydrukował także pojazd dla każdego astronauty? 
 
 Przykład:
+
 ```
-    Liczba osób w Kosmosie:  3
-    Yuri Malenchenko w ISS
-    Timothy Kopra w ISS
-    Timothy Peake w ISS
+Liczba osób w Kosmosie:  3
+Yuri Malenchenko w ISS
+Timothy Kopra w ISS
+Timothy Peake w ISS
 ```    
 
 --- hints ---
@@ -33,9 +34,7 @@ Zmień swoją pętlę `for`, aby wyglądała tak:
 for o in osoby:
   print(o['name'], ' w ', o['craft'])
 ```
-
 --- /hint --- 
 --- hints ---
-
 
 --- /challenge ---
