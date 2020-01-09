@@ -55,10 +55,10 @@ lokalizacja.write(time.ctime(czas_przejscia))
 
 Spróbuj dodać więcej lokalizacji!
 
---- /hint ------ /hints --- --- /challenge ---
+--- /hint --- --- /hints --- --- /challenge ---
 
 
-Tłumaczenie wykonane przez wolontariuszy
+**Tłumaczenie wykonane przez wolontariuszy**
 
 Projekt ten przetłumaczył **Paweł Wilk** a zweryfikował **Tomasz Przybyłek**.
 

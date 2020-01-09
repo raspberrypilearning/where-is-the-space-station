@@ -40,7 +40,7 @@ Będziemy potrzebować w Pythonie moduł `time`, abyśmy mogli wyświetlić czas
 
 ![zrzut ekranu](images/iss-time.png)
 
-+ Funkcja`time.ctime()` przekształci znacznik czasu w czytelny format, który można zapisać na mapie:
++ Funkcja `time.ctime()` przekształci znacznik czasu w czytelny format, który można zapisać na mapie:
 
 ![zrzut ekranu](images/iss-pass-write.png)
 

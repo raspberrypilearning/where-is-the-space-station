@@ -53,7 +53,8 @@ Moduły `urllib.request` i `json` zostały już zaimportowane u góry głównego
 Powinieneś zobaczyć coś takiego:
 ```
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
-```    
+```
+    
 
 Jest to słownik Pythona z trzema kluczami: `message`, `number`, oraz `people`.
 

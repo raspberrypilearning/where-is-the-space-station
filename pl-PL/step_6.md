@@ -33,7 +33,7 @@ Twój kod powinien wyglądać tak:
 
 ![zrzut ekranu](images/iss-image.png)
 
---- /hint ------ /hints ---
+--- /hint --- --- /hints ---
 
 + ISS startuje na środku mapy, a teraz przenieśmy ją do właściwej lokalizacji:
 
