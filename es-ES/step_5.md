@@ -1,51 +1,31 @@
+## ¿Dónde está la ISS?
 
+La Estación Espacial Internacional está en órbita alrededor de la Tierra. Completa una órbita alrededor de la Tierra aproximadamente cada hora y media, y viaja a una velocidad promedio de 7.66 km por segundo. ¡Es rápida!
 
-## ¿Cuándo pasará por encima la ISS?
+Usemos otro servicio web para averiguar dónde está la Estación Espacial Internacional.
 
-Existe igualmente un servicio web que puedes usar para averiguar cuándo la ISS pasará sobre una ubicación concreta. 
-Averigüemos cuándo la ISS pasará sobre el Centro Espacial de Houston, EE. UU., cuya latitud es 29.5502 y longitud = 95.097.
-  
-+ En primer lugar, tracemos un punto en el mapa en estas coordenadas:
++ Primero abra la URL del servicio web en una nueva pestaña en su navegador web: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-  ![screenshot](images/iss-houston.png)
+Deberá ver algo como esto:
+```
+    {
+    "iss_position": {
+      "latitude": 8.54938193505081, 
+      "longitude": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
+```    
 
-+ A continuación, obtengamos la fecha y la hora en la que la ISS volverá a pasar sobre está ubicación. 
+El resultado contiene las coordenadas del lugar en la Tierra sobre la cual se encuentra actualmente la ISS.
 
-  Al igual que antes, podemos contactar con el servicio web introduciendo la url en la barra de dirección del navegador web: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-  
-  Deberías ver un error:
+[[[generic-theory-lat-long]]]
 
-  ![screenshot](images/iss-pass-error.png)
++ Ahora necesita llamar al mismo servicio web desde Python. Agregue el siguiente código al final de su script para obtener la ubicación actual de la ISS:
 
-+ Este servicio web toma la latitud y la longitud como entradas, por lo que debemos incluirlas en la url que usemos.
+![captura de pantalla](images/iss-location.png)
 
-  Las entradas se añaden después de un `?` y se separan mediante `&`. 
++ Vamos a crear variables para almacenar la latitud y la longitud, y luego vamos a imprimirlas:
 
-  Añade las entradas `lat` y `lon` a la url tal y como se muestra: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1"target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-  
-  ![screenshot](images/iss-passtimes.png)
-  
-  La respuesta incluye varios sobrevuelos a distintas horas. Solamente miraremos el primero. La hora se indica en formato horario estándar. Serás capaz de convertirla a una hora que pueda leerse en Python. 
-
-+ A continuación, contactemos con el servicio web desde Python. Añade el siguiente código al final de tu script:
-
-  ![screenshot](images/iss-passover.png)
-
-+ Ahora, usemos el primer sobrevuelo de los resultados.
-
-Añade el siguiente código:
-
-  ![screenshot](images/iss-print-pass.png)
-
-
-+ La hora se proporciona como marca horaria, por lo que necesitaremos el módulo horario de Python para poder imprimirla en un formato que podamos leer y convertir a la hora local.  Hagamos que la tortuga escriba la hora de sobrevuelo al lado del punto. 
-
-+ Añade una linea `import time` a la parte superior de tu script:
-
-  ![screenshot](images/iss-time.png)
-
-+ La función `time.cime()` convertirá la hora a un formato que podamos leer y escribir con la tortuga: 
-
-  ![screenshot](images/iss-pass-write.png)
- 
-  (Puedes eliminar o comentar la línea `print`).
+![captura de pantalla](images/iss-coordinates.png)
