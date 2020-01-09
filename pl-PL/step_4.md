@@ -35,6 +35,6 @@ for o in osoby:
   print(o['name'], ' w ', o['craft'])
 ```
 --- /hint --- 
---- hints ---
+--- /hints ---
 
 --- /challenge ---
