@@ -12,7 +12,7 @@ Ar fi util să se afișeze poziția pe o hartă. Poți face acest lucru folosind
 
 Harta este centrată la ` (0,0) ` latitudine și longitudine, care este exact ceea ce ai nevoie.
 
-+ Trebuie să setezi dimensiunea ecranului pentru a se potrivi cu dimensiunea imaginii, care este de 720 pe 360 de pixeli. Adaugă ` screen.setup (720, 360) `:
++ Trebuie să setezi dimensiunea ecranului pentru a se potrivi cu dimensiunea imaginii, care este de 720 pe 360 de pixeli. Adaugă ` ecran.setup (720, 360) `:
 
 ![captură de ecran](images/iss-setup.png)
 
@@ -22,7 +22,7 @@ Harta este centrată la ` (0,0) ` latitudine și longitudine, care este exact ce
 
 Acum, coordonatele se vor potrivi cu coordonatele de latitudine și longitudine pe care le returneaza serviciul web.
 
-+ Hai să creăm o pictogramă cu broască țestoasă pentru SSI. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
++ Hai să creăm o pictogramă turtle pentru SSI. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
 
 [generic-python-turtle-image]
 
