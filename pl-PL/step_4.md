@@ -19,7 +19,7 @@ Przykład:
 
 Musisz dodać kod do instrukcji print w `for p in people:`. Pamiętaj, że możesz drukować wiele obiektów, oddzielając je przecinkami.
 
--- /hint --- --- hint ---
+--- /hint --- --- hint ---
 
 Otrzymujesz wartość dla `name` używając `p[name]` - jak uzyskać wartość dla `craft`?
 
