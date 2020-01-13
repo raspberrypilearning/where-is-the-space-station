@@ -20,14 +20,14 @@ Necesitarás agregar código en el comando print en `for p in people:`. Recuerda
 
 \--- /hint \--- \--- hint \---
 
-Puede obtener el valor de `name` utilizando `p[name]` - ¿Cómo puede obtener el valor para `craft`?
+Puedes obtener el valor de `name` utilizando `p[name]` - ¿Cómo puedes obtener el valor para `craft`?
 
 \--- /hint \--- \--- hint \---
 
 Cambie el bucle `for` para que se vea así:
 
 ```python
-for p in people:
+for p in personas:
   print(p['name'], ' en ', p['craft'])
 ```
 
