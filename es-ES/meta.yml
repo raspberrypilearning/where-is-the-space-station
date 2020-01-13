@@ -10,7 +10,7 @@ steps:
   - 
     title: Introducción
   - 
-    title: Lo que necesitará
+    title: Lo que necesitarás
   - 
     title: '¿Quién está en el espacio?'
   - 
@@ -20,6 +20,6 @@ steps:
   - 
     title: Trazando la ISS en un mapa
   - 
-    title: '¿Cuándo la ISS estará por encima de su posición?'
+    title: '¿Cuándo la ISS estará por encima de tu posición?'
   - 
     title: 'Desafío: encontrar más veces cuando pasará por encima'
