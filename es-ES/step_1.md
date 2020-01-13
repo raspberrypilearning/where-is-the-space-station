@@ -1,6 +1,6 @@
 ## Introducción
 
-En este proyecto utilizará un servicio web para averiguar la ubicación actual de la Estación Espacial Internacional (ISS) y trazar su ubicación en un mapa.
+En este proyecto, utilizará un servicio web para averiguar la ubicación actual de la Estación Espacial Internacional (ISS) y trazar su ubicación en un mapa.
 
 ### Instrucciones
 
