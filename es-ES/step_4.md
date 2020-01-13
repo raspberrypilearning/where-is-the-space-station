@@ -16,7 +16,7 @@ Ejemplo:
 
 \--- hints \--- \--- hint \---
 
-Necesitarás agregar código en el comando print en `for p in people:`. Recuerda que puedes imprimir varios elementos separándolos con comas.
+Necesitarás agregar código en el comando print en `for p in personas:`. Recuerda que puedes imprimir varios elementos separándolos con comas.
 
 \--- /hint \--- \--- hint \---
 
