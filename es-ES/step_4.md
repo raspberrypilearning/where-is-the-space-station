@@ -1,10 +1,10 @@
 ## Desafío: mostrar la nave
 
-\--- desafío \---
+\--- challenge \---
 
 Además del nombre de los astronautas, el servicio web también proporciona la nave en la que se encuentran, como la ISS.
 
-+ ¿Puede cambiar al script para imprimir también la nave para cada astronauta? 
++ ¿Puedes cambiar el código para imprimir también la nave para cada astronauta? 
 
 Ejemplo:
 
@@ -16,7 +16,7 @@ Ejemplo:
 
 \--- hints \--- \--- hint \---
 
-Necesitará agregar código en el comando print en `for p in people:`. Recuerde que puede imprimir varios elementos separándolos con comas.
+Necesitarás agregar código en el comando print en `for p in people:`. Recuerda que puedes imprimir varios elementos separándolos con comas.
 
 \--- /hint \--- \--- hint \---
 
