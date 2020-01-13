@@ -1,12 +1,12 @@
 ## ¿Quién está en el espacio?
 
-Va a utilizar un servicio web que proporciona información en directo sobre el espacio. En primer lugar, veamos quién está actualmente en el espacio.
+Vas a utilizar un servicio web que proporciona información en directo sobre el espacio. En primer lugar, veamos quién está actualmente en el espacio.
 
 Un servicio web tiene una dirección (URL) al igual que un sitio web. En lugar de devolver HTML para una página web, este devuelve datos.
 
-+ Abra <a href="http://api.open-notify.org/astros.json" target="_blank">el servicio web</a> en un navegador web.
++ Abre <a href="http://api.open-notify.org/astros.json" target="_blank">el servicio web</a> en un navegador web.
 
-Deberá ver algo como esto:
+Deberás ver algo como esto:
 
     {
       "message": "success",
