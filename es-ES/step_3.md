@@ -98,4 +98,4 @@ Deberás ver algo como esto:
     Timothy Peake
     
 
-**Nota:** Está utilizando datos en vivo, por lo que sus resultados dependerán de la cantidad de personas que actualmente estén en el espacio.
+**Nota:** Estás utilizando datos en vivo, por lo que tus resultados dependerán de la cantidad de personas que actualmente estén en el espacio.
