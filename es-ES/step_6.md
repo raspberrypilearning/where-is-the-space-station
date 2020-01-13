@@ -44,4 +44,4 @@ Tu código debe parecerse a esto:
 
 ![captura de pantalla](images/iss-plotted.png)
 
-+ Espere unos segundos y vuelva a ejecutar su programa para ver a dónde se ha movido la ISS.
++ Espera unos segundos y vuelve a ejecutar tu programa para ver a dónde se ha movido la ISS.
