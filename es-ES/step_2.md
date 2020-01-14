@@ -14,4 +14,4 @@
 
 + Una versión completa de este proyecto - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ Abrir el servicio web Notify - [ api.open-notify.org ](http://api.open-notify.org/) {:target = "_ blank"}
++ Abrir los servicios web de Notify - [ api.open-notify.org ](http://api.open-notify.org/) {: target = "_ blank"}
