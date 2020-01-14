@@ -10,7 +10,7 @@ Para buscar la latitud y longitud de una ubicación que te interese, puedes usar
 
 \--- hints \--- \--- hint \---
 
-Al final de tu programa, configura las variables `lat` y `long` con los nuevos valores y luego usa la variable `location` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el valor de `risetime` de la respuesta, y escríbelo con la `lugar` de la tortuga.
+Al final de tu programa, configura las variables `lat` y `lon` con los nuevos valores y luego usa la variable `lugar` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el valor de `risetime` de la respuesta, y escríbelo con la variable `lugar` de la tortuga.
 
 \--- /hint \--- \--- hint \---
 
