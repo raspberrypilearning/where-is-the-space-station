@@ -10,7 +10,7 @@ Para buscar la latitud y longitud de una ubicación que te interese, puedes usar
 
 \--- hints \--- \--- hint \---
 
-Al final de tu programa, configura las variables `lat` y `long` con los nuevos valores y luego usa la variable `location` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el valor de `risetime` de la respuesta, y escríbelo con la `location` de la tortuga.
+Al final de tu programa, configura las variables `lat` y `long` con los nuevos valores y luego usa la variable `location` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el valor de `risetime` de la respuesta, y escríbelo con la `lugar` de la tortuga.
 
 \--- /hint \--- \--- hint \---
 
@@ -21,11 +21,11 @@ Agrega este código al final de tu programa y completa las partes faltantes. Ten
 lat = XX.XX
 lon = XX.XX
 
-# Dibuja un punto con la `location` de la tortuga (no es necesario crear una nueva tortuga), elije un color diferente
+# Dibuja un punto con el `lugar` de la tortuga (no es necesario crear una nueva tortuga), elije un color diferente
 
-# Obtenga el resultado de` iss- pass.json` para tu nueva latitud y longitud
+# Obten el resultado de` iss- pass.json` para tu nueva latitud y longitud
 
-# Obten el `risetime` del resultado y use la ` location` de la tortuga para escribirlo en el mapa
+# Obten el `risetime` del resultado y usa ` lugar` de la tortuga para escribirlo en el mapa
 ```
 
 \--- /hint \--- \--- hint \---
@@ -37,21 +37,21 @@ Este es un ejemplo de la ubicación del Cosmódromo de Baikonur, un puerto espac
 lat = 45.86
 lon = 63.31
 
-location.penup()
-location.color('orange')
-location.goto(lon, lat)
-location.dot(5)
-location.hideturtle()
+lugar.penup()
+lugar.color('orange')
+lugar.goto(lon, lat)
+lugar.dot(5)
+lugar.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str (lat) + '&lon =' + str (lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+respuesta = urllib.request.urlopen(url)
+resultado = json.loads(response.read())
 
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#print(resultado)
+encima = resultado['respuesta'][1]['risetime']
+lugar.write(time.ctime(over))
 ```
 
-¡Intente añadir más ubicaciones!
+¡Intenta añadir más ubicaciones!
 
 \--- / hint \--- \--- / hints \--- \--- / challenge \---
