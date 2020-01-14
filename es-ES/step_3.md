@@ -32,7 +32,7 @@ Los datos están en vivo, por lo que probablemente verás un resultado ligeramen
 
 [[[generic-json]]]
 
-Debes llamar al servicio web desde un script de Python para poder usar los resultados.
+Debes llamar al servicio web desde un código de Python para poder usar los resultados.
 
 + Abre este trinket: <http://rpf.io/iss-on> {:target = "_ blank"}.
 
@@ -67,7 +67,7 @@ Ahora imprimiremos la información de una manera más legible.
 
 ![captura de pantalla](images/iss-number.png)
 
-`result['number']` imprimirá el valor asociado con la clave `number` en el diccionario `result`. En el ejemplo esto es `3`.
+`resultado['number']` imprimirá el valor asociado con la clave `number` en el diccionario `resultado`. En el ejemplo esto es `3`.
 
 + El valor asociado con la clave `people` ¡ es una lista de diccionarios! Pongamos ese valor en una variable para que puedas usarlo:
 
