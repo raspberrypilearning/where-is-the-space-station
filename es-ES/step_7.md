@@ -1,6 +1,6 @@
-## ¿Cuándo la ISS estará por encima de su posición?
+## ¿Cuándo estará la ISS por encima de tu posición?
 
-También hay un servicio web que puede utilizar para saber cuándo la ISS estará en una ubicación particular.
+También hay un servicio web que puedes utilizar para saber cuándo la ISS estará en una ubicación en particular.
 
 Averigüemos cuándo será la próxima pasada de la ISS sobre el Centro Espacial en Houston, EE. UU., que se encuentra en la latitud `29.5502` y longitud `95.097`.
 
