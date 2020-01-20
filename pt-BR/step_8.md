@@ -8,13 +8,17 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 ![screenshot](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-No final do programa, defina as variáveis ​​ `lat` e `long` para novos valores e, em seguida, use a variável `location` turtle para desenhar um ponto no novo local. (Escolha uma cor diferente, se quiser.) Em seguida, chame o serviço da web `iss-pass` com as coordenadas (você pode copiar e colar o código para fazer isso). Finalmente, obtenha o `risetime` da resposta e escreva-o com a `local` turtle.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Adicione este código ao final do seu programa e preencha as partes que faltam. Observe que você pode copiar e colar o código que você escreveu para obter o tempo de passagem para o Centro Espacial em Houston e, em seguida, fazer as alterações necessárias.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Sua localização escolhida
@@ -28,9 +32,11 @@ lon = XX.XX
 # Pegue a resposta do 'risetime' e usa a turtle 'location' para escrevê-lo no mapa
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, é a primeira e maior base de lançamentos de foguetes do mundo, localizada no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Cosmódromo de Baikonur
@@ -52,6 +58,10 @@ acima = resultado['resposta'][1]['risetime']
 local.write(time.ctime(acima))
 ```
 
-Tente adicionar mais locais! (São Paulo, lat = -23.5505, lon = -46.6333)
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
