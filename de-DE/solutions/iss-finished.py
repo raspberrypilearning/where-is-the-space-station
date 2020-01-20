@@ -10,7 +10,7 @@ url = 'http://api.open-notify.org/astros.json'
 Antwort = urllib.request.urlopen (url)
 ergebnis = json.loads(response.read())
 
-drucken ("Menschen im Weltraum: ', ergebnis['nummer'])
+print("Menschen im Weltraum: ', ergebnis['nummer'])
 
 personen = Ergebnis ['personen']
 
@@ -19,7 +19,7 @@ für p in personen:
 
 
 url = 'http://api.open-notify.org/astros.json'
-Antwort = urllib.request.urlopen (url)
+Antwort = urllib.request.urlopen(url)
 ergebnis = json.loads(response.read())
 
 ort = ergebnis ['iss_position']
@@ -43,7 +43,7 @@ bildschirm.bgpic('map.gif')
 
 bildschirm.register_shape('iss.gif')
 iss = turtle.Turtle()
-iss.shape ('iss.gif')
+iss.shape('iss.gif')
 iss.setheading(90)
 
 iss.penup()
