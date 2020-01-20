@@ -8,13 +8,17 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 ![スクリーンショット](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-プログラムの最後に、`lat`（経度）と`long`（緯度）の変数を新しい値に設定し、次に `location`タートル変数を使用して新しい位置を地図に点として表示しましょう。 （必要に応じて別の色を選択します）次に、新しい値を使い `iss-pass` Webサービスを呼び出しましょう（コードをコピーして貼り付けてもいいです）。 最後に、Webサービスから返ってきたデータから`risetime` 取得しましょう。 `location` 変数を使ってそのデータを地図に表示しましょう。
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-このコードをプログラムの最後に追加しましょう。他に足りないものがあったらそれも加えてください。 ヒューストンの宇宙センターを通過する時間を当てはめるコードをコピー＆ペーストして、必要な変更を加えてもかまいません。
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 #決めた位置の経度と緯度。
@@ -28,9 +32,11 @@ lon = XX.XX
 #`risetime`（通過日時）をlocationタートル変数を使い、地図に表示しよう。
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-ここでは、カザフスタン南部の宇宙港バイコヌール宇宙飛行士の位置を使用した例を示します。 コードはヒューストン宇宙センターを通過した日時をプロットするために書いたコードの後に加えてください。
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # カザフスタン南部の宇宙港バイコヌール宇宙センターの位置
@@ -52,6 +58,10 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-場所を追加してみてください！
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
