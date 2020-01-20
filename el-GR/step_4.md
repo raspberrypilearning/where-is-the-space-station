@@ -14,23 +14,31 @@
     Timothy Peake στο ISS
     
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Πρέπει να προσθέσεις κώδικα στη δήλωση print στο βρόχο `for p in people:`. Θυμήσου ότι μπορείς να εμφανίζεις πολλά στοιχεία διαχωρίζοντάς τα με κόμματα.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Λαμβάνεις την τιμή για το κλειδί `name` χρησιμοποιώντας `p[name]`. Πώς μπορείς να πάρεις την τιμή για το κλειδί `craft`;
+\--- /hint \---
 
-\--- /hint \--- \--- hint \---
+\--- hint \---
 
-Διόρθωσε το βρόχο `for` έτσι ώστε να φαίνεται όπως αυτό:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 for p in people:
   print(p['name'], ' στο ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
