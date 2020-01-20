@@ -8,13 +8,17 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 ![screenshot](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Na kraju svog programa promjenljivim `sirina` i `duzina` dodijeli nove vrijednosti, a zatim upotrijebi kornjačinu promjenljivu `lokacija` da nacrtaš tačku na novoj lokaciji. (Odaberi neku drugu boju ako želiš). Zatim pozovi veb uslugu `iss-pass` sa unesenim koordinatama (da to uradiš, možeš kopirati i prenijeti kôd). Na kraju, `risetime` koji dobiješ iz odgovora upiši koristeći kornjaču `lokacija`.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Dodaj sljedeći kôd na kraju svog programa i popuni dijelove koji nedostaju. Imaj u vidu da možeš da kopiraš i preneseš kôd koji si napisao/napisala za dobijanje vremena prolaska iznad Svemirskog centra u Hjustonu, a zatim da u njega uneseš neophodne izmjene.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Tvoja odabrana lokacija
@@ -28,9 +32,11 @@ duzina = XX.XX
 # Uzmi 'risetime' iz rezultata i koristi kornjaču 'lokacija' da ga upišeš na kartu
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Ovdje je primjer u kojem je korišćena lokacija Kosmodroma Bajkonur, svemirske luke u južnom Kazahstanu. Kôd treba da bude na kraju tvog programa, poslije ucrtavanja vremena prolaska iznad Svemirskog centra u Hjustonu.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Kosmodrom Bajkonur
@@ -52,6 +58,10 @@ iznad = rezultat['response'][1]['risetime']
 lokacija.write(time.ctime(iznad))
 ```
 
-Pokušaj da dodaš još lokacija!
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
