@@ -8,13 +8,17 @@ Om de breedte- en lengtegraad van een locatie waar je in geïnteresseerd bent te
 
 ![screenshot](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Zet aan het einde van het programma de ` lat ` en ` long ` variabelen op nieuwe waarden en gebruik dan de `locatie` turtle variabele om een punt op de nieuwe locatie te tekenen. (Kies een andere kleur als je wil). Roep dan de ` iss-pass ` webservice op met de coördinaten (je kunt de code kopiëren en plakken). Tenslotte haal je de `risetime` op uit het antwoord en schrijf je die met de `locatie` turtle.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Voeg deze code toe aan het einde van je programma en vul de ontbrekende delen in. Merk op dat je de code die je hebt geschreven om de overvliegtijd voor het Space Center in Houston te krijgen kunt kopiëren en plakken om er daarna wijzigingen in aan te kunnen brengen.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Jouw gekozen locatie
@@ -28,9 +32,11 @@ lon = XX.XX
 # Haal de 'risetime' op uit het resultaat en gebruik de `locatie` turtle om het op de kaart te zetten
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Hier is een voorbeeld van de locatie van het Kosmodroom Bajkonoer, een raketlanceerplaats in Zuid-Kazachstan. De code kan aan het einde van je programma staan, na het tekenen van de overvliegtijd in het Houston Space Center.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Kosmodroom Bajkonoer
@@ -52,6 +58,10 @@ over = resultaat['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Probeer meer locaties toe te voegen
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
