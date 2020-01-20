@@ -32,16 +32,18 @@
 
 ![скріншот](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + МКС починається в центрі карти, а тепер переведемо його в правильне розташування:
 
-![скріншот](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
-**Примітка**: широта, як правило, дається спочатку, однак нам потрібно спочатку дати довготу, якщо будувати координати `(x, y)`.
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Перевірте свою програму, запустивши її. МКС слід перейти до його поточного розташування над Землею. 
 
-![скріншот](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + Зачекайте кілька секунд і знову запустіть програму, щоб побачити, куди перемістився МКС.
