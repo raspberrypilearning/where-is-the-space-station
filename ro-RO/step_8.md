@@ -8,13 +8,17 @@ Pentru a căuta latitudinea și longitudinea unei locații de interes, poți uti
 
 ![captură de ecran](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-La sfârșitul programului, setează variabilele ` lat ` și ` long ` la valori noi și apoi folosește variabila turtle ` locatie` pentru a desena un punct la noua locație. (Alege o culoare diferită dacă vrei.) Apoi invocă serviciul web ` iss-pass ` cu coordonatele (poți copia și lipi codul pentru a face acest lucru). În sfârșit, ia ` risetime ` din răspuns și scrie-l cu variabila turtle `locatie`.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Adaugă acest cod la sfârșitul programului și completează componentele care lipsesc. Reține că poți copia și lipi codul pe care l-ai scris pentru a obține timpul trecerii peste Centrul Spațial din Houston, apoi fă modificările de care ai nevoie.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Locatia ta dorita
@@ -28,9 +32,11 @@ lon = XX.XX
 # Extrage `risetime` din rezultat si apoi foloseste `location` din turtle pentru a-l scrie pe harta
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Iată un exemplu care utilizează locația Cosmodromului Baikonur, un port spațial din sudul Kazahstanului. Codul va fi la sfârșitul programului după ce ai reprezentat timpul trecerii deasupra Centrului Spatial din Houston.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Cosmodromul Baikonur 
@@ -52,6 +58,10 @@ deasupra= rezultat['response'][1]['risetime']
 locatie.write(time.ctime(deasupra))
 ```
 
-Încearcă să adaugi mai multe locații!
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
