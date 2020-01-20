@@ -32,13 +32,15 @@ Je code zou er als volgt uit moeten zien:
 
 ![screenshot](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + Het ISS start in het midden van de kaart, we gaan het nu naar de juiste locatie verplaatsen:
 
 ![screenshot](images/iss-plot.png)
 
-**Opmerking**: normaal wordt eerst de breedtegraad (Engels: latitude) als eerste gegeven, maar om de ` (x, y) ` coördinaten te tekenen moet eerst de lengtegraad (Engels: longitude) worden opgegeven.
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Test je programma door het uit te voeren. Het ISS zou naar de huidige locatie boven de aarde moeten gaan. 
 
