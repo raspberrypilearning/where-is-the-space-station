@@ -29,11 +29,13 @@ Now the coordinates will match the latitude and longitude coordinates that you g
 --- hints ---
 --- hint ---
 
+
 Your code should look like this:
 
 ![screenshot](images/iss-image.png)
 
 --- /hint ---
+
 --- /hints ---
     
 + The ISS starts off in the centre of the map, now let's move it to the correct location:
