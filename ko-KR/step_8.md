@@ -8,13 +8,17 @@
 
 ![스크린샷](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-프로그램의 끝에서 `lat`과 `long` 변수를 초기화하고, `location` turtle 변수를 활용하여 새로운 위치를 추가할 수 있도록 하세요. (원하는 경우 다른 색상을 선택하세요.) 그 다음, `iss-pass` 웹 서비스를 좌표 정보를 포함하여 호출하세요. (코드를 복사 붙여넣기 해도 됩니다.) 마지막으로, 응답에서 `risetime`을 받고, `location` turtle 변수에 정보를 입력합니다.
+\--- hint \---
 
-\--- /hints \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-이 코드를 프로그램 끝에 추가하고 누락 된 부분을 채웁니다. 휴스턴에 있는 우주 센터의 통과 시각을 얻기 위해 작성한 코드를 복사하여 붙여 넣은 다음 필요한 부분을 변경할 수 있습니다.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # 선택한 위치의 위도와 경도
@@ -28,9 +32,11 @@ lon = XX.XX
 # `risetime` 에서 결과를 받고 `location` turtle 에 정보를 입력하여 맵에 쓰기
 ```
 
-\--- /hints \--- \--- hint \---
+\--- /hint \---
 
-다음은 카자흐스탄 남부의 우주 비행장인 Baikonur Cosmodrome의 좌표를 사용한 예입니다. 코드는 Houston Space Center 통과 시각을 출력한 후, 프로그램이 끝날 때 진행됩니다.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Baikonur Cosmodrome
@@ -52,6 +58,10 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-더 많은 위치를 추가하십시오!
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
