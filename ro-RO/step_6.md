@@ -32,16 +32,18 @@ Codul tău ar trebui să arate astfel:
 
 ![captură de ecran](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + SSI pornește din centrul hărții, acum să o mutăm în locația corectă:
 
-![captură de ecran](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
-** Notă **: în mod normal, latitudinea este dată mai întâi, dar trebuie să dăm longitudinea mai întâi atunci când se reprezintă coordonatele ` (x, y) `.
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Testează-ți programul rulându-l. SSI ar trebui să se mute la poziția sa actuală deasupra Pământului. 
 
-![captură de ecran](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + Așteaptă câteva secunde și execută programul din nou pentru a vedea unde s-a mutat SSI.
