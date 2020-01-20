@@ -14,23 +14,31 @@
     Timothy Peake in ISS
     
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-`for p in people:`の中にあるprintステートメントにコードを追加する必要があります。 複数の項目をカンマで区切って表示することができます。
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-`name` 値を`p[name]`を使って得ることができます - どのように`craft`の値を得ることができますか？
+\--- /hint \---
 
-\--- /hint \--- \--- hint \---
+\--- hint \---
 
-`for` ループを以下のように変えてください：
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 for p in people:
   print(p['name'], ' in ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
