@@ -14,23 +14,31 @@ Ejemplo:
     Timothy Peake en ISS
     
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Necesitarás agregar código en el comando print en `for p in personas:`. Recuerda que puedes imprimir varios elementos separándolos con comas.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Puedes obtener el valor de `name` utilizando `p[name]` - ¿Cómo puedes obtener el valor para `craft`?
+\--- /hint \---
 
-\--- /hint \--- \--- hint \---
+\--- hint \---
 
-Cambie el bucle `for` para que se vea así:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 for p in personas:
   print(p['name'], ' en ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
