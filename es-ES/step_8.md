@@ -8,13 +8,17 @@ Para buscar la latitud y longitud de una ubicación que te interese, puedes usar
 
 ![captura de pantalla](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Al final de tu programa, configura las variables `lat` y `lon` con los nuevos valores y luego usa la variable `lugar` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el valor de `risetime` de la respuesta, y escríbelo con la variable `lugar` de la tortuga.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Agrega este código al final de tu programa y completa las partes faltantes. Ten en cuenta que puedes copiar y pegar el código que escribiste para obtener el tiempo de paso para el Centro Espacial en Houston y luego realizar los cambios que necesites.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Tu ubicación elegida
@@ -28,9 +32,11 @@ lon = XX.XX
 # Obten el `risetime` del resultado y usa ` lugar` de la tortuga para escribirlo en el mapa
 ```
 
-\--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Este es un ejemplo de la ubicación del Cosmódromo de Baikonur, un puerto espacial en el sur de Kazajstán. El código va al final de tu programa, después de trazar el tiempo de transferencia del Centro Espacial de Houston.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Cosmódromo de Baikonur
@@ -52,6 +58,10 @@ encima = resultado['respuesta'][1]['risetime']
 lugar.write(time.ctime(over))
 ```
 
-¡Intenta añadir más ubicaciones!
+Try adding more locations!
 
-\--- / hint \--- \--- / hints \--- \--- / challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
