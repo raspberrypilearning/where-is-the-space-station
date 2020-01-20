@@ -32,16 +32,18 @@
 
 ![スクリーンショット](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + ISSアイコンは地図の中央におかれます。ISSアイコン、を正しい位置におきましょう：
 
-![スクリーンショット](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
-**注**：通常は最初に緯度がきますが、 goto()関数を使って`（x、y）` 座標をプロットするときには関数に経度を一番最初のインプットとして入力する必要があります。
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + プログラムを実行してテストします。 ISSアイコンは地球上の現在の位置におかれます。 
 
-![スクリーンショット](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + 数秒待ってからもう一度プログラムを実行すると、ISSアイコンはどの位置に移動したか確認してください。
