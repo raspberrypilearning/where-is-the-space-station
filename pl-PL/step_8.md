@@ -8,13 +8,17 @@ Aby sprawdzić szerokość i długość geograficzną lokalizacji, którą jeste
 
 ![zrzut ekranu](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Na końcu twojego programu ustaw nową wartość zmiennych `lat` i `long`, a następnie użyj zmiennej żółwia `location`, aby narysować kropkę w nowej lokalizacji. (Wybierz inny kolor, jeśli chcesz.) Następnie wywołaj usługę sieciową `iss-pass` ze współrzędnymi (możesz skopiować i wkleić kod, aby to zrobić). Na koniec odczytaj `risetime` z odpowiedzi i zapisz go za pomocą zmiennej `location` żółwia.
+\--- hint \---
 
--- /hint \--- \--- hint \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Dodaj ten kod na końcu programu i uzupełnij brakujące fragmenty. Pamiętaj, że możesz skopiować i wkleić napisany kod, aby uzyskać czas przejścia nad Centrum Kosmicznym w Houston, a następnie wprowadzić potrzebne zmiany.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 #Twoja wybrana lokalizacja
@@ -28,9 +32,11 @@ dlugosc = XX.XX
 #Pobierz 'risetime' z wyników i użyj żółwia 'lokalizacja' aby nanieść je na mapie
 ```
 
--- /hint \--- \--- hint \---
+\--- /hint \---
 
-Oto przykład wykorzystania lokalizacji Kosmodromu z Bajkonuru, kosmoportu w południowym Kazachstanie. Kod znajduje się na końcu twojego programu, po narysowaniu czasu przejścia dla Centrum Lotów Kosmicznego w Houston.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Kosmodrom Bajkonur
@@ -52,6 +58,10 @@ czas_przejscia = result['response'][1]['risetime']
 lokalizacja.write(time.ctime(czas_przejscia))
 ```
 
-Spróbuj dodać więcej lokalizacji!
+Try adding more locations!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
