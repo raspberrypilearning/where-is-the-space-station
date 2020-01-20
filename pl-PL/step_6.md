@@ -32,16 +32,18 @@ Twój kod powinien wyglądać tak:
 
 ![zrzut ekranu](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + ISS startuje na środku mapy, a teraz przenieśmy ją do właściwej lokalizacji:
 
-![zrzut ekranu](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
-**Uwaga**: szerokość geograficzna jest zwykle podawana jako pierwsza, ale podczas wyświetlania współrzędnych `(x, y)` musimy najpierw podać długość geograficzną.
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Sprawdź swój program, uruchamiając go. ISS powinna przejść do swojej obecnej lokalizacji nad Ziemią. 
 
-![zrzut ekranu](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + Poczekaj kilka sekund i uruchom ponownie program, aby sprawdzić, gdzie przemieściła się ISS.
