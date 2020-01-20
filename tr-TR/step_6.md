@@ -32,16 +32,18 @@ Kodunuz şöyle görünmeli:
 
 ![ekran görüntüsü](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + The ISS starts off in the centre of the map, now let's move it to the correct location:
 
-![ekran görüntüsü](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
 **Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Test your program by running it. The ISS should move to its current location above Earth. 
 
-![ekran görüntüsü](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + Wait a few seconds and run your program again to see where the ISS has moved to.
