@@ -14,23 +14,31 @@ Beispiel:
     Timothy Peake
     
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Du musst den Code für die Druckausgabe in der `for p in personen` - Anweisung hinzufügen. Denke daran, dass du mehrere Artikel drucken kannst, indem du sie mit Kommas trennst.
+\--- hint \---
 
-\--- /hints \--- \--- hint \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Du erhältst den Wert für `name` mit `p[name]` — wie bekommst du den Wert für `craft`?
+\--- /hint \---
 
-\--- /hint \--- \--- hint \---
+\--- hint \---
 
-Ändere deine `für` Schleife, so dass es so aussieht:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 for p in personen:
   print(p['name'], ' in ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
