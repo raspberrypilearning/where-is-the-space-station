@@ -8,26 +8,36 @@ Para pesquisar a latitude e longitude de um local em que estás interessado, pod
 
 ![captura de tela](images/iss-final.png)
 
-\--- dicas \--- \--- dica \---
+\--- hints \---
 
-No final do programa, defina as variáveis ​​ `lat` e `long` para novos valores e, em seguida, use a variável `location` turtle para desenhar um ponto no novo local. (Escolha uma cor diferente, se quiser.) Em seguida, chame `iss-pass` serviço da web com as coordenadas (é possível copiar e colar o código para fazer isso). Finalmente, obtenha o tempo de subida `` da resposta e escreva-o com a localização `` tartaruga.
+\--- hint \---
 
-\--- / sugestão \--- \--- sugestão \---
+At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
 
-Adicione este código ao final do seu programa e preencha as partes que faltam. Observe que você pode copiar e colar o código que você escreveu para obter o tempo de passagem para o Centro Espacial em Houston e, em seguida, fazer as alterações necessárias.
+\--- /hint \---
+
+\--- hint \---
+
+Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
 # Sua localização escolhida lat = XX.XX lon = XX.XX # Desenhe um ponto com a tartaruga `location` (não é necessário criar uma nova tartaruga), escolha uma cor diferente # Obtenha o resultado de` iss-pass.json` para sua nova latitude e longitude # Pegue o `risetime` do resultado e use a tartaruga` location` para escrevê-lo no mapa
 ```
 
-\--- / sugestão \--- \--- sugestão \---
+\--- /hint \---
 
-Aqui está um exemplo usando a localização do Cosmódromo de Baikonur, um espaçoporto no sul do Cazaquistão. O código vai no final do seu programa, depois de traçar o tempo de passagem do Centro Espacial de Houston.
+\--- hint \---
+
+Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
 # Baikonur Cosmodrome lat = 45.86 lon = 63.31 location.penup () localização.color ('laranja') location.goto (lon, lat) location.dot (5) localização.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) resposta = urllib.request.urlopen (url) resultado = json.loads (response.read) ()) #print (resultado) over = resultado ['resposta'][1]['tempo de subida'] location.write (time.ctime (over))
 ```
 
-Tente adicionar mais locais!
+Try adding more locations!
 
-\--- / dica \--- \--- / dicas \--- \--- / desafio \---
+\--- /hint \---
+
+\--- /hints \---
+
+\--- /challenge \---
