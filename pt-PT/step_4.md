@@ -11,22 +11,30 @@ Exemplo:
     Pessoas no Espaço: 3 Yuri Malenchenko na ISS Timothy Kopra na ISS Timothy Peake na ISS
     
 
-\--- dicas \--- \--- dica \---
+\--- hints \---
 
-Você precisa adicionar código à declaração de impressão em `para p em pessoas:`. Lembre-se de que você pode imprimir vários itens separando-os com vírgulas.
+\--- hint \---
 
-\--- / sugestão \--- \--- sugestão \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Você obtém o valor para o `nome` usando `p[name]` - como você pode obter o valor `para a embarcação`?
+\--- /hint \---
 
-\--- / sugestão \--- \--- sugestão \---
+\--- hint \---
 
-Altere seu `para o loop` para que fique assim:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 para p em pessoas: print (p ['name'], 'in', p ['craft'])
 ```
 
-\--- / sugestão \--- \--- / dicas \---
+\--- /hint \---
 
-\--- / desafio \---
+\--- /hints \---
+
+\--- /challenge \---
