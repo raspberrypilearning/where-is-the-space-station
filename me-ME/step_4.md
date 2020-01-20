@@ -14,23 +14,31 @@ Primjer:
     Timothy Peake u ISS
     
 
-\--- hints \--- \--- hint \---
+\--- hints \---
 
-Treba da dodaš kôd naredbi print u `for p in osobe:`. Zapamti da možeš da ispišeš više elemenata tako što ćeš ih razdvojiti zarezima.
+\--- hint \---
 
-\--- /hint \--- \--- hint \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Vrijednost za `name` dobijaš koristeći `p[name]` — kako ćeš dobiti vrijednost za `craft`?
+\--- /hint \---
 
-\--- /hint \--- \--- hint \---
+\--- hint \---
 
-Izmijeni svoju `for` petlju da izgleda ovako:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 for p in osobe:
   print(p['name'], ' u ', p['craft'])
 ```
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
