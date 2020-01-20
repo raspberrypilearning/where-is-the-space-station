@@ -11,22 +11,30 @@
     Люди в космосі: 3 Юрій Маленченко в МКС Тимофій Копра в МКС Тімоті Пік в МКС
     
 
-\--- натяки \--- \--- натяк \---
+\--- hints \---
 
-Вам потрібно додати код до опису друку в `для p в людях:`. Пам'ятайте, що ви можете надрукувати кілька елементів, розділяючи їх комами.
+\--- hint \---
 
-\--- / натяк \--- \--- натяк \---
+You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
 
-Ви отримуєте значення для `ім'я` за допомогою `p[name]` - як ви можете отримати значення для `корабля`?
+\--- /hint \---
 
-\--- / натяк \--- \--- натяк \---
+\--- hint \---
 
-Змініть `для циклу` , щоб він виглядав так:
+You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+
+\--- /hint \---
+
+\--- hint \---
+
+Change your `for` loop so it looks like this:
 
 ```python
 для p в людях: print (p ['name'], 'in', p ['craft'])
 ```
 
-\--- / підказка \--- \--- / підказки \---
+\--- /hint \---
+
+\--- /hints \---
 
 \--- /challenge \---
