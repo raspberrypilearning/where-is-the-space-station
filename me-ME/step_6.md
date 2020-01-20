@@ -32,13 +32,15 @@ Tvoj kôd treba da izgleda ovako:
 
 ![screenshot](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+\--- /hint \---
+
+\--- /hints \---
 
 + ISS se nalazi na sredini karte. Pomjerimo je sada na ispravnu lokaciju:
 
 ![screenshot](images/iss-plot.png)
 
-**Napomena**: geografska širina se obično daje prva, ali mi treba prvo da damo geografsku dužinu kada ucrtavamo `(x,y)` koordinate.
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
 + Pokreni i isprobaj svoj program. ISS bi trebalo da se pomjeri na svoju trenutnu lokaciju iznad Zemlje. 
 
