@@ -9,16 +9,16 @@ Neben den Namen der Astronauten bietet der Web Service auch das Raumfahrzeug an,
 Beispiel:
 
     Personen im Weltraum: 3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \---
 
 \--- hint \---
 
-Du musst den Code für die Druckausgabe in der `für P in Personen` - Anweisung hinzufügen. Denke daran, dass du mehrere Artikel drucken kannst, indem du sie mit Kommas trennst.
+Du musst den Code für die Druckausgabe in der `for p in personen` - Anweisung hinzufügen. Denke daran, dass du mehrere Dinge drucken kannst, indem du sie mit Kommas trennst.
 
 \--- /hint \---
 
