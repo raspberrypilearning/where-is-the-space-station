@@ -1,12 +1,12 @@
-## Provocare: găseste mai multe perioade de trecere pe deasupra SSI
+## Challenge: find more pass-over times
 
 \--- challenge \---
 
-Pentru a căuta latitudinea și longitudinea unei locații de interes, poți utiliza un site web cum ar fi <a href="http://www.latlong.net/" target="_blank"> www.latlong.net/ </a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Poți să cauți și să completezi orele de trecere deasupra pentru mai multe locații? 
++ Can you look up and plot the pass-over times for more locations? 
 
-![captură de ecran](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
 \--- hints \---
 
@@ -21,15 +21,15 @@ At the end of your program, set the `lat` and `long` variables to new values and
 Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
-# Locatia ta dorita
+# Your chosen location
 lat = XX.XX
 lon = XX.XX
 
-# Marcheaza cu punct folsind location din turtle (nu e nevoie sa creezi un nou turtle), alege o culoare diferita
+# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
 
-# Extrage rezultatul din `iss-pass.json` pentru noua latitudine si longitudine
+# Get the result from `iss-pass.json` for your new latitude and longitude
 
-# Extrage `risetime` din rezultat si apoi foloseste `location` din turtle pentru a-l scrie pe harta
+# Get the `risetime` from the result and use the `location` turtle to write it on the map
 ```
 
 \--- /hint \---
@@ -39,23 +39,23 @@ lon = XX.XX
 Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
-# Cosmodromul Baikonur 
+# Baikonur Cosmodrome
 lat = 45.86
 lon = 63.31
 
-locatie.penup()
-locatie.color('orange')
-locatie.goto(lon,lat)
-locatie.dot(5)
-locatie.hideturtle()
+location.penup()
+location.color('orange')
+location.goto(lon,lat)
+location.dot(5)
+location.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-raspuns= urllib.request.urlopen(url)
-rezultat= json.loads(raspuns.read())
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
 
-#afiseaza(rezultat)
-deasupra= rezultat['response'][1]['risetime']
-locatie.write(time.ctime(deasupra))
+#print(result)
+over = result['response'][1]['risetime']
+location.write(time.ctime(over))
 ```
 
 Try adding more locations!
