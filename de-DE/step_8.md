@@ -12,13 +12,13 @@ Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kan
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Am Ende deines Programms setze die `Breiten-` und `Längengrad`-Variablen auf neue Werte und benutze dann die `Standort` Turtle-Variable, um einen Punkt an der neuen Stelle zu zeichnen. (Wähle eine andere Farbe, wenn du möchtest.) Rufe dann den `iss-pass` Web Service mit den Koordinaten auf (Du kannst den Code kopieren und einfügen, um dies zu tun). Abschließend erhältst du die `Anstiegszeit` aus der Antwort, und schreibst sie in das `Standort` Turtle.
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Füge diesen Code am Ende deines Programms hinzu und fülle die fehlenden Teile aus. Beachte, dass du den Code, den du geschrieben hast, kopieren und einfügen kannst, um die Überflugzeiten für das Raumfahrtzentrum in Houston zu erhalten und dann die Änderungen vornehmen kannst, die du benötigst.
 
 ```python
 # Dein gewählter Standort
@@ -32,11 +32,11 @@ laengengrad = XX. X
 # Hol' dir die `risetime` aus dem Ergebnis und benutze die `Standort` Turtle, um sie auf die Karte zu schreiben
 ```
 
-\--- /hint \---
+\---/hint\---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Hier ist ein Beispiel mit der Lage des Baikonur Cosmodrom, einem Raumhafen im Süden Kasachstans. Der Code wird am Ende deines Programms angezeigt, nachdem du die Überflugzeit vom Houston Raumfahrtzentrum aufgezeichnet hast.
 
 ```python
 # Baikonur Cosmodrome
@@ -58,10 +58,10 @@ ueber = ergebnis['response'][1]['risetime']
 standort.write(time.ctime(ueber))
 ```
 
-Try adding more locations!
+Versuche weitere Orte hinzuzufügen!
 
 \--- /hint \---
 
-\--- /hints \---
+\---/hints\---
 
 \--- /challenge \---
