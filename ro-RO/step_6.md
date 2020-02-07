@@ -1,49 +1,49 @@
-## Reprezentarea SSI pe o hartă
+## Plotting the ISS on a map
 
-Ar fi util să se afișeze poziția pe o hartă. Poți face acest lucru folosind Python Turtle!
+It would be useful to show the position on a map. You can do this using Python Turtle graphics!
 
-+ Mai întâi va trebui să importăm librăria Python ` turtle `:
++ First we'll need to import the `turtle` Python library:
 
-![captură de ecran](images/iss-turtle.png)
+![screenshot](images/iss-turtle.png)
 
-+ În continuare, încarcă o hartă a lumii ca imagine de fundal. Există una deja inclusă în trinket numită „map.gif”! NASA a oferit această frumoasă hartă și a acordat permisiunea pentru refolosire. 
++ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
-![captură de ecran](images/iss-map.png)
+![screenshot](images/iss-map.png)
 
-Harta este centrată la ` (0,0) ` latitudine și longitudine, care este exact ceea ce ai nevoie.
+The map is centered at `(0,0)` latitude and longitude, which is just what you need.
 
-+ Trebuie să setezi dimensiunea ecranului pentru a se potrivi cu dimensiunea imaginii, care este de 720 pe 360 de pixeli. Adaugă ` ecran.setup (720, 360) `:
++ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
 
-![captură de ecran](images/iss-setup.png)
+![screenshot](images/iss-setup.png)
 
-+ Vrei să poți trimite testoasa la o anumită latitudine și longitudine. Pentru a face acest lucru ușor, poți seta ecranul să corespundă coordonatelor pe care le utilizezi:
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
 
-![captură de ecran](images/iss-world.png)
+![screenshot](images/iss-world.png)
 
-Acum, coordonatele se vor potrivi cu coordonatele de latitudine și longitudine pe care le returneaza serviciul web.
+Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
 
-+ Hai să creăm o pictogramă turtle pentru SSI. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
++ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
-[generic-python-turtle-image]
+[[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Codul tău ar trebui să arate astfel:
+Your code should look like this:
 
-![captură de ecran](images/iss-image.png)
+![screenshot](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ SSI pornește din centrul hărții, acum să o mutăm în locația corectă:
++ The ISS starts off in the centre of the map, now let's move it to the correct location:
 
 ![screenshot](images/iss-plot.png)
 
 **Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
-+ Testează-ți programul rulându-l. SSI ar trebui să se mute la poziția sa actuală deasupra Pământului. 
++ Test your program by running it. The ISS should move to its current location above Earth. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ Așteaptă câteva secunde și execută programul din nou pentru a vedea unde s-a mutat SSI.
++ Wait a few seconds and run your program again to see where the ISS has moved to.
