@@ -1,12 +1,12 @@
-## Cine este în spațiu?
+## Who is in space?
 
-Vei folosi un serviciu web care oferă informații in timp real despre spațiu. Mai întâi, să aflăm cine este în prezent în spațiu.
+You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
 
-Un serviciu web are o adresă (URL) la fel cum are un site web. În loc să returneze HTML pentru o pagină web, returnează date.
+A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
 
-+ Deschide <a href="http://api.open-notify.org/astros.json" target="_blank"> serviciul web </a> într-un browser web.
++ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
 
-Ar trebui să vezi ceva ca mai jos:
+You should see something like this:
 
     {
       "message": "success",
@@ -28,74 +28,74 @@ Ar trebui să vezi ceva ca mai jos:
     }
     
 
-Datele sunt în timp real, așa că vei vedea probabil un rezultat ușor diferit. Formatul de date se numește ` JSON ` (pronunțat „Jason”).
+The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
 [[[generic-json]]]
 
-Trebuie să apelezi serviciul web dintr-un script Python pentru a putea utiliza rezultatele.
+You need to call the web service from a Python script, so you can use the results.
 
-+ Deschide acest trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-Modulele ` urllib.request ` și ` json ` au fost deja importate pentru tine la începutul script-ului ` main.py `.
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
-+ Adaugă următorul cod în ` main.py ` pentru a stoca într-o variabilă adresa URL a serviciului web pe care tocmai l-ai accesat:
++ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![captură de ecran](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
-+ Acum invocă serviciul web:
++ Now call the web service:
 
-![captură de ecran](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
-+ În continuare, trebuie să încarci răspunsul JSON într-o structură de date Python:
++ Next you need to load the JSON response into a Python data structure:
 
-![captură de ecran](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
-Ar trebui să vezi ceva ca mai jos:
+You should see something like this:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Acesta este un dicționar Python cu trei chei: ` message (mesaj)`, ` number(număr)` și ` people(oameni)`.
+This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Acel mesaj ` ` cu valoarea ` success(succes) ` îți spune că ai accesat cu succes serviciul web. Reține că vei vedea rezultate diferite pentru ` număr ` și ` oameni ` în funcție de cine se află în prezent în spațiu.
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
-Acum, să tipărim informațiile într-un mod mai lizibil.
+Now let's print the information in a more readable way.
 
-+ Mai întâi, să căutăm numărul de persoane în spațiu și să îl tipărim:
++ First, let's look up the number of people in space and print it:
 
-![captură de ecran](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
-`rezultat[ 'number']` va tipări valoarea asociată cu cheia `number` în dicţionarul `rezultat`. În exemplu, aceasta este ` 3 `.
+`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
-+ Valoarea asociată cu cheia `people` este o listă de dicționare! Să punem această valoare într-o variabilă, astfel încât să o poți folosi:
++ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![captură de ecran](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
-Ar trebui să vezi ceva ca mai jos:
+You should see something like:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Acum trebuie să imprimi o linie pentru fiecare astronaut. Poți folosi o structură repetitivă ` for` din Python pentru a face acest lucru.
++ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
 [[[generic-python-for-loop-list]]]
 
-+ De fiecare dată cand se executa bucla, ` p ` va primi valoarea unui dicționar pentru un alt astronaut.
++ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![captură de ecran](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
-+ Poți căuta apoi valorile pentru ` name ` și ` craft`. Să arătăm numele persoanelor din spațiu:
++ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![captură de ecran](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
-Ar trebui să vezi ceva ca mai jos:
+You should see something like this:
 
-    Persoane in spatiu:  3
+    People in Space:  3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-** Notă: ** Utilizați date actualizate în timp real, astfel încât rezultatele dvs. vor depinde de numărul de persoane care se află în prezent în spațiu.
+**Note:** You are using live data, so your results will depend on the number of people currently in space.
