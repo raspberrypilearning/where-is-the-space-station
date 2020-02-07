@@ -10,12 +10,12 @@ url = 'http://api.open-notify.org/astros.json'
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-print(u'宇宙にいる人の数: ', result['number'])
+print('People in Space: ', result['number'])
 
 people = result['people']
 
 for p in people:
-  print(p['name'], u'は', p['craft'])
+  print(p['name'], ' in ', p['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
@@ -25,8 +25,8 @@ result = json.loads(response.read())
 location = result['iss_position']
 lat = float(location['latitude'])
 lon = float(location['longitude'])
-print(u'緯度： ', lat)
-print(u'経度： ', lon)
+print('Latitude: ', lat)
+print('Longitude: ', lon)
 
 screen = turtle.Screen()
 screen.setup(720, 360)
@@ -37,7 +37,7 @@ screen.bgpic('map.gif')
 screen = turtle.Screen()
 screen.setup(720, 360)
 screen.setworldcoordinates(-180, -90, 180, 90)
-# 画像のURL
+# image source:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
 screen.bgpic('map.gif')
 
@@ -49,16 +49,16 @@ iss.setheading(90)
 iss.penup()
 iss.goto(lon, lat)
 
-# ISSは以下の場所をいつ通過するのか？lat ー＞（緯度）、lonー＞（経度）
-#ロンドン
+# When Does ISS next pass over me?
+#london
 #lat = 51.5072
 #lon = 0.1275
 
-# 東京
+# Tokyo
 #lat = 35.689487
 #lon = 139.691706
 
-# ヒューストン宇宙センター
+# Space Center, Houston
 lat = 29.5502
 lon = -95.097
 
@@ -73,7 +73,7 @@ url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-#結果を表示
+#print result
 over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 
