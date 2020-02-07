@@ -1,10 +1,10 @@
-## Neye ihtiyacınız olacak
+## What you will need
 
-### Donanım
+### Hardware
 
 + A computer with internet connection
 
-### Yazılım
+### Software
 
 + [Trinket](https://trinket.io/) online editor
 
