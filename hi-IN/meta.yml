@@ -1,25 +1,25 @@
 ---
-title: अन्तरिक्ष स्टेशन कहाँ है?
-hero_image: छवियों /बैनर.png
-description: ISS का सटीक स्थान ज्ञात करें
+title: Where is the Space Station?
+hero_image: images/banner.png
+description: Find the exact location of the ISS
 listed: true
 copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: परिचय
+    title: Introduction
   - 
-    title: आपको क्या आवश्यकता होगी
+    title: What you will need
   - 
-    title: अंतरिक्ष में कौन है?
+    title: Who is in space?
   - 
-    title: 'चुनौती: शिल्प दिखाओ'
+    title: 'Challenge: show the craft'
   - 
-    title: ISS कहां है?
+    title: Where is the ISS?
   - 
-    title: ISS को एक मानचित्र पर चिन्हित करना
+    title: Plotting the ISS on a map
   - 
-    title: आईएसएस ऊपर कब होगा?
+    title: When will the ISS be overhead?
   - 
-    title: 'चुनौती: खोजें अधिक समय जो बीत गया'
+    title: 'Challenge: find more pass-over times'
