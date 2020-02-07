@@ -1,51 +1,51 @@
-## Коли буде МКС бути накладними?
+## When will the ISS be overhead?
 
-Існує також веб-сервіс, який ви можете використовувати, щоб дізнатись, коли МКС буде поруч із певним місцезнаходженням.
+There’s also a web service that you can use to find out when the ISS will next be over a particular location.
 
-Давайте з'ясуємо, коли МКС буде поруч з космічним центром в Х'юстоні, США, який знаходиться на широті `29.5502` та довготи `95.097`.
+Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
 
-+ Спочатку давайте накреслимо точку на карті в цих координатах:
++ First let’s plot a dot on the map at these coordinates:
 
-![знімок екрану](images/iss-houston.png)
+![screenshot](images/iss-houston.png)
 
-Тепер давайте отримаємо дату та час, коли МКС буде наступним накладним.
+Now let’s get the date and time that the ISS is next overhead.
 
-+ Як і раніше, ви можете зателефонувати до веб-сервісу, ввівши його URL-адресу в адресний рядок веб-переглядача: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-Ви повинні побачити помилку:
+You should see an error:
 
-![скріншот](images/iss-pass-error.png)
+![screenshot](images/iss-pass-error.png)
 
-Цей веб-сервіс приймає широту та довготу в якості вхідних даних, тому ви повинні включити їх у URL-адресу. Входи додаються після `?` і розділений з `&`.
+This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
 
-+ Додайте `лат` та `вхідні` в URL-адресу, як показано на малюнку: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1</a>
++ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
-![Знімок екрану](images/iss-passtimes.png)
+![screenshot](images/iss-passtimes.png)
 
-Відповідь включає в себе кілька переходів, і ми просто подивимося на перший. Час надається як часовий штамп Unix (ви зможете конвертувати його в читаний час у вашому сценарії Python).
+The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
 
-[generic-unix-timestamp]
+[[[generic-unix-timestamp]]]
 
-+ Тепер давайте називати веб-службу Python. Додайте наступний код до кінця вашого сценарію:
++ Now let's call the web service from Python. Add the following code to the end of your script:
 
-![скріншот](images/iss-passover.png)
+![screenshot](images/iss-passover.png)
 
-+ Тепер давайте отримаємо перший проміжок часу від результату. Додайте наступний код:
++ Now let's get the first pass-over time from the result. Add the following code:
 
-![скріншот](images/iss-print-pass.png)
+![screenshot](images/iss-print-pass.png)
 
-Нам буде потрібен модуль Python `, модуль` , щоб ми могли його надрукувати у зручному для читання вигляді та конвертувати його в місцевий час. Тоді ми отримаємо скрипт, щоб написати час проходження через точку для Х'юстона.
+We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
 
-+ Додайте `час імпорту` у верхній частині вашого сценарію:
++ Add an `import time` line at the top of your script:
 
-![скріншот](images/iss-time.png)
+![screenshot](images/iss-time.png)
 
-+ Функція `time.ctime ()` перетворить часову печатку на читабельну форму, яку ви можете написати на карту:
++ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
 
-![скріншот](images/iss-pass-write.png)
+![screenshot](images/iss-pass-write.png)
 
-(Ви можете видалити рядок `print` або перетворити його на коментар, додавши `#` на початку, щоб ваш сценарій його ігнорував.)
+(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
 
-+ Якщо вам подобається, ви можете змінити колір і формат тексту. 
++ If you like, you can change the colour and format of the text. 
 
 [[[generic-python-turtle-write]]]
