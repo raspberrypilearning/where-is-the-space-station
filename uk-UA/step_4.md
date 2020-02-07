@@ -1,14 +1,17 @@
-## Виклик: показати ремесло
+## Challenge: show the craft
 
-\--- завдання \---
+\--- challenge \---
 
-На додаток до назви астронавтів, веб-сервіс також забезпечує ремесло, на якому вони знаходяться, такі як МКС.
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ Чи можете ви додати свій скрипт так, щоб він також друкував ремесло для кожного астронавта? 
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Приклад:
+Example:
 
-    Люди в космосі: 3 Юрій Маленченко в МКС Тимофій Копра в МКС Тімоті Пік в МКС
+    People in Space:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \---
@@ -30,7 +33,8 @@ You get the value for `name` using `p[name]` — how can you get the value for `
 Change your `for` loop so it looks like this:
 
 ```python
-для p в людях: print (p ['name'], 'in', p ['craft'])
+for p in people:
+  print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
