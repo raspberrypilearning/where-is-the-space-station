@@ -1,14 +1,14 @@
-## 必要なもの
+## What you will need
 
-### ハードウェア
+### Hardware
 
-+ インターネットに接続されたコンピュータ
++ A computer with internet connection
 
-### ソフトウェア
+### Software
 
-+ [トレンケット](https://trinket.io/) オンラインエディタ
++ [Trinket](https://trinket.io/) online editor
 
-### その他のリソース
+### Additional resources
 
 + Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
