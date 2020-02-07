@@ -1,24 +1,24 @@
 ---
-title: Où est la Station Spatiale ?
+title: Where is the Space Station?
 hero_image: images/banner.png
-description: Tracer la position exacte de l'ISS
+description: Find the exact location of the ISS
 listed: true
 copyedit: false
-version: 3
-last_tested: 2017-01-01
+version: 3.1.0
+last_tested: 2018-11-22
 steps:
   - 
     title: Introduction
   - 
-    title: Qui est dans l'Espace ?
+    title: What you will need
   - 
-    title: 'Défi : Montre le vaisseau'
+    title: Who is in space?
   - 
-    title: 'Où est l''ISS ?'
+    title: 'Challenge: show the craft'
   - 
-    title: Quand est-ce l'ISS sera au-dessus d'une position ?
+    title: Where is the ISS?
   - 
-    title: 'Défi : Trouve d''autres heures de passage'
+    title: Plotting the ISS on a map
   - 
     title: When will the ISS be overhead?
   - 
