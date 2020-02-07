@@ -1,21 +1,17 @@
-hero_image: images/where-is-the-space-station.png
-theme: blue
-duration: 2
-listed: false
-ingredient: false
-copyedit: false
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+---
 title: أين محطة الفضاء الدولية؟
+hero_image: images/banner.png
 description: حدِّد الموقع الدقيق لمحطة الفضاء الدولية.
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: codeclub, python
+listed: true
+copyedit: false
+version: 3.1.0
+last_tested: 2018-11-22
 steps:
-- title: المقدمة
-- title: من الموجودون في الفضاء؟
-- title: 'التحدي: اعرض المركبة الفضائية'
-- title: أين توجد محطة الفضاء الدولية؟
-- title: متى ستكون محطة الفضاء الدولية فوق موقع معين مباشرة؟
-- title: 'التحدي: ابحث عن أوقات أخرى لمرور المحطة فوق موقع معين مباشرة'
-
+  - title: المقدمة
+  - title: ما ستحتاج إليه
+  - title: من في الفضاء؟
+  - title: 'التحدي: عرض الحرفة'
+  - title: أين هي محطة الفضاء الدولية؟
+  - title: رسم محطة الفضاء الدولية على الخريطة
+  - title: متى ستكون المحطة الفضائية الدولية فوقنا؟
+  - title: 'التحدي: العثور على مزيد من مرات التمرير'

@@ -4,9 +4,9 @@ La Estación Espacial Internacional está en órbita alrededor de la Tierra. Com
 
 Usemos otro servicio web para averiguar dónde está la Estación Espacial Internacional.
 
-+ Primero abra la URL del servicio web en una nueva pestaña en su navegador web: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Primero abre la URL del servicio web en una nueva pestaña en tu navegador web: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-Deberá ver algo como esto:
+Deberás ver algo como esto:
 ```
     {
     "iss_position": {
@@ -22,7 +22,7 @@ El resultado contiene las coordenadas del lugar en la Tierra sobre la cual se en
 
 [[[generic-theory-lat-long]]]
 
-+ Ahora necesita llamar al mismo servicio web desde Python. Agregue el siguiente código al final de su script para obtener la ubicación actual de la ISS:
++ Ahora necesitas llamar al mismo servicio web desde Python. Agrega el siguiente código al final de tu código para obtener la ubicación actual de la ISS:
 
 ![captura de pantalla](images/iss-location.png)
 

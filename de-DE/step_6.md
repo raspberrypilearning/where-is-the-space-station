@@ -10,9 +10,9 @@ Es wäre nützlich, die Position auf einer Karte anzuzeigen. Du kannst dies mit 
 
 ![screenshot](images/iss-map.png)
 
-Die Karte ist zentriert bei ` (0,0) ` Breite und Länge - genau das, was du brauchst.
+Die Karte ist zentriert bei `(0,0)` Breite und Länge - genau das, was du brauchst.
 
-+ Du musst die Bildschirmgröße so einstellen, dass sie der Bildgröße von 720 x 360 Pixel entspricht. Füge ` screen.setup(720, 360) ` hinzu:
++ Du musst die Bildschirmgröße so einstellen, dass sie der Bildgröße von 720 x 360 Pixel entspricht. Füge `screen.setup(720, 360)` hinzu:
 
 ![Screenshot](images/iss-setup.png)
 
@@ -26,22 +26,25 @@ Jetzt stimmen die Koordinaten mit den Längen- und Breitengradkoordinaten übere
 
 [[[generic-python-turtle-image]]]
 
-\--- hints \--- \--- hint \---
+--- hints ---
+ --- hint ---
 
 Dein Code sollte so aussehen:
 
 ![Screenshot](images/iss-image.png)
 
-\--- /hint \--- \--- /hints \---
+--- /hint ---
+
+--- /hints ---
 
 + Die ISS startet in der Mitte der Karte, jetzt bewegen wir sie an den richtigen Ort:
 
-![Screenshot](images/iss-plot.png)
+![screenshot](images/iss-plot.png)
 
-** Hinweis **: Breitengrad wird normalerweise zuerst angegeben, aber wir müssen zuerst den Längengrad angeben, wenn wir die ` (x, y)` Koordinaten zeichnen.
+**Hinweis**: Breitengrad wird normalerweise zuerst angegeben, aber wir müssen zuerst den Längengrad angeben, wenn wir die `(x, y)` Koordinaten zeichnen.
 
 + Teste dein Programm, indem du es ausführst. Die ISS sollte sich an ihren aktuellen Standort oberhalb der Erde bewegen. 
 
-![Screenshot](images/iss-plotted.png)
+![screenshot](images/iss-plotted.png)
 
 + Warte ein paar Sekunden und starte dein Programm erneut, um zu sehen, wohin die ISS gezogen ist.

@@ -8,10 +8,10 @@ version: 3.1.0
 last_tested: 2017-01-01
 steps:
   - title: Introducción
-  - title: Lo que necesitará
+  - title: Lo que necesitarás
   - title: '¿Quién está en el espacio?'
   - title: 'Desafío: mostrar la nave'
   - title: '¿Dónde está la ISS?'
   - title: Trazando la ISS en un mapa
-  - title: '¿Cuándo la ISS estará por encima de su posición?'
+  - title: '¿Cuándo estará la ISS por encima de tu posición?'
   - title: 'Desafío: encontrar más veces cuando pasará por encima'

@@ -40,7 +40,7 @@ Wir brauchen das Python `Zeit` Modul, damit wir es in einer lesbaren Form drucke
 
 ![Screenshot](images/iss-time.png)
 
-+ Die ` time.ctime () ` Funktion konvertiert den Zeitstempel in eine lesbare Form, die du auf deine Karte schreiben kannst:
++ Die `time.ctime ()` Funktion konvertiert den Zeitstempel in eine lesbare Form, die du auf deine Karte schreiben kannst:
 
 ![Screenshot](images/iss-pass-write.png)
 
