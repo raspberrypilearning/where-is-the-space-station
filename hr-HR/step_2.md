@@ -1,10 +1,10 @@
-## Trebat ćeš
+## What you will need
 
-### Hardver
+### Hardware
 
 + A computer with internet connection
 
-### Softver
+### Software
 
 + [Trinket](https://trinket.io/) online editor
 
