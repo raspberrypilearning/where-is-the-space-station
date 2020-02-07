@@ -6,7 +6,7 @@ To look up the latitude and longitude of a location you are interested in, you c
 
 + Can you look up and plot the pass-over times for more locations? 
 
-![स्क्रीनशॉट](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
 \--- hints \---
 
