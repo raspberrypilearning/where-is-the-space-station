@@ -55,7 +55,7 @@ Du solltest so etwas sehen:
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Dies ist ein Python-Wörterbuch mit drei Schlüsseln: `message`, `number`, und `people`.
+Dies ist ein Python-Wörterbuch (auch "Dictionary" genannt) mit drei Schlüsseln: `message`, `number`, und `people`.
 
 [[[generic-python-key-value-pairs]]]
 
@@ -78,11 +78,11 @@ Du solltest etwas sehen wie:
     {'craft': 'ISS', 'name': 'Yuri Malenchenko'},{'craft': 'ISS', 'name': 'Timothy Kopra'},{'craft': 'ISS', 'name': 'Timothy Peake'}
     
 
-+ Jetzt musst du eine Zeile für jeden Astronauten ausdrucken. Dazu kannst du einen Python `für` Schleife verwenden.
++ Jetzt musst du eine Zeile für jeden Astronauten ausdrucken. Dazu kannst du eine Python `for` Schleife verwenden.
 
 [[[generic-python-for-loop-list]]]
 
-+ `p` wird jedes Mal durch die Schleife auf ein Dictionary für einen anderen Astronauten gesetzt.
++ Bei jedem Schleifen-Durchlauf wird `p` auf ein Dictionary für einen anderen Astronauten gesetzt.
 
 ![Screenshot](images/iss-people-1a.png)
 
