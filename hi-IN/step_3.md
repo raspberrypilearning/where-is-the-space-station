@@ -1,77 +1,77 @@
-## अंतरिक्ष में कौन है?
+## Who is in space?
 
-आप एक वेब सेवा का उपयोग करने जा रहे हैं जो अंतरिक्ष के बारे में लाइव जानकारी प्रदान करती है। सबसे पहले, आइए जानें कि वर्तमान में कौन अंतरिक्ष में है।
+You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
 
-एक वेब सेवा का एक पता (URL) होता है, जैसे एक वेबसाइट करती है। एक वेब पेज के लिए एचटीएमएल लौटने के बजाय, यह डेटा लौटाता है।
+A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
 
-+ वेब सेवा <<> खोलें </a> एक वेब ब्राउज़र में।
++ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
 
-आपको कुछ इस तरह से देखना चाहिए:
+You should see something like this:
 
     {
-      "संदेश": "सफलता",
-      "संख्या": 3,
-      "लोग": [
+      "message": "success",
+      "number": 3,
+      "people": [
         {
-          "शिल्प": "आईएसएस",
-          "नाम": "यूरी मालेनचेंको"
+          "craft": "ISS",
+          "name": "Yuri Malenchenko"
         },
         {
-          " शिल्प ":" आईएसएस ",
-          " नाम ":" टिमोथी कोपरा "
+          "craft": "ISS",
+          "name": "Timothy Kopra"
         },
         {
-          " शिल्प ":" आईएसएस ",
-          " नाम ":" टिमोथी पीक "
+          "craft": "ISS",
+          "name": "Timothy Peake"
         }
       ]
-    ]
+    }
     
 
-डेटा लाइव है, इसलिए आप शायद थोड़ा अलग परिणाम देखेंगे। डेटा प्रारूप को ` JSON कहा जाता है ` ('जेसन' की तरह उच्चारण)।
+The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
-[[[जेनरीक-जेसन]]]
+[[[generic-json]]]
 
-आपको पायथन स्क्रिप्ट से वेब सेवा को कॉल करने की आवश्यकता है, ताकि आप परिणामों का उपयोग कर सकें।
+You need to call the web service from a Python script, so you can use the results.
 
-+ इस ट्रिंकेट को खोलें: [ http://rpf.io/iss-on ](http://rpf.io/iss-on) {: लक्ष्य = "_ blank"}।
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-` urllib.request ` और ` json ` मॉड्यूल पहले से ही आपके लिए ` main.py के आयात किए जा चुके हैं ` स्क्रिप्ट।
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
-+ निम्न कोड को ` main.py पर जोड़ें ` वेब सेवा के URL को स्टोर करने के लिए जिसे आपने एक चर के रूप में एक्सेस किया है:
++ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![स्क्रीनशॉट](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
-+ अब वेब सेवा को कॉल करें:
++ Now call the web service:
 
-![स्क्रीनशॉट](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
-+ आगे आपको पायथन डेटा संरचना में JSON प्रतिक्रिया लोड करने की आवश्यकता है:
++ Next you need to load the JSON response into a Python data structure:
 
-![स्क्रीनशॉट](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
-आपको कुछ इस तरह से देखना चाहिए:
+You should see something like this:
 
-    {'संदेश': 'सफलता', 'संख्या': 3, 'लोग': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-यह तीन कुंजियों वाला पायथन शब्दकोश है: ` संदेश `, ` संख्या `, और ` लोग ` ।
+This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-वह ` संदेश ` मूल्य है ` सफलता ` आपको बताता है कि आपने वेब सेवा को सफलतापूर्वक एक्सेस किया है। Note that you will see different results for `number` and `people` depending on who is currently in space.
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
-![स्क्रीनशॉट](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
 `result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![स्क्रीनशॉट](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
 You should see something like:
 
@@ -84,11 +84,11 @@ You should see something like:
 
 + Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![स्क्रीनशॉट](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
 + You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![स्क्रीनशॉट](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
 You should see something like this:
 
