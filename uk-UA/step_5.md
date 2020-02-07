@@ -1,24 +1,31 @@
-## Де знаходиться МКС?
+## Where is the ISS?
 
-Міжнародна космічна станція знаходиться на орбіті навколо Землі. Він завершує орбіту Землі приблизно кожну півтори години і подорожує зі середньою швидкістю 7,66 км / сек. Це швидко!
+The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
 
-Давайте використати інший веб-сервіс, щоб дізнатись, де знаходиться Міжнародна космічна станція.
+Let’s use another web service to find out where the International Space Station is.
 
-+ Спочатку відкрийте URL-адресу веб-служби на новій вкладці веб-переглядача: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-Ви повинні побачити щось на зразок цього:
+You should see something like this:
 
-    {"iss_position": {"широта": 8.54938193505081, "довгота": 73.16560793639105}, "повідомлення": "success", "timestamp": 1461931913}
+    {
+    "iss_position": {
+      "latitude": 8.54938193505081, 
+      "longitude": 73.16560793639105
+    }, 
+    "message": "success", 
+    "timestamp": 1461931913
+    }
     
 
-Результат містить координати місця на Землі, що МКС в даний час закінчився.
+The result contains the coordinates of the spot on Earth that the ISS is currently over.
 
-[generic-theory-lat-long]
+[[[generic-theory-lat-long]]]
 
-+ Тепер вам потрібно зателефонувати на той самий веб-сервіс з Python. Додайте наступний код до кінця вашого сценарію, щоб отримати поточне місцезнаходження МКС:
++ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
-![скріншот](images/iss-location.png)
+![screenshot](images/iss-location.png)
 
-+ Давайте створюватимемо змінні для зберігання широти та довготи, а потім надрукуємо їх:
++ Let’s create variables to store the latitude and longitude, and then print them:
 
-![скріншот](images/iss-coordinates.png)
+![screenshot](images/iss-coordinates.png)
