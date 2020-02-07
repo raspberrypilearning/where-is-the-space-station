@@ -1,12 +1,12 @@
-## Gdje se nalazi ISS?
+## Where is the ISS?
 
-Međunarodna svemirska stanica nalazi se u orbiti oko Zemlje. Napravi krug oko Zemlje otprilike svakih sat i po vremena, a prosječna brzina joj je 7,66 km u sekundi. Brza je!
+The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
 
-Koristićemo drugu veb uslugu da saznamo gdje se nalazi Međunarodna svemirska stanica.
+Let’s use another web service to find out where the International Space Station is.
 
-+ Prvo otvori URL veb usluge u novoj kartici svog veb-pregledača: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-Trebalo bi da vidiš nešto slično ovome:
+You should see something like this:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ Trebalo bi da vidiš nešto slično ovome:
     }
     
 
-Rezultat sadrži koordinate mjesta na Zemlji iznad kojeg se trenutno nalazi ISS.
+The result contains the coordinates of the spot on Earth that the ISS is currently over.
 
 [[[generic-theory-lat-long]]]
 
-+ Sada ovu istu veb uslugu treba da pozoveš iz Pythona. Dodaj sljedeći kôd na kraju svoje skripte kako bi dobio/dobila trenutnu lokaciju ISS:
++ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
 ![screenshot](images/iss-location.png)
 
-+ Kreirajmo promjenljive u koje ćemo smjestiti geografsku širinu i geografsku dužinu, a zatim ih ispišimo:
++ Let’s create variables to store the latitude and longitude, and then print them:
 
 ![screenshot](images/iss-coordinates.png)
