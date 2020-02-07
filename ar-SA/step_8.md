@@ -12,13 +12,13 @@
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+في نهاية البرنامج، قم بتعيين قيم `lat` و `long` إلى قيم جديدة ثم استخدم متغير السلحفاة ` location ` لرسم نقطة في الموقع الجديد. (اختر لونًا مختلفًا إذا أردت.) ثم استدعي خدمة الويب بـ ` iss-pass ` مع الإحداثيات (يمكنك نسخ ولصق الكود للقيام بذلك). أخيرًا ، احصل على` risetime ` من الاستجابة ، واكتبه مع موقع ` location ` السلحفاة.
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+أضف هذا الكود إلى نهاية البرنامج واملأ الأجزاء المفقودة. لاحظ أنه يمكنك نسخ ولصق التعليمة البرمجية التي كتبتها للحصول على الوقت الإضافي لمركز الفضاء في هيوستن ، ثم قم بإجراء التغييرات التي تحتاجها.
 
 ```python
 # موقعك الذي اخترته
@@ -36,7 +36,7 @@ lon = XX.XX
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+إليك مثال على ذلك باستخدام موقع بايكونور كوزمودروم Baikonur Cosmodrome، وهو ميناء فضائي في جنوب كازاخستان. يقع هذا الكود في نهاية البرنامج، بعد رسم وقت المرور فوق مركز هيوستن للفضاء.
 
 ```python
 #بايكونور كوزمودروم Baikonur Cosmodrome
@@ -58,7 +58,7 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+حاول إضافة المزيد من المواقع!
 
 \--- /hint \---
 
