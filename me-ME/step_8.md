@@ -1,10 +1,10 @@
-## Izazov: pronađi još vremena prolaska
+## Challenge: find more pass-over times
 
 \--- challenge \---
 
 To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Možeš li da pronađeš i ucrtaš datum i vrijeme prolaska iznad još nekih lokacija? 
++ Can you look up and plot the pass-over times for more locations? 
 
 ![screenshot](images/iss-final.png)
 
@@ -21,15 +21,15 @@ At the end of your program, set the `lat` and `long` variables to new values and
 Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
-# Tvoja odabrana lokacija
-sirina = XX.XX
-duzina = XX.XX
+# Your chosen location
+lat = XX.XX
+lon = XX.XX
 
-# Nacrtaj tačku koristeći kornjaču 'lokacija' (nije potrebno da kreiraš novu kornjaču), odaberi drugu boju 
+# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
 
-# Dobij rezultat od 'iss-pass.json' za svoju novu geografsku širinu i dužinu 
+# Get the result from `iss-pass.json` for your new latitude and longitude
 
-# Uzmi 'risetime' iz rezultata i koristi kornjaču 'lokacija' da ga upišeš na kartu
+# Get the `risetime` from the result and use the `location` turtle to write it on the map
 ```
 
 \--- /hint \---
@@ -39,23 +39,23 @@ duzina = XX.XX
 Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
-# Kosmodrom Bajkonur
-sirina = 45.86
-duzina = 63.31
+# Baikonur Cosmodrome
+lat = 45.86
+lon = 63.31
 
-lokacija.penup()
-lokacija.color('orange')
-lokacija.goto(duzina,sirina)
-lokacija.dot(5)
-lokacija.hideturtle()
+location.penup()
+location.color('orange')
+location.goto(lon,lat)
+location.dot(5)
+location.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-odgovor = urllib.request.urlopen(url)
-rezultat = json.loads(odgovor.read())
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
 
-#print(rezultat)
-iznad = rezultat['response'][1]['risetime']
-lokacija.write(time.ctime(iznad))
+#print(result)
+over = result['response'][1]['risetime']
+location.write(time.ctime(over))
 ```
 
 Try adding more locations!
