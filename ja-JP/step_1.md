@@ -1,10 +1,10 @@
-## はじめに
+## Introduction
 
-このプロジェクトでは、Webサービスを使って宇宙にある国際宇宙ステーション（ISS）の現在地を調べ、地図上にその位置をプロットします。
+In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
 
-### 説明
+### Instructions
 
-宇宙ステーションのアイコンは、ISSの現在の位置を示します。 黄色のテキストは、ISSが次にヒューストンの宇宙センターを通過する時を示しています。
+The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@
   <img src="images/iss-final.png">
 </div>
 
-### あなたが学ぶもの
+### What you will learn
 
-このプロジェクトは[Raspberry Piのデジタル作成カリキュラム](http://rpf.io/curriculum)における以下の部分を含みます。
+This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [プログラミング構造を組み合わせて問題を解決する。](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
