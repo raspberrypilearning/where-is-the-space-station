@@ -8,17 +8,17 @@ It would be useful to show the position on a map. You can do this using Python T
 
 + Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
-![स्क्रीनशॉट](images/iss-map.png)
+![screenshot](images/iss-map.png)
 
 The map is centered at `(0,0)` latitude and longitude, which is just what you need.
 
 + You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
 
-![स्क्रीनशॉट](images/iss-setup.png)
+![screenshot](images/iss-setup.png)
 
 + You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
 
-![स्क्रीनशॉट](images/iss-world.png)
+![screenshot](images/iss-world.png)
 
 Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
 
@@ -28,9 +28,9 @@ Now the coordinates will match the latitude and longitude coordinates that you g
 
 \--- hints \--- \--- hint \---
 
-आपका कोड इस प्रकार दिखना चाहिए:
+Your code should look like this:
 
-![स्क्रीनशॉट](images/iss-image.png)
+![screenshot](images/iss-image.png)
 
 \--- /hint \---
 
