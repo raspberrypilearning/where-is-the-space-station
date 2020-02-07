@@ -38,12 +38,12 @@ Tu código debe parecerse a esto:
 
 + La ISS comienza en el centro del mapa, ahora vamos a moverla a la ubicación correcta:
 
-![screenshot](images/iss-plot.png)
+![captura de pantalla](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Nota**: la latitud normalmente se da en primer lugar, pero necesitamos dar la longitud primero al trazar las coordenadas `(x, y)`.
 
 + Prueba el programa ejecutándolo. La ISS deberá moverse a su ubicación actual sobre la Tierra. 
 
-![screenshot](images/iss-plotted.png)
+![captura de pantalla](images/iss-plotted.png)
 
 + Espera unos segundos y vuelve a ejecutar tu programa para ver a dónde se ha movido la ISS.
