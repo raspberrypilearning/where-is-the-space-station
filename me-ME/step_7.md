@@ -1,51 +1,51 @@
-## Kada će ISS biti iznad nas?
+## When will the ISS be overhead?
 
-Postoji i veb usluga koju možeš koristiti da saznaš kada će ISS biti iznad određene lokacije.
+There’s also a web service that you can use to find out when the ISS will next be over a particular location.
 
-Saznajmo kada će ISS biti iznad Svemirskog centra u Hjustonu, SAD. Geografska širina Svemirskog centra je `29.5502`, a dužina `95.097`.
+Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
 
-+ Ucrtajmo prvo tačku na karti na ovim koordinatama:
++ First let’s plot a dot on the map at these coordinates:
 
 ![screenshot](images/iss-houston.png)
 
-Sada saznajmo datum i vrijeme kada će sljedeći put ISS proći iznad Svemirskog centra.
+Now let’s get the date and time that the ISS is next overhead.
 
-+ Kao i prije, veb usluzi možeš pristupiti tako što ćeš unijeti njen URL u adresnu traku veb-pregledača: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-Trebalo bi da dobiješ poruku o grešci:
+You should see an error:
 
 ![screenshot](images/iss-pass-error.png)
 
-Ova veb usluga koristi geografsku širinu i dužinu kao ulazne podatke, pa ih moraš unijeti u URL. Ulazni podaci dodaju se poslije znaka `?` i odvajaju se znakom `&`.
+This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
 
-+ Dodaj ulazne podatke `lat` i `lon` u URL kao što je prikazano ovdje: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a> 
++ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
 ![screenshot](images/iss-passtimes.png)
 
-Odgovor sadrži vremena za nekoliko prolazaka, a mi ćemo pogledati samo prvo. Vrijeme je dato kao Unix vremenska oznaka (u tvojoj skripti u Pythonu moći ćeš da ga pretvoriš u vrijeme koje se može čitati).
+The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
 
 [[[generic-unix-timestamp]]]
 
-+ Pozovimo sada veb uslugu iz Pythona. Dodaj sljedeći kôd na kraju svoje skripte:
++ Now let's call the web service from Python. Add the following code to the end of your script:
 
 ![screenshot](images/iss-passover.png)
 
-+ Sada ćemo iz rezultata upotrijebiti prvo vrijeme prolaska. Dodaj sljedeći kôd:
++ Now let's get the first pass-over time from the result. Add the following code:
 
 ![screenshot](images/iss-print-pass.png)
 
-Potreban nam je Python modul `time` kako bismo mogli da ga ispišemo u čitljivom obliku i da ga pretvorimo u lokalno vrijeme. Zatim ćemo napraviti da skripta upiše vrijeme prolaska pored tačke za Hjuston.
+We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
 
-+ Dodaj red `import time` na početku svoje skripte:
++ Add an `import time` line at the top of your script:
 
 ![screenshot](images/iss-time.png)
 
-+ Funkcija `time.ctime()` pretvoriće vremensku oznaku u čitljivi oblik koji možeš upisati na svoju kartu:
++ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
 
 ![screenshot](images/iss-pass-write.png)
 
-(Možeš ukloniti red `print` ili ga komentarisati dodajući `#` na početku, tako da ga tvoja skripta ignoriše.)
+(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
 
-+ Ako želiš, možeš promijeniti boju i format teksta. 
++ If you like, you can change the colour and format of the text. 
 
 [[[generic-python-turtle-write]]]
