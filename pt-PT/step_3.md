@@ -28,71 +28,74 @@ Deves ver algo parecido com isto:
     }
     
 
-Os dados são ao vivo, então você provavelmente verá um resultado ligeiramente diferente. O formato de dados é chamado de `JSON` (pronunciado como "Jason").
+The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
 [[[generic-json]]]
 
-Você precisa chamar o serviço da web a partir de um script Python, para poder usar os resultados.
+You need to call the web service from a Python script, so you can use the results.
 
-+ Abrir este trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-Os módulos `urllib.request` e `json` já foram importados para você na parte superior do script `main.py`.
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
-+ Adicione o seguinte código a `main.py` para armazenar o URL do serviço web que você acabou de acessar como uma variável:
++ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![captura de tela](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
-+ Agora ligue para o serviço da web:
++ Now call the web service:
 
-![captura de tela](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
-+ De seguida, vais necessitar carregar a resposta JSON em uma estrutura de dados Python:
++ Next you need to load the JSON response into a Python data structure:
 
-![captura de tela](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
-Você deveria ver algo assim:
+You should see something like this:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Este é um dicionário Python com três chaves: `, mensagem`, `número`e `pessoas`.
+This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Que `mensagem` tem o valor `sucesso` diz que você acessou com sucesso o serviço web. Observe que você verá resultados diferentes para `número` e `pessoas` dependendo de quem está no espaço.
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
-Agora vamos imprimir as informações de uma maneira mais legível.
+Now let's print the information in a more readable way.
 
-+ Primeiro, vamos procurar o número de pessoas no espaço e imprimi-lo:
++ First, let's look up the number of people in space and print it:
 
-![captura de tela](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
-`resultado ['número']` imprimirá o valor associado à chave `número` no `resultado` dicionário. No exemplo, isso é `3`.
+`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
-+ O valor associado à chave `pessoas` é uma lista de dicionários! Vamos colocar esse valor em uma variável para que você possa usá-lo:
++ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![captura de tela](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
-Você deveria ver algo como:
+You should see something like:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Agora você precisa imprimir uma linha para cada astronauta. Você pode usar um loop `do Python para` para fazer isso.
++ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
 [[[generic-python-for-loop-list]]]
 
-+ Cada vez através do loop, `p` será definido como um dicionário para um astronauta diferente.
++ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![captura de tela](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
-+ Você pode então procurar os valores para o `nome` e `ofício`. Vamos mostrar os nomes das pessoas no espaço:
++ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![captura de tela](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
-Você deveria ver algo assim:
+You should see something like this:
 
-    Pessoas no Espaço: 3 Yuri Malenchenko Timothy Kopra Timothy Peake
+    People in Space:  3
+    Yuri Malenchenko
+    Timothy Kopra
+    Timothy Peake
     
 
-**Nota:** Você está usando dados ao vivo, então seus resultados dependerão do número de pessoas atualmente no espaço.
+**Note:** You are using live data, so your results will depend on the number of people currently in space.
