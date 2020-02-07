@@ -1,17 +1,17 @@
-## आपको किन चीज़ों की आवश्यकता होगी
+## What you will need
 
-### हार्डवेयर
+### Hardware
 
-+ इंटरनेट कनेक्शन वाला कंप्यूटर
++ A computer with internet connection
 
-### सॉफ्टवेयर
+### Software
 
-+ [ त्रिंकेत ](https://trinket.io/) ऑनलाइन संपादक
++ [Trinket](https://trinket.io/) online editor
 
-### अतिरिक्त संसाधन
+### Additional resources
 
-+ सुरुआत प्रोजेक्ट - [ rpf.io/iss-on ](http://rpf.io/iss-on) {: लक्ष्य = "_ खाली"}
++ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ इस परियोजना का एक पूर्ण संस्करण - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) {: लक्ष्य = "_ खाली"}
++ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ ओपन नोटिसेस वेबसर्विसेज - [ api.open-notify.org ](http://api.open-notify.org/) {: लक्ष्य = "_ blank"}
++ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
