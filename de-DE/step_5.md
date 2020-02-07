@@ -7,7 +7,7 @@ Verwenden wir einen anderen Web Service, um herauszufinden, wo sich die Internat
 + Öffne zunächst die URL für den Web Service in einem neuen Tab in deinem Webbrowser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
 Du solltest so etwas sehen:
-
+```
     {
     "iss_position": {
       "Breitengrad": 8.54938193505081, 
@@ -16,7 +16,7 @@ Du solltest so etwas sehen:
     "message": "success", 
     "timestamp": 1461931913
     }
-    
+```    
 
 Das Ergebnis enthält die Koordinaten des Ortes auf der Erde, über dem die ISS sich derzeit befindet.
 

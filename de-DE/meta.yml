@@ -7,19 +7,11 @@ copyedit: false
 version: 3
 last_tested: 2017-01-01
 steps:
-  - 
-    title: Einleitung
-  - 
-    title: Was du brauchen wirst
-  - 
-    title: 'Aufgabe: Die Weltraumstation anzeigen'
-  - 
-    title: 'Wo ist die ISS?'
-  - 
-    title: Wo befindet sich die ISS?
-  - 
-    title: 'Aufgabe: Finde noch mehr Überflugszeiten'
-  - 
-    title: Wann wird die ISS über dir sein?
-  - 
-    title: 'Herausforderung: finde mehr Zeiten wenn sie sich über dir befindet'
+  - title: Einleitung
+  - title: Was du brauchen wirst
+  - title: Wer ist im Weltraum?
+  - title: 'Aufgabe: Die Weltraumstation anzeigen'
+  - title: Wo ist die ISS?
+  - title: Zeichne die ISS auf einer Karte
+  - title: Wann wird die ISS über dir sein?
+  - title: 'Aufgabe: Finde mehr Überflugzeiten'

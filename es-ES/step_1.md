@@ -1,6 +1,6 @@
 ## Introducción
 
-En este proyecto utilizará un servicio web para averiguar la ubicación actual de la Estación Espacial Internacional (ISS) y trazar su ubicación en un mapa.
+En este proyecto, utilizarás un servicio web para averiguar la ubicación actual de la Estación Espacial Internacional (ISS) y trazar su ubicación en un mapa.
 
 ### Instrucciones
 
@@ -12,7 +12,7 @@ El icono de la estación espacial muestra la ubicación actual de la ISS. El tex
   <img src="images/iss-final.png">
 </div>
 
-### Lo que aprenderá
+### Lo que aprenderás
 
 Este proyecto incluye elementos de los siguientes aspectos del [currículo de creación digital de Raspberry Pi](http://rpf.io/curriculum):
 

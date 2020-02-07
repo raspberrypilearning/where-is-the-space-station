@@ -1,6 +1,6 @@
-## Herausforderung: finde mehr Überflugzeiten
+## Aufgabe: Finde mehr Überflugzeiten
 
-\--- challenge \---
+--- challenge ---
 
 Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kannst du eine Website wie <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a> benutzen.
 
@@ -8,11 +8,16 @@ Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kan
 
 ![screenshot](images/iss-final.png)
 
-\--- hints \--- \--- hint \---
+--- hints ---
+
+
+--- hint ---
 
 Am Ende deines Programms setze die `Breiten-` und `Längengrad`-Variablen auf neue Werte und benutze dann die `Standort` Turtle-Variable, um einen Punkt an der neuen Stelle zu zeichnen. (Wähle eine andere Farbe, wenn du möchtest.) Rufe dann den `iss-pass` Web Service mit den Koordinaten auf (Du kannst den Code kopieren und einfügen, um dies zu tun). Abschließend erhältst du die `Anstiegszeit` aus der Antwort, und schreibst sie in das `Standort` Turtle.
 
-\--- /hint \--- \--- hint \---
+--- /hint ---
+
+--- hint ---
 
 Füge diesen Code am Ende deines Programms hinzu und fülle die fehlenden Teile aus. Beachte, dass du den Code, den du geschrieben hast, kopieren und einfügen kannst, um die Überflugzeiten für das Raumfahrtzentrum in Houston zu erhalten und dann die Änderungen vornehmen kannst, die du benötigst.
 
@@ -28,7 +33,9 @@ laengengrad = XX. X
 # Hol' dir die `risetime` aus dem Ergebnis und benutze die `Standort` Turtle, um sie auf die Karte zu schreiben
 ```
 
-\--- /hint \--- \--- hint \---
+--- /hint ---
+
+--- hint ---
 
 Hier ist ein Beispiel mit der Lage des Baikonur Cosmodrom, einem Raumhafen im Süden Kasachstans. Der Code wird am Ende deines Programms angezeigt, nachdem du die Überflugzeit vom Houston Raumfahrtzentrum aufgezeichnet hast.
 
@@ -54,4 +61,18 @@ standort.write(time.ctime(ueber))
 
 Versuche weitere Orte hinzuzufügen!
 
-\--- /hint \--- \--- /hints \--- \--- /challenge \---
+--- /hint ---
+
+--- /hints ---
+
+--- /challenge ---
+
+
+***
+Dieses Projekt wurde von freiwilligen Helfern übersetzt:
+
+Nicole Rotarius
+
+Dennis Weber
+
+Dank freiwilliger Helfer können wir Menschen auf der ganzen Welt die Möglichkeit geben, in ihrer eigenen Sprache zu lernen. Du kannst uns helfen, mehr Menschen zu erreichen, indem Du dich freiwillig zum Übersetzen meldest - weitere Informationen unter [rpf.io/translate](https://rpf.io/translate).
