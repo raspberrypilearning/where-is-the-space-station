@@ -1,25 +1,25 @@
 ---
-title: Unde este Stația Spațială?
+title: Where is the Space Station?
 hero_image: images/banner.png
-description: Găsiți locația exactă a Stației Spațiale Internaționale
+description: Find the exact location of the ISS
 listed: true
 copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: Introducere
+    title: Introduction
   - 
-    title: De ce vei avea nevoie
+    title: What you will need
   - 
-    title: Cine este în spațiu?
+    title: Who is in space?
   - 
-    title: 'Provocare: arată meseria'
+    title: 'Challenge: show the craft'
   - 
-    title: Unde este SSI?
+    title: Where is the ISS?
   - 
-    title: Reprezentarea SSI pe o hartă
+    title: Plotting the ISS on a map
   - 
-    title: Când va fi SSI deasupra?
+    title: When will the ISS be overhead?
   - 
-    title: 'Provocare: găsiți mai multe perioade de trecere pe deasupra SSI'
+    title: 'Challenge: find more pass-over times'
