@@ -34,13 +34,13 @@ Dein Code sollte so aussehen:
 
 \--- /hint \---
 
-\--- /hints \---
+\---/hints\---
 
 + Die ISS startet in der Mitte der Karte, jetzt bewegen wir sie an den richtigen Ort:
 
 ![screenshot](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+** Hinweis **: Breitengrad wird normalerweise zuerst angegeben, aber wir müssen zuerst den Längengrad angeben, wenn wir die ` (x, y)` Koordinaten zeichnen.
 
 + Teste dein Programm, indem du es ausführst. Die ISS sollte sich an ihren aktuellen Standort oberhalb der Erde bewegen. 
 
