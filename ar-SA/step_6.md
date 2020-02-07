@@ -38,12 +38,12 @@
 
 + تبدأ محطة الفضاء ISS في وسط الخريطة ، والآن دعنا ننتقل إلى الموقع الصحيح:
 
-![screenshot](images/iss-plot.png)
+![لقطة الشاشة](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+** ملاحظة **: يتم إعطاء خط العرض عادةً أولاً ، لكننا نحتاج إلى إعطاء خط الطول أولاً عند تنسيق التخطيط ` (x,y) `.
 
 + اختبار البرنامج الخاص بك عن طريق تشغيله. يجب أن تنتقل المحطة الفضائية الدولية إلى موقعها الحالي فوق الأرض. 
 
-![screenshot](images/iss-plotted.png)
+![لقطة الشاشة](images/iss-plotted.png)
 
 + انتظر بضع ثوان وقم بتشغيل البرنامج مرة أخرى لترى أين انتقلت محطة الفضاء الدولية.
