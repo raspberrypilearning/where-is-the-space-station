@@ -40,15 +40,15 @@ The `urllib.request` and `json` modules have already been imported for you at th
 
 + Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![captura de pantalla](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
 + Now call the web service:
 
-![captura de pantalla](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
 + Next you need to load the JSON response into a Python data structure:
 
-![captura de pantalla](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
 You should see something like this:
 
@@ -65,13 +65,13 @@ Now let's print the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
-![captura de pantalla](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
 `result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![captura de pantalla](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
 You should see something like:
 
@@ -84,11 +84,11 @@ You should see something like:
 
 + Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![captura de pantalla](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
 + You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![captura de pantalla](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
 You should see something like this:
 
