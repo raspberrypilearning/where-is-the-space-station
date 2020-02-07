@@ -1,25 +1,25 @@
 ---
-title: Gdje je svemirska stanica?
+title: Where is the Space Station?
 hero_image: images/banner.png
-description: Nađi tačnu lokaciju Međunarodne svemirske stanice (ISS)
+description: Find the exact location of the ISS
 listed: true
 copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: Uvod
+    title: Introduction
   - 
-    title: Šta će ti biti potrebno
+    title: What you will need
   - 
-    title: Ko je u svemiru?
+    title: Who is in space?
   - 
-    title: 'Izazov: prikaži letjelicu'
+    title: 'Challenge: show the craft'
   - 
-    title: Gdje se nalazi ISS?
+    title: Where is the ISS?
   - 
-    title: Ucrtavanje ISS na kartu
+    title: Plotting the ISS on a map
   - 
-    title: Kada će ISS biti iznad nas?
+    title: When will the ISS be overhead?
   - 
-    title: 'Izazov: pronađi još vremena prolaska'
+    title: 'Challenge: find more pass-over times'
