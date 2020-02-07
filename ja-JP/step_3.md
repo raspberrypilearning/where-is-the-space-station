@@ -1,12 +1,12 @@
-## 誰が宇宙にいるのか？
+## Who is in space?
 
-宇宙に関するライブ情報を提供するWebサービスを使用します。 まず、誰が現在宇宙にいるのかを見てみましょう。
+You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
 
-Webサービスには、Webサイトと同じようにアドレス（URL）があります。 WebページのHTMLを返す代わりに、データを返します。
+A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
 
-+ Webブラウザで<a href="http://api.open-notify.org/astros.json" target="_blank">Webサービス</a>開けましょう。
++ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
 
-以下のようなものが表示されます：
+You should see something like this:
 
     {
       "message": "success",
@@ -28,69 +28,69 @@ Webサービスには、Webサイトと同じようにアドレス（URL）が�
     }
     
 
-ライブデータであるため、毎回Webサービスから返ってくるデータが同じものとは限りません。 データ形式は `JSON` （ 'ジェイソン'のように発音）と呼ばれます。
+The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
 [[[generic-json]]]
 
-データを使うためには、PythonスクリプトからWebサービスを呼び出す必要があります。
+You need to call the web service from a Python script, so you can use the results.
 
 + Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-`urllib.request` と `json` モジュールは、 `main.py` スクリプトの先頭にすでにインポートされています。
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
-+ `main.py` に次のコードを追加して、アクセスしたWebサービスのURLを変数として保存します。
++ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![スクリーンショット](images/iss-url.png)
+![screenshot](images/iss-url.png)
 
-+ 次に、Webサービスを呼び出します。
++ Now call the web service:
 
-![スクリーンショット](images/iss-request.png)
+![screenshot](images/iss-request.png)
 
 + Next you need to load the JSON response into a Python data structure:
 
-![スクリーンショット](images/iss-result.png)
+![screenshot](images/iss-result.png)
 
-以下のようなものが表示されます：
+You should see something like this:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-これは、3つのキーを持つPythonの辞書（ディクショナリ）です：`message`、`number`、と`people`。
+This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Webサービスにアクセス成功した場合、指定したキー、`message`、に`success` の値があります。 ライブデータなので、Webサービスが返す結果が毎回同じとは限りません：`number`（宇宙にいる人の数） と`people` （宇宙にいる人）。
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
-次に、情報を読みやすく表示しましょう。
+Now let's print the information in a more readable way.
 
-+ まず、宇宙にいる人の数を調べて、それを表示しましょう。
++ First, let's look up the number of people in space and print it:
 
-![スクリーンショット](images/iss-number.png)
+![screenshot](images/iss-number.png)
 
-`result ['number']` は、 `result` 辞書にあるキー `number` に関連する値のことです。 この例では、numberキーに関連する値は`3`です。
+`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
-+ `people`キーに関連付けられた値は、辞書のリストです！ その値を変数に入れて使用できるようにしましょう：
++ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![スクリーンショット](images/iss-people.png)
+![screenshot](images/iss-people.png)
 
-次のようなものが表示されます。
+You should see something like:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ 今度は、宇宙飛行士の名前を表示しましょう。名前は別々の行に表示されているように。 これを行うには、Python `for` ループを使用することができます。
++ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
 [[[generic-python-for-loop-list]]]
 
-+ ループを通過するたびに、 `p` が別の宇宙飛行士に当てはまる辞書に設定されます。
++ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![スクリーンショット](images/iss-people-1a.png)
+![screenshot](images/iss-people-1a.png)
 
-+ 次に、 `name` と `craft`の値を検索できます。 宇宙にいる人たちの名前を表示しましょう：
++ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
-![スクリーンショット](images/iss-people-2.png)
+![screenshot](images/iss-people-2.png)
 
-以下のようなものが表示されます：
+You should see something like this:
 
     People in Space:  3
     Yuri Malenchenko
@@ -98,4 +98,4 @@ Webサービスにアクセス成功した場合、指定したキー、`message
     Timothy Peake
     
 
-**注：** ライブデータを使用しているため、表示されるデータが毎回同じものとは限りません。データ現在宇宙にいる人たちをあらわしています。
+**Note:** You are using live data, so your results will depend on the number of people currently in space.
