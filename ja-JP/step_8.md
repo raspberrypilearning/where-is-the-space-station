@@ -1,12 +1,12 @@
-## チャレンジ：より多くの通過日時を見つける
+## Challenge: find more pass-over times
 
 \--- challenge \---
 
 To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ もっと多くの場所の通過日時を調べてプロットできますか？ 
++ Can you look up and plot the pass-over times for more locations? 
 
-![スクリーンショット](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
 \--- hints \---
 
@@ -21,15 +21,15 @@ At the end of your program, set the `lat` and `long` variables to new values and
 Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
-#決めた位置の経度と緯度。
+# Your chosen location
 lat = XX.XX
 lon = XX.XX
 
-#locationタートル変数を使い、地図に点を画こう。
+# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
 
-#自分が決めた緯度と経度に対するデータを`iss-pass.json`からとろう。
+# Get the result from `iss-pass.json` for your new latitude and longitude
 
-#`risetime`（通過日時）をlocationタートル変数を使い、地図に表示しよう。
+# Get the `risetime` from the result and use the `location` turtle to write it on the map
 ```
 
 \--- /hint \---
@@ -39,7 +39,7 @@ lon = XX.XX
 Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
-# カザフスタン南部の宇宙港バイコヌール宇宙センターの位置
+# Baikonur Cosmodrome
 lat = 45.86
 lon = 63.31
 
