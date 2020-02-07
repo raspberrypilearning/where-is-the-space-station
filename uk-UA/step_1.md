@@ -1,10 +1,10 @@
-## Вступ
+## Introduction
 
-У цьому проекті ви будете використовувати веб-сервіс, щоб дізнатись про поточне місцезнаходження Міжнародної космічної станції (МКС) і закріпити його розташування на карті.
+In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
 
-### Інструкції
+### Instructions
 
-Значок космічної станції показує поточне місцезнаходження МКС. Жовтий текст показує, коли МКС потім пройде через Космічний центр в Х'юстоні, США.
+The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@
   <img src="images/iss-final.png">
 </div>
 
-### Що ви дізнаєтесь
+### What you will learn
 
-Цей проект охоплює елементи з наступними стандартами [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [Для вирішення проблеми об'єднайте конструкції програмування.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
