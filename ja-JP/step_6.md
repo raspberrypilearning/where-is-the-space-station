@@ -1,49 +1,49 @@
-## マップにISSの位置をプロットする
+## Plotting the ISS on a map
 
-位置を地図上に表示すると便利です。 Python Turtleのグラフィックを使ってこれを行うことができます！
+It would be useful to show the position on a map. You can do this using Python Turtle graphics!
 
-+ 最初に、`turtle`Pythonライブラリをインポートする必要があります：
++ First we'll need to import the `turtle` Python library:
 
-![スクリーンショット](images/iss-turtle.png)
+![screenshot](images/iss-turtle.png)
 
-+ 次に、世界地図を背景画像として読み込みます。 There’s one already included in your trinket called 'map.gif'! NASAが提供してる地図で、再利用の許可をだしています。 
++ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
-![スクリーンショット](images/iss-map.png)
+![screenshot](images/iss-map.png)
 
-地図は、`（0,0）`緯度と経度に配置されています。
+The map is centered at `(0,0)` latitude and longitude, which is just what you need.
 
-+ 画像のサイズ（720 x 360ピクセル）と一致するように画面サイズを設定する必要があります。 `screen.setup(720, 360)`を追加しましょう:
++ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
 
 ![screenshot](images/iss-setup.png)
 
-+ 特定の緯度と経度にカメを置きましょう。 これを簡単にするには、使用している座標に合わせて画面を設定します：
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
 
-![スクリーンショット](images/iss-world.png)
+![screenshot](images/iss-world.png)
 
-これで座標は、Webサービスから返された緯度と経度の座標と一致します。
+Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
 
-+ ISSをあらわすカメアイコンを作成しましょう。 Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-コードは以下のようになります：
+Your code should look like this:
 
-![スクリーンショット](images/iss-image.png)
+![screenshot](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ ISSアイコンは地図の中央におかれます。ISSアイコン、を正しい位置におきましょう：
++ The ISS starts off in the centre of the map, now let's move it to the correct location:
 
 ![screenshot](images/iss-plot.png)
 
 **Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
-+ プログラムを実行してテストします。 ISSアイコンは地球上の現在の位置におかれます。 
++ Test your program by running it. The ISS should move to its current location above Earth. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ 数秒待ってからもう一度プログラムを実行すると、ISSアイコンはどの位置に移動したか確認してください。
++ Wait a few seconds and run your program again to see where the ISS has moved to.
