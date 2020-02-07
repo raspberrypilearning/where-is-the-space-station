@@ -1,14 +1,17 @@
-## Desafio: mostre o ofício
+## Challenge: show the craft
 
-\--- desafio \---
+\--- challenge \---
 
-Além do nome dos astronautas, o serviço da Web também fornece o veículo em que eles estão, como o ISS.
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ Você pode adicionar ao seu roteiro para que ele também imprima a embarcação para cada astronauta? 
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Exemplo:
+Example:
 
-    Pessoas no Espaço: 3 Yuri Malenchenko na ISS Timothy Kopra na ISS Timothy Peake na ISS
+    People in Space:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \---
@@ -30,7 +33,8 @@ You get the value for `name` using `p[name]` — how can you get the value for `
 Change your `for` loop so it looks like this:
 
 ```python
-para p em pessoas: print (p ['name'], 'in', p ['craft'])
+for p in people:
+  print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
