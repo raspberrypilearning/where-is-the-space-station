@@ -1,12 +1,12 @@
-## Ko je u svemiru?
+## Who is in space?
 
-Koristićeš veb uslugu koja uživo pruža informacije o svemiru. Saznajmo prvo ko se trenutno nalazi u svemiru.
+You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
 
-Veb usluga ima svoju adresu (URL), baš kao i veb-sajt. Umjesto da vraća HTML za veb-stranicu, vraća podatke.
+A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
 
-+ Otvori <a href="http://api.open-notify.org/astros.json" target="_blank">veb uslugu</a> u veb-pregledaču.
++ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
 
-Trebalo bi da vidiš nešto slično ovome:
+You should see something like this:
 
     {
       "message": "success",
@@ -28,74 +28,74 @@ Trebalo bi da vidiš nešto slično ovome:
     }
     
 
-Podaci se prikazuju uživo, pa ćeš vjerovatno vidjeti malo drugačiji rezultat. Format podataka se zove `JSON` (izgovara se kao 'Džejson').
+The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
 
 [[[generic-json]]]
 
-Treba da pozoveš veb uslugu iz Python skripte kako bi mogao/mogla da koristiš rezultate.
+You need to call the web service from a Python script, so you can use the results.
 
 + Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
 
-Moduli `urllib.request` i `json` već su uvezeni za tebe na početku `main.py` skripte.
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
-+ Dodaj sljedeći kôd u `main.py` da URL veb usluge kojoj smo upravo pristupili sačuvaš kao promjenljivu:
++ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
 ![screenshot](images/iss-url.png)
 
-+ Sada pozovi veb uslugu:
++ Now call the web service:
 
 ![screenshot](images/iss-request.png)
 
-+ Zatim treba da učitaš JSON odgovor u strukturu podataka u Pythonu:
++ Next you need to load the JSON response into a Python data structure:
 
 ![screenshot](images/iss-result.png)
 
-Trebalo bi da vidiš nešto slično ovome:
+You should see something like this:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-Ovo je Pythonov rječnik koji sadrži tri ključa: `message` (poruka), `number` (broj) i `people` (osobe).
+This is a Python dictionary with three keys: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-Vrijednost `poruke` (message) je `success`, što znači da si uspješno pristupio/pristupila veb usluzi. Imaj u vidu da ćeš vidjeti različite rezultate za `number` i `people`, u zavisnosti od toga ko je trenutno u svemiru.
+That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
-Sada ispišimo informacije u obliku koji će biti jednostavnije pročitati.
+Now let's print the information in a more readable way.
 
-+ Prvo pronađimo broj osoba u svemiru i ispišimo ga:
++ First, let's look up the number of people in space and print it:
 
 ![screenshot](images/iss-number.png)
 
-`rezultat['number']` će u rječnik `rezultat` ispisati vrijednost povezanu sa ključem `number`. To je u ovom primjeru `3`.
+`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
 
-+ Vrijednost povezana sa ključem `people` je lista rječnika! Stavimo ovu vrijednost u promjenljivu kako bismo je mogli koristiti:
++ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
 ![screenshot](images/iss-people.png)
 
-Trebalo bi da vidiš nešto slično ovome:
+You should see something like:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Sada treba da ispišeš red za svakog astronauta. U Pythonu za to možeš da koristiš `for` petlju.
++ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
 [[[generic-python-for-loop-list]]]
 
-+ U svakom prolazu kroz petlju, `p` će biti postavljeno u rječnik za različitog astronauta.
++ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
 ![screenshot](images/iss-people-1a.png)
 
-+ Zatim možeš da potražiš vrijednosti za `name` i `craft`. Prikažimo imena osoba u svemiru:
++ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
 ![screenshot](images/iss-people-2.png)
 
-Trebalo bi da vidiš nešto slično ovome:
+You should see something like this:
 
-    Osobe u svemiru:  3
+    People in Space:  3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-**Napomena:** Koristiš podatke koji se dobijaju uživo, pa će tvoji rezultati zavisiti od broja ljudi koji su trenutno u svemiru.
+**Note:** You are using live data, so your results will depend on the number of people currently in space.
