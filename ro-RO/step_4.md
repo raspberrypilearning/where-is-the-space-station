@@ -1,14 +1,14 @@
-## Provocare: arată meseria
+## Challenge: show the craft
 
 \--- challenge \---
 
-În plus față de numele astronauților, serviciul web oferă și navele pe care se află, cum ar fi SSI.
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ Poți adăuga cod la scriptul tău astfel încât să imprime și navele pentru fiecare astronaut? 
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Exemplu:
+Example:
 
-    Oameni in spatiu:  3
+    People in Space:  3
     Yuri Malenchenko in ISS
     Timothy Kopra in ISS
     Timothy Peake in ISS
@@ -33,7 +33,7 @@ You get the value for `name` using `p[name]` — how can you get the value for `
 Change your `for` loop so it looks like this:
 
 ```python
-for p in oameni:
+for p in people:
   print(p['name'], ' in ', p['craft'])
 ```
 
