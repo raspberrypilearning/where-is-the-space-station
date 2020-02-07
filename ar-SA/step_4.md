@@ -18,19 +18,19 @@
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+تحتاج إلى إضافة رمز إلى عبارة الطباعة في `for p in people: `. تذكر أنه يمكنك طباعة عناصر متعددة بفصلها بفواصل.
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+يمكنك الحصول على قيمة `الاسم` باستخدام `p[name]` - كيف يمكنك الحصول على قيمة `الحرفة`؟
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+تغيير المسار الحلقي ` for` الخاص بك بحيث يبدو مثل هذا:
 
 ```python
 for p in people:
