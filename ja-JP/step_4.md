@@ -1,12 +1,12 @@
-## チャレンジ：宇宙飛行士が乗っている宇宙ステーションの名前を表示しよう
+## Challenge: show the craft
 
 \--- challenge \---
 
-宇宙飛行士の名前に加えて、Webサービスは、ISSなど、彼らが乗っているいる宇宙船（宇宙ステーション）も提供します。
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ スクリプトに追加して、各宇宙飛行士が乗っている宇宙船を表示することはできますか？ 
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-例：
+Example:
 
     People in Space:  3
     Yuri Malenchenko in ISS
