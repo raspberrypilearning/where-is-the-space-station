@@ -1,49 +1,49 @@
-## Нанесення МКС на карту
+## Plotting the ISS on a map
 
-Було б корисно показати позицію на карті. Ви можете зробити це за допомогою графіки Python Turtle!
+It would be useful to show the position on a map. You can do this using Python Turtle graphics!
 
-+ Спочатку нам доведеться імпортувати бібліотеку Python `черепахи`:
++ First we'll need to import the `turtle` Python library:
 
 ![screenshot](images/iss-turtle.png)
 
-+ Далі, завантажте карту світу як фонове зображення. There’s one already included in your trinket called 'map.gif'! NASA надав цю прекрасну карту та отримав дозвіл на повторне використання. 
++ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
-![знімок екрану](images/iss-map.png)
+![screenshot](images/iss-map.png)
 
-Карта розташована в центрі `(0,0)` широти та довготи, що саме вам потрібно.
+The map is centered at `(0,0)` latitude and longitude, which is just what you need.
 
-+ Вам потрібно встановити розмір екрана відповідно до розміру зображення, який становить 720 на 360 пікселів. Додати `screen.setup (720, 360)`:
++ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
 
-![скріншот](images/iss-setup.png)
+![screenshot](images/iss-setup.png)
 
-+ Ви хочете мати можливість відправити черепаху до певної широти і довготи. Щоб зробити це простим, ви можете встановити екран у відповідність з координатами, які ви використовуєте:
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
 
-![скріншот](images/iss-world.png)
+![screenshot](images/iss-world.png)
 
-Тепер координати будуть відповідати координатам широти та довготи, які ви повернете з веб-служби.
+Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
 
-+ Створимо піктограму черепахи для МКС. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Ваш код має виглядати наступним чином:
+Your code should look like this:
 
-![скріншот](images/iss-image.png)
+![screenshot](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ МКС починається в центрі карти, а тепер переведемо його в правильне розташування:
++ The ISS starts off in the centre of the map, now let's move it to the correct location:
 
 ![screenshot](images/iss-plot.png)
 
 **Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
 
-+ Перевірте свою програму, запустивши її. МКС слід перейти до його поточного розташування над Землею. 
++ Test your program by running it. The ISS should move to its current location above Earth. 
 
 ![screenshot](images/iss-plotted.png)
 
-+ Зачекайте кілька секунд і знову запустіть програму, щоб побачити, куди перемістився МКС.
++ Wait a few seconds and run your program again to see where the ISS has moved to.
