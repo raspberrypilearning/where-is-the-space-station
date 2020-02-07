@@ -1,14 +1,14 @@
-## Що вам знадобиться
+## What you will need
 
-### Обладнання
+### Hardware
 
-+ Комп'ютер з підключенням до Інтернету
++ A computer with internet connection
 
-### Програмне забезпечення
+### Software
 
-+ [Інтернет-редактор Trіlett](https://trinket.io/)
++ [Trinket](https://trinket.io/) online editor
 
-### Додаткові ресурси
+### Additional resources
 
 + Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
