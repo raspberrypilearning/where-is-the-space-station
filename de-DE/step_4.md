@@ -18,19 +18,19 @@ Beispiel:
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+Du musst den Code für die Druckausgabe in der `für P in Personen` - Anweisung hinzufügen. Denke daran, dass du mehrere Artikel drucken kannst, indem du sie mit Kommas trennst.
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+Du erhältst den Wert für `name` mit `p[name]` — wie bekommst du den Wert für `craft`?
 
-\--- /hint \---
+\---/hint\---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+Ändere deine `for` Schleife, so dass es so aussieht:
 
 ```python
 for p in personen:
@@ -39,6 +39,6 @@ for p in personen:
 
 \--- /hint \---
 
-\--- /hints \---
+\---/hints\---
 
 \--- /challenge \---
