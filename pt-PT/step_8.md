@@ -1,12 +1,12 @@
-## Desafio: encontre mais tempos de repercussão
+## Challenge: find more pass-over times
 
-\--- desafio \---
+\--- challenge \---
 
-Para pesquisar a latitude e longitude de um local em que estás interessado, podes utilizar um site como <a href="http://www.latlong.net/" target="_blank"> www.latlong.net/ </a>.
+To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Você pode procurar e plotar os tempos de passagem para mais locais? 
++ Can you look up and plot the pass-over times for more locations? 
 
-![captura de tela](images/iss-final.png)
+![screenshot](images/iss-final.png)
 
 \--- hints \---
 
@@ -21,7 +21,15 @@ At the end of your program, set the `lat` and `long` variables to new values and
 Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
 
 ```python
-# Sua localização escolhida lat = XX.XX lon = XX.XX # Desenhe um ponto com a tartaruga `location` (não é necessário criar uma nova tartaruga), escolha uma cor diferente # Obtenha o resultado de` iss-pass.json` para sua nova latitude e longitude # Pegue o `risetime` do resultado e use a tartaruga` location` para escrevê-lo no mapa
+# Your chosen location
+lat = XX.XX
+lon = XX.XX
+
+# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+
+# Get the result from `iss-pass.json` for your new latitude and longitude
+
+# Get the `risetime` from the result and use the `location` turtle to write it on the map
 ```
 
 \--- /hint \---
@@ -31,7 +39,23 @@ Add this code to the end of your program and fill in the missing parts. Note tha
 Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
 
 ```python
-# Baikonur Cosmodrome lat = 45.86 lon = 63.31 location.penup () localização.color ('laranja') location.goto (lon, lat) location.dot (5) localização.hideturtle () url = 'http: // api. open-notify.org/iss-pass.json?lat= '+ str (lat) +'&lon = '+ str (lon) resposta = urllib.request.urlopen (url) resultado = json.loads (response.read) ()) #print (resultado) over = resultado ['resposta'][1]['tempo de subida'] location.write (time.ctime (over))
+# Baikonur Cosmodrome
+lat = 45.86
+lon = 63.31
+
+location.penup()
+location.color('orange')
+location.goto(lon,lat)
+location.dot(5)
+location.hideturtle()
+
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+response = urllib.request.urlopen(url)
+result = json.loads(response.read())
+
+#print(result)
+over = result['response'][1]['risetime']
+location.write(time.ctime(over))
 ```
 
 Try adding more locations!
