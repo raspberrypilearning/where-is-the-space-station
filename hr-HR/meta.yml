@@ -1,16 +1,16 @@
 ---
-title: Gdje je svemirska postaja?
+title: Where is the Space Station?
 hero_image: images/banner.png
-description: U ovom projektu koristit ćeš web uslugu kako bi saznao gdje se trenutno nalazi Međunarodna svemirska postaja (ISS) i ucrtao njenu lokaciju na kartu.
+description: Find the exact location of the ISS
 listed: true
 copyedit: false
-version: 3
-last_tested: 2017-01-01
+version: 3.1.0
+last_tested: 2018-11-22
 steps:
   - 
-    title: Sretan rođendan
+    title: Introduction
   - 
-    title: Ono što će vam trebati
+    title: What you will need
   - 
     title: Who is in space?
   - 
