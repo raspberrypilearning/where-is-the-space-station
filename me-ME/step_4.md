@@ -1,17 +1,17 @@
-## Izazov: prikaži letjelicu
+## Challenge: show the craft
 
 \--- challenge \---
 
-Pored imena astronauta, veb usluga daje i naziv letjelice u kojoj se on nalazi, kao što je ISS.
+In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
 
-+ Možeš li da napraviš da tvoja skripta ispisuje i naziv letjelice u kojoj je astronaut? 
++ Can you add to your script so that it also prints out the craft for each astronaut? 
 
-Primjer:
+Example:
 
-    Osobe u svemiru:  3
-    Yuri Malenchenko u ISS
-    Timothy Kopra u ISS
-    Timothy Peake u ISS
+    People in Space:  3
+    Yuri Malenchenko in ISS
+    Timothy Kopra in ISS
+    Timothy Peake in ISS
     
 
 \--- hints \---
@@ -33,8 +33,8 @@ You get the value for `name` using `p[name]` — how can you get the value for `
 Change your `for` loop so it looks like this:
 
 ```python
-for p in osobe:
-  print(p['name'], ' u ', p['craft'])
+for p in people:
+  print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
