@@ -12,7 +12,7 @@ Es wäre nützlich, die Position auf einer Karte anzuzeigen. Du kannst dies mit 
 
 Die Karte ist zentriert bei ` (0,0) ` Breite und Länge - genau das, was du brauchst.
 
-+ Du musst die Bildschirmgröße so einstellen, dass sie der Bildgröße von 720 x 360 Pixel entspricht. Füge ` screen.setup(720, 360) ` hinzu:
++ Du musst die Bildschirmgröße so einstellen, dass sie der Bildgröße von 720 x 360 Pixel entspricht. Füge `bildschirm.setup(720, 360) ` hinzu:
 
 ![Screenshot](images/iss-setup.png)
 
