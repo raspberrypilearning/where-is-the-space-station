@@ -4,7 +4,7 @@
 
 Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kannst du eine Website wie <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a> benutzen.
 
-+ Kannst du die Überflugzeiten für weitere Standorte suchen und planen? 
++ Kannst du die Überflugzeiten für weitere Standorte suchen und anzeigen? 
 
 ![screenshot](images/iss-final.png)
 
@@ -12,7 +12,7 @@ Um die Breite und Länge eines Ortes zu suchen, an dem du interessiert bist, kan
 
 \--- hint \---
 
-Am Ende deines Programms setze die `Breiten-` und `Längengrad`-Variablen auf neue Werte und benutze dann die `Standort` Turtle-Variable, um einen Punkt an der neuen Stelle zu zeichnen. (Wähle eine andere Farbe, wenn du möchtest.) Rufe dann den `iss-pass` Web Service mit den Koordinaten auf (Du kannst den Code kopieren und einfügen, um dies zu tun). Abschließend erhältst du die `Anstiegszeit` aus der Antwort, und schreibst sie in das `Standort` Turtle.
+Setzte am Ende deines Programms die `Breiten-` und `Längengrad`-Variablen auf neue Werte und benutze dann die `standort` Turtle-Variable, um einen Punkt an der neuen Stelle zu zeichnen. (Wähle eine andere Farbe, wenn du möchtest.) Rufe dann den `iss-pass` Web Service mit den Koordinaten auf (Du kannst den Code kopieren und einfügen, um dies zu tun). Abschließend erhältst du die `Anstiegszeit` aus der Antwort, und schreibst sie in das `Standort` Turtle.
 
 \--- /hint \---
 
