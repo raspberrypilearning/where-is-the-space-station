@@ -44,7 +44,7 @@ Wir brauchen das Python `Zeit` Modul, damit wir es in einer lesbaren Form drucke
 
 ![Screenshot](images/iss-pass-write.png)
 
-(Du kannst die `drucken` Zeile entfernen oder sie in einen Kommentar verwandeln, indem du `#` am Anfang hinzufügst, damit dein Skript sie ignoriert.)
+(Du kannst die `'print'` Zeile entfernen oder sie in einen Kommentar verwandeln, indem du `#` am Anfang hinzufügst, damit dein Skript sie ignoriert.)
 
 + Wenn du möchtest, kannst du die Farbe und das Format des Textes ändern. 
 
