@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## Când va fi SSI deasupra?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+Există, de asemenea, un serviciu web pe care îl poți folosi pentru a afla când SSI va fi ulterior deasupra unei anumite locații.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Să aflăm când SSI va fi ulterior peste Centrul Spațial din Houston, SUA, care se află la latitudinea ` 29.5502 ` și longitudinea ` 95.097 `.
 
-+ First let’s plot a dot on the map at these coordinates:
++ În primul rând, să desenăm un punct pe hartă la aceste coordonate:
 
-![screenshot](images/iss-houston.png)
+![captură de ecran](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Acum, să obținem data și ora la care SSI este deasupra.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Ca și până acum, puteți apela serviciul web introducând URL-ul său în bara de adrese a unui browser web: <a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
 
-You should see an error:
+Ar trebui să vezi o eroare:
 
-![screenshot](images/iss-pass-error.png)
+![captură de ecran](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Acest serviciu web ia latitudinea și longitudinea ca parametri de intrare, deci trebuie să le incluzi în adresa URL. Intrările sunt adăugate după un `? ` și separate prin `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Adaugă parametrii ` lat ` și ` lon ` la url după cum urmează: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
 
-![screenshot](images/iss-passtimes.png)
+![captură de ecran](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+Răspunsul include mai multe perioade cand a trecut pe deasupra și ne vom uita doar la prima. Timpul este oferit sub forma unei mărci temporale Unix (vei putea să-l convertesti la o oră lizibilă în scriptul tău Python).
 
-[[[generic-unix-timestamp]]]
+[generic-unix-timestamp]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Acum trebuie să apelezi același serviciu web din Python. Adaugă următorul cod la sfârșitul scriptului:
 
-![screenshot](images/iss-passover.png)
+![captură de ecran](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Acum să obținem primul moment de trecere pe deasupra din rezultat. Adaugă următorul cod:
 
-![screenshot](images/iss-print-pass.png)
+![captură de ecran](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+Vom avea nevoie de modulul Python ` time `, astfel încât să-l putem tipări într-o formă care poate fi citită și să-l convertim la ora locală. Apoi, vom primi script-ul pentru a scrie timpul de trecere deasupra punctului pentru Houston.
 
-+ Add an `import time` line at the top of your script:
++ Adaugă o linie `import time` in partea de sus a scriptului:
 
-![screenshot](images/iss-time.png)
+![captură de ecran](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ Funcția ` time.ctime () ` va converti marca temporală într-o formă care poate fi citită pe care o poți scrie pe harta ta:
 
-![screenshot](images/iss-pass-write.png)
+![captură de ecran](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(Poți elimina imprimarea liniei `print` sau să o transformi într-un comentariu adăugând ` # ` la început, astfel încât scriptul să o ignore.)
 
-+ If you like, you can change the colour and format of the text. 
++ Dacă vrei, poți modifica culoarea și formatul textului. 
 
-[[[generic-python-turtle-write]]]
+[generic-python-turtle-write]
