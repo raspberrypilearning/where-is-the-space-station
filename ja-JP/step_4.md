@@ -1,12 +1,12 @@
-## Challenge: show the craft
+## チャレンジ：宇宙飛行士が乗っている宇宙ステーションの名前を表示しよう
 
 \--- challenge \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+宇宙飛行士の名前に加えて、Webサービスは、ISSなど、彼らが乗っているいる宇宙船（宇宙ステーション）も提供します。
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ スクリプトに追加して、各宇宙飛行士が乗っている宇宙船を表示することはできますか？ 
 
-Example:
+例：
 
     People in Space:  3
     Yuri Malenchenko in ISS
@@ -18,19 +18,19 @@ Example:
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+`for p in people:`の中にあるprintステートメントにコードを追加する必要があります。 複数の項目をカンマで区切って表示することができます。
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+`name` の値を`p[name]`で得ることができます - ではどうやったら`craft`の値を得ることができますか？
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+`for` ループを以下のように変えてください：
 
 ```python
 for p in people:
