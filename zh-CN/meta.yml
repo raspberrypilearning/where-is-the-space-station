@@ -1,25 +1,25 @@
 ---
-title: Where is the Space Station?
+title: 国际空间站在哪里？
 hero_image: images/banner.png
-description: Find the exact location of the ISS
+description: 绘制 ISS 的准确位置。
 listed: true
 copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: Introduction
+    title: 介绍
   - 
-    title: What you will need
+    title: 你需要准备这些
   - 
-    title: Who is in space?
+    title: 谁在太空中？
   - 
-    title: 'Challenge: show the craft'
+    title: '挑战：显示飞行器'
   - 
-    title: Where is the ISS?
+    title: ISS在哪里？
   - 
-    title: Plotting the ISS on a map
+    title: 在地图上描出代表ISS的点
   - 
-    title: When will the ISS be overhead?
+    title: 国际空间站什么时候会从我们头顶飞过呢？
   - 
-    title: 'Challenge: find more pass-over times'
+    title: '挑战：找到更多从头顶飞过的时间'
