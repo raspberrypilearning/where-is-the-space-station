@@ -1,10 +1,10 @@
-## Introduction
+## Introducere
 
-In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+În acest proiect, veți folosi un serviciu web pentru a afla locația actuală a Stației Spațiale Internaționale (SSI) și a o reprezenta pe o hartă.
 
-### Instructions
+### Instrucțiuni
 
-The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+Pictograma stației spațiale arată locația curentă a SSI. Textul galben arată urmatorul moment în care SSI va trece peste Centrul Spațial din Houston, SUA.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@ The space station icon shows the current location of the ISS. The yellow text sh
   <img src="images/iss-final.png">
 </div>
 
-### What you will learn
+### Ce vei învăța
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+Acest proiect acoperă elemente din următoarele domenii ale [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
 
-+ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Combinați elemente de programare pentru a rezolva o problemă.](https://www.raspberrypi.org/curriculum/programming/builder)
