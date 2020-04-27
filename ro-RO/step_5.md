@@ -1,12 +1,12 @@
-## Where is the ISS?
+## Unde este SSI?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+Stația Spațială Internațională este pe orbită în jurul Pământului. Face o rotație completă a pământului aproximativ la fiecare oră și jumătate și călătorește cu o viteză medie de 7,66 km pe secundă. E rapidă!
 
-Let’s use another web service to find out where the International Space Station is.
+Să folosim un alt serviciu web pentru a afla unde se află Stația Spațială Internațională.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Mai întâi, deschide adresa URL pentru serviciul web într-o nouă filă din browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank"> http://api.open-notify.org/iss-now.json </a>
 
-You should see something like this:
+Ar trebui să vezi ceva ca mai jos:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+Rezultatul conține coordonatele punctului de pe Pământ pe care SSI se află în prezent.
 
-[[[generic-theory-lat-long]]]
+[generic-theory-lat-long]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Acum trebuie să apelezi același serviciu web din Python. Adăugă următorul cod la sfârșitul scriptului pentru a obține locația curentă a SSI:
 
-![screenshot](images/iss-location.png)
+![captură de ecran](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Să creăm variabile pentru a stoca latitudinea și longitudinea, apoi să le tipărim:
 
-![screenshot](images/iss-coordinates.png)
+![captură de ecran](images/iss-coordinates.png)
