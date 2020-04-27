@@ -1,17 +1,17 @@
-## What you will need
+## 必要なもの
 
-### Hardware
+### ハードウェア
 
-+ A computer with internet connection
++ インターネットに接続されたコンピュータ
 
-### Software
+### ソフトウェア
 
-+ [Trinket](https://trinket.io/) online editor
++ [Trinket](https://trinket.io/) オンラインエディタ
 
-### Additional resources
+### その他のリソース
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ 最初のプロジェクト - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ このプロジェクトの完全なバージョン - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
 + Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
