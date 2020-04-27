@@ -1,39 +1,39 @@
-## Challenge: show the craft
+## Provocare: arată meseria
 
 \--- challenge \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+În plus față de numele astronauților, serviciul web oferă și navele pe care se află, cum ar fi SSI.
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ Poți adăuga cod la scriptul tău astfel încât să imprime și navele pentru fiecare astronaut? 
 
-Example:
+Exemplu:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Oameni în spațiu:  3
+    Yuri Malenchenko în ISS
+    Timothy Kopra în ISS
+    Timothy Peake în ISS
     
 
 \--- hints \---
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+Trebuie să adaugi codul la instrucțiunea de imprimare din ` for p in oameni: `. Nu uita că poți imprima mai multi itemi prin separarea lor cu virgule.
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+Obții valoarea pentru ` name ` folosind ` p[name]` - cum poți obține valoarea pentru ` craft`?
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+Schimbă bucla ` for` astfel încât să arate așa:
 
 ```python
-for p in people:
+for p in oameni:
   print(p['name'], ' in ', p['craft'])
 ```
 
