@@ -18,19 +18,19 @@
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+`for p in people:` 코드를 추가해야 합니다. 쉼표로 구분하여 여러 항목을 출력할 수 있음을 기억하세요.
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+`name`의 값을 `p[name]`을 통해 얻을 수 있습니다. — `craft` 값을 어떻게 받을 수 있습니까?
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+`for` 루프를 아래와 같이 변경할 수 있습니다:
 
 ```python
 for p in people:
