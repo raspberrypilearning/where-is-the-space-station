@@ -38,12 +38,12 @@ ISS의 위치를 지도에 표시해 준다면 더 알아보기 쉽겠죠. Pytho
 
 + ISS는 지도의 중심에서 움직이기 시작하고, 이제 올바른 위치로 옮겨 봅시다:
 
-![screenshot](images/iss-plot.png)
+![스크린샷](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**참고:** 보통 위도가 먼저 주어지지만, `(x,y)` 좌표를 그릴 때에는 경도를 먼저 지정해 주어야 합니다.
 
 + 프로그램을 테스트해 보세요. ISS는 현재 지구 상의 위도, 경도로 이동해야 합니다. 
 
-![screenshot](images/iss-plotted.png)
+![스크린샷](images/iss-plotted.png)
 
 + 조금 기다렸다가 프로그램을 다시 실행해서 ISS가 어디로 이동했는지 확인해 보세요.
