@@ -7,75 +7,75 @@ import time
 
 # http://open-notify.org/Open-Notify-API/
 url = 'http://api.open-notify.org/astros.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+响应 = urllib.request.urlopen(url)
+结果 = json.loads(响应.read())
 
-print('People in Space: ', result['number'])
+print('太空中的人：', 结果['number'])
 
-people = result['people']
+人 = 结果['people']
 
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+for p in 人:
+  print(p['name'], ' 在 ', p['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+响应 = urllib.request.urlopen(url)
+结果 = json.loads(响应.read())
 
-location = result['iss_position']
-lat = float(location['latitude'])
-lon = float(location['longitude'])
-print('Latitude: ', lat)
-print('Longitude: ', lon)
+位置 = 结果['iss_position']
+纬度 = float(位置['latitude'])
+经度 = float(位置['longitude'])
+print('纬度： ', 纬度)
+print('经度： ', 经度)
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-screen.bgpic('map.gif')
+屏幕 = turtle.Screen()
+屏幕.setup(720, 360)
+屏幕.setworldcoordinates(-180, -90, 180, 90)
+屏幕.bgpic('map.gif')
 
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-# image source:
-# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
-screen.bgpic('map.gif')
+屏幕 = turtle.Screen()
+屏幕.setup(720, 360)
+屏幕.setworldcoordinates(-180, -90, 180, 90)
+# 图片来源：
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 来源：NASA
+屏幕.bgpic('map.gif')
 
-screen.register_shape('iss.gif')
-iss = turtle.Turtle()
-iss.shape('iss.gif')
-iss.setheading(90)
+屏幕.register_shape('iss.gif')
+空间站 = turtle.Turtle()
+空间站.shape('iss.gif')
+空间站.setheading(90)
 
-iss.penup()
-iss.goto(lon, lat)
+空间站.penup()
+空间站.goto(经度, 纬度)
 
-# When Does ISS next pass over me?
-#london
-#lat = 51.5072
-#lon = 0.1275
+# 国际空间站下次何时从我头顶飞过？
+# 伦敦
+#纬度 = 51.5072
+#经度 = 0.1275
 
-# Tokyo
+# 东京
 #lat = 35.689487
 #lon = 139.691706
 
-# Space Center, Houston
-lat = 29.5502
-lon = -95.097
+# 休斯顿太空中心
+纬度 = 29.5502
+经度 = -95.097
 
-location = turtle.Turtle()
-location.penup()
-location.color('yellow')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+位置 = turtle.Turtle()
+位置.penup()
+位置.color('yellow')
+位置.goto(经度,纬度)
+位置.dot(5)
+位置.hideturtle()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(纬度) + '&lon=' + str(经度)
+响应 = urllib.request.urlopen(url)
+结果 = json.loads(响应.read())
 
-#print result
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+# 打印结果
+越过 = 结果['响应'][1]['risetime']
+位置.write(time.ctime(越过))
 
 
 
