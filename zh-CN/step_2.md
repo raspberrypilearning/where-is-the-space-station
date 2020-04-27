@@ -1,17 +1,17 @@
-## What you will need
+## 你需要哪些准备
 
-### Hardware
+### 硬件
 
-+ A computer with internet connection
++ 可以连接互联网的计算机
 
-### Software
+### 软件
 
-+ [Trinket](https://trinket.io/) online editor
++ [Trinket](https://trinket.io/) 在线编辑器
 
-### Additional resources
+### 其他资源
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ 入门项目 - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ 该项目的完整版本 - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ 打开“Nofify”网络服务 - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
