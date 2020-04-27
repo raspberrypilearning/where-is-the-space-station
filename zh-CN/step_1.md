@@ -1,10 +1,10 @@
-## Introduction
+## 介绍
 
-In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+在这个项目中，你将使用网络服务来查找国际空间站（ISS）目前的位置，并绘制其在地图上的位置。
 
-### Instructions
+### 说明
 
-The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+空间站图标显示了国际空间站目前的位置。 黄色文本显示了国际空间站下次飞过美国休斯顿空间中心的时间。
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@ The space station icon shows the current location of the ISS. The yellow text sh
   <img src="images/iss-final.png">
 </div>
 
-### What you will learn
+### 你将学到什么
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+本项目涵盖[Raspberry Pi 树莓派数字制作课程](http://rpf.io/curriculum)如下几方面内容：
 
-+ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [综合利用编程结构解决问题。](https://www.raspberrypi.org/curriculum/programming/builder)
