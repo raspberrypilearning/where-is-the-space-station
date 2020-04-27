@@ -1,12 +1,12 @@
-## Where is the ISS?
+## ISSはどこですか？
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+国際宇宙ステーションは地球周回軌道上にあります。 地球の周回軌道をおよそ1時間半で完了し、毎秒7.66kmの平均速度で移動します。 これは速い！
 
-Let’s use another web service to find out where the International Space Station is.
+国際宇宙ステーションの場所を調べるために別のWebサービスを利用しましょう。
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ まず、Webブラウザの新しいタブでWebサービスのURLを開きます <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-You should see something like this:
+以下のようなものが表示されます：
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+ISSの位置は地球上の地点の座標としてあらわされています。
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ PythonからこのWebサービスを呼び出す必要があります。 スクリプトの最後に次のコードを追加して、ISSの現在の場所を取得します。
 
-![screenshot](images/iss-location.png)
+![スクリーンショット](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ 緯度と経度を格納する変数を作って表示しましょう。
 
-![screenshot](images/iss-coordinates.png)
+![スクリーンショット](images/iss-coordinates.png)
