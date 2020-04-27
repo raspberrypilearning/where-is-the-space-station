@@ -1,17 +1,17 @@
-## What you will need
+## De ce vei avea nevoie
 
 ### Hardware
 
-+ A computer with internet connection
++ Un computer cu o conexiune la internet
 
 ### Software
 
-+ [Trinket](https://trinket.io/) online editor
++ editorul online [ Trinket](https://trinket.io/)
 
-### Additional resources
+### Resurse suplimentare
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ Proiect de început - [ rpf.io/iss-on ](http://rpf.io/iss-on) {: Target = "_ blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ O versiune finalizată a acestui proiect - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) {: Target = "_ blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ Serviciile web Open Notify - [ api.open-notify.org ](http://api.open-notify.org/) {: Target = "_ blank"}
