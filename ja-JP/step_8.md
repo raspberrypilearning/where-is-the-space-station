@@ -1,45 +1,45 @@
-## Challenge: find more pass-over times
+## チャレンジ：より多くの通過日時を見つける
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+興味のある場所の緯度と経度を調べるには、<a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>などのWebサイトを使用できます。
 
-+ Can you look up and plot the pass-over times for more locations? 
++ もっと多くの場所の通過日時を調べて表示できますか？ 
 
-![screenshot](images/iss-final.png)
+![スクリーンショット](images/iss-final.png)
 
 \--- hints \---
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+プログラムの最後に、`lat`（経度）と`long`（緯度）の変数を新しい値に設定し、次に `location`turtle変数を使用して新しい位置を地図に点として表示しましょう。 （必要に応じて別の色を選択します）次に、新しい値を使い `iss-pass` Webサービスを呼び出しましょう（コードをコピーして貼り付けてもいいです）。 最後に、Webサービスから返ってきたデータから`risetime` を取得しましょう。 `location` 変数を使ってそのデータを地図に表示しましょう。
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+このコードをプログラムの最後に追加しましょう。他に足りないものがあったらそれも加えてください。 ヒューストンの宇宙センターを通過する時間を当てはめるコードをコピー＆ペーストして、必要な変更を加えてもかまいません。
 
 ```python
-# Your chosen location
+#決めた位置の経度と緯度。
 lat = XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+#location turtle変数を使い(新しくturtleを作る必要はありません)、地図に違う色の点を描こう。
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+#自分が決めた緯度と経度に対するデータを`iss-pass.json`から読み取ろう。
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+#`risetime`（通過日時）をlocationタートル変数を使い、地図に表示しよう。
 ```
 
 \--- /hint \---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+以下は、カザフスタン南部の宇宙基地であるバイコヌール宇宙基地の場所を使用した例です。 コードはヒューストン宇宙センターを通過した日時を表示するために書いたコードの後に加えてください。
 
 ```python
-# Baikonur Cosmodrome
+# カザフスタン南部の宇宙港バイコヌール宇宙センターの位置
 lat = 45.86
 lon = 63.31
 
@@ -58,7 +58,7 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+他の場所も追加してみてください！
 
 \--- /hint \---
 
