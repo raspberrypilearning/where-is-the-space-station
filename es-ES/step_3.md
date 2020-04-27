@@ -28,7 +28,7 @@ Deberás ver algo como esto:
     }
     
 
-Los datos están en vivo, por lo que probablemente verás un resultado ligeramente diferente. El formato de los datos se llama `JSON` (pronunciado como 'Jason').
+The data is live, so you will probably see a slightly different result. El formato de los datos se llama `JSON` (pronunciado como 'Jason').
 
 [[[generic-json]]]
 
@@ -36,7 +36,7 @@ Debes llamar al servicio web desde un código de Python para poder usar los resu
 
 + Abre este trinket: <http://rpf.io/iss-on> {:target = "_ blank"}.
 
-Los módulos `urllib.request` y `json` ya han sido importados para ti en la parte superior del script `main.py`.
+The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
 
 + Agrega el siguiente código a `main.py` para almacenar la URL del servicio web al que acabas de acceder como una variable:
 
@@ -98,4 +98,4 @@ Deberás ver algo como esto:
     Timothy Peake
     
 
-**Nota:** Estás utilizando datos en vivo, por lo que tus resultados dependerán de la cantidad de personas que actualmente estén en el espacio.
+**Note:** You are using live data, so your results will depend on the number of people currently in space.
