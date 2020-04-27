@@ -1,25 +1,25 @@
 ---
-title: Where is the Space Station?
+title: 宇宙ステーションはどこですか？
 hero_image: images/banner.png
-description: Find the exact location of the ISS
+description: ISSの正確な場所を見つける
 listed: true
 copyedit: false
 version: 3.1.0
-last_tested: 2018-11-22
+last_tested: 2018-22-01
 steps:
   - 
-    title: Introduction
+    title: 前書き
   - 
-    title: What you will need
+    title: あなたが必要とするもの
   - 
-    title: Who is in space?
+    title: 誰が宇宙にいるのか？
   - 
-    title: 'Challenge: show the craft'
+    title: 'チャレンジ：宇宙飛行士が乗っている宇宙ステーションの名前を表示しよう'
   - 
-    title: Where is the ISS?
+    title: ISSはどこですか？
   - 
-    title: Plotting the ISS on a map
+    title: マップにISSの位置をプロットする
   - 
-    title: When will the ISS be overhead?
+    title: ISSはいつ特定の場所の位置を通過するか？
   - 
-    title: 'Challenge: find more pass-over times'
+    title: 'チャレンジ：より多くの通過日時を見つける'
