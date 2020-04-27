@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## ISSはいつ特定の場所を通過するか？
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+ISSがいつ特定の場所を通過するかを提供するWebサービスがあります。
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+ISSが、いつヒューストンの宇宙センターの位置を通過するか調べて見ましょう：緯度 `29.5502` と経度 `95.097`。
 
-+ First let’s plot a dot on the map at these coordinates:
++ まず、地図上にこの座標を点として表示しましょう：
 
-![screenshot](images/iss-houston.png)
+![スクリーンショット](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+ISSが特定の場所の位置を通過する日時を取得しましょう。
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ 前と同じように、WebブラウザのアドレスバーにURLを入力すると、Webサービスを呼び出すことができます <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-You should see an error:
+エラーが表示されます。
 
-![screenshot](images/iss-pass-error.png)
+![スクリーンショット](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+このWebサービスは特定の場所の緯度と経度が必要です。URLにそれらをあらわす情報を加える必要があります。 Webサービスに提供する情報は`？`の後に加えて、`&`で分離します。
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ `lat`（緯度）と`lon`（経度）の情報をURLに追加しましょう： <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
-![screenshot](images/iss-passtimes.png)
+![スクリーンショット](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+Webサービスから返ってきたデータにはいくつかの日時が含まれています。最初のものだけを見ていきます。 時間はUnixのタイムスタンプとして与えられます(Pythonスクリプトで読み込み可能な時間に変換することができます)。
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ では、PythonからWebサービスを呼び出しましょう。 スクリプトの最後に次のコードを加えましょう。
 
-![screenshot](images/iss-passover.png)
+![スクリーンショット](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Webサービスから返ってきたデータから、最初の日時を取得しましょう。 次のコードを追加します。
 
-![screenshot](images/iss-print-pass.png)
+![スクリーンショット](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+私たちはPythonの`time` モジュールを必要とします。このモジュールを使うと、現地時間に変換してデータを読みやすい形式で表示することができます。 ISSがヒューストンを示す位置をいつ通過するか探るスクリプトを書きます。
 
-+ Add an `import time` line at the top of your script:
++ あなたのスクリプトの上部に `import time` 行を追加してください：
 
-![screenshot](images/iss-time.png)
+![スクリーンショット](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ `time.ctime()` 関数はタイムスタンプを読みやすい形式に変換します。この関数を使うと、地図に読みやすい形式で日時が表示されます。
 
-![screenshot](images/iss-pass-write.png)
+![スクリーンショット](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+（ `print` 行を削除、もしくは行の最初に`＃` を追加してコメントに変えてもいいです。（スクリプトはコメントを無視します））
 
-+ If you like, you can change the colour and format of the text. 
++ 必要に応じて、テキストの色と書式を変更することができます。 
 
 [[[generic-python-turtle-write]]]
