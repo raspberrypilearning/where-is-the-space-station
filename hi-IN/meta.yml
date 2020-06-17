@@ -1,21 +1,17 @@
-hero_image: images/where-is-the-space-station.png
-theme: blue
-duration: 2
+---
+title: स्पेस स्टेशन कहाँ है?
+hero_image: images/banner.png
+description: ISS के सटीक स्थान का पता लगाएँ
 listed: true
-ingredient: false
 copyedit: false
-curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
-title: अन्तरिक्ष स्टेशन कहाँ है?
-description: ISS के बिल्कुल सटीक स्थान पता लगाएँ।
-original_url: https://codeclubprojects.org/en-GB/python/iss
-interests: space
-technologies: python
-site_areas: codeclub, python
+version: 3.1.0
+last_tested: 2018-11-22
 steps:
-- title: भूमिका
-- title: अन्तरिक्ष में कौन है?
-- title: 'चुनौती: क्राफ्ट दिखाएँ'
-- title: ISS कहाँ है?
-- title: ISS सिर के ऊपर से कब गुजरेगा?
-- title: 'चुनौती: पासओवर के और समय ढूँढ़ें'
-
+  - title: परिचय
+  - title: आपको किन चीजों की आवश्यकता होगी
+  - title: अंतरिक्ष में कौन है?
+  - title: 'चुनौती: अंतरिक्ष यान बताइए'
+  - title: आईएसएस (ISS) कहां है?
+  - title: आईएसएस (ISS) को मैप पर दिखाना
+  - title: आईएसएस (ISS) ऊपर से कब गुज़रेगा?
+  - title: 'चुनौती: अपनी मनपसंद जगह चुनिए और बताइये की आईएसएस (ISS) उनके ऊपर से कब गुज़रेगा?'
