@@ -8,17 +8,17 @@ version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: 介绍
+    title: 简介
   - 
-    title: 你需要准备这些
+    title: 你需要哪些准备
   - 
     title: 谁在太空中？
   - 
-    title: '挑战：显示飞行器'
+    title: '挑战：展示国际空间站的位置'
   - 
-    title: ISS在哪里？
+    title: 国际空间站在哪里？
   - 
-    title: 在地图上描出代表ISS的点
+    title: 在地图上描出代表国际空间站的点
   - 
     title: 国际空间站什么时候会从我们头顶飞过呢？
   - 
