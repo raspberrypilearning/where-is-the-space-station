@@ -14,4 +14,4 @@
 
 + 该项目的完整版本 - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ 打开“Nofify”网络服务 - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ 打开“Notify”网络服务 - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
