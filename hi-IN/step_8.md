@@ -1,45 +1,44 @@
-## Challenge: find more pass-over times
+## चुनौती: अपनी मनपसंद जगह चुनिए और बताइये की आईएसएस (ISS) उनके ऊपर से कब गुज़रेगा?
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+अपनी मनपसंद जगह के लेटीट्‍यूड और लोंगीट्‍यूड को देखने के लिए, आप किसी वेबसाइट का उपयोग कर सकते हैं जैसे <a href="http://www.latlong.net/" target="_blank"> www.latlong.net/ </a>
 
-+ Can you look up and plot the pass-over times for more locations? 
++ क्या आप अधिक स्थानों को देख कर उनके पास-ओवर टाइम प्लॉट कर सकते हैं? 
 
-![screenshot](images/iss-final.png)
+![स्क्रीनशॉट](images/iss-final.png)
 
 \--- hints \---
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+अपने प्रोग्राम के अंत में, `lat` और `long` वेरिएबल की नई वैल्यूज सेट करें और फिर नए स्थान पर एक डॉट लगाने के लिए `location` टर्टल वेरियबल का उपयोग करें। (यदि आप चाहें तो एक अलग रंग चुन सकते हैं।) फिर `iss-pass` वेब सेवा को निर्देशांक के साथ कॉल करें (आप ऐसा करने के लिए कोड को कॉपी और पेस्ट कर सकते हैं)। अंत में, परिणाम से `risetime` प्राप्त करें, और इसे `location` टर्टल के साथ लिखें।
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+इस कोड को अपने प्रोग्राम के अंत में जोड़ें और खाली स्थानों को भरें। ध्यान दें कि आप ह्यूस्टन में स्पेस सेंटर के पास-ओवर टाइम प्राप्त करने के लिए आपके द्वारा लिखे गए कोड को कॉपी और पेस्ट कर सकते हैं, और फिर आप उसमे आवश्यक बदलाव कर सकते हैं।
 
 ```python
-# Your chosen location
+# आपका चुना हुआ स्थान
 lat = XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# `स्थान` टर्टल के साथ एक डॉट ड्रा करें (एक नया टर्टल बनाने की कोई जरूरत नहीं), एक अलग रंग चुनें
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
-
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# अपने नए लेटीट्‍यूड और लोंगीट्‍यूड के लिए `iss-pass.json` से परिणाम प्राप्त करें
+# परिणाम से `risetime` प्राप्त करें और इसे मैप पर लिखने के लिए` `location` टर्टल का उपयोग करें
 ```
 
 \--- /hint \---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+दक्षिणी कजाखस्तान के एक स्पेसपोर्ट बैकोनूर कोस्मोड्रोम के स्थान का उपयोग करते हुए एक उदाहरण दिया गया है। ह्यूस्टन स्पेस सेंटर पास-ओवर टाइम को प्लॉट करने के बाद, कोड आपके प्रोग्राम के अंत में चला जाता है।
 
 ```python
-# Baikonur Cosmodrome
+# बैकोनूर कोस्मोड्रोम
 lat = 45.86
 lon = 63.31
 
@@ -49,7 +48,7 @@ location.goto(lon,lat)
 location.dot(5)
 location.hideturtle()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + &lon=' + str(lon)
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
@@ -58,7 +57,7 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+अधिक स्थानों को जोड़ने का प्रयास करें!
 
 \--- /hint \---
 
