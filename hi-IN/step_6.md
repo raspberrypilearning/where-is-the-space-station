@@ -1,49 +1,49 @@
-## Plotting the ISS on a map
+## आईएसएस (ISS) को मैप पर दिखाना
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+यह एक मैप पर जगह दिखाने के लिए उपयोगी होगा। आप पायथन टर्टल ग्राफिक्स का उपयोग करके ऐसा कर सकते हैं!
 
-+ First we'll need to import the `turtle` Python library:
++ सबसे पहले हमें `turtle` पायथन लाइब्रेरी को इम्पोर्ट करना होगा:
 
-![screenshot](images/iss-turtle.png)
+![स्क्रीनशॉट](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
++ अगला, बैकग्राउंड फोटो के रूप में एक वर्ल्ड मैप लोड करें। वहाँ एक पहले से ही 'map.gif' नामक आपके ट्रिंकेट में शामिल है! NASA ने यह सुंदर मैप प्रदान किया है और पुन: उपयोग की अनुमति दी है। 
 
-![screenshot](images/iss-map.png)
+![स्क्रीनशॉट](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+मैप `(0,0)` लेटीट्‍यूड और लोंगीट्‍यूड पर केंद्रित है, और आपको केवल इसी की आवश्यकता है।
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ आपको फोटो के आकार से मेल खाने के लिए स्क्रीन का आकार निर्धारित करने की आवश्यकता है, जो कि 720 से 360 पिक्सेल है। `screen.setup(720, 360)` जोड़ें:
 
-![screenshot](images/iss-setup.png)
+![स्क्रीनशॉट](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ आप टर्टल को आपके द्वारा चुने गए लेटीट्‍यूड और लोंगीट्‍यूड पर भेजने में सक्षम होना चाहते हैं। इसे आसान बनाने के लिए, आप स्क्रीन को आपके द्वारा उपयोग किए जा रहे निर्देशांक जैसे सेट कर सकते हैं:
 
-![screenshot](images/iss-world.png)
+![स्क्रीनशॉट](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+अब निर्देशांक लेटीट्‍यूड और लोंगीट्‍यूड से मेल खाएँगे जो आपको वेब सेवा से वापस मिलते हैं।
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ आइए आईएसएस (ISS) के लिए एक टर्टल आइकन बनाएं। आपकी ट्रिंकेट में 'iss.gif' और 'iss2.gif' शामिल हैं - उन दोनों को आज़माएँ और देखें कि आप किसे पसंद करते हैं। 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+आपका कोड इस प्रकार दिखना चाहिए:
 
-![screenshot](images/iss-image.png)
+![स्क्रीनशॉट](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ ISS नक्शे के केंद्र में शुरू होता है, आइये अब इसे सही स्थान पर ले जाते हैं:
 
-![screenshot](images/iss-plot.png)
+![स्क्रीनशॉट](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Note:** लेटीट्‍यूड सामान्य रूप से पहले दिया जाता है, लेकिन हमें `(x, y)` निर्देशांक प्लॉट करते समय सबसे पहले लोंगीट्‍यूड देना होगा।
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ इसे चलाकर अपने प्रोग्राम को टेस्ट करें। आईएसएस (ISS) को पृथ्वी के ऊपर अपने वर्तमान स्थान पर जाना चाहिए। 
 
-![screenshot](images/iss-plotted.png)
+![स्क्रीनशॉट](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ कुछ सेकंड रुकें और अपने प्रोग्राम को फिर से चलाकर देखें कि आईएसएस (ISS) कहां पहुंच गया है।
