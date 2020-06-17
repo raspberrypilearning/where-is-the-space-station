@@ -1,39 +1,39 @@
-## Challenge: show the craft
+## Meydan okuma: aracı göster
 
-\--- challenge \---
+\--- meydan okuma \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+Astronotların adının yanı sıra, web hizmeti ISS gibi üzerinde bulundukları aracın adını sağlar.
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ Scriptinizin (kod) her astronotun bulunduğu aracı yazdırmasını sağlayabilirmisiniz? 
 
-Example:
+Örneğin:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    Uzaydaki insan sayısı: 3
+    Yuri Malenchenko
+    Timothy Kopra
+    Timothy Peake
     
 
 \--- hints \---
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+`for p in insanlar:` daki print ifadesine kod eklemelisiniz. Unutmayın birden çok öğeyi virgül kullanarak ayırarak yazdırabilirsiniz.
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+`p[name]` kullanarak `name` değerini elde edersiniz — `craft`? için nasıl değeri elde edebilirsiniz?
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+`for` döngünüzü aşağıdaki gibi görünecek şekilde değiştirin:
 
 ```python
-for p in people:
+for p in insanlar:
   print(p['name'], ' in ', p['craft'])
 ```
 
