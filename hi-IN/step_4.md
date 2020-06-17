@@ -1,12 +1,12 @@
-## Challenge: show the craft
+## चुनौती: अंतरिक्ष यान बताइए
 
 \--- challenge \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+अंतरिक्ष यात्रियों के नाम के साथ-साथ, वेब सेवा उनके अंतरिक्ष यान का नाम भी बताती है, जैसे की आईएसएस (ISS)।
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ क्या आप अपनी स्क्रिप्ट में कुछ जोड़ सकते हैं ताकि यह प्रत्येक अंतरिक्ष यात्री के लिए उसके अंतरिक्ष यान को भी प्रिंट कर सके? 
 
-Example:
+उदाहरण:
 
     People in Space:  3
     Yuri Malenchenko in ISS
@@ -18,19 +18,19 @@ Example:
 
 \--- hint \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+आपको `for p in people:` वाली प्रिंट स्टेटमेंट में कोड जोड़ना होगा। याद रखें कि आप एक से ज़्यादा चीज़ें परिंट करना चाहते हैं तो उन्हें आप अल्पविराम(",") से अलग कर सकते हैं।
 
 \--- /hint \---
 
 \--- hint \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+यदि आपको `name` की वैल्यू `p[name]`का उपयोग करने से मिलती है - तो आपको अंतरिक्ष यान (`craft`) की वैल्यू कैसे मिलेगी?
 
 \--- /hint \---
 
 \--- hint \---
 
-Change your `for` loop so it looks like this:
+अपने `for` लूप को इस तरह बदलें ताकि वो कुछ इस तरह दिखाई दे:
 
 ```python
 for p in people:
