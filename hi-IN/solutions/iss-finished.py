@@ -49,16 +49,16 @@ iss.setheading(90)
 iss.penup()
 iss.goto(lon, lat)
 
-# When Does ISS next pass over me?
-#london
+# आईएसएस (ISS) अगली बार मेरे ऊपर से कब गुज़रेगा?
+#लंडन
 #lat = 51.5072
 #lon = 0.1275
 
-# Tokyo
+# टोक्यो
 #lat = 35.689487
 #lon = 139.691706
 
-# Space Center, Houston
+# स्पेस सेंटर, ह्यूस्टन
 lat = 29.5502
 lon = -95.097
 
@@ -73,7 +73,7 @@ url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-#print result
+# परिणाम प्रिंट करें
 over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 
