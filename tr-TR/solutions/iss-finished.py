@@ -8,40 +8,40 @@ import time
 # http://open-notify.org/Open-Notify-API/
 url = 'http://api.open-notify.org/astros.json'
 response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+sonuc = json.loads(yanit.read())
 
-print('People in Space: ', result['number'])
+print('Uzaydaki Insanlar: ', sonuc['number'])
 
-people = result['people']
+insanlar = sonuc['insanlar']
 
-for p in people:
+for p in insanlar:
   print(p['name'], ' in ', p['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+yanit = urllib.request.urlopen(url)
+sonuc = json.loads(yanit.read())
 
-location = result['iss_position']
-lat = float(location['latitude'])
-lon = float(location['longitude'])
-print('Latitude: ', lat)
-print('Longitude: ', lon)
+konum = sonuc['iss_position']
+enlem = float(konum['latitude'])
+boylam = float(konum['longitude'])
+print('Enlem: ', enlem)
+print('Boylam: ', boylam)
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-screen.bgpic('map.gif')
+ekran = turtle.Screen()
+ekran.setup(720, 360)
+ekran.setworldcoordinates(-180, -90, 180, 90)
+ekran.bgpic('map.gif')
 
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-# image source:
+ekran = turtle.Screen()
+ekran.setup(720, 360)
+ekran.setworldcoordinates(-180, -90, 180, 90)
+# görüntü kaynağı:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
-screen.bgpic('map.gif')
+ekran.bgpic('map.gif')
 
-screen.register_shape('iss.gif')
+ekran.register_shape('iss.gif')
 iss = turtle.Turtle()
 iss.shape('iss.gif')
 iss.setheading(90)
@@ -49,33 +49,33 @@ iss.setheading(90)
 iss.penup()
 iss.goto(lon, lat)
 
-# When Does ISS next pass over me?
-#london
-#lat = 51.5072
-#lon = 0.1275
+# ISS ne zaman bir daha üzerimden geçecek?
+#londra
+#enlem = 51.5072
+#boylam = 0.1275
 
 # Tokyo
-#lat = 35.689487
-#lon = 139.691706
+#enlem = 35.689487
+#boylam = 139.691706
 
 # Space Center, Houston
-lat = 29.5502
-lon = -95.097
+enlem = 29.5502
+boylam = -95.097
 
-location = turtle.Turtle()
-location.penup()
-location.color('yellow')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+konum = turtle.Turtle()
+konum.penup()
+konum.color('yellow')
+konum.goto(boylam,enlem)
+konum.dot(5)
+konum.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+yanit = urllib.request.urlopen(url)
+sonuc = json.loads(yanit.read())
 
-#print result
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#sonucu yazdır
+uzerinde = sonuc['response'][1]['risetime']
+konum.write(time.ctime(uzerinde))
 
 
 
