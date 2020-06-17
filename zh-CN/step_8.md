@@ -1,42 +1,42 @@
-## Challenge: find more pass-over times
+## 挑战：找到更多飞过的时间
 
-\--- challenge \---
+\--- 挑战 \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+要查找感兴趣位置的纬度和经度，可以使用诸如<a href="http://www.latlong.net/" target="_blank"> www.latlong.net/ </a> 一样的网站。
 
-+ Can you look up and plot the pass-over times for more locations? 
++ 你可以查找并绘制更多的飞过时间吗？ 
 
-![screenshot](images/iss-final.png)
+![截屏](images/iss-final.png)
 
-\--- hints \---
+\--- 提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+在你的程序结束时， 将`lat`和`long`变量设置为新值，然后使用`location`turtle变量在新位置绘制一个点。 (你可以选择其他喜欢的颜色。)然后调用` iss-pass `Web服务 并传入坐标（你可以复制并粘贴代码来执行此操作）。 最后，从响应中获得`risetime`，然后使用turtle`location`将其写入。
 
-\--- /hint \---
+\--- /提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+将此代码添加到程序的末尾，并填写缺少的部分。 请注意，你可以复制并粘贴编写的代码，以获得飞过休斯顿太空中心的时间，然后进行必要的更改。
 
 ```python
-# Your chosen location
-lat = XX.XX
+# 您选定的位置
+lat= XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# 使用 `location` turtle 绘制一个点(无需创建一个新turtle)， 选择不同的颜色
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+# 从"iss-pass.json"中获取你新的纬度和经度结果
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# 从结果中获取`risetime` 并使用 `location` turtle在地图上写入它
 ```
 
-\--- /hint \---
+\--- /提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+这是使用哈萨克斯坦南部太空港Baikonur Cosmodrome位置的示例。 在绘制了飞跃休斯顿太空中心的时间之后，代码运行到你程序的末尾。
 
 ```python
 # Baikonur Cosmodrome
@@ -58,10 +58,10 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+尝试添加更多位置！
 
-\--- /hint \---
+\--- /提示 \---
 
 \--- /hints \---
 
-\--- /challenge \---
+\---/挑战\---
