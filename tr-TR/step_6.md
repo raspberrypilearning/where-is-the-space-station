@@ -1,49 +1,49 @@
-## Plotting the ISS on a map
+## ISS'yi harita üzerinde gösterme
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+ISS'nin konumunu haritada göstermek faydalı olabilir. Bunu Python Turtle grafiklerini kullanarak yapabilirsiniz!
 
-+ First we'll need to import the `turtle` Python library:
++ Öncelikle Python `turtle` kütüphanesini içe aktarmalıyız:
 
-![screenshot](images/iss-turtle.png)
+![ekran görüntüsü](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
++ Ardından, arka plan görüntüsü olarak bir dünya haritası yükleyin. Trinketinizde zaten 'map.gif' adında bir tane var! NASA bu güzel haritayı sağladı ve yeniden kullanım için izin verdi. 
 
-![screenshot](images/iss-map.png)
+![ekran görüntüsü](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+Harita `(0,0)` enlem ve boylamda ortalanmıştır, tam da ihtiyacınız olan şey bu.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ Ekran boyutunu, 720 x 360 piksel olan görüntünün boyutuna uyacak şekilde ayarlamanız gerekli. `ekran.setup(720, 360)`'ı Ekleyin:
 
-![screenshot](images/iss-setup.png)
+![ekran görüntüsü](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Turtle'ı belirli bir enlem ve boylama gönderebilmek isteyebilirsiniz. Bunu kolaylaştırmak için, ekranı kullandığınız koordinatlara uyacak şekilde ayarlayabilirsiniz:
 
-![screenshot](images/iss-world.png)
+![ekran görüntüsü](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Şimdi koordinatlar, web hizmetinden aldığınız enlem ve boylam ile eşleşecektir.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ ISS için bir turtlesimgesi oluşturalım. Trinketinizde 'iss.gif' ve 'iss2.gif' adlı iki ikon içeriyor - ikisini de deneyin ve hangisini kullanmak istediğinizi seçin. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+Kodunuz şöyle görünmeli:
 
-![screenshot](images/iss-image.png)
+![ekran görüntüsü](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ ISS haritanın ortasında başlıyor, şimdi doğru yere taşıyalım:
 
-![screenshot](images/iss-plot.png)
+![ekran görüntüsü](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Not**: Enlem normal olarak önce gelir, ancak `(x, y)`'yi gösterirken öncelikle boylam gelir.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Programınızı çalıştırarak(run) test edin. ISS, Dünya üzerindeki mevcut konumuna gitmelidir. 
 
-![screenshot](images/iss-plotted.png)
+![ekran görüntüsü](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Birkaç saniye bekleyin ve ISS'nin nereye gittiğini görmek için programınızı tekrar çalıştırın(run).
