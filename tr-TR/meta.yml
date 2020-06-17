@@ -1,25 +1,25 @@
 ---
-title: Where is the Space Station?
+title: Uzay İstasyonu nerede?
 hero_image: images/banner.png
-description: Find the exact location of the ISS
+description: ISS'nin tam konumunu bulun
 listed: true
 copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
   - 
-    title: Introduction
+    title: Giriş
   - 
-    title: What you will need
+    title: Nelere ihtiyacınız olacak
   - 
-    title: Who is in space?
+    title: Uzayda kim var?
   - 
-    title: 'Challenge: show the craft'
+    title: 'Meydan okuma: aracı göster'
   - 
-    title: Where is the ISS?
+    title: ISS nerede?
   - 
-    title: Plotting the ISS on a map
+    title: ISS'i harita üzerinde gösterme
   - 
-    title: When will the ISS be overhead?
+    title: "ISS ne zaman üstümüzde olacak?\n"
   - 
-    title: 'Challenge: find more pass-over times'
+    title: 'Meydan okuma: daha fazla geçiş süresi bulun'
