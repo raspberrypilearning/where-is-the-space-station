@@ -1,44 +1,44 @@
-## Challenge: show the craft
+## 挑战: 展示国际空间站的位置
 
-\--- challenge \---
+\--- 挑战 \---
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
+除了宇航员的名字外，网络服务还提供他们所使用的飞行器，如国际空间站等。
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
++ 您能添加到脚本中以便同时打印出每位宇航员的飞船吗？ 
 
-Example:
+例子：
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    太空中的人：3
+    尤里·马伦琴科
+    蒂莫西·科普拉
+    蒂莫西·皮克
     
 
-\--- hints \---
+\--- 提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas.
+您需要将代码添加到`for p in people:`的打印语句中， 。 请记住，您可以通过用逗号分隔多个项目来打印它们。
 
-\--- /hint \---
+\--- /提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`?
+您可以使用`p[name]` 获取`姓名`的信息。那么您如何获得`航天器`的值？
 
-\--- /hint \---
+\--- /提示 \---
 
-\--- hint \---
+\--- 提示 \---
 
-Change your `for` loop so it looks like this:
+更改你的`for`循环，让它看起来像这样：
 
 ```python
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+  print(p['name'], ' 在 ', p['craft'])
 ```
 
-\--- /hint \---
+\--- /提示 \---
 
-\--- /hints \---
+\--- /提示 \---
 
-\--- /challenge \---
+\--- /挑战 \---
