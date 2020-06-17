@@ -1,64 +1,64 @@
-## Challenge: find more pass-over times
+## Meydan okuma: daha fazla geçiş süresi bulun
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+İstediğiniz bir yerin enlem ve boylamını bulmak için, <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a> gibi bir web sitesini kullanabilirsiniz.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Daha fazla yer için geçiş zamanlarını bulabilir ve gösterebilir misiniz? 
 
-![screenshot](images/iss-final.png)
+![ekran görüntüsü](images/iss-final.png)
 
 \--- hints \---
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Programın sonunda, `enlem` ve `boylam` değişkenlerine yeni değerler verin sonra `konum` turtle değişkenini kullanarak yeni koumda bir nokta çizin. (İsterseniz farklı bir renk seçin.) Sonra koordinatlarla birlikte `iss-pass` web hizmetini çağırın (bunu yapmak için kodu kopyalayıp yapıştırabilirsiniz). Son olarak, yanıtdan `risetime`'ı alın ve `konum` turtle'ı ile yazın.
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Bu kodu programınızın sonuna ekleyin ve eksik kısımları doldurun. Houston'daki Space Centre'nin geçiş zamanını almak için yazdığınız kodu kopyalayıp yapıştırabileceğinizi ve ardından ihtiyacınız olan değişiklikleri yapabileceğinizi unutmayın.
 
 ```python
-# Your chosen location
-lat = XX.XX
-lon = XX.XX
+# Seçtiğiniz yer
+enlem = XX.XX
+boylam = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+#`konum` Turtle'ı ile bir nokta çizin(tekrar yeni bir Turtle oluşturmaya gerek yoktur), farklı bir renk seçin
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+#Yeni enlem ve boylam için `iss-pass.json`dan sonuçlarınızı alın
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+#Sonuçtan `risetime`ı alın ve `konum` turtle'ını kullanarak haritaya yazın
 ```
 
 \--- /hint \---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+İşte Kazakistan'ın güneyinde bir uzay limanı olan Baikonur Cosmodrome'un yerini kullanan bir örnek. Kod, Houston Space Centre geçiş zamanını gösterdikten sonra programınızın sonuna gider.
 
 ```python
 # Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
+enlem = 45.86
+boylam = 63.31
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+konum.penup()
+konum.color('orange')
+konum.goto(boylam,enlem)
+konum.dot(5)
+konum.hideturtle()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(enlem) + '&lon=' + str(boylam)
+yanıt = urllib.request.urlopen(url)
+sonuc = json.loads(response.read())
 
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#print(sonuc)
+uzerinde = sonuc['response'][1]['risetime']
+konum.write(time.ctime(uzerinde))
 ```
 
-Try adding more locations!
+Daha fazla yer eklemeyi deneyin!
 
 \--- /hint \---
 
