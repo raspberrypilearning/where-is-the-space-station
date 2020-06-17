@@ -1,10 +1,10 @@
-## Introduction
+## Giriş
 
-In this project you will use a web service to find out the current location of the International Space Station (ISS) and plot its location on a map.
+Bu projede, Uluslararası Uzay İstasyonunun (ISS) geçerli konumunu bulmak için bir web hizmeti kullanacak ve konumunu bir harita üzerinde işaretleyeceksiniz.
 
-### Instructions
+### Talimatlar
 
-The space station icon shows the current location of the ISS. The yellow text shows when the ISS will next pass over the Space Centre in Houston, US.
+Uzay istasyonu simgesi, ISS'nin geçerli konumunu gösterir. Sarı metin, ISS'nin ABD'nin Houston kentindeki Space Centre'den ne zaman geçeceğini gösteriyor.
 
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -12,8 +12,8 @@ The space station icon shows the current location of the ISS. The yellow text sh
   <img src="images/iss-final.png">
 </div>
 
-### What you will learn
+### Ne öğreneceksiniz
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
+Bu proje, [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum)'un aşağıdaki bölümlerinden unsurları kapsamaktadır:
 
-+ [Combine programming constructs to solve a problem.](https://www.raspberrypi.org/curriculum/programming/builder)
++ [Bir problemi çözmek için programlama yapılarını birleştirin.](https://www.raspberrypi.org/curriculum/programming/builder)
