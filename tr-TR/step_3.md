@@ -1,12 +1,12 @@
-## Who is in space?
+## Uzayda kim var?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Uzay hakkında anlık bilgi sağlayan bir web hizmeti kullanacaksınız. İlk olarak, şu anda kimin uzayda olduğunu bulalım.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Bir web hizmetinin, tıpkı bir web sitesi gibi bir adresi (URL) vardır. Web sayfası için HTML yerine, veri sağlar.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Bir internet tarayıcısında <a href="http://api.open-notify.org/astros.json" target="_blank">web hizmetini</a> açın.
 
-You should see something like this:
+Aşağıdakine benzer bir şey görmelisiniz:
 
     {
       "message": "success",
@@ -28,74 +28,74 @@ You should see something like this:
     }
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Veri anlık, bu yüzden muhtemelen biraz farklı bir sonuç göreceksiniz. Bu veri formatına `JSON` denir ('ceysın' olarak telafuz edilir).
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Bir Python scriptinden web hizmetini çağırmalısınız, böylece sonuçları kullanabilirsiniz.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Bu trinket'i açın: <http://rpf.io/iss-on>{:target="_blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+`urllib.request` ve `json` modülleri `main.py`'nin en üstünde sizin için içe aktarıldı.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Aşağıdaki kodu az önce değişken olarak eriştiğiniz web servisinin adresini(URL) saklamak için `main.py`'ye ekleyin:
 
-![screenshot](images/iss-url.png)
+![ekran görüntüsü](images/iss-url.png)
 
-+ Now call the web service:
++ Şimdi web servisini çağırın:
 
-![screenshot](images/iss-request.png)
+![ekran görüntüsü](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ Sonra JSON yanıtını bir Python veri yapısına yüklemelisiniz:
 
-![screenshot](images/iss-result.png)
+![ekran görüntüsü](images/iss-result.png)
 
-You should see something like this:
+Aşağıdakine benzer bir şey görmelisiniz:
 
     {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Bu üç anahtarlı bir Python sözlüğüdür: `message`, `number`, and `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+`success` değerine sahip `message` size başarılı bir şekilde web hizmetine eriştiğinizi söyler. Şu anda uzayda bulunan kişi sayısına bağlı olarak `number` ve `people` için farklı sonuçlar görüceğinizi not edin.
 
-Now let's print the information in a more readable way.
+Şimdi bilgileri daha okunabilir bir şekilde yazdıralım.
 
-+ First, let's look up the number of people in space and print it:
++ İlk olarak, uzaydaki insan sayısını görelim ve yazdıralım:
 
-![screenshot](images/iss-number.png)
+![ekran görüntüsü](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`sonuc['number']` `sonuc` sözlüğünde bulunan `number` anahtarına bağlı değeri yazdıracaktır. Örnekte, bu `3`.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ `people` anahtarıyla ilişkili değer sözlüklerin bir listesi! Bu değeri bir değişkene koyalım, böylece onu kullanabilirsiniz:
 
-![screenshot](images/iss-people.png)
+![ekran görüntüsü](images/iss-people.png)
 
-You should see something like:
+Aşağıdakine benzer bir şey görmelisiniz:
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Şimdi her astronot için bir satır yazdırmanız gerekiyor. Bunu için bir Python `for` döngüsü kullanabilirsiniz.
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ Döngü boyunca her seferinde `p` farklı bir astronot için sözlüğe ayarlanacaktır.
 
-![screenshot](images/iss-people-1a.png)
+![ekran görüntüsü](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ Sonrasında `name` ve `craft` için değerlere bakabilirsiniz. Uzaydaki insanların isimlerini gösterelim:
 
-![screenshot](images/iss-people-2.png)
+![ekran görüntüsü](images/iss-people-2.png)
 
-You should see something like this:
+Aşağıdakine benzer bir şey görmelisiniz:
 
-    People in Space:  3
+    Uzaydaki Insanlar: 3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+**Not:** Anlık veri kullanıyorsunuz, bu yüzden sonuçlarınız şu anda uzayda olan kişi sayısına bağlı olacaktır.
