@@ -1,12 +1,12 @@
-## Where is the ISS?
+## ISS nerede?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+Uluslararası Uzay İstasyonu Dünyanın yörüngesinde bulunuyor. Kabaca her bir buçuk saatte dünyanın yörüngesinin etrafında bir tur atar ve yaklaşık olarak saniyede 7.66 km bir hızda seyreder. Oldukça hızlı!
 
-Let’s use another web service to find out where the International Space Station is.
+Hadi Uluslararası Uzay İstasyonu'nun yerini bulmak için başka bir web hizmeti kullanalım.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Önce web hizmetinin URL'sini web tarayıcınızda yeni bir sekmede açın: <a href="http://api.open-notify.org/iss-now.json" target="_blank"> http://api.open-notify.org/iss-now.json </a>
 
-You should see something like this:
+Aşağıdakine benzer bir şey görmelisiniz:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+Sonuç, şu anda ISS'nin Dünya üzerinde bulunduğu yerin koordinatlarını içerir.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Şimdi aynı web servisini Python'da çağırmalısınız. ISS'nin geçerli konumunu bulmak için scriptinizin sonuna aşağıdaki kodu ekleyin:
 
-![screenshot](images/iss-location.png)
+![ekran görüntüsü](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Enlem ve boylamı saklamak için değişkenler oluşturalım ve bunları yazdıralım:
 
-![screenshot](images/iss-coordinates.png)
+![ekran görüntüsü](images/iss-coordinates.png)
