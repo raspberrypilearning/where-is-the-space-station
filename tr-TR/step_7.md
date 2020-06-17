@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## ISS ne zaman üstümüzde olacak?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+ISS'nin belirli bir konumun üzerinde ne zaman bulunacağını öğrenmek için kullanabileceğiniz bir web hizmeti de vardır.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+ISS'nin bir dahaki sefer ne zaman enlemi `29.5502` ve boylamı `95.097` olan Houston, ABD'deki Space Centre'ın üzerinden geçeceğini bulalım.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Önce harita üzerinde şu koordinatları kullanarak bir noktayı gösterelim:
 
-![screenshot](images/iss-houston.png)
+![ekran görüntüsü](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Şimdi ISS'nin bir sonraki üzerimizde olduğu tarihi ve saati alalım.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Daha önce olduğu gibi, URL'sini bir web tarayıcısının adres çubuğuna girerek web hizmetini çağırabilirsiniz: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-You should see an error:
+Bir hata görmelisiniz:
 
-![screenshot](images/iss-pass-error.png)
+![ekran görüntüsü](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Bu web hizmeti enlem ve boylamı girdi olarak alır, bu nedenle bunları URL'ye eklemeniz gerekir. Girdiler `?`'dan sonra eklenir ve `&` ile ayrılır.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Gösterildiği gibi `enlem`(lat) ve `boylam`(lon) girdilerini URL ye girin: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
-![screenshot](images/iss-passtimes.png)
+![ekran görüntüsü](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+Yanıt birkaç geçiş süresi içeriyor ve biz sadece ilkine bakacağız. Zaman bir Unix zaman damgası olarak verildi (Python scriptinizde okunabilir bir zamana dönüştürebilirsiniz).
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Şimdi web servisini Python'da çağıralım. Scriptinizin sonuna aşağıdaki kodu ekleyin:
 
-![screenshot](images/iss-passover.png)
+![ekran görüntüsü](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Şimdi sonuçtan ilk geçiş zamanını alalım. Aşağıdaki kodu ekleyin:
 
-![screenshot](images/iss-print-pass.png)
+![ekran görüntüsü](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+Python `time` modülüne ihtiyacımız olacak, böylece onu okunabilir bir biçimde yazdırıp yerel saate dönüştürebiliriz. Sonra scriptin Houston için geçiş zamanını yazdırmasını sağlıycağız.
 
-+ Add an `import time` line at the top of your script:
++ Scriptinizin en üstüne bu `import time` satırını ekleyin:
 
-![screenshot](images/iss-time.png)
+![ekran görüntüsü](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ `time.ctime()` fonksiyonu zaman damgasını haritanıza yazabileceğiniz okunabilir bir forma dönüştürür:
 
-![screenshot](images/iss-pass-write.png)
+![ekran görüntüsü](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(`print` satırını kaldırabilirsiniz, veya başına `#` ekleyerek scriptinizin onu görmezden gelmesini sağlayabilirsiniz)
 
-+ If you like, you can change the colour and format of the text. 
++ İsterseniz metnin rengini ve biçimini değiştirebilirsiniz. 
 
 [[[generic-python-turtle-write]]]
