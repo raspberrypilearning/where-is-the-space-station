@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## 国际空间站什么时候会从我们头顶飞过呢？
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+你也可以使用的网络服务来了解国际空间站何时将位于某个特定位置。
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+让我们找出国际空间站何时下一次在美国休斯顿的太空中心上空，该中心座标是纬度` 29.5502 `和经度` 95.097 ` 。
 
-+ First let’s plot a dot on the map at these coordinates:
++ 首先，让我们在地图上的以下坐标处绘制一个点：
 
-![screenshot](images/iss-houston.png)
+![截屏](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+现在让我们找到国际空间站下一次飞过的日期和时间。
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ 和以前一样，你可以通过在Web浏览器的地址栏中输入URL来调用Web服务：<a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
 
-You should see an error:
+你应该看到一个错误：
 
-![screenshot](images/iss-pass-error.png)
+![截屏](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+这个网络服务需要纬度和经度作为输入，所以你必须将它们纳入URL。 在 `?`后面添加输入并用`&`分隔。
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ 把` lat `和` lon `添加到网址中，如下所示：<a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
 
-![screenshot](images/iss-passtimes.png)
+![截屏](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+响应中包含多个飞过的时间，我们只看第一个。 时间以Unix时间格式给出(你可以在Python脚本中将其转换为可读时间)。
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ 现在让我们从 Python 中调用这个web 服务。 将以下代码添加到脚本的末尾：
 
-![screenshot](images/iss-passover.png)
+![截屏](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ 现在让我们从结果中获取第一个飞过的时间。 添加以下代码：
 
-![screenshot](images/iss-print-pass.png)
+![截屏](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+我们需要使用Python `time`库，以便以可读的形式打印并将其转换为本地时间。 然后，我们使用脚本输出飞过休斯顿座标点的时间。
 
-+ Add an `import time` line at the top of your script:
++ 将`import time`语句添加到你的程序的顶部:
 
-![screenshot](images/iss-time.png)
+![截屏](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ ` time.ctime() `函数会将时间戳转换为可读形式，你可以将其写入地图：
 
-![screenshot](images/iss-pass-write.png)
+![截屏](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(您可以删除`print`那行, 或者在行首添加`#`, 将其变成评论，所以你的脚本会忽略它。)
 
-+ If you like, you can change the colour and format of the text. 
++ 如果你喜欢，你可以更改文本的颜色和格式。 
 
 [[[generic-python-turtle-write]]]
