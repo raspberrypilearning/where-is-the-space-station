@@ -1,31 +1,31 @@
-## Where is the ISS?
+## 国际空间站在哪儿？
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+国际空间站处于环绕地球的轨道。 它大约每一个半小时完成一次地球轨道，并以每秒7.66公里的平均速度行进。 它很快！
 
-Let’s use another web service to find out where the International Space Station is.
+让我们使用另一个网络服务来找出国际空间站的位置。
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ 首先在你的浏览器新标签页中打开网页URL： <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-You should see something like this:
+你应该看到类似下面的内容：
 
     {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
+    “iss_position”：{
+      “ latitude”：8.54938193505081， 
+      “ longitude”：73.16560793639105
+    }， 
+    “ message”： “成功”， 
+    “ timestamp”：1461931913
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+结果包含国际空间站当前在地球上的点的坐标。
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ 现在你需要从 Python 调用相同的 web 服务。 在脚本结尾添加以下代码以获取当前国际空间站位置：
 
-![screenshot](images/iss-location.png)
+![截屏](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ 让我们创建变量以存储纬度和经度，然后打印它们：
 
-![screenshot](images/iss-coordinates.png)
+![截屏](images/iss-coordinates.png)
