@@ -1,45 +1,45 @@
-## Challenge: find more pass-over times
+## Desafío: encontrar más veces cuando pasará por encima
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Para buscar la latitud y longitud de una ubicación que te interese, puedes usar un sitio web como <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ ¿Puedes buscar y trazar los tiempos de paso para más ubicaciones? 
 
-![screenshot](images/iss-final.png)
+![captura de pantalla](images/iss-final.png)
 
 \--- hints \---
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+Al final de tu programa, configura las variables `lat` y `lon` con nuevos valores y luego usa la variable `lugar` de la tortuga para dibujar un punto en la nueva ubicación. (Elije un color diferente si lo deseas). Luego llama al servicio web`iss-pass` con las coordenadas (puedes copiar y pegar el código para hacer esto). Finalmente, obtén el `risetime` de la respuesta, y escríbelo con la `location` tortuga.
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Agrega este código al final de tu programa y completa las partes faltantes. Ten en cuenta que puedes copiar y pegar el código que escribiste para obtener el tiempo de paso para el Centro Espacial en Houston y luego realizar los cambios que necesites.
 
 ```python
-# Your chosen location
+# Tu ubicación elegida
 lat = XX.XX
 lon = XX.XX
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# Dibuja un punto con el `location` de la tortuga (no es necesario crear una nueva tortuga), elije un color diferente
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+# Obten el resultado de` iss- pass.json` para tu nueva latitud y longitud
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# Obten el `risetime` del resultado y usa el ` location` de la tortuga para escribirlo en el mapa
 ```
 
 \--- /hint \---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Aquí hay un ejemplo utilizando la ubicación del Cosmódromo de Baikonur, un puerto espacial en el sur de Kazajistán. El código va al final de tu programa, después de trazar el tiempo de paso para el Centro Espacial de Houston.
 
 ```python
-# Baikonur Cosmodrome
+# Cosmódromo de Baikonur
 lat = 45.86
 lon = 63.31
 
@@ -58,7 +58,7 @@ over = result['response'][1]['risetime']
 location.write(time.ctime(over))
 ```
 
-Try adding more locations!
+¡Intenta añadir más ubicaciones!
 
 \--- /hint \---
 
