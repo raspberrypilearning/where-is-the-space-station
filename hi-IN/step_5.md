@@ -1,12 +1,12 @@
-## Where is the ISS?
+## आईएसएस (ISS) कहां है?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+अंतर्राष्ट्रीय अंतरिक्ष स्टेशन ऑर्बिट में है जो पृथ्वी के चारों ओर है। यह पृथ्वी के एक चक्कर को लगभग हर आधे घंटे में पूरा करता है, और औसतन 7.66 किमी प्रति सेकंड की गति से यात्रा करता है। इसकी गति तेज़ है!
 
-Let’s use another web service to find out where the International Space Station is.
+अंतर्राष्ट्रीय स्पेस स्टेशन कहां है, यह जानने के लिए एक अन्य वेब सेवा का उपयोग करें।
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ पहले अपने वेब ब्राउज़र में एक नए टैब में वेब सेवा का URL खोलें: <a href="http://api.open-notify.org/iss-now.json" target="_blank"> http://api.open-notify.org/iss-now.json </a>
 
-You should see something like this:
+आपको कुछ इस तरह दिखाई देना चाहिए:
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+परिणाम में आपको पृथ्वी पर उन जगहों के निर्देशांक दिखेंगे जिनके ऊपर आईएसएस (ISS) है।
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ अब आपको पायथन से उसी वेब सेवा को कॉल करने की आवश्यकता है। आईएसएस (ISS) की वर्तमान स्थिति प्राप्त करने के लिए अपनी स्क्रिप्ट के अंत में निम्नलिखित कोड जोड़ें:
 
-![screenshot](images/iss-location.png)
+![स्क्रीनशॉट](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ चलो लेटीट्‍यूड और लोंगीट्‍यूड को वेरिएबल में स्टोर कर देते हैं, और फिर उन्हें प्रिंट करते हैं:
 
-![screenshot](images/iss-coordinates.png)
+![स्क्रीनशॉट](images/iss-coordinates.png)
