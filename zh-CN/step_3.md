@@ -1,101 +1,101 @@
-## Who is in space?
+## 谁在太空中？
 
-You’re going to use a web service that provides live information about space. 首先，让我们找出谁在太空中。
+你将会使用一种提供有关太空的实时信息的网络服务。 首先，让我们找出目前谁在太空中。
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+网页服务有一个地址 (URL) ，就像网站的网址一样。 它返回的不是HTML网页 ，而是数据。
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ 在浏览器中打开 <a href="http://api.open-notify.org/astros.json" target="_blank">网页服务</a>。
 
-You should see something like this:
+你应该看到类似下面的内容：
 
     {
-      "message": "success",
+      "message": "sucess",
       "number": 3,
       "people": [
         {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
+          "craft": "国际空间站",
+          "name": "尤里·马伦琴科"
         },
         {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
+          "craft": "国际空间站",
+          "name": "蒂莫西·科普拉"
         },
         {
-          "craft": "ISS",
-          "name": "Timothy Peake"
+          "craft": "国际空间站",
+          "name": "蒂莫西·皮克"
         }
       ]
     }
     
 
-数据是实时的，因此你可能会看到略有不同的结果。 数据格式被称为` JSON ` （发音类似“杰森”）。
+数据是实时的，因此你可能会看到略微不同的结果。 数据格式被称为` JSON ` （发音类似“杰森”）。
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+你需要从Python脚本调用网页服务，以便使用结果。
 
 + 打开这个示例 trinket： <http://rpf.io/iss-on>{:target="_blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+`urllib.request`和`json`模块已经在`main.py`脚本的开头导入。
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ 将以下代码添加到` main.py `以将你刚刚访问的网页服务的URL存储为变量：
 
-![screenshot](images/iss-url.png)
+![截屏](images/iss-url.png)
 
-+ Now call the web service:
++ 现在调用网页服务：
 
-![screenshot](images/iss-request.png)
+![截屏](images/iss-request.png)
 
 + 接下来你需要将 JSON 响应加载到 Python 数据结构中：
 
-![screenshot](images/iss-result.png)
+![截屏](images/iss-result.png)
 
 你应该看到类似下面的内容：
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {'message': 'success', 'number': 3, 'people': [{'craft': '国际空间站', 'name': '尤里·马伦琴科'}, {'craft': '国际空间站', 'name': '蒂莫西·科普拉'}, {'craft': '国际空间站', 'name': '蒂莫西·皮克'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+这是有三个键（key）的Python字典结构：`message`（消息） ，`number`（数量）和`people` （人）。
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+`message`的值为`success`（成功）表示你已成功访问网页服务。 请注意，根据当前在太空中的人，你将看到`number`和`people`的不同结果。
 
-现在，让我们以更具可读性的方式打印信息。
+现在，让我们以更具可读性的方式打印这些信息。
 
-+ First, let's look up the number of people in space and print it:
++ 首先，让我们查找空间站的人数并打印：
 
-![screenshot](images/iss-number.png)
+![截屏](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`result['number']`将打印与`result`字典中的`number`键相匹配的值。 在这个例子中，这个数字是`3`。
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ 与`people`键对应的值是由字典结构构成的列表！ 让我们将该值放入一个变量中，以便使用它：
 
-![screenshot](images/iss-people.png)
+![截屏](images/iss-people.png)
 
-You should see something like:
+你应该看到类似下面的内容：
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
+    [{'craft': '国际空间站', 'name': '尤里 马连琴科'}， {'craft': '国际空间站', 'name': '蒂莫西·科普拉'}， {'craft': '国际空间站', 'name': '蒂莫西·皮克'}]}
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ 现在，您需要为每位宇航员打印一行。 您可以使用 Python `for` 循环来做这件事。
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ 每次经过循环，`p`将被设置为不同宇航员的字典结构。
 
-![screenshot](images/iss-people-1a.png)
+![截屏](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ 然后您可以查找`name`和`craft`的值。 让我们展示一下在太空中人们的名字：
 
-![screenshot](images/iss-people-2.png)
+![截屏](images/iss-people-2.png)
 
-You should see something like this:
+你应该看到类似下面的内容：
 
-    People in Space:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    太空中的人：3
+    尤里·马伦琴科
+    蒂莫西·科普拉
+    蒂莫西·皮克
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+**注意：** 您正在使用实时数据，所以您的结果将取决于当前在太空中的人数。
