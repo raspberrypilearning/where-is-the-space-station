@@ -10,72 +10,73 @@ url = 'http://api.open-notify.org/astros.json'
 response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
-print('People in Space: ', result['number'])
+print('Personas en el espacio:', result['number'])
 
-people = result['people']
+personas = resultado ['people']
 
-for p in people:
-  print(p['name'], ' in ', p['craft'])
+for p in personas:
+  print (p ['name'], 'in', p ['craft'])
 
 
 url = 'http://api.open-notify.org/iss-now.json'
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
 
-location = result['iss_position']
-lat = float(location['latitude'])
-lon = float(location['longitude'])
-print('Latitude: ', lat)
-print('Longitude: ', lon)
+respuesta = urllib.request.urlopen(url)
+resultado = json.loads(respuesta.read())
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-screen.bgpic('map.gif')
+ubicacion = resultado['iss_position']
+lat = float(ubicacion['latitude'])
+lon = float(ubicacion['longitude'])
+print('Latitud: ', lat)
+print('Longitud: ', lon)
+
+pantalla = turtle.Screen()
+pantalla.setup(720, 360)
+pantalla.setworldcoordinates(-180, -90, 180, 90)
+pantalla.bgpic('map.gif')
 
 
-screen = turtle.Screen()
-screen.setup(720, 360)
-screen.setworldcoordinates(-180, -90, 180, 90)
-# image source:
-# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
-screen.bgpic('map.gif')
+pantalla = turtle.Screen()
+pantalla.setup(720, 360)
+pantalla.setworldcoordintaes(-180, -90, 180, 90)
+# fuente de la imagen:
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Crédito: NASA
+pantalla.bgpic('map.gif')
 
-screen.register_shape('iss.gif')
-iss = turtle.Turtle()
-iss.shape('iss.gif')
-iss.setheading(90)
+pantalla.register_shape('iss.gif')
+eei = turtle.Turtle()
+eei.shape('iss.gif')
+eei.setheading(90)
 
-iss.penup()
-iss.goto(lon, lat)
+eei.penup()
+eei.goto(lon, lat)
 
-# When Does ISS next pass over me?
-#london
+# Cuando es el próximo paso de la EEI sobre mí?
+#Londres
 #lat = 51.5072
 #lon = 0.1275
 
-# Tokyo
+# Tokio
 #lat = 35.689487
 #lon = 139.691706
 
-# Space Center, Houston
+#Centro Espacial, Houston
 lat = 29.5502
 lon = -95.097
 
-location = turtle.Turtle()
-location.penup()
-location.color('yellow')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+ubicacion = turtle.Turtle()
+ubicacion.penup()
+ubicacion.color('yellow')
+ubicacion.goto(lon,lat)
+ubicacion.dot(5)
+ubicacion.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+respuesta = urllib.request.urlopen(url)
+resultado = json.loads(respuesta.read())
 
-#print result
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#Imprimir resultado
+sobremi = resultado['response'][1]['risetime']
+ubicacion.write(time.ctime(sobremi))
 
 
 
