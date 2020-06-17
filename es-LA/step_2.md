@@ -1,17 +1,17 @@
-## What you will need
+## Lo que necesitarás
 
 ### Hardware
 
-+ A computer with internet connection
++ Una computadora con conexión a internet
 
 ### Software
 
-+ [Trinket](https://trinket.io/) online editor
++ El editor en línea [Trinket](https://trinket.io/)
 
-### Additional resources
+### Recursos adicionales
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ Proyecto inicial - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ Una versión completa de este proyecto - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ Los servicios web de Open Notify - [ api.open-notify.org ](http://api.open-notify.org/) {: target = "_ blank"}
