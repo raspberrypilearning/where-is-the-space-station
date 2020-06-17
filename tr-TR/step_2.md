@@ -1,17 +1,17 @@
-## What you will need
+## Nelere ihtiyacınız olacak
 
-### Hardware
+### Donanım
 
-+ A computer with internet connection
++ İnternet bağlantısına sahip bir bilgisayar
 
-### Software
+### Yazılım
 
-+ [Trinket](https://trinket.io/) online editor
++ Çevrimiçi [Trinket](https://trinket.io/) Editörü
 
-### Additional resources
+### Ek Kaynaklar
 
-+ Starter project - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
++ Başlangıç projesi - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ A completed version of this project - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ Bu projenin tamamlanmış bir versiyonu - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
 
-+ Open Notify webservices - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
++ Open Notify web hizmeti - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
