@@ -8,26 +8,27 @@
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
+```
+{
+  "message": "success",
+  "number": 3,
+  "people": [
     {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
+      "craft": "ISS",
+      "name": "Yuri Malenchenko"
+    },
+    {
+      "craft": "ISS",
+      "name": "Timothy Kopra"
+    },
+    {
+      "craft": "ISS",
+      "name": "Timothy Peake"
     }
+  ]
+}
+```
     
-
 डेटा लाइव्ह आहे, म्हणून आपणास कदाचित थोड्या वेगळ्या प्रकारचा परिणाम दिसू शकताे. डेटा स्वरूपाला `JSON` असे म्हणतात('जेसन' असे उच्चारतात).
 
 [[[generic-json]]]
@@ -52,8 +53,9 @@
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
-    
+```
+{'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+```
 
 Python dictionary च्या तीन की(keys) आहेत: `message`, `number`, and `people`.
 
@@ -75,9 +77,10 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
+```
+[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
+```
     
-
 + आता आपल्याला प्रत्येक अंतराळवीरांसाठी एक ओळ मुद्रित करण्याची आवश्यकता आहे. आपण हे करण्यासाठी Python `for` loop(लूप) वापरू शकता.
 
 [[[generic-python-for-loop-list]]]
@@ -92,10 +95,11 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    People in Space:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
-    
+```
+People in Space:  3
+Yuri Malenchenko
+Timothy Kopra
+Timothy Peake
+```
 
 **Note** आपण थेट डेटा वापरत आहात, म्हणून आपले परिणाम सध्या अंतराळातील लोकांच्या संख्येवर अवलंबून असतील.

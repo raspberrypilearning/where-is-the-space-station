@@ -8,11 +8,12 @@
 
 उदाहरणे:
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
-    
+```
+People in Space:  3
+Yuri Malenchenko in ISS
+Timothy Kopra in ISS
+Timothy Peake in ISS
+```
 
 --- hints ---
 
