@@ -71,7 +71,7 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
 
 `result['number']` जे मूल्य मुद्रित करेल ते `result` dictionary मधील `number` या कीच (key) मूल्य असेल. उदाहरणार्थ, हे ` 3 `आहे.
 
-+ people की(key) सोबत जे मूल्य आहे ते dictionaries ची यादी आहे! चला त्या व्हेरिएबलमध्ये व्हॅल्यू ठेवू म्हणजे आपण ते वापरू शकाल:
++ `people` की(key) सोबत जे मूल्य आहे ते dictionaries ची यादी आहे! चला त्या व्हेरिएबलमध्ये व्हॅल्यू ठेवू म्हणजे आपण ते वापरू शकाल:
 
 ![screenshot](images/iss-people.png)
 
