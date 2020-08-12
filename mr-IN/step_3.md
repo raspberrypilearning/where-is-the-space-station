@@ -89,7 +89,7 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
 
 ![screenshot](images/iss-people-1a.png)
 
-+ त्यानंतर आपण `name` आणि `craft`. <0> नावाची मूल्ये शोधू शकता. चला अवकाशातील लोकांची नावे दाखवू:
++ त्यानंतर आपण `name` आणि `craft` नावाची मूल्ये शोधू शकता. चला अवकाशातील लोकांची नावे दाखवू:
 
 ![screenshot](images/iss-people-2.png)
 
