@@ -59,6 +59,8 @@
 
 Python dictionary च्या तीन की(keys) आहेत: `message`, `number`, and `people`.
 
+[[[generic-python-key-value-pairs]]]
+
 तो `message` आपल्याला सांगते की आपण वेब सेवेवर `success` प्रवेश केला. लक्षात घ्या की आपल्याला `number` आणि `people` साठी भिन्न परिणाम दिसतील ते सध्या अवकाशात कोण आहे यावर अवलंबून आहे.
 
 आता अधिक वाचनीय पध्दतीने माहिती मुद्रित(print) करू.
