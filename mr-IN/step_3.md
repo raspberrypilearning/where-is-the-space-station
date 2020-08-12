@@ -83,6 +83,8 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
     
 + आता आपल्याला प्रत्येक अंतराळवीरांसाठी एक ओळ मुद्रित करण्याची आवश्यकता आहे. आपण हे करण्यासाठी Python `for` loop(लूप) वापरू शकता.
 
+[[[generic-python-for-loop-list]]]
+
 + प्रत्येक वेळी लूपमधून `p` वेगळ्या अंतराळवीरांच्या dictionary वर सेट केले जाईल.
 
 ![screenshot](images/iss-people-1a.png)
