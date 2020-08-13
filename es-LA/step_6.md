@@ -12,7 +12,7 @@ Sería útil mostrar la posición en un mapa. ¡Puedes hacer esto usando gráfic
 
 El mapa está centrado en latitud y longitud `(0,0)`, que es justo lo que necesitas.
 
-+ Debes configurar el tamaño de la pantalla para que coincida con el tamaño de la imagen, que es de 720 por 360 píxeles. Añadir `screen.setup(720, 360)`:
++ Debes configurar el tamaño de la pantalla para que coincida con el tamaño de la imagen, que es de 720 por 360 píxeles. Añadir `pantalla.setup(720, 360)`:
 
 ![captura de pantalla](images/iss-setup.png)
 
