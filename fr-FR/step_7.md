@@ -1,51 +1,51 @@
-## When will the ISS be overhead?
+## Quand l'ISS sera-t-il au-dessus?
 
-There’s also a web service that you can use to find out when the ISS will next be over a particular location.
+Il y a aussi un service web que tu peux utiliser pour savoir quand l’ISS se trouvera ensuite sur un emplacement particulier.
 
-Let’s find out when the ISS will next be over the Space Centre in Houston, USA, which is at latitude `29.5502` and longitude `95.097`.
+Découvrons quand l’ISS sera sur le Centre Spatial de Houston, aux Etats-Unis, qui est à la latitude `29.5502` et à la longitude `95.097`.
 
-+ First let’s plot a dot on the map at these coordinates:
++ Commençons par tracer un point sur la carte à ces coordonnées :
 
-![screenshot](images/iss-houston.png)
+![capture d’écran](images/iss-houston.png)
 
-Now let’s get the date and time that the ISS is next overhead.
+Maintenant nous allons obtenir la date et l'heure du prochain passage de l'ISS au-dessus de là.
 
-+ As before, you can call the web service by entering its URL into the address bar of a web browser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
++ Comme avant, tu peux appeler le service web en entrant son URL dans la barre d'adresse d'un navigateur web : <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
 
-You should see an error:
+Tu devrais voir une erreur :
 
-![screenshot](images/iss-pass-error.png)
+![capture d'écran](images/iss-pass-error.png)
 
-This web service takes latitude and longitude as inputs, so you have to include them in the URL. Inputs are added after a `?` and separated with `&`.
+Ce service web prend la latitude et la longitude en tant qu'entrées, donc tu dois les inclure dans l'URL. Les entrées sont ajoutées après un `?` et séparées par `&`.
 
-+ Add the `lat` and `lon` inputs to the url as shown: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
++ Ajouter les entrées `lat` et `lon` à l'url comme indiqué : <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
 
-![screenshot](images/iss-passtimes.png)
+![capture d'écran](images/iss-passtimes.png)
 
-The response includes several pass-over times, and we’ll just look at the first one. The time is given as a Unix time stamp (you'll be able to convert it to a readable time in your Python script).
+La réponse comprend plusieurs temps de passage, et nous allons juste regarder la première. L'heure est donnée sous forme d'horodatage Unix (vous pourrez la convertir en une heure lisible dans votre script Python).
 
 [[[generic-unix-timestamp]]]
 
-+ Now let's call the web service from Python. Add the following code to the end of your script:
++ Appelons maintenant le service Web depuis Python. Ajoute le code suivant à la fin de ton script:
 
-![screenshot](images/iss-passover.png)
+![capture d'écran](images/iss-passover.png)
 
-+ Now let's get the first pass-over time from the result. Add the following code:
++ Voyons maintenant le premier temps de passage à partir du résultat. Ajoute le code suivant:
 
-![screenshot](images/iss-print-pass.png)
+![capture d'écran](images/iss-print-pass.png)
 
-We’ll need the Python `time` module so we can print it in a readable form and convert it to local time. Then we'll get the script to write the pass-over time by the dot for Houston.
+Nous aurons besoin du module Python `time` pour pouvoir l'imprimer sous une forme lisible et le convertir en heure locale. Ensuite, nous allons obtenir le script pour écrire le temps de passage par le point pour Houston.
 
-+ Add an `import time` line at the top of your script:
++ Ajouter une ligne `import time` en haut de votre script:
 
-![screenshot](images/iss-time.png)
+![capture d'écran](images/iss-time.png)
 
-+ The `time.ctime()` function will convert the time stamp to a readable form that you can write onto your map:
++ La fonction `time.ctime()` convertira l'horodatage en une forme lisible que tu peux écrire sur ta carte :
 
-![screenshot](images/iss-pass-write.png)
+![capture d'écran](images/iss-pass-write.png)
 
-(You can remove the `print` line, or turn it into a comment by adding `#` at the start so your script will ignore it.)
+(Tu peux supprimer la ligne `print` ou la transformer en un commentaire en ajoutant `#` au début pour que ton script l'ignore.)
 
-+ If you like, you can change the colour and format of the text. 
++ Si tu le souhaites, tu peux changer la couleur et le format du texte. 
 
 [[[generic-python-turtle-write]]]
