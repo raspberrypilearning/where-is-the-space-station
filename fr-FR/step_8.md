@@ -1,64 +1,64 @@
-## Challenge: find more pass-over times
+## Défi: trouver plus de temps de passage
 
 \--- challenge \---
 
-To look up the latitude and longitude of a location you are interested in, you can use a website such as <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
+Pour rechercher la latitude et la longitude d'un emplacement qui t'intéresse, tu peux utiliser un site Web tel que <a href="http://www.latlong.net/" target="_blank">www.latlong.net/</a>.
 
-+ Can you look up and plot the pass-over times for more locations? 
++ Tu peux chercher et tracer les temps de passage pour plus d'endroits? 
 
-![screenshot](images/iss-final.png)
+![capture d’écran](images/iss-final.png)
 
 \--- hints \---
 
 \--- hint \---
 
-At the end of your program, set the `lat` and `long` variables to new values and then use the `location` turtle variable to draw a dot at the new location. (Choose a different colour if you like.) Then call the `iss-pass` web service with the coordinates (you can copy and paste the code to do this). Finally, get the `risetime` from the response, and write it with the `location` turtle.
+À la fin de ton programme, définis les variables `lat` et `long` à de nouvelles valeurs, puis utilise la variable `emplacement` de turtle pour dessiner un point au nouvel emplacement. (Choisis une couleur différente si tu veux). Ensuite, appelle le service web `iss-pass` avec les coordonnées (tu peux copier et coller le code pour faire ceci). Enfin, obtiens la `risetime` à partir de la réponse, et écris-la avec l' `emplacement` de turtle.
 
 \--- /hint \---
 
 \--- hint \---
 
-Add this code to the end of your program and fill in the missing parts. Note that you can copy and paste the code you wrote to get the pass-over time for the Space Center in Houston, and then make the changes you need.
+Ajoute ce code à la fin de ton programme et remplis les parties manquantes. Note que tu peux copier et coller le code que tu as écrit pour obtenir le temps de passage pour le Centre spatial de Houston, puis apporter les changements dont tu as besoin.
 
 ```python
-# Your chosen location
+# Votre emplacement choisi
 lat = XX.XX
-lon = XX.XX
+lon = XX. X
 
-# Draw a dot with the `location` turtle (no need to create a new turtle), choose a different colour
+# Dessine un point avec l'emplacement de turtle (pas besoin de créer une nouvelle tortue), choisis une couleur différente
 
-# Get the result from `iss-pass.json` for your new latitude and longitude
+# Récupère le résultat de `iss-pass.json` pour ta nouvelle latitude et longitude
 
-# Get the `risetime` from the result and use the `location` turtle to write it on the map
+# Récupère le `risetime` du résultat et utilise l'emplacement de turtle pour l'écrire sur la carte
 ```
 
 \--- /hint \---
 
 \--- hint \---
 
-Here's an example using the location of the Baikonur Cosmodrome, a spaceport in southern Kazakhstan. The code goes at the end of your program, after plotting the Houston Space Center pass-over time.
+Voici un exemple utilisant l'emplacement du Cosmodrome de Baïkonour, un port spatial dans le sud du Kazakhstan. Le code va à la fin de ton programme, après avoir tracé le temps de passage du Houston Space Center.
 
 ```python
-# Baikonur Cosmodrome
-lat = 45.86
-lon = 63.31
+# Cosmodrome de Baïkonour
+lat = 45,86
+lon = 63,31
 
-location.penup()
-location.color('orange')
-location.goto(lon,lat)
-location.dot(5)
-location.hideturtle()
+emplacement.penup ()
+emplacement.color ('orange')
+emplacement.goto (lon, lat)
+emplacement.dot (5)
+emplacement.hideturtle ()
 
-url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
-response = urllib.request.urlopen(url)
-result = json.loads(response.read())
+url = 'http://api.open-notify.org/iss-pass.json?lat=' + str (lat) + '&lon =' + str (lon)
+reponse = urllib.request.urlopen (url)
+resultat = json.loads (reponse.read ())
 
-#print(result)
-over = result['response'][1]['risetime']
-location.write(time.ctime(over))
+#print (resultat)
+audessus = resultat ['reponse'][1]['risetime']
+emplacement.write (time.ctime (audessus))
 ```
 
-Try adding more locations!
+Essaye d'ajouter plus d'emplacements !
 
 \--- /hint \---
 
