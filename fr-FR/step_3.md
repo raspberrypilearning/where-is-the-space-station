@@ -1,12 +1,12 @@
-## Who is in space?
+## Qui est dans l'espace ?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+Tu vas utiliser un service web qui fournit des informations en direct sur l'espace. D’abord, découvrons qui est actuellement dans l’espace.
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Un service web a une adresse (URL) comme un site web. Au lieu de renvoyer du HTML pour une page Web, il renvoie des données.
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
++ Ouvre <a href="http://api.open-notify.org/astros.json" target="_blank">le service web</a> dans un navigateur web.
 
-You should see something like this:
+Tu dois voir quelque chose comme ça :
 
     {
       "message": "success",
@@ -28,74 +28,74 @@ You should see something like this:
     }
     
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+Les données sont en direct, donc tu vois probablement un résultat légèrement différent. Le format de données est appelé `JSON` (prononcé comme 'Jason').
 
 [[[generic-json]]]
 
-You need to call the web service from a Python script, so you can use the results.
+Tu dois appeler le service web à partir d'un script Python, pour pouvoir utiliser les résultats.
 
-+ Open this trinket: <http://rpf.io/iss-on>{:target="_blank"}.
++ Ouvre cette trinket : <http://rpf.io/iss-on>{:target="_blank"}.
 
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
+Les modules `urllib.request` et `json` ont déjà été importés pour toi en haut du script `main.py`.
 
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Ajoute le code suivant à `main.py` pour stocker l'URL du service web auquel tu as accédé en tant que variable :
 
-![screenshot](images/iss-url.png)
+![capture d'écran](images/iss-url.png)
 
-+ Now call the web service:
++ Maintenant, appelle le service web :
 
-![screenshot](images/iss-request.png)
+![capture d'écran](images/iss-request.png)
 
-+ Next you need to load the JSON response into a Python data structure:
++ Ensuite, tu dois charger la réponse JSON dans une structure de données Python :
 
-![screenshot](images/iss-result.png)
+![capture d'écran](images/iss-result.png)
 
-You should see something like this:
+Tu dois voir quelque chose comme ça :
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {'message': 'success', 'number': 3, 'people' : [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
     
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+Il s'agit d'un dictionnaire Python avec trois clés : `message`, `number`, et `people`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+Ce `message` a la valeur `success` te dit que tu as accédé au service web. Note que tu vois différents résultats pour `number` et `people` selon qui est actuellement dans l'espace.
 
-Now let's print the information in a more readable way.
+Maintenant, imprimons l'information de manière plus lisible.
 
-+ First, let's look up the number of people in space and print it:
++ Tout d'abord, recherchons le nombre de personnes dans l'espace et imprimons-le:
 
-![screenshot](images/iss-number.png)
+![capture d'écran](images/iss-number.png)
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+`resultat['number']` affichera la valeur associée à la clé `number` dans le dictionnaire `resultat`. Dans l’exemple, il s’agit de `3`.
 
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
++ La valeur associée à la clé `people` est une liste de dictionnaires ! Mettons cette valeur dans une variable pour que tu puisses l'utiliser:
 
-![screenshot](images/iss-people.png)
+![capture d'écran](images/iss-people.png)
 
-You should see something like:
+Tu devrais voir quelque chose comme ça :
 
     [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
     
 
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
++ Maintenant tu dois imprimer une ligne pour chaque astronaute. Tu peux utiliser une boucle Python `for` pour ce faire.
 
 [[[generic-python-for-loop-list]]]
 
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
++ À chaque fois à travers la boucle, `p` sera défini sur un dictionnaire pour un astronaute différent.
 
-![screenshot](images/iss-people-1a.png)
+![capture d'écran](images/iss-people-1a.png)
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
++ Tu peux ensuite rechercher les valeurs pour `name` et `craft`. Montrons les noms des personnes dans l'espace :
 
-![screenshot](images/iss-people-2.png)
+![capture d'écran](images/iss-people-2.png)
 
-You should see something like this:
+Tu devrais voir quelque chose comme ça :
 
-    People in Space:  3
+    Personnes dans l'espace : 3
     Yuri Malenchenko
     Timothy Kopra
     Timothy Peake
     
 
-**Note:** You are using live data, so your results will depend on the number of people currently in space.
+**Note:** Tu utilises des données en direct, donc tes résultats dépendront du nombre de personnes actuellement dans l'espace.
