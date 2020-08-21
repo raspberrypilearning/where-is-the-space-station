@@ -1,12 +1,12 @@
-## Where is the ISS?
+## Quand est-ce l'ISS sera au-dessus d'une position ?
 
-The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast!
+La Station spatiale internationale est en orbite autour de la Terre. Elle complète une orbite de la terre à peu près toutes les heures et demies, et voyage à une vitesse moyenne de 7,66 km par seconde. C'est rapide !
 
-Let’s use another web service to find out where the International Space Station is.
+Nous allons utiliser un autre service web pour savoir où se trouve la Station spatiale internationale.
 
-+ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
++ Commence par ouvrir l'URL du service web dans un nouvel onglet dans ton navigateur web : <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-You should see something like this:
+Tu devrais voir quelque chose comme ça :
 
     {
     "iss_position": {
@@ -18,14 +18,14 @@ You should see something like this:
     }
     
 
-The result contains the coordinates of the spot on Earth that the ISS is currently over.
+Le résultat contient les coordonnées de l'endroit sur Terre où se trouve actuellement l'ISS.
 
 [[[generic-theory-lat-long]]]
 
-+ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
++ Maintenant appelons le web-service à partir de Python. Ajoute le code suivant à la fin de ton script :
 
-![screenshot](images/iss-location.png)
+![capture d'écran](images/iss-location.png)
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Créons des variables pour stocker la latitude et la longitude, puis les imprimer :
 
-![screenshot](images/iss-coordinates.png)
+![capture d'écran](images/iss-coordinates.png)
