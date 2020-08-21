@@ -1,49 +1,49 @@
-## Plotting the ISS on a map
+## Tracer l'ISS sur une carte
 
-It would be useful to show the position on a map. You can do this using Python Turtle graphics!
+Il serait utile de montrer la position sur une carte. Tu peux le faire en utilisant les graphiques de Python Turtle !
 
-+ First we'll need to import the `turtle` Python library:
++ D'abord, nous allons devoir importer la bibliothèque Python `turtle` :
 
-![screenshot](images/iss-turtle.png)
+![capture d'écran](images/iss-turtle.png)
 
-+ Next, load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
++ Ensuite, charger une carte du monde comme image de fond. Il y en a une déjà inclus dans votre trinket appelée 'map.gif'! La NASA a fourni cette belle carte et a donné l'autorisation pour la réutilisation. 
 
-![screenshot](images/iss-map.png)
+![capture d’écran](images/iss-map.png)
 
-The map is centered at `(0,0)` latitude and longitude, which is just what you need.
+La carte est centrée à `(0,0)` de latitude et de longitude, ce qui est exactement ce dont tu as besoin.
 
-+ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
++ Tu dois définir la taille de l'écran pour correspondre à la taille de l'image, qui est de 720 par 360 pixels. Ajouter `ecran.setup(720, 360)`:
 
-![screenshot](images/iss-setup.png)
+![capture d'écran](images/iss-setup.png)
 
-+ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using:
++ Tu veux pouvoir envoyer la tortue à une latitude et une longitude particulières. Pour rendre cela facile, tu peux définir l'écran pour qu'il corresponde aux coordonnées que tu utilises:
 
-![screenshot](images/iss-world.png)
+![capture d'écran](images/iss-world.png)
 
-Now the coordinates will match the latitude and longitude coordinates that you get back from the web service.
+Maintenant, les coordonnées correspondent aux coordonnées de latitude et de longitude que vous obtiendrez du service web.
 
-+ Let’s create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
++ Créons une icône de tortue pour l’ISS. Ton trinket inclut 'iss.gif' et 'iss2.gif' — essaie-les toutes les deux et vois celle que tu préféres. 
 
 [[[generic-python-turtle-image]]]
 
 \--- hints \--- \--- hint \---
 
-Your code should look like this:
+Ton code devrait ressembler à ceci:
 
-![screenshot](images/iss-image.png)
+![capture d'écran](images/iss-image.png)
 
 \--- /hint \---
 
 \--- /hints \---
 
-+ The ISS starts off in the centre of the map, now let's move it to the correct location:
++ L'ISS commence au centre de la carte, nous allons maintenant le déplacer à l'emplacement correct :
 
-![screenshot](images/iss-plot.png)
+![capture d'écran](images/iss-plot.png)
 
-**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates.
+**Note ** : la latitude est normalement donnée en premier, mais nous devons d'abord donner de la longitude lors du tracé des coordonnées `(x,y)`.
 
-+ Test your program by running it. The ISS should move to its current location above Earth. 
++ Teste ton programme en l'exécutant. L'ISS devrait se déplacer à son emplacement actuel au-dessus de la Terre. 
 
-![screenshot](images/iss-plotted.png)
+![capture d'écran](images/iss-plotted.png)
 
-+ Wait a few seconds and run your program again to see where the ISS has moved to.
++ Attends quelques secondes et lance à nouveau ton programme pour voir où l'ISS s'est déplacé.
