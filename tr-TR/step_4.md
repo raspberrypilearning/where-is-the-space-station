@@ -1,6 +1,6 @@
 ## Meydan okuma: aracı göster
 
---- meydan okuma ---
+--- challenge ---
 
 Astronotların adının yanı sıra, web hizmeti ISS gibi üzerinde bulundukları aracın adını sağlar.
 
