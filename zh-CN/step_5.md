@@ -1,55 +1,31 @@
-## ISS 何时会到达上空？
+## 国际空间站在哪儿？
 
-你还可以调用另一个 web 服务来找出 ISS 下次会在何时运行到一个特定位置的上空。 
+国际空间站处于环绕地球的轨道。 它大约每一个半小时完成一次地球轨道，并以每秒7.66公里的平均速度行进。 它很快！
 
-让我们找出 ISS 下次什么时候处于美国休斯顿航天中心的上空，其纬度为 29.5502，经度为 95.097。
-  
- 
+让我们使用另一个网络服务来找出国际空间站的位置。
 
-+ 首先让我们在地图上的这些坐标处绘制一个点：
++ 首先在你的浏览器新标签页中打开网页URL： <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
-    ![screenshot](images/iss-houston.png)
+你应该看到类似下面的内容：
 
-+ 现在让我们获取 ISS 下次到达上空的日期和时间。 
+    {
+    “iss_position”：{
+      “ latitude”：8.54938193505081， 
+      “ longitude”：73.16560793639105
+    }， 
+    “ message”： “成功”， 
+    “ timestamp”：1461931913
+    }
+    
 
-    与之前一样，我们可以通过在 web 浏览器的地址栏里输入 url 来调用 web 服务：<a href="http://api.open-notify.org/iss-pass.json" target="_blank">http://api.open-notify.org/iss-pass.json</a>
-  
-    你会看到一个错误：
+结果包含国际空间站当前在地球上的点的坐标。
 
-    ![screenshot](images/iss-pass-error.png)
+[[[generic-theory-lat-long]]]
 
-+ 这项 web 服务将纬度和经度作为输入项，因此我们必须将它们加入我们使用的 url 中。
++ 现在你需要从 Python 调用相同的 web 服务。 在脚本结尾添加以下代码以获取当前国际空间站位置：
 
-    输入项添加在 `?` 后面并使用 `&` 隔开。 
+![截屏](images/iss-location.png)
 
-    如下所示，向 url 添加 `lat` 和 `lon` 输入项：<a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
-  
-    ![screenshot](images/iss-passtimes.png)
-  
-    响应结果包括多个经过时间，我们只需查看第一个时间。该时间以标准时间格式给出，你需要在 Python 中将其转化为可读的时间。
++ 让我们创建变量以存储纬度和经度，然后打印它们：
 
-+ 现在让我们来从 Python 调用 web 服务：向你的脚本末尾添加以下代码：
-
-    ![screenshot](images/iss-passover.png)
-
-+ 现在让我们从结果中获得第一次经过的时间。
-
-    添加以下代码：
-
-    ![screenshot](images/iss-print-pass.png)
-
-
-+ 该时间以时间戳的形式给出，因此我们需要 Python 时间模块，使我们能将其打印为可读的格式并将其转化为当地时间。让我们使用海龟写出经过该点的时间。 
-
-+ 在你的脚本顶部添加一行 `import time`：
-
-    ![screenshot](images/iss-time.png)
-
-+ `time.ctime()` 函数将该时间转化为你能使用海龟写出的可读格式： 
-
-    ![screenshot](images/iss-pass-write.png)
- 
-    （你可以移除或者注释掉 `print` 行。）
-
-
-
+![截屏](images/iss-coordinates.png)
