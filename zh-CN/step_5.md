@@ -7,15 +7,16 @@
 + 首先在你的浏览器新标签页中打开网页URL： <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
 
 你应该看到类似下面的内容：
-
-    {
-    “iss_position”：{
-      “ latitude”：8.54938193505081， 
-      “ longitude”：73.16560793639105
-    }， 
-    “ message”： “成功”， 
-    “ timestamp”：1461931913
-    }
+```
+{
+"iss_position": {
+  "latitude": 8.54938193505081, 
+  "longitude": 73.16560793639105
+}, 
+"message": "成功", 
+"timestamp": 1461931913
+}
+```
     
 
 结果包含国际空间站当前在地球上的点的坐标。
