@@ -10,9 +10,9 @@ url = 'http://api.open-notify.org/astros.json'
 reponse = urllib.request.urlopen(url)
 resultat = json.loads(reponse.read())
 
-print('Personnes dans l''espace: ', resultat['number'])
+print('Personnes dans l''espace : ', resultat['number'])
 
-personnes = resultat['people']
+personne = resultat['people']
 
 for p in personne:
   print(p['name'], ' dans ', p['craft'])
@@ -25,8 +25,8 @@ resultat = json.loads(reponse.read())
 emplacement = resultat['iss_position']
 lat = float(emplacement['latitude'])
 lon = float(emplacement['longitude'])
-print('Latitude: ', lat)
-print('Longitude: ', lon)
+print('Latitude : ', lat)
+print('Longitude : ', lon)
 
 ecran = turtle.Screen()
 ecran.setup(720, 360)
@@ -67,14 +67,14 @@ emplacement.penup()
 emplacement.color('yellow')
 emplacement.goto(lon,lat)
 emplacement.dot (5)
-hideturtle()
+emplacement.hideturtle()
 
 url = 'http://api.open-notify.org/iss-pass.json?lat=' + str(lat) + '&lon=' + str(lon)
 reponse = urllib.request.urlopen(url)
 resultat = json.loads(reponse.read())
 
 #print resultat
-audessus = result['response'][1]['risetime']
+audessus = resultat['response'][1]['risetime']
 emplacement.write(time.ctime(audessus))
 
 
