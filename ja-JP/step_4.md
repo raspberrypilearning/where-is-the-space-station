@@ -8,10 +8,10 @@
 
 例：
 
-    People in Space:  3
-    Yuri Malenchenko in ISS
-    Timothy Kopra in ISS
-    Timothy Peake in ISS
+    宇宙にいる人の数:  3
+    Yuri Malenchenko は ISS
+    Timothy Kopra は ISS
+    Timothy Peake は ISS
     
 
 \--- hints \---
