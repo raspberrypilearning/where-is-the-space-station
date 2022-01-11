@@ -1,5 +1,5 @@
 ---
-title: '¿Dónde está la Estación Espacial?'
+title: "¿Dónde está la Estación Espacial?"
 hero_image: images/banner.png
 description: Encuentra la ubicación exacta de la ISS
 listed: true
@@ -7,11 +7,13 @@ copyedit: false
 version: 3.1.0
 last_tested: 2018-11-22
 steps:
-  - title: Introducción
-  - title: Lo que necesitarás
-  - title: '¿Quién está en el espacio?'
-  - title: 'Desafío: mostrar la nave'
-  - title: '¿Dónde está la EEI?'
-  - title: Mostrando a la EEI en un mapa
-  - title: '¿Cuándo estará la EEI por encima de tu posición?'
-  - title: 'Desafío: encuentre más tiempos de traspaso'
+- title: Introducción
+- title: Lo que necesitarás
+  completion: engaged
+- title: "¿Quién está en el espacio?"
+- title: 'Desafío: mostrar la nave'
+- title: "¿Dónde está la EEI?"
+- title: Mostrando a la EEI en un mapa
+- title: "¿Cuándo estará la EEI por encima de tu posición?"
+  completion: internal
+- title: 'Desafío: encuentre más tiempos de traspaso'

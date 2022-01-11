@@ -7,11 +7,13 @@ copyedit: false
 version: 3
 last_tested: 2017-01-01
 steps:
-  - title: Einleitung
-  - title: Was du brauchen wirst
-  - title: Wer ist im Weltraum?
-  - title: 'Aufgabe: Die Weltraumstation anzeigen'
-  - title: Wo ist die ISS?
-  - title: Zeichne die ISS auf einer Karte
-  - title: Wann wird die ISS über dir sein?
-  - title: 'Aufgabe: Finde mehr Überflugzeiten'
+- title: Einleitung
+- title: Was du brauchen wirst
+  completion: engaged
+- title: Wer ist im Weltraum?
+- title: 'Aufgabe: Die Weltraumstation anzeigen'
+- title: Wo ist die ISS?
+- title: Zeichne die ISS auf einer Karte
+- title: Wann wird die ISS über dir sein?
+  completion: internal
+- title: 'Aufgabe: Finde mehr Überflugzeiten'

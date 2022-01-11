@@ -17,11 +17,13 @@ software: python
 version: 3
 last_tested: 2017-01-01
 steps:
-  - title: Inleiding
-  - title: Wat je nodig hebt
-  - title: Wie is er in de ruimte?
-  - title: 'Uitdaging: laat het ruimtestation zien'
-  - title: Waar is het ISS?
-  - title: Het ISS op een kaart tekenen
-  - title: Wanneer zal het ISS boven je hoofd zijn?
-  - title: 'Uitdaging: vind meer overvliegtijden'
+- title: Inleiding
+- title: Wat je nodig hebt
+  completion: engaged
+- title: Wie is er in de ruimte?
+- title: 'Uitdaging: laat het ruimtestation zien'
+- title: Waar is het ISS?
+- title: Het ISS op een kaart tekenen
+- title: Wanneer zal het ISS boven je hoofd zijn?
+  completion: internal
+- title: 'Uitdaging: vind meer overvliegtijden'

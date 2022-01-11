@@ -1,3 +1,4 @@
+---
 title: Dov'è la Stazione Spaziale?
 hero_image: images/banner.png
 description: Traccia la posizione esatta della ISS
@@ -15,9 +16,10 @@ hardware: ''
 software: python
 version: 3
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Introduzione
 - title: Chi è nello Spazio?
+  completion: engaged
 - title: 'Sfida: Mostra il Veicolo'
 - title: Dov'è la ISS?
 - title: Quando sarà la ISS in alto?

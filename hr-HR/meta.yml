@@ -1,6 +1,8 @@
+---
 title: Gdje je svemirska postaja?
 hero_image: images/banner.png
-description: U ovom projektu koristit ćeš web uslugu kako bi saznao gdje se trenutno nalazi Međunarodna svemirska postaja (ISS) i ucrtao njenu lokaciju na kartu.
+description: U ovom projektu koristit ćeš web uslugu kako bi saznao gdje se trenutno
+  nalazi Međunarodna svemirska postaja (ISS) i ucrtao njenu lokaciju na kartu.
 theme: blue
 duration: 2
 listed: true
@@ -15,5 +17,5 @@ hardware: ''
 software: python
 version: 3
 last_tested: 2017-01-01
-steps: 
+steps:
 - title: Gdje je svemirska postaja?
