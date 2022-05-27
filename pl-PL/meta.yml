@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: Wprowadzenie
 - title: Czego będziesz potrzebować
-  completion: engaged
 - title: Kto jest w kosmosie?
 - title: 'Wyzwanie: pokaż pojazd'
+  completion:
+  - engaged
 - title: Gdzie jest ISS?
 - title: Nanoszenie ISS na mapę
 - title: Kiedy ISS będzie nad głową?
-  completion: internal
+  completion:
+  - internal
 - title: 'Wyzwanie: znajdź więcej czasów przejścia'

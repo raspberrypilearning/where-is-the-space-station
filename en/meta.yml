@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: Introduction
 - title: What you will need
-  completion: engaged
 - title: Who is in space?
 - title: 'Challenge: show the craft'
+  completion:
+  - engaged
 - title: Where is the ISS?
 - title: Plotting the ISS on a map
 - title: When will the ISS be overhead?
-  completion: internal
+  completion:
+  - internal
 - title: 'Challenge: find more pass-over times'

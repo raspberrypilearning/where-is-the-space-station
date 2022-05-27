@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: परिचय
 - title: तुम्हाला काय लागेल
-  completion: engaged
 - title: अंतराळात कोण आहे?
 - title: 'आव्हान: अवकाश जहाज दर्शवा'
+  completion:
+  - engaged
 - title: आंतरराष्ट्रीय अंतराळ स्थानक (ISS) कोठे आहे?
 - title: नकाशावर ISS प्लॉट करत आहे
 - title: या वरती ISS कधी असेल?
-  completion: internal
+  completion:
+  - internal
 - title: 'आव्हान: अधिक पास-वेळा शोधा'

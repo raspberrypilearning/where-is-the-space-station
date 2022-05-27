@@ -19,11 +19,13 @@ last_tested: 2017-01-01
 steps:
 - title: Inleiding
 - title: Wat je nodig hebt
-  completion: engaged
 - title: Wie is er in de ruimte?
 - title: 'Uitdaging: laat het ruimtestation zien'
+  completion:
+  - engaged
 - title: Waar is het ISS?
 - title: Het ISS op een kaart tekenen
 - title: Wanneer zal het ISS boven je hoofd zijn?
-  completion: internal
+  completion:
+  - internal
 - title: 'Uitdaging: vind meer overvliegtijden'

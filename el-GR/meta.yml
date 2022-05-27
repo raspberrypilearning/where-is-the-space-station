@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: Εισαγωγή
 - title: Τι θα χρειαστείς
-  completion: engaged
 - title: Ποιος είναι στο διάστημα;
 - title: 'Πρόκληση: δείξε το σκάφος'
+  completion:
+  - engaged
 - title: Πού είναι o ISS;
 - title: Αποτύπωση του ISS σε χάρτη
 - title: Πότε o ISS θα βρίσκεται από πάνω μας;
-  completion: internal
+  completion:
+  - internal
 - title: 'Πρόκληση: βρες περισσότερα περάσματα πάνω από άλλες τοποθεσίες'

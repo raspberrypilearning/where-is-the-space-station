@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: ಪರಿಚಯ
 - title: ನಿಮಗೆ ಬೇಕಾದುದನ್ನು
-  completion: engaged
 - title: ಬಾಹ್ಯಾಕಾಶದಲ್ಲಿ ಯಾರು?
 - title: 'ಸವಾಲು: ಕರಕುಶಲತೆಯನ್ನು ತೋರಿಸಿ'
+  completion:
+  - engaged
 - title: ISS ಎಲ್ಲಿದೆ?
 - title: ನಕ್ಷೆಯಲ್ಲಿISS ಅನ್ನು ಯೋಜಿಸುವುದು
 - title: ISS ಯಾವಾಗ ಓವರ್ಹೆಡ್ ಆಗಿರುತ್ತದೆ?
-  completion: internal
+  completion:
+  - internal
 - title: 'ಸವಾಲು: ಹೆಚ್ಚು ಪಾಸ್-ಓವರ್ ಸಮಯಗಳನ್ನು ಹುಡುಕಿ'

@@ -19,8 +19,9 @@ last_tested: 2017-01-01
 steps:
 - title: Introduzione
 - title: Chi è nello Spazio?
-  completion: engaged
 - title: 'Sfida: Mostra il Veicolo'
 - title: Dov'è la ISS?
+  completion:
+  - engaged
 - title: Quando sarà la ISS in alto?
 - title: 'Sfida: Trova altri orari di passaggio'
