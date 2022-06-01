@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: المقدمة
 - title: ما ستحتاج إليه
-  completion: engaged
 - title: من في الفضاء؟
 - title: 'التحدي: عرض الحرفة'
+  completion:
+  - engaged
 - title: أين هي محطة الفضاء الدولية؟
 - title: رسم محطة الفضاء الدولية على الخريطة
 - title: متى ستكون المحطة الفضائية الدولية فوقنا؟
-  completion: internal
+  completion:
+  - internal
 - title: 'التحدي: العثور على مزيد من مرات التمرير'

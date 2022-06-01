@@ -9,13 +9,15 @@ last_tested: 2018-11-22
 steps:
 - title: Giriş
 - title: Nelere ihtiyacınız olacak
-  completion: engaged
 - title: Uzayda kim var?
 - title: 'Meydan okuma: aracı göster'
+  completion:
+  - engaged
 - title: ISS nerede?
 - title: ISS'i harita üzerinde gösterme
 - title: 'ISS ne zaman üstümüzde olacak?
 
-    '
-  completion: internal
+'
+  completion:
+  - internal
 - title: 'Meydan okuma: daha fazla geçiş süresi bulun'

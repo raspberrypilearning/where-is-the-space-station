@@ -9,11 +9,13 @@ last_tested: 2018-11-22
 steps:
 - title: Introducción
 - title: Lo que necesitarás
-  completion: engaged
 - title: "¿Quién está en el espacio?"
 - title: 'Desafío: mostrar la nave'
+  completion:
+  - engaged
 - title: "¿Dónde está la EEI?"
 - title: Mostrando a la EEI en un mapa
 - title: "¿Cuándo estará la EEI por encima de tu posición?"
-  completion: internal
+  completion:
+  - internal
 - title: 'Desafío: encuentre más tiempos de traspaso'

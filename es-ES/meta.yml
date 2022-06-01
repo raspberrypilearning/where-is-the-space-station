@@ -9,11 +9,13 @@ last_tested: 2017-01-01
 steps:
 - title: Introducción
 - title: Lo que necesitarás
-  completion: engaged
 - title: "¿Quién está en el espacio?"
 - title: 'Desafío: mostrar la nave'
+  completion:
+  - engaged
 - title: "¿Dónde está la ISS?"
 - title: Trazando la ISS en un mapa
 - title: "¿Cuándo estará la ISS por encima de tu posición?"
-  completion: internal
+  completion:
+  - internal
 - title: 'Desafío: encontrar más veces cuando pasará por encima'
