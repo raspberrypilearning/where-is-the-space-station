@@ -8,25 +8,22 @@ A web service has an address (URL) just like a website does. Instead of returnin
 
 You should see something like this:
 
-```
-{
-  "message": "success",
-  "number": 3,
-  "people": [
-    {
-      "craft": "ISS",
-      "name": "Yuri Malenchenko"
-    },
-    {
-      "craft": "ISS",
-      "name": "Timothy Kopra"
-    },
-    {
-      "craft": "ISS",
-      "name": "Timothy Peake"
-    }
-  ]
-}
+```	
+message	"success"
+people	
+    0	
+        name	"Cai Xuzhe"
+        craft	"Tiangong"
+    1	
+        name	"Chen Dong"
+        craft	"Tiangong"
+    2	
+        name	"Sergey Prokopyev"
+        craft	"ISS"
+    3	
+        name	"Nicole Mann"
+        craft	"ISS"
+number	4
 ```
 
 The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
@@ -41,20 +38,40 @@ The `urllib.request` and `json` modules have already been imported for you at th
 
 + Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
 
-![screenshot](images/iss-url.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7
+highlight_lines: 8
+---
+# http://open-notify.org/Open-Notify-API/
+url = 'http://api.open-notify.org/astros.json'
+--- /code ---
 
-+ Now call the web service:
++ Now call the web service and load the data into a variable:
 
-![screenshot](images/iss-request.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 7
+highlight_lines: 9, 10, 11
+---
+# http://open-notify.org/Open-Notify-API/
+url = 'http://api.open-notify.org/astros.json'
+response = urllib.request.urlopen(url)
+astros = json.loads(response.read())
+print(astros)
 
-+ Next you need to load the JSON response into a Python data structure:
-
-![screenshot](images/iss-result.png)
+--- /code ---
 
 You should see something like this:
 
 ```
-{'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+{"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
 ```
 
 This is a Python dictionary with three keys: `message`, `number`, and `people`.
@@ -67,13 +84,33 @@ Now let's print the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
-![screenshot](images/iss-number.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 12
+highlight_lines: 
+---
+print('People in Space: ', astros['number'])
+--- /code ---
 
-`result['number']` will print the value associated with the key `number` in the `result` dictionary. In the example, this is `3`.
+
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary. In the example, this is `3`.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
-![screenshot](images/iss-people.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 14
+highlight_lines: 
+---
+people = astros['people']
+--- /code ---
+
 
 You should see something like:
 
@@ -87,7 +124,20 @@ You should see something like:
 
 + Each time through the loop, `p` will be set to a dictionary for a different astronaut.
 
-![screenshot](images/iss-people-1a.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 14
+highlight_lines: 
+---
+people = astros['people']
+
+for p in people:
+  print(p['name'], ' in ', p['craft'])
+--- /code ---
+
 
 + You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
 
@@ -96,10 +146,17 @@ You should see something like:
 You should see something like this:
 
 ```
-People in Space:  3
-Yuri Malenchenko
-Timothy Kopra
-Timothy Peake
+People in Space:  10
+Cai Xuzhe  in  Tiangong
+Chen Dong  in  Tiangong
+Liu Yang  in  Tiangong
+Sergey Prokopyev  in  ISS
+Dmitry Petelin  in  ISS
+Frank Rubio  in  ISS
+Nicole Mann  in  ISS
+Josh Cassada  in  ISS
+Koichi Wakata  in  ISS
+Anna Kikina  in  ISS
 ```
 
 __Note:__ You are using live data, so your results will depend on the number of people currently in space.
