@@ -15,7 +15,6 @@ steps:
   - engaged
 - title: Where is the ISS?
 - title: Plotting the ISS on a map
-- title: When will the ISS be overhead?
+- title: Add data to your map
   completion:
   - internal
-- title: 'Challenge: find more pass-over times'

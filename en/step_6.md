@@ -52,7 +52,19 @@ Now the coordinates will match the latitude and longitude coordinates that you g
 
 Your code should look like this:
 
-![screenshot](images/iss-image.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 37
+highlight_lines: 
+---
+screen.register_shape('iss.gif')
+iss = turtle.Turtle()
+iss.shape('iss.gif')
+iss.setheading(90)
+--- /code ---
 
 --- /hint ---
 
@@ -60,7 +72,17 @@ Your code should look like this:
     
 + The ISS starts off in the centre of the map, now let's move it to the correct location:
 
-![screenshot](images/iss-plot.png)
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 42
+highlight_lines: 
+---
+iss.penup()
+iss.goto(lon, lat)
+--- /code ---
   
 **Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates. 
 
