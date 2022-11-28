@@ -16,8 +16,6 @@ steps:
 - title: ISS nerede?
 - title: ISS'i harita üzerinde gösterme
 - title: 'ISS ne zaman üstümüzde olacak?
-
-'
   completion:
   - internal
 - title: 'Meydan okuma: daha fazla geçiş süresi bulun'
