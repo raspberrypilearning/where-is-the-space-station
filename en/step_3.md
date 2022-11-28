@@ -80,7 +80,7 @@ This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 That `message` has the value `success` that tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
-Now let's print the information in a more readable way.
+Change the `print` statement so the information in a more readable way.
 
 + First, let's look up the number of people in space and print it:
 
@@ -89,7 +89,7 @@ Now let's print the information in a more readable way.
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 12
+line_number_start: 11
 highlight_lines: 
 ---
 print('People in Space: ', astros['number'])
@@ -128,9 +128,8 @@ highlight_lines:
 people = astros['people']
 
 for p in people:
-  print(p['name'])
+    print(p['name'])
 --- /code ---
-
 
 + You can then look up the values for `name` to show the names of the people in space:
 
