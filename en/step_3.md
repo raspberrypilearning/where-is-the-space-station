@@ -74,11 +74,11 @@ You should see something like this:
 {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
 ```
 
-This is a Python dictionary with three keys: `message`, `number`, and `people`.
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-That `message` has the value `success` tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
+That `message` has the value `success` that tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
 
 Now let's print the information in a more readable way.
 
@@ -96,7 +96,7 @@ print('People in Space: ', astros['number'])
 --- /code ---
 
 
-`astros['number']` will print the value associated with the key `number` in the `astros` dictionary. In the example, this is `3`.
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
 + The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
 
@@ -110,13 +110,6 @@ highlight_lines:
 ---
 people = astros['people']
 --- /code ---
-
-
-You should see something like:
-
-```
-[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-```
 
 + Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
@@ -135,28 +128,26 @@ highlight_lines:
 people = astros['people']
 
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+  print(p['name'])
 --- /code ---
 
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
-
-![screenshot](images/iss-people-2.png)
++ You can then look up the values for `name` to show the names of the people in space:
 
 You should see something like this:
 
 ```
 People in Space:  10
-Cai Xuzhe  in  Tiangong
-Chen Dong  in  Tiangong
-Liu Yang  in  Tiangong
-Sergey Prokopyev  in  ISS
-Dmitry Petelin  in  ISS
-Frank Rubio  in  ISS
-Nicole Mann  in  ISS
-Josh Cassada  in  ISS
-Koichi Wakata  in  ISS
-Anna Kikina  in  ISS
+Cai Xuzhe
+Chen Dong
+Liu Yang
+Sergey Prokopyev
+Dmitry Petelin
+Frank Rubio
+Nicole Mann
+Josh Cassada
+Koichi Wakata
+Anna Kikina
 ```
 
 __Note:__ You are using live data, so your results will depend on the number of people currently in space.
