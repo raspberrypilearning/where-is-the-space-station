@@ -9,14 +9,11 @@ Let’s use another web service to find out where the International Space Statio
 You should see something like this:
   
 ```
-{
-"iss_position": {
-  "latitude": 8.54938193505081, 
-  "longitude": 73.16560793639105
-}, 
-"message": "success", 
-"timestamp": 1461931913
-}
+message	"success"
+iss_position	
+    longitude	"-55.2310"
+    latitude	"-41.3559"
+timestamp	1669638277
 ```
   
 The result contains the coordinates of the spot on Earth that the ISS is currently over. 
@@ -44,7 +41,7 @@ print(iss_now)
 {'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
 ```
 
-+ Let’s create variables to store the latitude and longitude, and then print them:
++ Create variables to store the latitude and longitude, and then print them:
 
 --- code ---
 ---
