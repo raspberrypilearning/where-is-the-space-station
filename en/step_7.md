@@ -9,12 +9,12 @@ Now that you have collected your data and plotted the position of the ISS, you c
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 42
-highlight_lines: 
+line_number_start: 40
+highlight_lines: 41
 ---
+#output on screen
 num_people = turtle.Turtle()
 --- /code ---
-
 
 + The new turtle shouldn't draw lines as it move, and should be hidden.
 
@@ -23,8 +23,8 @@ num_people = turtle.Turtle()
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 42
-highlight_lines: 43, 44
+line_number_start: 41
+highlight_lines: 42, 43
 ---
 num_people = turtle.Turtle()
 num_people.penup()
@@ -38,7 +38,7 @@ num_people.hideturtle()
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 48
+line_number_start: 44
 highlight_lines: 
 ---
 num_people.color('yellow')
@@ -52,10 +52,9 @@ num_people.goto(-175,-25)
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 51 
-highlight_lines: 52
+line_number_start: 46 
+highlight_lines:
 ---
-#write people
 num_people.write('people in space: ' + str(astros['number']))
 --- /code ---
 
