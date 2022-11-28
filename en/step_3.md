@@ -111,13 +111,6 @@ highlight_lines:
 people = astros['people']
 --- /code ---
 
-
-You should see something like:
-
-```
-[{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-```
-
 + Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
 
 [[[generic-python-for-loop-list]]]
@@ -135,28 +128,26 @@ highlight_lines:
 people = astros['people']
 
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+  print(p['name'])
 --- /code ---
 
 
-+ You can then look up the values for `name` and `craft`. Let's show the names of the people in space:
-
-![screenshot](images/iss-people-2.png)
++ You can then look up the values for `name` to show the names of the people in space:
 
 You should see something like this:
 
 ```
 People in Space:  10
-Cai Xuzhe  in  Tiangong
-Chen Dong  in  Tiangong
-Liu Yang  in  Tiangong
-Sergey Prokopyev  in  ISS
-Dmitry Petelin  in  ISS
-Frank Rubio  in  ISS
-Nicole Mann  in  ISS
-Josh Cassada  in  ISS
-Koichi Wakata  in  ISS
-Anna Kikina  in  ISS
+Cai Xuzhe
+Chen Dong
+Liu Yang
+Sergey Prokopyev
+Dmitry Petelin
+Frank Rubio
+Nicole Mann
+Josh Cassada
+Koichi Wakata
+Anna Kikina
 ```
 
 __Note:__ You are using live data, so your results will depend on the number of people currently in space.
