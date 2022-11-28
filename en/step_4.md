@@ -35,7 +35,7 @@ Change your `for` loop so it looks like this:
 
 ```python
 for p in people:
-  print(p['name'], ' in ', p['craft'])
+    print(p['name'], ' in ', p['craft'])
 ```
 
 --- /hint --- 

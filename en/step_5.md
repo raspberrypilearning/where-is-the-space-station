@@ -11,9 +11,9 @@ You should see something like this:
 ```
 message	"success"
 iss_position	
-    longitude	"-55.2310"
-    latitude	"-41.3559"
-timestamp	1669638277
+    longitude	"2.6290"
+    latitude	"22.7281"
+timestamp	1669639624
 ```
   
 The result contains the coordinates of the spot on Earth that the ISS is currently over. 
@@ -27,15 +27,20 @@ The result contains the coordinates of the spot on Earth that the ISS is current
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 19 
-highlight_lines: 
+line_number_start: 13 
+highlight_lines: 16, 17, 18, 20
 ---
+for p in people:
+    print(p['name'], ' in ', p['craft'])
+    
 url = 'http://api.open-notify.org/iss-now.json'
 response = urllib.request.urlopen(url)
 iss_now = json.loads(response.read())
 
 print(iss_now)
 --- /code ---
+
+You should see the following data.
 
 ```
 {'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
@@ -48,12 +53,23 @@ print(iss_now)
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 23
-highlight_lines: 
+line_number_start: 16
+highlight_lines: 20, 21, 22, 23, 24
 ---
+url = 'http://api.open-notify.org/iss-now.json'
+response = urllib.request.urlopen(url)
+iss_now = json.loads(response.read())
+
 location = iss_now['iss_position']
 lat = float(location['latitude'])
 lon = float(location['longitude'])
 print('Latitude: ', lat)
 print('Longitude: ', lon)
 --- /code ---
+
++ Run your code and the last two lines printed should look like this:
+
+```
+Latitude:  38.0465
+Longitude:  20.0936
+```
