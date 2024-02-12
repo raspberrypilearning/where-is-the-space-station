@@ -8,24 +8,21 @@ Webサービスには、Webサイトと同じようにアドレス (URL) があ�
 
 以下のようなものが表示されます：
 
-    {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
-    }
+    message "success"
+    people  
+        0   
+            name    "Cai Xuzhe"
+            craft   "Tiangong"
+        1   
+            name    "Chen Dong"
+            craft   "Tiangong"
+        2   
+            name    "Sergey Prokopyev"
+            craft   "ISS"
+        3   
+            name    "Nicole Mann"
+            craft   "ISS"
+    number  4
     
 
 ライブデータであるため、毎回Webサービスから返ってくるデータが同じものとは限りません。 データ形式は `JSON` ( 'ジェイソン'のように発音) と呼ばれます。
@@ -40,43 +37,64 @@ Webサービスには、Webサイトと同じようにアドレス (URL) があ�
 
 + `main.py` に次のコードを追加して、アクセスしたWebサービスのURLを変数として保存します。
 
-![スクリーンショット](images/iss-url.png)
+## \--- code \---
 
-+ 次に、Webサービスを呼び出します。
+language: python filename: main.py line_numbers: true line_number_start: 7
 
-![スクリーンショット](images/iss-request.png)
+## highlight_lines: 8
 
-+ 次に、JSONレスポンスをPythonのデータ構造として読み込む必要があります。
+# http://open-notify.org/Open-Notify-API/
 
-![スクリーンショット](images/iss-result.png)
+url = 'http://api.open-notify.org/astros.json' \--- /code \---
+
++ Now call the web service and load the data into a variable:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 7
+
+## highlight_lines: 9, 10, 11
+
+# http://open-notify.org/Open-Notify-API/
+
+url = 'http://api.open-notify.org/astros.json' response = urllib.request.urlopen(url) astros = json.loads(response.read()) print(astros)
+
+\--- /code \---
 
 以下のようなものが表示されます：
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
     
 
-これは、`message`、`number`、と`people`という3つのキーを持つPythonの辞書（ディクショナリ）です。
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-Webサービスにアクセス成功した場合、指定したキー、`message`、に`success` の値があります。 ライブデータなので、Webサービスが返す結果が毎回同じとは限りません：`number`（宇宙にいる人の数） と`people` （宇宙にいる人）。
+That `message` has the value `success` that tells you that you successfully accessed the web service. ライブデータなので、Webサービスが返す結果が毎回同じとは限りません：`number`（宇宙にいる人の数） と`people` （宇宙にいる人）。
 
-次に、情報を読みやすく表示しましょう。
+Change the `print` statement so the information is more readable.
 
 + まず、宇宙にいる人の数を調べて、それを表示しましょう。
 
-![スクリーンショット](images/iss-number.png)
+## \--- code \---
 
-`result['number']` は、`result` 辞書にあるキー `number` に関連する値のことです。 この例では、numberキーに関連する値は`3`です。
+language: python filename: main.py line_numbers: true line_number_start: 11
+
+## highlight_lines:
+
+print('People in Space: ', astros['number']) \--- /code \---
+
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
 + `people`キーに関連付けられた値は、辞書のリストです！ その値を変数に入れて使用できるようにしましょう：
 
-![スクリーンショット](images/iss-people.png)
+## \--- code \---
 
-次のようなものが表示されます。
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-    
+## highlight_lines:
+
+people = astros['people'] \--- /code \---
 
 + 今度は、宇宙飛行士の名前を別々の行に表示しましょう。 これを行うには、Python `for` ループを使用することができます。
 
@@ -84,18 +102,31 @@ Webサービスにアクセス成功した場合、指定したキー、`message
 
 + ループを通過するたびに、 `p` が別の宇宙飛行士に当てはまる辞書に設定されます。
 
-![スクリーンショット](images/iss-people-1a.png)
+## \--- code \---
 
-+ 次に、 `name` と `craft`の値を検索できます。 宇宙にいる人たちの名前を表示しましょう：
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-![スクリーンショット](images/iss-people-2.png)
+## highlight_lines: 13, 14
+
+people = astros['people']
+
+for p in people: print(p['name']) \--- /code \---
+
++ You can then look up the values for `name` to show the names of the people in space:
 
 以下のようなものが表示されます：
 
-    宇宙にいる人の数:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    People in Space:  10
+    Cai Xuzhe
+    Chen Dong
+    Liu Yang
+    Sergey Prokopyev
+    Dmitry Petelin
+    Frank Rubio
+    Nicole Mann
+    Josh Cassada
+    Koichi Wakata
+    Anna Kikina
     
 
 **注：** ライブデータを使用しているため、表示されるデータが毎回同じものとは限りません。データ現在宇宙にいる人たちをあらわしています。
