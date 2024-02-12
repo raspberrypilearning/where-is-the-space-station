@@ -1,51 +1,49 @@
-## ISS ne zaman üstümüzde olacak?
+## Add data to your map
 
-ISS'nin belirli bir konumun üzerinde ne zaman bulunacağını öğrenmek için kullanabileceğiniz bir web hizmeti de vardır.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-ISS'nin bir dahaki sefer ne zaman enlemi `29.5502` ve boylamı `95.097` olan Houston, ABD'deki Space Centre'ın üzerinden geçeceğini bulalım.
++ First create a new turtle to write some text
 
-+ Önce harita üzerinde şu koordinatları kullanarak bir noktayı gösterelim:
+## \--- code \---
 
-![ekran görüntüsü](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-Şimdi ISS'nin bir sonraki üzerimizde olduğu tarihi ve saati alalım.
+## highlight_lines: 41
 
-+ Daha önce olduğu gibi, URL'sini bir web tarayıcısının adres çubuğuna girerek web hizmetini çağırabilirsiniz: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-Bir hata görmelisiniz:
+num_people = turtle.Turtle() \--- /code \---
 
-![ekran görüntüsü](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-Bu web hizmeti enlem ve boylamı girdi olarak alır, bu nedenle bunları URL'ye eklemeniz gerekir. Girdiler `?`'dan sonra eklenir ve `&` ile ayrılır.
+## \--- code \---
 
-+ Gösterildiği gibi `enlem`(lat) ve `boylam`(lon) girdilerini URL ye girin: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![ekran görüntüsü](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Yanıt birkaç geçiş süresi içeriyor ve biz sadece ilkine bakacağız. Zaman bir Unix zaman damgası olarak verildi (Python scriptinizde okunabilir bir zamana dönüştürebilirsiniz).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ Şimdi web servisini Python'da çağıralım. Scriptinizin sonuna aşağıdaki kodu ekleyin:
+## \--- code \---
 
-![ekran görüntüsü](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Şimdi sonuçtan ilk geçiş zamanını alalım. Aşağıdaki kodu ekleyin:
+## highlight_lines:
 
-![ekran görüntüsü](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-Python `time` modülüne ihtiyacımız olacak, böylece onu okunabilir bir biçimde yazdırıp yerel saate dönüştürebiliriz. Sonra scriptin Houston için geçiş zamanını yazdırmasını sağlıycağız.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ Scriptinizin en üstüne bu `import time` satırını ekleyin:
+## \--- code \---
 
-![ekran görüntüsü](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ `time.ctime()` fonksiyonu zaman damgasını haritanıza yazabileceğiniz okunabilir bir forma dönüştürür:
+## highlight_lines:
 
-![ekran görüntüsü](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(`print` satırını kaldırabilirsiniz, veya başına `#` ekleyerek scriptinizin onu görmezden gelmesini sağlayabilirsiniz)
-
-+ İsterseniz metnin rengini ve biçimini değiştirebilirsiniz. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
