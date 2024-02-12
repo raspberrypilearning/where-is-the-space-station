@@ -1,51 +1,49 @@
-## ISS ಯಾವಾಗ ಓವರ್ಹೆಡ್ ಆಗಿರುತ್ತದೆ?
+## Add data to your map
 
-ISS ಮುಂದಿನ ನಿರ್ದಿಷ್ಟ ಸ್ಥಳದ ಮೇಲೆ ಯಾವಾಗ ಇರುತ್ತದೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯಲು ನೀವು ಬಳಸಬಹುದಾದ ವೆಬ್ ಸೇವೆಯೂ ಇದೆ.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-Latitude `29.5502` ನಲ್ಲಿರುವ USA, Houstonನ್ನಲ್ಲಿರುವ Space Centre ಮೇಲೆ ISS ಮುಂದಿನದು ಯಾವಾಗ ಎಂದು ಕಂಡುಹಿಡಿಯೋಣ ಮತ್ತು longitude `95.097`.
++ First create a new turtle to write some text
 
-+ ಮೊದಲು ಈ ನಿರ್ದೇಶಾಂಕಗಳಲ್ಲಿ ನಕ್ಷೆಯಲ್ಲಿ ಚುಕ್ಕೆ ಹಾಕೋಣ:
+## \--- code \---
 
-![screenshot](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-ಈಗ ISS ಮುಂದಿನ ಓವರ್ಹೆಡ್ ಆಗಿರುವ ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ಪಡೆಯೋಣ.
+## highlight_lines: 41
 
-+ ಮೊದಲಿನಂತೆ, ವೆಬ್ ಬ್ರೌಸರ್‌ನ ವಿಳಾಸ ಪಟ್ಟಿಗೆ ಅದರ URL ಅನ್ನು ನಮೂದಿಸುವ ಮೂಲಕ ನೀವು ವೆಬ್ ಸೇವೆಯನ್ನು ಕರೆಯಬಹುದು: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-ನೀವು ದೋಷವನ್ನು ನೋಡಬೇಕು:
+num_people = turtle.Turtle() \--- /code \---
 
-![screenshot](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-ಈ ವೆಬ್ ಸೇವೆಯು latitude ಮತ್ತುlongitude ವನ್ನು ಇನ್‌ಪುಟ್‌ಗಳಾಗಿ ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆ, ಆದ್ದರಿಂದ ನೀವು ಅವುಗಳನ್ನು URL ನಲ್ಲಿ ಸೇರಿಸಬೇಕಾಗುತ್ತದೆ. ನಂತರ ಇನ್‌ಪುಟ್‌ಗಳನ್ನು ಸೇರಿಸಲಾಗುತ್ತದೆ`?` ಮತ್ತು `&`ನೊಂದಿಗೆ ಬೇರ್ಪಡಿಸಲಾಗಿದೆ.
+## \--- code \---
 
-+ ತೋರಿಸಿರುವಂತೆ url ಗೆ `lat` ಮತ್ತು `lon` ಒಳಹರಿವುಗಳನ್ನು ಸೇರಿಸಿ: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![screenshot](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-ಪ್ರತಿಕ್ರಿಯೆಯು ಹಲವಾರು ಪಾಸ್-ಓವರ್ ಸಮಯಗಳನ್ನು ಒಳಗೊಂಡಿದೆ, ಮತ್ತು ನಾವು ಮೊದಲನೆಯದನ್ನು ನೋಡುತ್ತೇವೆ. ಸಮಯವನ್ನು ಯುನಿಕ್ಸ್ time stamp ಆಗಿ ನೀಡಲಾಗಿದೆ (ನಿಮ್ಮPython ಸ್ಕ್ರಿಪ್ಟ್‌ನಲ್ಲಿ ನೀವು ಅದನ್ನು ಓದಬಲ್ಲ ಸಮಯಕ್ಕೆ ಪರಿವರ್ತಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ ಈಗ ವೆಬ್ ಸೇವೆಯನ್ನು Python ನಿಂದ ಕರೆಯೋಣ. ನಿಮ್ಮ ಸ್ಕ್ರಿಪ್ಟ್‌ನ ಕೊನೆಯಲ್ಲಿ ಈ ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಸೇರಿಸಿ:
+## \--- code \---
 
-![screenshot](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ ಈಗ ಫಲಿತಾಂಶದಿಂದ ಮೊದಲ ಪಾಸ್-ಓವರ್ ಸಮಯವನ್ನು ಪಡೆಯೋಣ. ಕೆಳಗಿನ ಕೋಡ್ ಸೇರಿಸಿ:
+## highlight_lines:
 
-![screenshot](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-ನಮಗೆ Python `time` ಬೇಕಾಗುತ್ತದೆ ಮಾಡ್ಯೂಲ್ ಆದ್ದರಿಂದ ನಾವು ಅದನ್ನು ಓದಬಲ್ಲ ರೂಪದಲ್ಲಿ ಮುದ್ರಿಸಬಹುದು ಮತ್ತು ಅದನ್ನು ಸ್ಥಳೀಯ ಸಮಯಕ್ಕೆ ಪರಿವರ್ತಿಸಬಹುದು. ನಂತರ ನಾವು ಹೂಸ್ಟನ್‌ಗಾಗಿ ಡಾಟ್ ಮೂಲಕ ಪಾಸ್-ಓವರ್ ಸಮಯವನ್ನು ಬರೆಯಲು ಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಪಡೆಯುತ್ತೇವೆ.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ ಅದಕ್ಕೆ `import time` ಸಾಲನ್ನು ನಿಮ್ಮ ಸ್ಕ್ರಿಪ್ಟಿನ ಮೇಲ್ಭಾಗಕ್ಕೆ ಸೇರಿಸಿ:
+## \--- code \---
 
-![screenshot](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ `time.ctime() ` ಕಾರ್ಯವು time stamp ಅನ್ನು ನಿಮ್ಮ ನಕ್ಷೆಯಲ್ಲಿ ಬರೆಯಬಹುದಾದ ಓದಬಲ್ಲ ರೂಪಕ್ಕೆ ಪರಿವರ್ತಿಸುತ್ತದೆ:
+## highlight_lines:
 
-![screenshot](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(ನೀವು `print` ಸಾಲನ್ನು ತೆಗೆದುಹಾಕಬಹುದು, ಅಥವಾ ಪ್ರಾರಂಭದಲ್ಲಿ `#` ಅನ್ನು ಸೇರಿಸುವ ಮೂಲಕ ಅದನ್ನು ಕಾಮೆಂಟ್ ಆಗಿ ಪರಿವರ್ತಿಸಬಹುದು ಆದ್ದರಿಂದ ನಿಮ್ಮ ಸ್ಕ್ರಿಪ್ಟ್ ಅದನ್ನು ನಿರ್ಲಕ್ಷಿಸುತ್ತದೆ.)
-
-+ ನೀವು ಬಯಸಿದರೆ, ನೀವು ಪಠ್ಯದ ಬಣ್ಣ ಮತ್ತು ಸ್ವರೂಪವನ್ನು ಬದಲಾಯಿಸಬಹುದು. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
