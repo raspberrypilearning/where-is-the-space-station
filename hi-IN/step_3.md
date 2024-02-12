@@ -1,101 +1,132 @@
 ## अंतरिक्ष में कौन है?
 
-आप एक वेब सेवा का उपयोग करने जा रहे हैं जो अंतरिक्ष के बारे में लाइव जानकारी प्रदान देती है। सबसे पहले, आइए जानें कि वर्तमान में कौन अंतरिक्ष में है।
+आप एक वेब सेवा का उपयोग करने जा रहे हैं जो अंतरिक्ष के बारे में लाइव जानकारी प्रदान करती है। सबसे पहले, आइए जानें कि वर्तमान में अंतरिक्ष में कौन है।
 
-वेबसाइट की तरह ही, हर वेब सेवा का पता होता है जिसे हम यूआरएल (URL) कहते हैं। फरक यह है की वेबपेज की तरह एचटीएमएल (HTML) वापस भेजने के बजाय, यह डेटा लौटाता है।
+वेबसाइट की तरह ही, हर वेब सेवा का पता (URL) होता है। वेब पेज के लिए HTML लौटाने के बजाय, यह डेटा लौटाता है।
 
-+ <a href="http://api.open-notify.org/astros.json" target="_blank">वेब सेवा</a> को वेब ब्राउज़र में खोलें ।
++ <a href="http://api.open-notify.org/astros.json" target="_blank">वेब सेवा</a> को एक वेब ब्राउज़र में खोलें।
 
-आपका वेबपेज कुछ इस तरह दिखाई देना चाहिए:
+आपको कुछ ऐसा दिखना चाहिए:
 
-    {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
-    }
+    message "success"
+    people  
+        0   
+            name    "Cai Xuzhe"
+            craft   "Tiangong"
+        1   
+            name    "Chen Dong"
+            craft   "Tiangong"
+        2   
+            name    "Sergey Prokopyev"
+            craft   "ISS"
+        3   
+            name    "Nicole Mann"
+            craft   "ISS"
+    number  4
     
 
-डेटा लाइव है, इसलिए आप शायद थोड़ा अलग परिणाम देखेंगे। डेटा प्रारूप को ` JSON ` कहा जाता है ('जेसन' की तरह उच्चारण)।
+डेटा लाइव है, इसलिए आपको शायद थोड़ा अलग परिणाम दिखाई देगा। ऐसे दिखने वाले डेटा को `JSON` कहा जाता है ('जेसन' की तरह उच्चारण)।
 
 [[[generic-json]]]
 
-आपको पायथन स्क्रिप्ट से वेब सेवा को कॉल करने की आवश्यकता है, ताकि आप परिणामों का उपयोग कर सकें।
+आपको वेब सेवा को Python स्क्रिप्ट से कॉल करने की आवश्यकता है, ताकि आप परिणामों का उपयोग कर सकें।
 
-+ इस ट्रिंकेट को खोलें: [ http://rpf.io/iss-on ](http://rpf.io/iss-on)
++ इस trinket को खोलें: <http://rpf.io/iss-on>{:target="_blank"}
 
-` urllib.request ` और ` json ` मॉड्यूल पहले से ही आपके लिए ` main.py` स्क्रिप्ट में इम्पोर्ट किए जा चुके हैं ।
+`urllib.request` और `json` मॉड्यूल पहले से ही आपके लिए `main.py` स्क्रिप्ट में आयात किए जा चुके हैं ।
 
-+ निम्न कोड को ` main.py` में जोड़ें ताकि जिस वेब सेवा का आपने अभी प्रयोग किया था उसके यूआरएल को वेरिएबल में स्टोर कर सकें
++ निम्न कोड को `main.py` में जोड़ें ताकि जिस वेब सेवा का आपने अभी प्रयोग किया था उसके URL को वेरिएबल में स्टोर कर सकें:
 
-![स्क्रीनशॉट](images/iss-url.png)
+## \--- code \---
 
-+ अब वेब सेवा को कॉल करें:
+language: python filename: main.py line_numbers: true line_number_start: 7
 
-![स्क्रीनशॉट](images/iss-request.png)
+## highlight_lines: 8
 
-+ आगे आपको पायथन डेटा स्ट्रक्चर में JSON प्रतिक्रिया लोड करने की आवश्यकता है:
+# http://open-notify.org/Open-Notify-API/
 
-![स्क्रीनशॉट](images/iss-result.png)
+url = 'http://api.open-notify.org/astros.json' \--- /code \---
 
-आपका वेबपेज कुछ इस तरह दिखाई देना चाहिए:
++ Now call the web service and load the data into a variable:
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 7
+
+## highlight_lines: 9, 10, 11
+
+# http://open-notify.org/Open-Notify-API/
+
+url = 'http://api.open-notify.org/astros.json' response = urllib.request.urlopen(url) astros = json.loads(response.read()) print(astros)
+
+\--- /code \---
+
+आपको कुछ ऐसा दिखना चाहिए:
+
+    {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
     
 
-यह तीन keys वाला पायथन शब्दकोश है: `message`, `number`, और `people` ।
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-वह `message` जिसकी वैल्यू है `success` आपको बताता है कि आपने वेब सेवा को सफलतापूर्वक एक्सेस किया है। ध्यान दें कि आपको `number` और `people` के लिए अलग परिणाम दिखाई देंगे और वह अंतरिक्ष में वर्तमान में कौन है, इस पर निर्भर करता है।
+That `message` has the value `success` that tells you that you successfully accessed the web service. ध्यान दें कि आपको `number` और `people` के लिए अलग परिणाम दिखाई देंगे और वह अंतरिक्ष में वर्तमान में कौन है, इस पर निर्भर करता है।
 
-अब सूचना को इस तरह प्रिंट करते हैं ताकि उसे पढ़ने और समझने में आसानी हो।
+Change the `print` statement so the information is more readable.
 
-+ पहले, चलो अंतरिक्ष में लोगों की संख्या देखते हैं और इसे प्रिंट करते हैं:
++ सबसे पहले, आइए अंतरिक्ष में लोगों की संख्या देखें और इसे प्रिंट करें:
 
-![स्क्रीनशॉट](images/iss-number.png)
+## \--- code \---
 
-`result['number']` जो है वह `result` शब्दकोश में `number` key के साथ जुड़े मूल्य को प्रिंट करेगा। इस उदाहरण में, यह `3` है।
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-+ `people` key के साथ जुड़ी हुई वैल्यू शब्दकोशों की एक सूची के समान है! आइए उस वैल्यू को एक वेरिएबल में रखें ताकि आप इसका उपयोग कर सकें:
+## highlight_lines:
 
-![स्क्रीनशॉट](images/iss-people.png)
+print('People in Space: ', astros['number']) \--- /code \---
 
-आपको कुछ इस तरह दिखाई देना चाहिए:
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-    
++ `people` कुंजी से जुड़ा मान शब्दकोशों की एक सूची है! आइए उस मान को एक वेरिएबल में रखें ताकि आप इसका उपयोग कर सकें:
 
-+ अब आपको प्रत्येक अंतरिक्ष यात्री के लिए एक लाइन प्रिंट करनी है। ऐसा करने के लिए आप पाइथन `for` लूप का उपयोग कर सकते हैं।
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 11
+
+## highlight_lines:
+
+people = astros['people'] \--- /code \---
+
++ अब आपको प्रत्येक अंतरिक्ष यात्री के लिए एक पंक्ति प्रिंट करनी है। ऐसा करने के लिए आप Python `for` लूप का उपयोग कर सकते हैं।
 
 [[[generic-python-for-loop-list]]]
 
-+ हर बार लूप के माध्यम से, `p` एक अलग अंतरिक्ष यात्री के लिए एक शब्दकोश में सेट किया जाएगा।
++ हर बार लूप के माध्यम से, `p` एक अलग अंतरिक्ष यात्री के लिए शब्दकोश में सेट किया जाएगा।
 
-![स्क्रीनशॉट](images/iss-people-1a.png)
+## \--- code \---
 
-+ फिर आप `name` और `craft` की वैल्यू देख सकते हैं। आइए अंतरिक्ष में गए लोगों के नाम दिखाएं:
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-![स्क्रीनशॉट](images/iss-people-2.png)
+## highlight_lines: 13, 14
 
-आपको कुछ इस तरह दिखाई देना चाहिए:
+people = astros['people']
 
-    People in Space:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+for p in people: print(p['name']) \--- /code \---
+
++ You can then look up the values for `name` to show the names of the people in space:
+
+आपको कुछ ऐसा दिखना चाहिए:
+
+    People in Space:  10
+    Cai Xuzhe
+    Chen Dong
+    Liu Yang
+    Sergey Prokopyev
+    Dmitry Petelin
+    Frank Rubio
+    Nicole Mann
+    Josh Cassada
+    Koichi Wakata
+    Anna Kikina
     
 
 **ध्यान दें:** आप लाइव डेटा का उपयोग कर रहे हैं, इसलिए आपके परिणाम वर्तमान में अंतरिक्ष में मौजूद लोगों की संख्या पर निर्भर करेंगे।
