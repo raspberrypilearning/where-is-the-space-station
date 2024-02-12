@@ -8,24 +8,21 @@
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
-    }
+    message "success"
+    people  
+        0   
+            name    "Cai Xuzhe"
+            craft   "Tiangong"
+        1   
+            name    "Chen Dong"
+            craft   "Tiangong"
+        2   
+            name    "Sergey Prokopyev"
+            craft   "ISS"
+        3   
+            name    "Nicole Mann"
+            craft   "ISS"
+    number  4
     
 
 डेटा लाइव्ह आहे, म्हणून आपणास कदाचित थोड्या वेगळ्या प्रकारचा परिणाम दिसू शकताे. डेटा स्वरूपाला `JSON` असे म्हणतात('जेसन' असे उच्चारतात).
@@ -40,43 +37,64 @@
 
 + आपण फक्त चल म्हणून प्रवेश केलेल्या वेब सेवेची URL समाविष्ट करण्यासाठी`main.py`वर खालील कोड जोडा:
 
-![screenshot](images/iss-url.png)
+## \--- code \---
 
-+ आता वेब सेवेवर कॉल करा:
+language: python filename: main.py line_numbers: true line_number_start: 7
 
-![screenshot](images/iss-request.png)
+## highlight_lines: 8
 
-+ पुढे आपल्याला Python data structure मध्ये JSON प्रतिसाद लोड करणे आवश्यक आहे:
+# http://open-notify.org/Open-Notify-API/
 
-![screenshot](images/iss-result.png)
+url = 'http://api.open-notify.org/astros.json' \--- /code \---
+
++ Now call the web service and load the data into a variable:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 7
+
+## highlight_lines: 9, 10, 11
+
+# http://open-notify.org/Open-Notify-API/
+
+url = 'http://api.open-notify.org/astros.json' response = urllib.request.urlopen(url) astros = json.loads(response.read()) print(astros)
+
+\--- /code \---
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
     
 
-Python dictionary च्या तीन की(keys) आहेत: `message`, `number`, and `people`.
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-तो `message` आपल्याला सांगते की आपण वेब सेवेवर `success` प्रवेश केला. लक्षात घ्या की आपल्याला `number` आणि `people` साठी भिन्न परिणाम दिसतील ते सध्या अवकाशात कोण आहे यावर अवलंबून आहे.
+That `message` has the value `success` that tells you that you successfully accessed the web service. लक्षात घ्या की आपल्याला `number` आणि `people` साठी भिन्न परिणाम दिसतील ते सध्या अवकाशात कोण आहे यावर अवलंबून आहे.
 
-आता अधिक वाचनीय पध्दतीने माहिती मुद्रित(print) करू.
+Change the `print` statement so the information is more readable.
 
 + प्रथम, अवकाशातील लोकांची संख्या शोधू आणि मुद्रित करा:
 
-![screenshot](images/iss-number.png)
+## \--- code \---
 
-`result['number']`जे मूल्य मुद्रित करेल ते `result` dictionary मधील `number` या कीच (key) मूल्य असेल. उदाहरणार्थ, हे ` 3 `आहे.
+language: python filename: main.py line_numbers: true line_number_start: 11
+
+## highlight_lines:
+
+print('People in Space: ', astros['number']) \--- /code \---
+
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
 + `people` की(key) सोबत जे मूल्य आहे ते dictionaries ची यादी आहे! चला त्या व्हेरिएबलमध्ये व्हॅल्यू ठेवू म्हणजे आपण ते वापरू शकाल:
 
-![screenshot](images/iss-people.png)
+## \--- code \---
 
-तुमच्याकडे असे काहीतरी दिसायला हवे:
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-    
+## highlight_lines:
+
+people = astros['people'] \--- /code \---
 
 + आता आपल्याला प्रत्येक अंतराळवीरांसाठी एक ओळ मुद्रित करण्याची आवश्यकता आहे. आपण हे करण्यासाठी Python `for` loop(लूप) वापरू शकता.
 
@@ -84,18 +102,31 @@ Python dictionary च्या तीन की(keys) आहेत: `message`, `
 
 + प्रत्येक वेळी लूपमधून `p` वेगळ्या अंतराळवीरांच्या dictionary वर सेट केले जाईल.
 
-![screenshot](images/iss-people-1a.png)
+## \--- code \---
 
-+ त्यानंतर आपण `name` आणि `craft`. <0> नावाची मूल्ये शोधू शकता. चला अवकाशातील लोकांची नावे दाखवू:
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-![screenshot](images/iss-people-2.png)
+## highlight_lines: 13, 14
+
+people = astros['people']
+
+for p in people: print(p['name']) \--- /code \---
+
++ You can then look up the values for `name` to show the names of the people in space:
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    People in Space:  3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    People in Space:  10
+    Cai Xuzhe
+    Chen Dong
+    Liu Yang
+    Sergey Prokopyev
+    Dmitry Petelin
+    Frank Rubio
+    Nicole Mann
+    Josh Cassada
+    Koichi Wakata
+    Anna Kikina
     
 
 **टीपः ** आपण थेट डेटा वापरत आहात, म्हणून आपले परिणाम सध्या अंतराळातील लोकांच्या संख्येवर अवलंबून असतील.
