@@ -7,7 +7,7 @@
 अंतराळ स्थानकाचे चिन्ह ISS चे सद्य स्थिती दर्शविते. पुढे कधी अमेरिकेच्या ह्युस्टनमधील अंतराळ केंद्रावर ISS केव्हा जाईल हे पिवळा मजकूर दर्शवितो.
 
 <div class="trinket">
-  <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  <iframe src="https://trinket.io/embed/python/a0ba9cea61?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
   <img src="images/iss-final.png">
 </div>
