@@ -1,51 +1,49 @@
-## या वरती ISS कधी असेल?
+## Add data to your map
 
-येथे एक वेब सेवा देखील आहे जी वापरूनसांगू शकतो कि ISS पुढील विशिष्ट स्थानापर्यंत केव्हा येईल.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-अमेरिकेच्या ह्युस्टनमधील अक्षांश `29.5502` आणि रेखांश `95.097` वरअंतराळ केंद्रावर ISS केव्हा होईल हे जाणून घेऊया.
++ First create a new turtle to write some text
 
-+ प्रथम या निर्देशांकांवर नकाशावर बिंदू प्लॉट करूया:
+## \--- code \---
 
-![screenshot](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-आता ISS ची पुढील या वरती असल्याची तारीख आणि वेळ मिळवू या.
+## highlight_lines: 41
 
-+ पूर्वीप्रमाणे आपण वेब ब्राउझरच्या अ‍ॅड्रेस बारमध्ये त्याची URL प्रविष्ट करुन वेब सेवेला कॉल करू शकता: <a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
+# output on screen
 
-आपल्याला एक त्रुटी दिसेल:
+num_people = turtle.Turtle() \--- /code \---
 
-![screenshot](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-ही वेब सेवा अक्षांश आणि रेखांश म्हणून इनपुट म्हणून घेते, म्हणून आपणास त्यांचा यूआरएलमध्ये समावेश करावा लागेल. इनपुट `?` यानंतर जोडले जातात आणि `&`सह विभक्त होतात.
+## \--- code \---
 
-+ `lat` आणि `lon` यूआरएलमध्ये <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>दर्शविल्याप्रमाणे जोडा
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![screenshot](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-प्रतिसादामध्ये कित्येक पास ओव्हर वेळा समाविष्ट आहेत आणि आपण फक्त प्रथम पाहू. वेळ Unix time stamp म्हणून देण्यात आला आहे (आपण आपल्या python स्क्रिप्टमधील वाचनीय वेळेत त्यास रूपांतरित करा).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ आता आपल्याला Python मधून वेब सेवा कॉल करण्याची आवश्यकता आहे. आपल्या स्क्रिप्टच्या शेवटी पुढील कोड जोडा:
+## \--- code \---
 
-![screenshot](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ आता निकालापासून पहिला पास ओव्हर टाइम घेऊया. खालील कोड जोडा:
+## highlight_lines:
 
-![screenshot](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-आपल्याला Python `time` मॉड्यूल लागेल जेणेकरून आपण ते वाचनीय स्वरूपात मुद्रित करू आणि स्थानिक वेळेत रूपांतरित करू. मग आपल्याला ह्युस्टनसाठी डॉटद्वारे पास-ओव्हर टाईम लिहिण्यासाठी स्क्रिप्ट मिळेल.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ तुमच्या स्क्रिप्टच्या सुरवातीला `import time` ही ओळ जोडा:
+## \--- code \---
 
-![screenshot](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ `time.ctime()` हे फंक्शन टाईम स्टॅम्पला आपल्या नकाशावर लिहिण्या योग्य वाचन करण्यायोग्य फॉर्ममध्ये रूपांतरित करते:
+## highlight_lines:
 
-![screenshot](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(आपण `print` ओळ काढू शकता किंवा प्रारंभात `#` जोडून टिप्पणीमध्ये रूपांतरित करू शकता जेणेकरून आपली स्क्रिप्ट त्याकडे दुर्लक्ष करेल.)
-
-+ आपल्याला आवडत असल्यास, आपण मजकूराचा रंग आणि स्वरूप बदलू शकता. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
