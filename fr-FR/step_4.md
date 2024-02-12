@@ -33,8 +33,8 @@ Tu obtiens la valeur de `name` en utilisant `p[name]` — comment peux-tu obteni
 Modifie ta boucle `pour` pour qu'elle ressemble à ceci:
 
 ```python
-for p in personne :
-  print(p['name'], ' dans ', p['craft'])
+for p in people:
+    print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
