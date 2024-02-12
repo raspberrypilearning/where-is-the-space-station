@@ -15,11 +15,13 @@ steps:
     title: Who is in space?
   - 
     title: 'Challenge: show the craft'
+    completion:
+      - engaged
   - 
     title: Where is the ISS?
   - 
     title: Plotting the ISS on a map
   - 
-    title: When will the ISS be overhead?
-  - 
-    title: 'Challenge: find more pass-over times'
+    title: Add data to your map
+    completion:
+      - internal
