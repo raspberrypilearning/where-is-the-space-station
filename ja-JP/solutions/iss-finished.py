@@ -74,7 +74,7 @@ response = urllib.request.urlopen(url)
 result = json.loads(response.read())
 
 #結果を表示
-over = result['response'][1]['risetime']
+over = result['response'][0]['risetime']
 location.write(time.ctime(over))
 
 
