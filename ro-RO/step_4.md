@@ -33,8 +33,8 @@ Obții valoarea pentru ` name ` folosind ` p[name]` - cum poți obține valoarea
 Schimbă bucla ` for` astfel încât să arate așa:
 
 ```python
-for p in oameni:
-  print(p['name'], ' in ', p['craft'])
+for p in people:
+    print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
