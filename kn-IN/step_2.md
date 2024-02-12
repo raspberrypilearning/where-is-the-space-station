@@ -12,6 +12,6 @@
 
 + ಸ್ಟಾರ್ಟರ್ ಪ್ರಾಜೆಕ್ಟ್ - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ ಈ ಯೋಜನೆಯ ಪೂರ್ಣಗೊಂಡ ಆವೃತ್ತಿ - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ A completed version of this project - [trinket.io/python/a0ba9cea61](https://trinket.io/python/a0ba9cea61){:target="_blank"}
 
 + ವೆಬ್ ಸರ್ವೀಸಸ್ ಅಧಿಸೂಚನೆ ತೆರೆಯಿರಿ - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
