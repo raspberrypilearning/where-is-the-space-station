@@ -21,7 +21,7 @@ for p in personas:
 url = 'http://api.open-notify.org/iss-now.json'
 
 respuesta = urllib.request.urlopen(url)
-resultado = json.loads(respuesta.read())
+result = json.loads(response.read())
 
 ubicacion = resultado['iss_position']
 lat = float(ubicacion['latitude'])
@@ -37,7 +37,7 @@ pantalla.bgpic('map.gif')
 
 pantalla = turtle.Screen()
 pantalla.setup(720, 360)
-pantalla.setworldcoordintaes(-180, -90, 180, 90)
+pantalla.setworldcoordinates(-180, -90, 180, 90)
 # fuente de la imagen:
 # map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Crédito: NASA
 pantalla.bgpic('map.gif')
@@ -75,7 +75,7 @@ respuesta = urllib.request.urlopen(url)
 resultado = json.loads(respuesta.read())
 
 #Imprimir resultado
-sobremi = resultado['response'][1]['risetime']
+over = result['response'][0]['risetime']
 ubicacion.write(time.ctime(sobremi))
 
 
