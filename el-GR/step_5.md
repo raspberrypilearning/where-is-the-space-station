@@ -8,14 +8,11 @@
 
 Θα πρέπει να δεις κάτι σαν κι αυτό:
 
-    {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
-    }
+    message "success"
+    iss_position    
+        longitude   "2.6290"
+        latitude    "22.7281"
+    timestamp   1669639624
     
 
 Το αποτέλεσμα περιέχει τις γεωγραφικές συντεταγμένες του σημείου στη Γη, πάνω από το οποίο βρίσκεται ο ISS.
@@ -24,8 +21,36 @@
 
 + Τώρα πρέπει να καλέσεις την ίδια υπηρεσία web στο πρόγραμμά σου στην Python. Πρόσθεσε τον ακόλουθο κώδικα στο τέλος του σεναρίου σου για να λάβεις την τρέχουσα θέση του ISS:
 
-![στιγμιότυπο οθόνης](images/iss-location.png)
+## \--- code \---
 
-+ Ας δημιουργήσουμε μεταβλητές για να αποθηκεύσουμε το γεωγραφικό πλάτος και μήκος και στη συνέχεια να τις εμφανίσουμε:
+language: python filename: main.py line_numbers: true line_number_start: 13
 
-![στιγμιότυπο οθόνης](images/iss-coordinates.png)
+## highlight_lines: 16, 17, 18, 20
+
+for p in people: print(p['name'], ' in ', p['craft'])
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+print(iss_now) \--- /code \---
+
+You should see the following data.
+
+    {'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
+    
+
++ Create variables to store the latitude and longitude, and then print them:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 16
+
+## highlight_lines: 20, 21, 22, 23, 24
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+location = iss_now['iss_position'] lat = float(location['latitude']) lon = float(location['longitude']) print('Latitude: ', lat) print('Longitude: ', lon) \--- /code \---
+
++ Run your code and the last two lines printed should look like this:
+
+    Latitude:  38.0465
+    Longitude:  20.0936
