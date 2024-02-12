@@ -6,12 +6,12 @@
 
 ### सॉफ्टवेयर
 
-+ [ ट्रिंकेट ](https://trinket.io/) ऑनलाइन एडिटर
++ [Trinket](https://trinket.io/) ऑनलाइन एडिटर
 
-### अन्य आवश्यक चीज़ें
+### अतिरिक्त संसाधन
 
-+ स्टार्टर प्रोजेक्ट - [ rpf.io/iss-on](http://rpf.io/iss-on)
++ शुरूआती प्रोजेक्ट - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}
 
-+ इस परियोजना का एक पूर्ण संस्करण - [ trinket.io/python/5d3327334d ](https://trinket.io/python/5d3327334d) 
++ A completed version of this project - [trinket.io/python/a0ba9cea61](https://trinket.io/python/a0ba9cea61){:target="_blank"}
 
-+ ओपन नोटिफाई वेब सेवाएं - [ api.open-notify.org ](http://api.open-notify.org/)
++ Notify वेब सेवाओं को खोलें - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
