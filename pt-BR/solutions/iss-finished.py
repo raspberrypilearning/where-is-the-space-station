@@ -74,7 +74,7 @@ resposta = urllib.request.urlopen(url)
 resultado = json.loads(resposta.read())
 
 # mostrar resultado
-acima = resultado['response'][1]['risetime']
+over = result['response'][0]['risetime']
 local.write(time.ctime(acima))
 
 
