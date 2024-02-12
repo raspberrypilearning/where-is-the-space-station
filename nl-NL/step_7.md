@@ -1,51 +1,49 @@
-## Wanneer zal het ISS boven je hoofd zijn?
+## Add data to your map
 
-Er is ook een webservice die je kunt gebruiken om uit te zoeken wanneer het ISS boven een bepaalde locatie is.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-Laten we eens uitzoeken wanneer het ISS de volgende keer boven het Space Center in Houston, VS, vliegt, op breedtegraad ` 29.5502 ` en lengtegraad ` 95.097 `.
++ First create a new turtle to write some text
 
-+ We gaan eerst een punt op de kaart zetten op deze coördinaten:
+## \--- code \---
 
-![screenshot](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-Dan nemen we de datum en het tijdstip waarop het ISS er boven zal zijn.
+## highlight_lines: 41
 
-+ Zoals eerder kunt je de webservice oproepen door de URL in te voeren in de adresbalk van een webbrowser: <a href="http://api.open-notify.org/iss-pass.json" target="_blank"> api.open-notify.org/iss-pass.json </a>
+# output on screen
 
-Je zou een foutmelding moeten zien:
+num_people = turtle.Turtle() \--- /code \---
 
-![screenshot](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-Deze webservice neemt breedtegraad en lengtegraad als invoer, die moet dus worden opgenomen in de URL. De invoer wordt na een `? ` toegevoegd en gescheiden met `&`.
+## \--- code \---
 
-+ Voeg de ` lat ` en ` lon ` invoer toe aan de url zoals getoond: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon = 95.1 </a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![screenshot](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Het antwoord geeft meerdere overvliegtijden en we kijken nu alleen naar de eerste. De tijd wordt gegeven als een Unix-tijdstempel (die je kunt omzetten naar een leesbare tijd in je Python-script).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ Roep de webservice nu vanuit Python op. Voeg de volgende code toe aan het einde van het script:
+## \--- code \---
 
-![screenshot](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Haal nu de eerste overvliegtijd uit het resultaat. Voer de volgende code in:
+## highlight_lines:
 
-![screenshot](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-We hebben de Python `time` module nodig om het in een leesbare vorm te kunnen weergeven en het naar plaatselijke tijd te kunnen omzetten. Daarna krijgen we het script om de overvliegtijd voor Houston netjes weer te geven.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ Voeg bovenaan je script de regel ` import time ` toe:
+## \--- code \---
 
-![screenshot](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ De `time.ctime()` functie zet de tijdstempel om naar een leesbaar formaat die je kunt weergeven op de kaart:
+## highlight_lines:
 
-![screenshot](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(Je kunt de `print` regel verwijderen of er een `#` voor zetten om de regel te negeren)
-
-+ Als je wilt kun je de kleur en de grootte van de tekst wijzigen. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
