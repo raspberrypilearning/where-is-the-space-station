@@ -2,11 +2,7 @@
 
 ISS의 위치를 지도에 표시해 준다면 더 알아보기 쉽겠죠. Python의 Turtle graphics를 이용해서 작업을 수행할 수 있습니다.
 
-+ 먼저, `turtle` 라이브러리를 불러와야 합니다.
-
-![스크린샷](images/iss-turtle.png)
-
-+ 다음으로, 세계 지도를 배경 이미지로 불러오세요. 이미 trinket에 'map.gif'라는 파일이 있을겁니다! NASA는 이 아름다운 지도를 누구나 사용, 배포할 수 있도록 허가했습니다. 
++ Load a world map as the background image. 이미 trinket에 'map.gif'라는 파일이 있을겁니다! NASA는 이 아름다운 지도를 누구나 사용, 배포할 수 있도록 허가했습니다. 
 
 ![스크린샷](images/iss-map.png)
 
@@ -14,31 +10,53 @@ ISS의 위치를 지도에 표시해 준다면 더 알아보기 쉽겠죠. Pytho
 
 + 이제 720 x 360 픽셀의 이미지 크기와 같도록 화면 크기를 설정해야 합니다. `screen.setup(720,360)`을 추가합니다:
 
-![스크린샷](images/iss-setup.png)
+## \--- code \---
 
-+ turtle을 특정 위도와 경도로 보낼 수 있도록 합니다. 이 작업을 쉽게 하려면, 사용 중인 좌표와 일치하도록 화면을 설정할 수 있습니다:
+language: python filename: main.py line_numbers: true line_number_start: 26
 
-![스크린샷](images/iss-world.png)
+## highlight_lines: 28, 29
+
+# image source:
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) \--- /code \---
+
++ turtle을 특정 위도와 경도로 보낼 수 있도록 합니다. To make this easy, you can set the screen to match the coordinates you're using and add in the map image:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 27
+
+## highlight_lines: 30, 31
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) screen.setworldcoordinates(-180, -90, 180, 90) screen.bgpic('map.gif') \--- /code \---
 
 이제 좌표는 웹 서비스에서 가져온 위도와 경도 좌표와 일치하게 됩니다.
 
-+ ISS를 나타낼 turtle 아이콘을 만들어 봅시다. trinket에는 이미 'iss.gif', 'iss2.gif'가 들어있습니다. - 둘 다 시도해 보고 어떤 것이 마음에 드는지 골라 보세요. 
++ Create a turtle icon for the ISS. trinket에는 이미 'iss.gif', 'iss2.gif'가 들어있습니다. - 둘 다 시도해 보고 어떤 것이 마음에 드는지 골라 보세요. 
 
 [[[generic-python-turtle-image]]]
 
-\--- hints \--- \--- hint \---
+## \--- code \---
 
-다음과 같은 코드가 될 것입니다.:
+language: python filename: main.py line_numbers: true line_number_start: 33
 
-![스크린샷](images/iss-image.png)
+## highlight_lines:
 
-\--- /hint \---
+screen.register_shape('iss.gif') iss = turtle.Turtle() iss.shape('iss.gif') iss.setheading(90) \--- /code \---
 
-\--- /hints \---
++ The ISS starts off in the centre of the map, now move it to the correct location:
 
-+ ISS는 지도의 중심에서 움직이기 시작하고, 이제 올바른 위치로 옮겨 봅시다:
+## \--- code \---
 
-![스크린샷](images/iss-plot.png)
+language: python filename: main.py line_numbers: true line_number_start: 38
+
+## highlight_lines:
+
+iss.penup() iss.goto(lon, lat) \--- /code \---
 
 **참고:** 보통 위도가 먼저 주어지지만, `(x,y)` 좌표를 그릴 때에는 경도를 먼저 지정해 주어야 합니다.
 
