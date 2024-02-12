@@ -74,7 +74,7 @@ odpowiedz = urllib.request.urlopen(url)
 wynik = json.loads(odpowiedz.read())
 
 #wyświetl wynik
-czas_przejscia = result['response'][1]['risetime']
+over = result['response'][0]['risetime']
 lokalizacja.write(time.ctime(czas_przejscia))
 
 
