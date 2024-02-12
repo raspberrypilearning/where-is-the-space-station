@@ -15,11 +15,13 @@ steps:
     title: '¿Quién está en el espacio?'
   - 
     title: 'Desafío: mostrar la nave'
+    completion:
+      - engaged
   - 
     title: '¿Dónde está la EEI?'
   - 
     title: Mostrando a la ISS en un mapa
   - 
-    title: '¿Cuándo estará la ISS por encima de tu posición?'
-  - 
-    title: 'Desafío: encuentre más tiempos de traspaso'
+    title: Add data to your map
+    completion:
+      - internal
