@@ -74,7 +74,7 @@ yanit = urllib.request.urlopen(url)
 sonuc = json.loads(yanit.read())
 
 #sonucu yazdır
-uzerinde = sonuc['response'][1]['risetime']
+over = result['response'][0]['risetime']
 konum.write(time.ctime(uzerinde))
 
 
