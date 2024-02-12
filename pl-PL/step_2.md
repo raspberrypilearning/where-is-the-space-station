@@ -12,6 +12,6 @@
 
 + Projekt początkowy - [rpf.io/iss-on](http://rpf.io/iss-on){:target="_ blank"}
 
-+ Ukończona wersja tego projektu - [trinket.io/python/5d3327334d](https://trinket.io/python/5d3327334d){:target="_blank"}
++ A completed version of this project - [trinket.io/python/a0ba9cea61](https://trinket.io/python/a0ba9cea61){:target="_blank"}
 
 + Usługi sieciowe Open Notify - [api.open-notify.org](http://api.open-notify.org/){:target="_blank"}
