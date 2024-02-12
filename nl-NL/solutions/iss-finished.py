@@ -74,7 +74,7 @@ antwoord = urllib.request.urlopen(url)
 resultaat = json.loads(antwoord.read())
 
 #print resultaat
-over = resultaat['response'][1]['risetime']
+over = result['response'][0]['risetime']
 locatie.write(time.ctime(over))
 
 
