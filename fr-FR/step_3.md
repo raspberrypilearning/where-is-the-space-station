@@ -8,24 +8,21 @@ Un service web a une adresse (URL) comme un site web. Au lieu de renvoyer du HTM
 
 Tu dois voir quelque chose comme ça :
 
-    {
-      "message": "success",
-      "number": 3,
-      "people": [
-        {
-          "craft": "ISS",
-          "name": "Yuri Malenchenko"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Kopra"
-        },
-        {
-          "craft": "ISS",
-          "name": "Timothy Peake"
-        }
-      ]
-    }
+    message "success"
+    people  
+        0   
+            name    "Cai Xuzhe"
+            craft   "Tiangong"
+        1   
+            name    "Chen Dong"
+            craft   "Tiangong"
+        2   
+            name    "Sergey Prokopyev"
+            craft   "ISS"
+        3   
+            name    "Nicole Mann"
+            craft   "ISS"
+    number  4
     
 
 Les données sont en direct, donc tu vois probablement un résultat légèrement différent. Le format de données est appelé `JSON` (prononcé comme 'Jason').
@@ -40,43 +37,64 @@ Les modules `urllib.request` et `json` ont déjà été importés pour toi en ha
 
 + Ajoute le code suivant à `main.py` pour stocker l'URL du service web auquel tu as accédé en tant que variable :
 
-![capture d'écran](images/iss-url.png)
+## \--- code \---
 
-+ Maintenant, appelle le service web :
+language: python filename: main.py line_numbers: true line_number_start: 7
 
-![capture d'écran](images/iss-request.png)
+## highlight_lines: 8
 
-+ Ensuite, tu dois charger la réponse JSON dans une structure de données Python :
+# http://open-notify.org/Open-Notify-API/
 
-![capture d'écran](images/iss-result.png)
+url = 'http://api.open-notify.org/astros.json' \--- /code \---
+
++ Now call the web service and load the data into a variable:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 7
+
+## highlight_lines: 9, 10, 11
+
+# http://open-notify.org/Open-Notify-API/
+
+url = 'http://api.open-notify.org/astros.json' response = urllib.request.urlopen(url) astros = json.loads(response.read()) print(astros)
+
+\--- /code \---
 
 Tu dois voir quelque chose comme ça :
 
-    {'message': 'success', 'number': 3, 'people' : [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]}
+    {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
     
 
-Il s'agit d'un dictionnaire Python avec trois clés : `message`, `number`, et `people`.
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-Ce `message` a la valeur `success` te dit que tu as accédé au service web. Note que tu vois différents résultats pour `number` et `people` selon qui est actuellement dans l'espace.
+That `message` has the value `success` that tells you that you successfully accessed the web service. Note que tu vois différents résultats pour `number` et `people` selon qui est actuellement dans l'espace.
 
-Maintenant, imprimons l'information de manière plus lisible.
+Change the `print` statement so the information is more readable.
 
 + Tout d'abord, recherchons le nombre de personnes dans l'espace et imprimons-le:
 
-![capture d'écran](images/iss-number.png)
+## \--- code \---
 
-`resultat['number']` affichera la valeur associée à la clé `number` dans le dictionnaire `resultat`. Dans l’exemple, il s’agit de `3`.
+language: python filename: main.py line_numbers: true line_number_start: 11
+
+## highlight_lines:
+
+print('People in Space: ', astros['number']) \--- /code \---
+
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
 + La valeur associée à la clé `people` est une liste de dictionnaires ! Mettons cette valeur dans une variable pour que tu puisses l'utiliser:
 
-![capture d'écran](images/iss-people.png)
+## \--- code \---
 
-Tu devrais voir quelque chose comme ça :
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-    [{'craft': 'ISS', 'name': 'Yuri Malenchenko'}, {'craft': 'ISS', 'name': 'Timothy Kopra'}, {'craft': 'ISS', 'name': 'Timothy Peake'}]
-    
+## highlight_lines:
+
+people = astros['people'] \--- /code \---
 
 + Maintenant tu dois imprimer une ligne pour chaque astronaute. Tu peux utiliser une boucle Python `for` pour ce faire.
 
@@ -84,18 +102,31 @@ Tu devrais voir quelque chose comme ça :
 
 + À chaque fois à travers la boucle, `p` sera défini sur un dictionnaire pour un astronaute différent.
 
-![capture d'écran](images/iss-people-1a.png)
+## \--- code \---
 
-+ Tu peux ensuite rechercher les valeurs pour `name` et `craft`. Montrons les noms des personnes dans l'espace :
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-![capture d'écran](images/iss-people-2.png)
+## highlight_lines: 13, 14
+
+people = astros['people']
+
+for p in people: print(p['name']) \--- /code \---
+
++ You can then look up the values for `name` to show the names of the people in space:
 
 Tu devrais voir quelque chose comme ça :
 
-    Personnes dans l'espace : 3
-    Yuri Malenchenko
-    Timothy Kopra
-    Timothy Peake
+    People in Space:  10
+    Cai Xuzhe
+    Chen Dong
+    Liu Yang
+    Sergey Prokopyev
+    Dmitry Petelin
+    Frank Rubio
+    Nicole Mann
+    Josh Cassada
+    Koichi Wakata
+    Anna Kikina
     
 
 **Note:** Tu utilises des données en direct, donc tes résultats dépendront du nombre de personnes actuellement dans l'espace.
