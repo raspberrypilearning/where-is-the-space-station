@@ -15,11 +15,13 @@ steps:
     title: Wie is er in de ruimte?
   - 
     title: 'Uitdaging: laat het ruimtestation zien'
+    completion:
+      - engaged
   - 
     title: Waar is het ISS?
   - 
     title: Het ISS op een kaart tekenen
   - 
-    title: Wanneer zal het ISS recht boven je zijn?
-  - 
-    title: 'Uitdaging: vind meer overvliegtijden'
+    title: Add data to your map
+    completion:
+      - internal
