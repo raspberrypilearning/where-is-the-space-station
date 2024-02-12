@@ -15,11 +15,13 @@ steps:
     title: Cine este în spațiu?
   - 
     title: 'Provocare: arată meseria'
+    completion:
+      - engaged
   - 
     title: Unde este SSI?
   - 
     title: Reprezentarea SSI pe o hartă
   - 
-    title: Când va fi SSI deasupra?
-  - 
-    title: 'Provocare: găsiți mai multe perioade de trecere pe deasupra SSI'
+    title: Add data to your map
+    completion:
+      - internal
