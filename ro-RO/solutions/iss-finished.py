@@ -74,7 +74,7 @@ răspuns = urllib.request.urlopen(url)
 rezultat = json.loads(raspuns.read())
 
 #afiseaza rezultatul
-deasupra = rezultat['response'][1]['risetime']
+over = result['response'][0]['risetime']
 locatie.write(time.ctime(deasupra))
 
 
