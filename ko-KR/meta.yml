@@ -15,11 +15,13 @@ steps:
     title: 우주에 누가 있나요?
   - 
     title: '과제: 크래프트(우주선) 출력'
+    completion:
+      - engaged
   - 
     title: ISS는 어디에 있나요?
   - 
     title: 지도에 ISS 띄우기
   - 
-    title: ISS는 언제 특정 위치를 통과하나요?
-  - 
-    title: '과제: 더 많은 통과 시간 찾기'
+    title: Add data to your map
+    completion:
+      - internal
