@@ -7,7 +7,7 @@
 우주 정거장 아이콘은 ISS의 현재 위치를 보여줍니다. 노란색 텍스트는 ISS가 다음 휴스턴에 있는 우주 센터를 통과할 때를 알려줍니다.
 
 <div class="trinket">
-  <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  <iframe src="https://trinket.io/embed/python/a0ba9cea61?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
   <img src="images/iss-final.png">
 </div>
