@@ -74,7 +74,7 @@ reponse = urllib.request.urlopen(url)
 resultat = json.loads(reponse.read())
 
 #print resultat
-audessus = resultat['response'][1]['risetime']
+over = result['response'][0]['risetime']
 emplacement.write(time.ctime(audessus))
 
 
