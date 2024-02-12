@@ -8,14 +8,11 @@
 
 以下のようなものが表示されます：
 
-    {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
-    }
+    message "success"
+    iss_position    
+        longitude   "2.6290"
+        latitude    "22.7281"
+    timestamp   1669639624
     
 
 ISSの位置は地球上の地点の座標としてあらわされています。
@@ -24,8 +21,36 @@ ISSの位置は地球上の地点の座標としてあらわされています�
 
 + PythonからこのWebサービスを呼び出す必要があります。 スクリプトの最後に次のコードを追加して、ISSの現在の場所を取得します。
 
-![スクリーンショット](images/iss-location.png)
+## \--- code \---
 
-+ 緯度と経度を格納する変数を作って表示しましょう。
+language: python filename: main.py line_numbers: true line_number_start: 13
 
-![スクリーンショット](images/iss-coordinates.png)
+## highlight_lines: 16, 17, 18, 20
+
+for p in people: print(p['name'], ' in ', p['craft'])
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+print(iss_now) \--- /code \---
+
+You should see the following data.
+
+    {'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
+    
+
++ Create variables to store the latitude and longitude, and then print them:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 16
+
+## highlight_lines: 20, 21, 22, 23, 24
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+location = iss_now['iss_position'] lat = float(location['latitude']) lon = float(location['longitude']) print('Latitude: ', lat) print('Longitude: ', lon) \--- /code \---
+
++ Run your code and the last two lines printed should look like this:
+
+    Latitude:  38.0465
+    Longitude:  20.0936
