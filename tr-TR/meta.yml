@@ -15,11 +15,13 @@ steps:
     title: Uzayda kim var?
   - 
     title: 'Meydan okuma: aracı göster'
+    completion:
+      - engaged
   - 
     title: ISS nerede?
   - 
     title: ISS'i harita üzerinde gösterme
   - 
-    title: "ISS ne zaman üstümüzde olacak?\n"
-  - 
-    title: 'Meydan okuma: daha fazla geçiş süresi bulun'
+    title: Add data to your map
+    completion:
+      - internal
