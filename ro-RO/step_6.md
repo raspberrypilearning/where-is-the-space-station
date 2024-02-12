@@ -2,11 +2,7 @@
 
 Ar fi util să se afișeze poziția pe o hartă. Poți face acest lucru folosind Python Turtle!
 
-+ Mai întâi va trebui să importăm librăria Python ` turtle `:
-
-![captură de ecran](images/iss-turtle.png)
-
-+ În continuare, încarcă o hartă a lumii ca imagine de fundal. Există una deja inclusă în trinket numită „map.gif”! NASA a oferit această frumoasă hartă și a acordat permisiunea pentru refolosire. 
++ Load a world map as the background image. Există una deja inclusă în trinket numită „map.gif”! NASA a oferit această frumoasă hartă și a acordat permisiunea pentru refolosire. 
 
 ![captură de ecran](images/iss-map.png)
 
@@ -14,31 +10,53 @@ Harta este centrată la ` (0,0) ` latitudine și longitudine, care este exact ce
 
 + Trebuie să setezi dimensiunea ecranului pentru a se potrivi cu dimensiunea imaginii, care este de 720 pe 360 de pixeli. Adaugă ` ecran.setup (720, 360) `:
 
-![captură de ecran](images/iss-setup.png)
+## \--- code \---
 
-+ Vrei să poți trimite testoasa la o anumită latitudine și longitudine. Pentru a face acest lucru ușor, poți seta ecranul să corespundă coordonatelor pe care le utilizezi:
+language: python filename: main.py line_numbers: true line_number_start: 26
 
-![captură de ecran](images/iss-world.png)
+## highlight_lines: 28, 29
+
+# image source:
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) \--- /code \---
+
++ Vrei să poți trimite testoasa la o anumită latitudine și longitudine. To make this easy, you can set the screen to match the coordinates you're using and add in the map image:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 27
+
+## highlight_lines: 30, 31
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) screen.setworldcoordinates(-180, -90, 180, 90) screen.bgpic('map.gif') \--- /code \---
 
 Acum, coordonatele se vor potrivi cu coordonatele de latitudine și longitudine pe care le returneaza serviciul web.
 
-+ Hai să creăm o pictogramă turtle pentru SSI. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
++ Create a turtle icon for the ISS. Trinket-ul tău include „iss.gif” și „iss2.gif” - încearcă-le pe amândouă și vezi pe care o preferi. 
 
 [generic-python-turtle-image]
 
-\--- hints \--- \--- hint \---
+## \--- code \---
 
-Codul tău ar trebui să arate astfel:
+language: python filename: main.py line_numbers: true line_number_start: 33
 
-![captură de ecran](images/iss-image.png)
+## highlight_lines:
 
-\--- /hint \---
+screen.register_shape('iss.gif') iss = turtle.Turtle() iss.shape('iss.gif') iss.setheading(90) \--- /code \---
 
-\--- /hints \---
++ The ISS starts off in the centre of the map, now move it to the correct location:
 
-+ SSI pornește din centrul hărții, acum să o mutăm în locația corectă:
+## \--- code \---
 
-![captură de ecran](images/iss-plot.png)
+language: python filename: main.py line_numbers: true line_number_start: 38
+
+## highlight_lines:
+
+iss.penup() iss.goto(lon, lat) \--- /code \---
 
 ** Notă **: în mod normal, latitudinea este dată mai întâi, dar trebuie să dăm longitudinea mai întâi atunci când se reprezintă coordonatele ` (x, y) `.
 
