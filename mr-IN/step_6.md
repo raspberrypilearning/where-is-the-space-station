@@ -2,11 +2,7 @@
 
 नकाशावर स्थान दर्शविणे उपयुक्त ठरेल. Python Turtle ग्राफिक्स वापरून आपण हे करू शकता!
 
-+ आपल्याला प्रथम Python `turtle` लायब्ररी आयात करणे आवश्यक आहे:
-
-![screenshot](images/iss-turtle.png)
-
-+ पुढे, पार्श्वभूमी प्रतिमेच्या रुपात जागतिक नकाशा लोड करा. आपल्या trinket मध्ये यापूर्वीच 'map.gif' नावाचा एक छायाचित्र समाविष्ट आहे! नासाने हा सुंदर नकाशा प्रदान केला आहे आणि पुन्हा वापरासाठी परवानगी दिली आहे. 
++ Load a world map as the background image. आपल्या trinket मध्ये यापूर्वीच 'map.gif' नावाचा एक छायाचित्र समाविष्ट आहे! नासाने हा सुंदर नकाशा प्रदान केला आहे आणि पुन्हा वापरासाठी परवानगी दिली आहे. 
 
 ![screenshot](images/iss-map.png)
 
@@ -14,31 +10,53 @@
 
 + आपल्याला प्रतिमेच्या आकाराशी जुळण्यासाठी स्क्रीन आकार सेट करणे आवश्यक आहे, जे 720 बाय 360 पिक्सेल आहे. `screen.setup(720, 360)`जोडा:
 
-![screenshot](images/iss-setup.png)
+## \--- code \---
 
-+ आपल्याला turtle एका विशिष्ट अक्षांश आणि रेखांशवर पाठविण्यात सक्षम होऊ इच्छित आहाेत. हे सुलभ करण्यासाठी आपण वापरत असलेल्या निर्देशांक जुळविण्यासाठी आपण स्क्रीन सेट करू शकता:
+language: python filename: main.py line_numbers: true line_number_start: 26
 
-![screenshot](images/iss-world.png)
+## highlight_lines: 28, 29
+
+# image source:
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) \--- /code \---
+
++ आपल्याला turtle एका विशिष्ट अक्षांश आणि रेखांशवर पाठविण्यात सक्षम होऊ इच्छित आहाेत. To make this easy, you can set the screen to match the coordinates you're using and add in the map image:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 27
+
+## highlight_lines: 30, 31
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) screen.setworldcoordinates(-180, -90, 180, 90) screen.bgpic('map.gif') \--- /code \---
 
 आता समन्वय(coordinates) अक्षांश आणि रेखांश समन्वयशी जुळतील जे वेब सेवेवरून परत येतील.
 
-+ चला ISS साठी एक turtleचिन्ह बनवू. आपल्या trinket मध्ये ''iss.gif' आणि 'iss2.gif' समाविष्ट आहे - त्या दोघांनाही वापरून पहा आणि आपण कोणते पसंत करता ते पहा. 
++ Create a turtle icon for the ISS. आपल्या trinket मध्ये ''iss.gif' आणि 'iss2.gif' समाविष्ट आहे - त्या दोघांनाही वापरून पहा आणि आपण कोणते पसंत करता ते पहा. 
 
 [[[generic-python-turtle-image]]]
 
-\--- hints \--- \--- hint \---
+## \--- code \---
 
-आपला कोड असा दिसला पाहिजे:
+language: python filename: main.py line_numbers: true line_number_start: 33
 
-![screenshot](images/iss-image.png)
+## highlight_lines:
 
-\--- /hint \---
+screen.register_shape('iss.gif') iss = turtle.Turtle() iss.shape('iss.gif') iss.setheading(90) \--- /code \---
 
-\--- /hints \---
++ The ISS starts off in the centre of the map, now move it to the correct location:
 
-+ ISS नकाशाच्या मध्यभागी प्रारंभ होतो, आता त्यास योग्य ठिकाणी हलवू:
+## \--- code \---
 
-![screenshot](images/iss-plot.png)
+language: python filename: main.py line_numbers: true line_number_start: 38
+
+## highlight_lines:
+
+iss.penup() iss.goto(lon, lat) \--- /code \---
 
 **सूचना**: अक्षांश साधारणपणे प्रथम दिले जाते, परंतु ` (x, y)` समन्वय रचताना प्रथम रेखांश देणे आवश्यक आहे.
 
