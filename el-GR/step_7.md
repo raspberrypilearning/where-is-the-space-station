@@ -1,51 +1,49 @@
-## Πότε o ISS θα βρίσκεται από πάνω μας;
+## Add data to your map
 
-Υπάρχει ακόμη μία υπηρεσία web που μπορείς να χρησιμοποιήσεις για να μάθεις πότε ο ISS θα βρίσκεται πάνω από μια συγκεκριμένη τοποθεσία.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-Ας δούμε πότε θα είναι η αμέσως επόμενη διέλευση του ISS πάνω από τη Διαστημική Βάση στο Χιούστον των ΗΠΑ, το οποίο βρίσκεται σε γεωγραφικό πλάτος `29.5502` και γεωγραφικό μήκος `95.097`.
++ First create a new turtle to write some text
 
-+ Πρώτα ας σχεδιάσουμε μια κουκίδα στο χάρτη σε αυτές τις συντεταγμένες:
+## \--- code \---
 
-![στιγμιότυπο οθόνης](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-Τώρα ας πάρουμε την προσεχή ημερομηνία και ώρα που o ISS θα βρίσκεται πάνω από το Χιούστον.
+## highlight_lines: 41
 
-+ Όπως και πριν, μπορείς να καλέσεις την υπηρεσία web εισάγοντας τη διεύθυνση URL στη γραμμή διευθύνσεων ενός προγράμματος περιήγησης: <api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-Θα πρέπει να δεις ένα μήνυμα σφάλματος:
+num_people = turtle.Turtle() \--- /code \---
 
-![στιγμιότυπο οθόνης](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-Αυτή η υπηρεσία web δέχεται ως δεδομένα το γεωγραφικό πλάτος και μήκος, επομένως πρέπει να τα συμπεριλάβεις στη διεύθυνση URL. Δεδομένα εισόδου γράφονται μετά από ένα `?` και διαχωρίζονται με `&`.
+## \--- code \---
 
-+ Πρόσθεσε τα δεδομένα `lat` και `lon` στη διεύθυνση url όπως παρακάτω: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![στιγμιότυπο οθόνης](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Το αποτέλεσμα περιλαμβάνει αρκετά περάσματα του ISS πάνω από τη διαστημική βάση. Μας ενδιαφέρει απλά το πρώτο πέρασμα. Η ώρα δίνεται σε μορφή Unix (θα την μετατρέψεις στη σωστή μορφή στο σενάριο Python).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ Τώρα ας καλέσουμε την υπηρεσία web από την Python. Πρόσθεσε τον ακόλουθο κώδικα στο τέλος του σεναρίου:
+## \--- code \---
 
-![στιγμιότυπο οθόνης](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Τώρα ας πάρουμε την ώρα του πρώτου περάσματος από το αποτέλεσμα. Πρόσθεσε τον ακόλουθο κώδικα:
+## highlight_lines:
 
-![στιγμιότυπο οθόνης](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-Θα χρειαστείς τη βιβλιοθήκη `time` της Python έτσι ώστε να μπορέσεις να την εμφανίσεις σε μια ευανάγνωστη μορφή και να την μετατρέψεις σε τοπική ώρα. Έπειτα θα προσθέσεις κώδικα για να εμφανίσεις την ώρα δίπλα στην κουκίδα για το Χιούστον στο χάρτη.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ Πρόσθεσε τη γραμμή `import time` στην κορυφή του σεναρίου:
+## \--- code \---
 
-![στιγμιότυπο οθόνης](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ Η συνάρτηση `time.ctime()` θα μετατρέψει την ώρα από μορφή Unix σε ευανάγνωστη μορφή που μπορείς να γράψεις στον χάρτη σου:
+## highlight_lines:
 
-![στιγμιότυπο οθόνης](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(Μπορείς να διαγράψεις την γραμμή `print` ή να την μετατρέψεις σε σχόλιο προσθέτοντας στην αρχή της `#` έτσι ώστε το σενάριο να την αγνοήσει.)
-
-+ Αν θέλεις, μπορείς να αλλάξεις το χρώμα και τη μορφή του κειμένου. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
