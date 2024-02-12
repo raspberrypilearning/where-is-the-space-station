@@ -7,7 +7,7 @@
 ಬಾಹ್ಯಾಕಾಶ ನಿಲ್ದಾಣದ ಐಕಾನ್ ISS ಪ್ರಸ್ತುತ ಸ್ಥಳವನ್ನು ತೋರಿಸುತ್ತದೆ. US Houstonನ್ನಲ್ಲಿರುವ Space Centre ಮೇಲೆ ISS ಯಾವಾಗ ಹಾದುಹೋಗುತ್ತದೆ ಎಂಬುದನ್ನು ಹಳದಿ ಪಠ್ಯ ತೋರಿಸುತ್ತದೆ.
 
 <div class="trinket">
-  <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  <iframe src="https://trinket.io/embed/python/a0ba9cea61?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
   <img src="images/iss-final.png">
 </div>
