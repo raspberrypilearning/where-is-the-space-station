@@ -8,14 +8,11 @@
 
 तुमच्याकडे असे काहीतरी दिसायला हवे:
 
-    {
-    "iss_position": {
-      "latitude": 8.54938193505081, 
-      "longitude": 73.16560793639105
-    }, 
-    "message": "success", 
-    "timestamp": 1461931913
-    }
+    message "success"
+    iss_position    
+        longitude   "2.6290"
+        latitude    "22.7281"
+    timestamp   1669639624
     
 
 निकालात ISS सध्या जेथे आहे ते पृथ्वीवरील स्पॉटचे निर्देशांक( coordinates) समाविष्ट आहेत.
@@ -24,8 +21,36 @@
 
 + आता आपल्याला Python मधून आधीची वेब सेवा कॉल करण्याची आवश्यकता आहे. आपल्या स्क्रिप्टच्या शेवटी ISSचे वर्तमान स्थान मिळविण्यासाठी खालील कोड जोडा:
 
-![screenshot](images/iss-location.png)
+## \--- code \---
 
-+ अक्षांश आणि रेखांश संग्रहित करण्यासाठी चल बनवू आणि नंतर ते मुद्रित करा:
+language: python filename: main.py line_numbers: true line_number_start: 13
 
-![screenshot](images/iss-coordinates.png)
+## highlight_lines: 16, 17, 18, 20
+
+for p in people: print(p['name'], ' in ', p['craft'])
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+print(iss_now) \--- /code \---
+
+You should see the following data.
+
+    {'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
+    
+
++ Create variables to store the latitude and longitude, and then print them:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 16
+
+## highlight_lines: 20, 21, 22, 23, 24
+
+url = 'http://api.open-notify.org/iss-now.json' response = urllib.request.urlopen(url) iss_now = json.loads(response.read())
+
+location = iss_now['iss_position'] lat = float(location['latitude']) lon = float(location['longitude']) print('Latitude: ', lat) print('Longitude: ', lon) \--- /code \---
+
++ Run your code and the last two lines printed should look like this:
+
+    Latitude:  38.0465
+    Longitude:  20.0936
