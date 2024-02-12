@@ -15,11 +15,13 @@ steps:
     title: Qui est dans l'espace ?
   - 
     title: 'Défi: montrer la fabrication'
+    completion:
+      - engaged
   - 
     title: Où est l'ISS?
   - 
     title: Tracer l'ISS sur une carte
   - 
-    title: Quand l'ISS sera-t-il au-dessus?
-  - 
-    title: 'Défi: trouver plus de temps de passage'
+    title: Add data to your map
+    completion:
+      - internal
