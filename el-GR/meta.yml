@@ -15,11 +15,13 @@ steps:
     title: Ποιος είναι στο διάστημα;
   - 
     title: 'Πρόκληση: δείξε το σκάφος'
+    completion:
+      - engaged
   - 
     title: Πού είναι o ISS;
   - 
     title: Αποτύπωση του ISS σε χάρτη
   - 
-    title: Πότε o ISS θα βρίσκεται από πάνω μας;
-  - 
-    title: 'Πρόκληση: βρες περισσότερα περάσματα πάνω από άλλες τοποθεσίες'
+    title: Add data to your map
+    completion:
+      - internal
