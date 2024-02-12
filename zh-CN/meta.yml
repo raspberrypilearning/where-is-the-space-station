@@ -15,11 +15,13 @@ steps:
     title: 谁在太空中？
   - 
     title: '挑战：展示国际空间站的位置'
+    completion:
+      - engaged
   - 
     title: 国际空间站在哪里？
   - 
     title: 在地图上描出代表国际空间站的点
   - 
-    title: 国际空间站什么时候会从我们头顶飞过呢？
-  - 
-    title: '挑战：找到更多从头顶飞过的时间'
+    title: Add data to your map
+    completion:
+      - internal
