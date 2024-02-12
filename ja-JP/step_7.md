@@ -1,51 +1,49 @@
-## ISSはいつ特定の場所を通過するか？
+## Add data to your map
 
-ISSがいつ特定の場所を通過するかを提供するWebサービスがあります。
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-ISSが、いつヒューストンの宇宙センターの位置を通過するか調べて見ましょう：緯度 `29.5502` と経度 `95.097`。
++ First create a new turtle to write some text
 
-+ まず、地図上にこの座標を点として表示しましょう：
+## \--- code \---
 
-![スクリーンショット](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-ISSが特定の場所の位置を通過する日時を取得しましょう。
+## highlight_lines: 41
 
-+ 前と同じように、WebブラウザのアドレスバーにURLを入力すると、Webサービスを呼び出すことができます <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-エラーが表示されます。
+num_people = turtle.Turtle() \--- /code \---
 
-![スクリーンショット](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-このWebサービスは特定の場所の緯度と経度が必要です。URLにそれらをあらわす情報を加える必要があります。 Webサービスに提供する情報は`？`の後に加えて、`&`で分離します。
+## \--- code \---
 
-+ `lat`（緯度）と`lon`（経度）の情報をURLに追加しましょう： <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![スクリーンショット](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Webサービスから返ってきたデータにはいくつかの日時が含まれています。最初のものだけを見ていきます。 時間はUnixのタイムスタンプとして与えられます(Pythonスクリプトで読み込み可能な時間に変換することができます)。
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ では、PythonからWebサービスを呼び出しましょう。 スクリプトの最後に次のコードを加えましょう。
+## \--- code \---
 
-![スクリーンショット](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Webサービスから返ってきたデータから、最初の日時を取得しましょう。 次のコードを追加します。
+## highlight_lines:
 
-![スクリーンショット](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-私たちはPythonの`time` モジュールを必要とします。このモジュールを使うと、現地時間に変換してデータを読みやすい形式で表示することができます。 ISSがヒューストンを示す位置をいつ通過するか探るスクリプトを書きます。
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ あなたのスクリプトの上部に `import time` 行を追加してください：
+## \--- code \---
 
-![スクリーンショット](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ `time.ctime()` 関数はタイムスタンプを読みやすい形式に変換します。この関数を使うと、地図に読みやすい形式で日時が表示されます。
+## highlight_lines:
 
-![スクリーンショット](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-（ `print` 行を削除、もしくは行の最初に`＃` を追加してコメントに変えてもいいです。（スクリプトはコメントを無視します））
-
-+ 必要に応じて、テキストの色と書式を変更することができます。 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
