@@ -33,8 +33,8 @@ You get the value for `name` using `p[name]` — how can you get the value for `
 Change your `for` loop so it looks like this:
 
 ```python
-for p in pessoas:
-  print(p['name'], ' na ', p['craft'])
+for p in people:
+    print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
