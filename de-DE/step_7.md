@@ -1,51 +1,49 @@
-## Wann wird die ISS über dir sein?
+## Add data to your map
 
-Es gibt auch einen Webservice, mit dem du herausfinden kannst, wann die ISS das nächste Mal an einem bestimmten Ort sein wird.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-Lass uns herausfinden, wann die ISS als nächstes das Raumfahrtzentrum in Houston, USA, überqueren wird, das sich auf Breitengrad `29.5502` und Längengrad `95.097` befindet.
++ First create a new turtle to write some text
 
-+ Lass uns zunächst einen Punkt auf der Karte an diesen Koordinaten zeichnen:
+## \--- code \---
 
-![screenshot](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-Jetzt erhalten wir das Datum und die Zeit, in der die ISS sich das nächste Mal darüber befindet.
+## highlight_lines: 41
 
-+ Wie bisher kannst du den Web Service aufrufen, indem du dessen URL in die Adressleiste eines Webbrowsers eingibst: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-Du solltest einen Fehler sehen:
+num_people = turtle.Turtle() \--- /code \---
 
-![Screenshot](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-Dieser Web Service verwendet Breiten- und Längengrade als Eingaben, sodass wir diese in die URL aufnehmen müssen. Eingaben werden nach einem `?` hinzugefügt und mit `&` getrennt.
+## \--- code \---
 
-+ Füge die `Breitengrad` und `Längengrad` Angaben wie folgt in die URL ein: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank"> api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![Screenshot](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Die Antwort enthält mehrere Überflugzeiten, und wir werden uns nur die erste ansehen. Die Zeit wird als Unix-Zeitstempel angegeben (du kannst sie in eine lesbare Zeit in deinem Python-Skript konvertieren).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ Jetzt musst du denselben Web Service von Python aus aufrufen. Füge den folgenden Code am Ende deines Skripts hinzu:
+## \--- code \---
 
-![Screenshot](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Jetzt bekommen wir die erste Überflugzeit aus dem Ergebnis. Gib den folgenden Code ein:
+## highlight_lines:
 
-![screenshot](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-Wir brauchen das Python `Zeit` Modul, damit wir es in einer lesbaren Form drucken und in lokale Zeit konvertieren können. Dann werden wir das Skript so ändern, dass die Überflugzeit für Houston ausgegeben wird.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ Füge diese `import time` Zeile an den Anfang des Skripts hinzu:
+## \--- code \---
 
-![Screenshot](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ Die ` time.ctime () ` Funktion konvertiert den Zeitstempel in eine lesbare Form, die du auf deine Karte schreiben kannst:
+## highlight_lines:
 
-![Screenshot](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(Du kannst die `'print'` Zeile entfernen oder sie in einen Kommentar verwandeln, indem du `#` am Anfang hinzufügst, damit dein Skript sie ignoriert.)
-
-+ Wenn du möchtest, kannst du die Farbe und das Format des Textes ändern. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
