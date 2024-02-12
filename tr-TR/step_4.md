@@ -33,8 +33,8 @@ Astronotların adının yanı sıra, web hizmeti ISS gibi üzerinde bulunduklar�
 `for` döngünüzü aşağıdaki gibi görünecek şekilde değiştirin:
 
 ```python
-for p in insanlar:
-  print(p['name'], ' in ', p['craft'])
+for p in people:
+    print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
