@@ -1,51 +1,49 @@
-## Kiedy ISS będzie nad głową?
+## Add data to your map
 
-Istnieje również usługa sieciowa, za pomocą której można dowiedzieć się, kiedy ISS będzie nad danym miejscem.
+Now that you have collected your data and plotted the position of the ISS, you can add some data to the map.
 
-Zobaczmy, kiedy ISS będzie następny raz nad Centrum Lotów Kosmicznych w Houston, w Stanach Zjednoczonych, na szerokości geograficznej `29.5502` i długości geograficznej `95,097`.
++ First create a new turtle to write some text
 
-+ Najpierw narysuj kropkę na mapie o tych współrzędnych:
+## \--- code \---
 
-![zrzut ekranu](images/iss-houston.png)
+language: python filename: main.py line_numbers: true line_number_start: 40
 
-Teraz pobierzmy datę i godzinę, kiedy ISS będzie następnym razem nad Houston.
+## highlight_lines: 41
 
-+ Tak jak poprzednio, możesz wywołać usługę sieciową, wpisując jej adres URL w pasku adresu przeglądarki internetowej: <a href="http://api.open-notify.org/iss-pass.json" target="_blank">api.open-notify.org/iss-pass.json</a>
+# output on screen
 
-Powinien pojawić się błąd:
+num_people = turtle.Turtle() \--- /code \---
 
-![zrzut ekranu](images/iss-pass-error.png)
++ The new turtle shouldn't draw lines as it move, and should be hidden.
 
-Ta usługa sieciowa ma długość i szerokość geograficzną jako dane wejściowe, więc musisz uwzględnić je w adresie URL. Dane wejściowe są dodawane po `?` i oddzielane przez `&`.
+## \--- code \---
 
-+ Dodaj parametry `szerokosc` (lat) i `dlugosc` (lon) do adresu url w ten sposób: <a href="http://api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1" target="_blank">api.open-notify.org/iss-pass.json?lat=29.55&lon=95.1</a>
+language: python filename: main.py line_numbers: true line_number_start: 41
 
-![zrzut ekranu](images/iss-passtimes.png)
+## highlight_lines: 42, 43
 
-Odpowiedź zawiera kilka czasów przejścia, przyjrzyjmy się pierwszemu z nich. Czas jest podany jako uniksowy znacznik czasu (będziesz mógł przekonwertować go na czytelny format czasu w skrypcie Pythona).
+num_people = turtle.Turtle() num_people.penup() num_people.hideturtle() \--- /code \---
 
-[[[generic-unix-timestamp]]]
++ Choose a colour for the text you want to write, and a position on the map that you want to write it. This could be decided by the longitude and latitude of the ISS, but there is also some space to the west coast of the Americas and also above Antartica.
 
-+ Teraz musisz wywołać tę samą usługę sieciową z Pythona. Dodaj następujący kod na końcu skryptu:
+## \--- code \---
 
-![zrzut ekranu](images/iss-passover.png)
+language: python filename: main.py line_numbers: true line_number_start: 44
 
-+ Teraz weźmy z wyników pierwszy czas przejścia. Dodaj następujący kod:
+## highlight_lines:
 
-![zrzut ekranu](images/iss-print-pass.png)
+num_people.color('yellow') num_people.goto(-175,-25) \--- /code \---
 
-Będziemy potrzebować w Pythonie moduł `time`, abyśmy mogli wyświetlić czas w czytelnym formacie i przekonwertować go na czas lokalny. Potem otrzymamy skrypt do zapisu czasu przejścia nad kropką dla Houston.
++ Write text on your map, at the position you sent your turtle. In this case the text will tell the user the number of people in space.
 
-+ Dodaj linię z instrukcją `import time` na początku skryptu:
+## \--- code \---
 
-![zrzut ekranu](images/iss-time.png)
+language: python filename: main.py line_numbers: true line_number_start: 46
 
-+ Funkcja`time.ctime()` przekształci znacznik czasu w czytelny format, który można zapisać na mapie:
+## highlight_lines:
 
-![zrzut ekranu](images/iss-pass-write.png)
+num_people.write('people in space: ' + str(astros['number'])) \--- /code \---
 
-(Możesz usunąć linię z `print`, albo zamienić ją w komentarz dodając `#` na początku skryptu aby był ignorowany.)
-
-+ Jeśli chcesz, możesz zmienić kolor i format tekstu. 
++ You could add more data to your map if you wanted.
 
 [[[generic-python-turtle-write]]]
