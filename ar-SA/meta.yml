@@ -15,11 +15,13 @@ steps:
     title: من في الفضاء؟
   - 
     title: 'التحدي: عرض الحرفة'
+    completion:
+      - engaged
   - 
     title: أين هي محطة الفضاء الدولية؟
   - 
     title: رسم محطة الفضاء الدولية على الخريطة
   - 
-    title: متى ستكون المحطة الفضائية الدولية فوقنا؟
-  - 
-    title: 'التحدي: العثور على مزيد من مرات التمرير'
+    title: Add data to your map
+    completion:
+      - internal
