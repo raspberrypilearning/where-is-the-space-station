@@ -15,11 +15,13 @@ steps:
     title: 'Aufgabe: Die Weltraumstation anzeigen'
   - 
     title: 'Wo ist die ISS?'
+    completion:
+      - engaged
   - 
     title: Wo befindet sich die ISS?
   - 
     title: 'Aufgabe: Finde noch mehr Überflugszeiten'
   - 
-    title: Wann wird die ISS über dir sein?
-  - 
-    title: 'Herausforderung: finde mehr Zeiten wenn sie sich über dir befindet'
+    title: Add data to your map
+    completion:
+      - internal
