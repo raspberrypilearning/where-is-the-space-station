@@ -2,11 +2,7 @@
 
 ISS'nin konumunu haritada göstermek faydalı olabilir. Bunu Python Turtle grafiklerini kullanarak yapabilirsiniz!
 
-+ Öncelikle Python `turtle` kütüphanesini içe aktarmalıyız:
-
-![ekran görüntüsü](images/iss-turtle.png)
-
-+ Ardından, arka plan görüntüsü olarak bir dünya haritası yükleyin. Trinketinizde zaten 'map.gif' adında bir tane var! NASA bu güzel haritayı sağladı ve yeniden kullanım için izin verdi. 
++ Load a world map as the background image. Trinketinizde zaten 'map.gif' adında bir tane var! NASA bu güzel haritayı sağladı ve yeniden kullanım için izin verdi. 
 
 ![ekran görüntüsü](images/iss-map.png)
 
@@ -14,31 +10,53 @@ Harita `(0,0)` enlem ve boylamda ortalanmıştır, tam da ihtiyacınız olan şe
 
 + Ekran boyutunu, 720 x 360 piksel olan görüntünün boyutuna uyacak şekilde ayarlamanız gerekli. `ekran.setup(720, 360)`'ı Ekleyin:
 
-![ekran görüntüsü](images/iss-setup.png)
+## \--- code \---
 
-+ Turtle'ı belirli bir enlem ve boylama gönderebilmek isteyebilirsiniz. Bunu kolaylaştırmak için, ekranı kullandığınız koordinatlara uyacak şekilde ayarlayabilirsiniz:
+language: python filename: main.py line_numbers: true line_number_start: 26
 
-![ekran görüntüsü](images/iss-world.png)
+## highlight_lines: 28, 29
+
+# image source:
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) \--- /code \---
+
++ Turtle'ı belirli bir enlem ve boylama gönderebilmek isteyebilirsiniz. To make this easy, you can set the screen to match the coordinates you're using and add in the map image:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 27
+
+## highlight_lines: 30, 31
+
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+
+screen = turtle.Screen() screen.setup(720, 360) screen.setworldcoordinates(-180, -90, 180, 90) screen.bgpic('map.gif') \--- /code \---
 
 Şimdi koordinatlar, web hizmetinden aldığınız enlem ve boylam ile eşleşecektir.
 
-+ ISS için bir turtlesimgesi oluşturalım. Trinketinizde 'iss.gif' ve 'iss2.gif' adlı iki ikon içeriyor - ikisini de deneyin ve hangisini kullanmak istediğinizi seçin. 
++ Create a turtle icon for the ISS. Trinketinizde 'iss.gif' ve 'iss2.gif' adlı iki ikon içeriyor - ikisini de deneyin ve hangisini kullanmak istediğinizi seçin. 
 
 [[[generic-python-turtle-image]]]
 
-\--- hints \--- \--- hint \---
+## \--- code \---
 
-Kodunuz şöyle görünmeli:
+language: python filename: main.py line_numbers: true line_number_start: 33
 
-![ekran görüntüsü](images/iss-image.png)
+## highlight_lines:
 
-\--- /hint \---
+screen.register_shape('iss.gif') iss = turtle.Turtle() iss.shape('iss.gif') iss.setheading(90) \--- /code \---
 
-\--- /hints \---
++ The ISS starts off in the centre of the map, now move it to the correct location:
 
-+ ISS haritanın ortasında başlıyor, şimdi doğru yere taşıyalım:
+## \--- code \---
 
-![ekran görüntüsü](images/iss-plot.png)
+language: python filename: main.py line_numbers: true line_number_start: 38
+
+## highlight_lines:
+
+iss.penup() iss.goto(lon, lat) \--- /code \---
 
 **Not**: Enlem normal olarak önce gelir, ancak `(x, y)`'yi gösterirken öncelikle boylam gelir.
 
