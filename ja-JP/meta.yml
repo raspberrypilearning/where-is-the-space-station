@@ -5,7 +5,7 @@ description: ISSの正確な場所を見つける
 listed: true
 copyedit: false
 version: 3.1.0
-last_tested: 2018-22-01
+last_tested: 2018-11-22
 steps:
   - 
     title: 前書き
@@ -15,11 +15,13 @@ steps:
     title: 誰が宇宙にいるのか？
   - 
     title: 'チャレンジ：宇宙飛行士が乗っている宇宙ステーションの名前を表示しよう'
+    completion:
+      - engaged
   - 
     title: ISSはどこですか？
   - 
     title: マップにISSの位置をプロットする
   - 
-    title: ISSはいつ特定の場所の位置を通過するか？
-  - 
-    title: 'チャレンジ：より多くの通過日時を見つける'
+    title: Add data to your map
+    completion:
+      - internal
