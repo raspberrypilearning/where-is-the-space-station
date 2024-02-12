@@ -7,7 +7,7 @@
 空间站图标显示了国际空间站目前的位置。 黄色文本显示了国际空间站下次飞过美国休斯顿太空中心的时间。
 
 <div class="trinket">
-  <iframe src="https://trinket.io/embed/python/b95851338c?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  <iframe src="https://trinket.io/embed/python/a0ba9cea61?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
   <img src="images/iss-final.png">
 </div>
