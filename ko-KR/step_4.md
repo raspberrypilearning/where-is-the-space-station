@@ -34,7 +34,7 @@
 
 ```python
 for p in people:
-  print(p['name'], ': ', p['craft'])
+    print(p['name'], ' in ', p['craft'])
 ```
 
 \--- /hint \---
