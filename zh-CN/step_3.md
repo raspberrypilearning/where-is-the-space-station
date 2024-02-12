@@ -8,24 +8,21 @@
 
 你应该看到类似下面的内容：
 
-    {
-      "message": "sucess",
-      "number": 3,
-      "people": [
-        {
-          "craft": "国际空间站",
-          "name": "尤里·马伦琴科"
-        },
-        {
-          "craft": "国际空间站",
-          "name": "蒂莫西·科普拉"
-        },
-        {
-          "craft": "国际空间站",
-          "name": "蒂莫西·皮克"
-        }
-      ]
-    }
+    message "success"
+    people  
+        0   
+            name    "Cai Xuzhe"
+            craft   "Tiangong"
+        1   
+            name    "Chen Dong"
+            craft   "Tiangong"
+        2   
+            name    "Sergey Prokopyev"
+            craft   "ISS"
+        3   
+            name    "Nicole Mann"
+            craft   "ISS"
+    number  4
     
 
 数据是实时的，因此你可能会看到略微不同的结果。 数据格式被称为` JSON ` （发音类似“杰森”）。
@@ -40,43 +37,64 @@
 
 + 将以下代码添加到` main.py `以将你刚刚访问的网页服务的URL存储为变量：
 
-![截屏](images/iss-url.png)
+## \--- code \---
 
-+ 现在调用网页服务：
+language: python filename: main.py line_numbers: true line_number_start: 7
 
-![截屏](images/iss-request.png)
+## highlight_lines: 8
 
-+ 接下来你需要将 JSON 响应加载到 Python 数据结构中：
+# http://open-notify.org/Open-Notify-API/
 
-![截屏](images/iss-result.png)
+url = 'http://api.open-notify.org/astros.json' \--- /code \---
+
++ Now call the web service and load the data into a variable:
+
+## \--- code \---
+
+language: python filename: main.py line_numbers: true line_number_start: 7
+
+## highlight_lines: 9, 10, 11
+
+# http://open-notify.org/Open-Notify-API/
+
+url = 'http://api.open-notify.org/astros.json' response = urllib.request.urlopen(url) astros = json.loads(response.read()) print(astros)
+
+\--- /code \---
 
 你应该看到类似下面的内容：
 
-    {'message': 'success', 'number': 3, 'people': [{'craft': '国际空间站', 'name': '尤里·马伦琴科'}, {'craft': '国际空间站', 'name': '蒂莫西·科普拉'}, {'craft': '国际空间站', 'name': '蒂莫西·皮克'}]}
+    {"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
     
 
-这是有三个键（key）的Python字典结构：`message`（消息） ，`number`（数量）和`people` （人）。
+This is a Python dictionary with three keys: `message`, `people`, and `number`.
 
 [[[generic-python-key-value-pairs]]]
 
-`message`的值为`success`（成功）表示你已成功访问网页服务。 请注意，根据当前在太空中的人，你将看到`number`和`people`的不同结果。
+That `message` has the value `success` that tells you that you successfully accessed the web service. 请注意，根据当前在太空中的人，你将看到`number`和`people`的不同结果。
 
-现在，让我们以更具可读性的方式打印这些信息。
+Change the `print` statement so the information is more readable.
 
 + 首先，让我们查找空间站的人数并打印：
 
-![截屏](images/iss-number.png)
+## \--- code \---
 
-`result['number']`将打印与`result`字典中的`number`键相匹配的值。 在这个例子中，这个数字是`3`。
+language: python filename: main.py line_numbers: true line_number_start: 11
+
+## highlight_lines:
+
+print('People in Space: ', astros['number']) \--- /code \---
+
+`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
 
 + 与`people`键对应的值是由字典结构构成的列表！ 让我们将该值放入一个变量中，以便使用它：
 
-![截屏](images/iss-people.png)
+## \--- code \---
 
-你应该看到类似下面的内容：
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-    [{'craft': '国际空间站', 'name': '尤里 马连琴科'}， {'craft': '国际空间站', 'name': '蒂莫西·科普拉'}， {'craft': '国际空间站', 'name': '蒂莫西·皮克'}]}
-    
+## highlight_lines:
+
+people = astros['people'] \--- /code \---
 
 + 现在，您需要为每位宇航员打印一行。 您可以使用 Python `for` 循环来做这件事。
 
@@ -84,18 +102,31 @@
 
 + 每次经过循环，`p`将被设置为不同宇航员的字典结构。
 
-![截屏](images/iss-people-1a.png)
+## \--- code \---
 
-+ 然后您可以查找`name`和`craft`的值。 让我们展示一下在太空中人们的名字：
+language: python filename: main.py line_numbers: true line_number_start: 11
 
-![截屏](images/iss-people-2.png)
+## highlight_lines: 13, 14
+
+people = astros['people']
+
+for p in people: print(p['name']) \--- /code \---
+
++ You can then look up the values for `name` to show the names of the people in space:
 
 你应该看到类似下面的内容：
 
-    太空中的人：3
-    尤里·马伦琴科
-    蒂莫西·科普拉
-    蒂莫西·皮克
+    People in Space:  10
+    Cai Xuzhe
+    Chen Dong
+    Liu Yang
+    Sergey Prokopyev
+    Dmitry Petelin
+    Frank Rubio
+    Nicole Mann
+    Josh Cassada
+    Koichi Wakata
+    Anna Kikina
     
 
 **注意：** 您正在使用实时数据，所以您的结果将取决于当前在太空中的人数。
