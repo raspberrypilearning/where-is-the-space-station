@@ -1,45 +1,84 @@
-## Challenge: show the craft
+## Plot the ISS on a map
 
---- challenge ---
+It would be useful to show the position on a map. You can do this using Python Turtle graphics!
 
-In addition to the name of the astronauts, the web service also provides the craft that they are on, such as the ISS.
++ Load a world map as the background image. There’s one already included in your trinket called 'map.gif'! NASA has provided this beautiful map and given permission for reuse. 
 
-+ Can you add to your script so that it also prints out the craft for each astronaut? 
+![screenshot](images/iss-map.png)
+ 
+The map is centered at `(0,0)` latitude and longitude, which is just what you need. 
 
-Example:
++ You need to set the screen size to match the size of the image, which is 720 by 360 pixel. Add `screen.setup(720, 360)`:
 
-```
-People in Space:  3
-Yuri Malenchenko in ISS
-Timothy Kopra in ISS
-Timothy Peake in ISS
-```
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 26
+highlight_lines: 28, 29
+---
+# image source:
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+screen = turtle.Screen()
+screen.setup(720, 360)
+--- /code ---
+  
++ You want to be able to send the turtle to a particular latitude and longitude. To make this easy, you can set the screen to match the coordinates you're using and add in the map image:
 
---- hints --- 
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 27
+highlight_lines: 30, 31
+---
+# map.jpg: http://visibleearth.nasa.gov/view.php?id=57752 Credit: NASA
+screen = turtle.Screen()
+screen.setup(720, 360)
+screen.setworldcoordinates(-180, -90, 180, 90)
+screen.bgpic('map.gif')
+--- /code ---
 
---- hint ---
+Now the coordinates will match the latitude and longitude coordinates that you get back from the web service. 
 
-You need to add code to the print statement in `for p in people:`. Remember you can print multiple items by separating them with commas. 
++ Create a turtle icon for the ISS. Your trinket includes 'iss.gif' and 'iss2.gif' — try them both and see which one you prefer. 
+    
+[[[generic-python-turtle-image]]]
 
---- /hint --- 
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 33
+highlight_lines: 
+---
+screen.register_shape('iss.gif')
+iss = turtle.Turtle()
+iss.shape('iss.gif')
+iss.setheading(90)
+--- /code ---
 
---- hint ---
++ The ISS starts off in the centre of the map, now move it to the correct location:
 
-You get the value for `name` using `p[name]` — how can you get the value for `craft`? 
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 38
+highlight_lines: 
+---
+iss.penup()
+iss.goto(lon, lat)
+--- /code ---
+  
+**Note**: latitude is normally given first, but we need to give longitude first when plotting `(x,y)` coordinates. 
 
---- /hint --- 
++ Test your program by running it. The ISS should move to its current location above Earth. 
 
---- hint ---
+![screenshot](images/iss-plotted.png)
 
-Change your `for` loop so it looks like this:
-
-```python
-for p in people:
-    print(p['name'], ' in ', p['craft'])
-```
-
---- /hint --- 
-
---- /hints ---
-
---- /challenge ---
++ Wait a few seconds and run your program again to see where the ISS has moved to. 

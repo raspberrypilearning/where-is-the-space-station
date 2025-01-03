@@ -1,152 +1,75 @@
-## Who is in space?
+## Where is the ISS?
 
-You’re going to use a web service that provides live information about space. First, let’s find out who is currently in space.
+The International Space Station is in orbit around Earth. It completes an orbit of the earth roughly every hour and a half, and travels at an average speed of 7.66 km per second. It’s fast! 
 
-A web service has an address (URL) just like a website does. Instead of returning HTML for a web page, it returns data.
+Let’s use another web service to find out where the International Space Station is. 
 
-+ Open <a href="http://api.open-notify.org/astros.json" target="_blank">the web service</a> in a web browser.
-
++ First open the URL for the web service in a new tab in your web browser: <a href="http://api.open-notify.org/iss-now.json" target="_blank">http://api.open-notify.org/iss-now.json</a>
+  
 You should see something like this:
-
-```	
+  
+```
 message	"success"
-people	
-    0	
-        name	"Cai Xuzhe"
-        craft	"Tiangong"
-    1	
-        name	"Chen Dong"
-        craft	"Tiangong"
-    2	
-        name	"Sergey Prokopyev"
-        craft	"ISS"
-    3	
-        name	"Nicole Mann"
-        craft	"ISS"
-number	4
+iss_position	
+    longitude	"2.6290"
+    latitude	"22.7281"
+timestamp	1669639624
 ```
+  
+The result contains the coordinates of the spot on Earth that the ISS is currently over. 
 
-The data is live, so you will probably see a slightly different result. The data format is called `JSON` (pronounced like 'Jason').
+[[[generic-theory-lat-long]]]
 
-[[[generic-json]]]
-
-You need to call the web service from a Python script, so you can use the results.
-
-+ Open this trinket: [http://rpf.io/iss-on](http://rpf.io/iss-on){:target="_blank"}.
-
-The `urllib.request` and `json` modules have already been imported for you at the top of the `main.py` script.
-
-+ Add the following code to `main.py` to store the URL of the web service you just accessed as a variable:
++ Now you need to call the same web service from Python. Add the following code to the end of your script to get the current location of the ISS:
 
 --- code ---
 ---
 language: python
 filename: main.py
 line_numbers: true
-line_number_start: 7
-highlight_lines: 8
+line_number_start: 13 
+highlight_lines: 16, 17, 18, 20
 ---
-# http://open-notify.org/Open-Notify-API/
-url = 'http://api.open-notify.org/astros.json'
---- /code ---
-
-+ Now call the web service and load the data into a variable:
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 7
-highlight_lines: 9, 10, 11
----
-# http://open-notify.org/Open-Notify-API/
-url = 'http://api.open-notify.org/astros.json'
-response = urllib.request.urlopen(url)
-astros = json.loads(response.read())
-print(astros)
-
---- /code ---
-
-You should see something like this:
-
-```
-{"message": "success", "people": [{"name": "Cai Xuzhe", "craft": "Tiangong"}, {"name": "Chen Dong", "craft": "Tiangong"}, {"name": "Liu Yang", "craft": "Tiangong"}, {"name": "Sergey Prokopyev", "craft": "ISS"}, {"name": "Dmitry Petelin", "craft": "ISS"}, {"name": "Frank Rubio", "craft": "ISS"}, {"name": "Nicole Mann", "craft": "ISS"}, {"name": "Josh Cassada", "craft": "ISS"}, {"name": "Koichi Wakata", "craft": "ISS"}, {"name": "Anna Kikina", "craft": "ISS"}], "number": 10}
-```
-
-This is a Python dictionary with three keys: `message`, `people`, and `number`.
-
-[[[generic-python-key-value-pairs]]]
-
-That `message` has the value `success` that tells you that you successfully accessed the web service. Note that you will see different results for `number` and `people` depending on who is currently in space.
-
-Change the `print` statement so the information is more readable.
-
-+ First, let's look up the number of people in space and print it:
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 11
-highlight_lines: 
----
-print('People in Space: ', astros['number'])
---- /code ---
-
-
-`astros['number']` will print the value associated with the key `number` in the `astros` dictionary.
-
-+ The value associated with the `people` key is a list of dictionaries! Let’s put that value into a variable so you can use it:
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 11
-highlight_lines: 
----
-people = astros['people']
---- /code ---
-
-+ Now you need to print out a line for each astronaut. You can use a Python `for` loop to do this.
-
-[[[generic-python-for-loop-list]]]
-
-+ Each time through the loop, `p` will be set to a dictionary for a different astronaut.
-
---- code ---
----
-language: python
-filename: main.py
-line_numbers: true
-line_number_start: 11
-highlight_lines: 13, 14
----
-people = astros['people']
-
 for p in people:
-    print(p['name'])
+    print(p['name'], ' in ', p['craft'])
+    
+url = 'http://api.open-notify.org/iss-now.json'
+response = urllib.request.urlopen(url)
+iss_now = json.loads(response.read())
+
+print(iss_now)
 --- /code ---
 
-+ You can then look up the values for `name` to show the names of the people in space:
-
-You should see something like this:
+You should see the following data.
 
 ```
-People in Space:  10
-Cai Xuzhe
-Chen Dong
-Liu Yang
-Sergey Prokopyev
-Dmitry Petelin
-Frank Rubio
-Nicole Mann
-Josh Cassada
-Koichi Wakata
-Anna Kikina
+{'message': 'success', 'iss_position': {'latitude': '6.0142', 'longitude': '-35.1414'}, 'timestamp': 1669305109}
 ```
 
-__Note:__ You are using live data, so your results will depend on the number of people currently in space.
++ Create variables to store the latitude and longitude, and then print them:
+
+--- code ---
+---
+language: python
+filename: main.py
+line_numbers: true
+line_number_start: 16
+highlight_lines: 20, 21, 22, 23, 24
+---
+url = 'http://api.open-notify.org/iss-now.json'
+response = urllib.request.urlopen(url)
+iss_now = json.loads(response.read())
+
+location = iss_now['iss_position']
+lat = float(location['latitude'])
+lon = float(location['longitude'])
+print('Latitude: ', lat)
+print('Longitude: ', lon)
+--- /code ---
+
++ Run your code and the last two lines printed should look like this:
+
+```
+Latitude:  38.0465
+Longitude:  20.0936
+```
