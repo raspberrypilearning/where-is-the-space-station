@@ -16,7 +16,8 @@ steps:
 - title: Add data to your map
   completion:
   - internal
-  - external
 - title: Challenge
   challenge: true
 - title: What can you do now?
+  completion:
+  - external
