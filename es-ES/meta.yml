@@ -18,4 +18,3 @@ steps:
 - title: "¿Cuándo estará la ISS por encima de tu posición?"
   completion:
   - internal
-- title: 'Desafío: encontrar más veces cuando pasará por encima'
