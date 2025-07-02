@@ -18,4 +18,3 @@ steps:
 - title: "¿Cuándo estará la EEI por encima de tu posición?"
   completion:
   - internal
-- title: 'Desafío: encuentre más tiempos de traspaso'

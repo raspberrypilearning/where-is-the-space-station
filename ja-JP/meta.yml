@@ -18,4 +18,3 @@ steps:
 - title: ISSはいつ特定の場所の位置を通過するか？
   completion:
   - internal
-- title: チャレンジ：より多くの通過日時を見つける

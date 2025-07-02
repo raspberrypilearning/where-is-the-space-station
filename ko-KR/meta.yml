@@ -18,4 +18,3 @@ steps:
 - title: ISS는 언제 특정 위치를 통과하나요?
   completion:
   - internal
-- title: '과제: 더 많은 통과 시간 찾기'
